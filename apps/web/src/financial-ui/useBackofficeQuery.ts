@@ -6,7 +6,11 @@ export type QueryState<T> =
   | { phase: 'loading' }
   | { phase: 'denied' }
   | { phase: 'error'; message: string; retryable: boolean; kind: BackofficeApiError['kind'] }
-  | { phase: 'ready'; data: T };
+  | { phase: 'ready'; data: T; refreshing?: boolean };
+
+function isAbortError(error: unknown): boolean {
+  return typeof DOMException !== 'undefined' && error instanceof DOMException && error.name === 'AbortError';
+}
 
 export function useBackofficeQuery<T>(options: {
   enabled?: boolean;
@@ -23,15 +27,29 @@ export function useBackofficeQuery<T>(options: {
   const [state, setState] = useState<QueryState<T>>(enabled && autoLoad ? { phase: 'loading' } : { phase: 'idle' });
   const loaderRef = useRef(loader);
   const mapErrorRef = useRef(mapError);
+  const requestSequenceRef = useRef(0);
   loaderRef.current = loader;
   mapErrorRef.current = mapError;
 
   const reload = useCallback(async (signal?: AbortSignal) => {
-    setState({ phase: 'loading' });
+    const requestSequence = ++requestSequenceRef.current;
+
+    setState((current) =>
+      current.phase === 'ready'
+        ? { phase: 'ready', data: current.data, refreshing: true }
+        : { phase: 'loading' },
+    );
+
     try {
       const data = await loaderRef.current(signal);
-      setState({ phase: 'ready', data });
+      if (signal?.aborted || requestSequence !== requestSequenceRef.current) {
+        return;
+      }
+      setState({ phase: 'ready', data, refreshing: false });
     } catch (error) {
+      if (signal?.aborted || requestSequence !== requestSequenceRef.current || isAbortError(error)) {
+        return;
+      }
       if (error instanceof BackofficeApiError) {
         if (error.kind === 'denied') {
           setState({ phase: 'denied' });
@@ -54,8 +72,15 @@ export function useBackofficeQuery<T>(options: {
     }
   }, []);
 
-  const reset = useCallback(() => setState({ phase: 'idle' }), []);
-  const setReady = useCallback((data: T) => setState({ phase: 'ready', data }), []);
+  const reset = useCallback(() => {
+    requestSequenceRef.current += 1;
+    setState({ phase: 'idle' });
+  }, []);
+
+  const setReady = useCallback((data: T) => {
+    requestSequenceRef.current += 1;
+    setState({ phase: 'ready', data, refreshing: false });
+  }, []);
 
   useEffect(() => {
     if (!enabled || !autoLoad) {
