@@ -17658,6 +17658,54 @@ NEXT_PROMPT_EXECUTED: NO
 
 ---
 
+## PROPOSTAS — DETALHE: DIALOGS SEM FORM-FIELD LEGADO
+
+DATA: 2026-10-07T10:41:00-04:00
+STATUS: **PASS**
+
+### Escopo executado
+
+Continuidade da wave frontend Enterprise Tier-1, uma função por vez.
+
+Módulo: **Propostas**.
+Função: **Detalhe da proposta** (`/app/proposals/:id`) — dialogs de aceite, rejeição e cancelamento.
+Classificação principal: **OBJECT / DETAIL PAGE**.
+
+Classificação: **interpretação de engenharia visual / experiência operacional**. Nenhuma regra
+empresarial criada, promovida ou alterada; nenhum backend, API, migration, seed, permissão ou
+contrato de dados tocado.
+
+### Arquivo alterado
+
+- `apps/web/src/proposals/pages/ProposalDetailPage.tsx`
+
+### Alteração aplicada
+
+- Select de origem do aceite e textareas de rejeição/cancelamento deixaram `form-field` legado.
+- `acceptProposalVersion`, `rejectProposalVersion`, `cancelProposalVersion`, rowVersion e mensagens
+  de sucesso foram preservados.
+
+### Validação
+
+- `pnpm --filter @cisne/web exec vitest run --config vite.config.ts src/proposals/pages/ProposalDetailPage.test.tsx src/proposals/proposal-object-page.ui.test.tsx src/proposals/proposals.e2e.test.tsx` — **PASS** (16/16)
+- `pnpm --filter @cisne/web exec eslint src/proposals/pages/ProposalDetailPage.tsx` — **PASS**
+- `pnpm --filter @cisne/web typecheck` — **PASS**
+- `git diff --check` — **PASS**
+
+### Quality gate
+
+- [x] Alteração restrita aos dialogs de Propostas
+- [x] Nenhum dado, KPI, relação ou capability inventado
+- [x] Nenhuma regra empresarial nova
+- [x] Nenhuma migration, seed, backend, permissão ou contrato de API
+- [x] Ações, rowVersion e mensagens preservadas
+
+WORKING_TREE: limpo após commit
+COMMIT: incluído no commit desta sessão
+NEXT_PROMPT_EXECUTED: NO
+
+---
+
 ## SOLICITACOES — DETALHE: DIALOGS E CONFLITO SEM CLASSES LEGADAS
 
 DATA: 2026-10-07T10:39:00-04:00

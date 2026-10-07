@@ -692,11 +692,14 @@ export function ProposalDetailPage() {
           );
         }}
       >
-        <div className="form-field">
-          <label htmlFor={`${reasonId}-accept-origin`}>Origem da aceitação</label>
+        <div className="flex min-w-0 flex-col gap-1.5">
+          <label htmlFor={`${reasonId}-accept-origin`} className="text-sm font-semibold text-gray-700">
+            Origem da aceitação
+          </label>
           <select
             id={`${reasonId}-accept-origin`}
             value={acceptOrigin}
+            className="min-h-9 rounded-md border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 shadow-sm focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 focus:outline-none"
             onChange={(event) => setAcceptOrigin(event.target.value)}
           >
             {Object.values(PROPOSAL_ACCEPTANCE_ORIGINS).map((origin) => (
@@ -735,13 +738,16 @@ export function ProposalDetailPage() {
           );
         }}
       >
-        <div className="form-field">
-          <label htmlFor={`${reasonId}-reject`}>Motivo</label>
+        <div className="flex min-w-0 flex-col gap-1.5">
+          <label htmlFor={`${reasonId}-reject`} className="text-sm font-semibold text-gray-700">
+            Motivo
+          </label>
           <textarea
             id={`${reasonId}-reject`}
             value={rejectReason}
             onChange={(event) => setRejectReason(event.target.value)}
             rows={3}
+            className="min-h-24 rounded-md border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 shadow-sm focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 focus:outline-none"
           />
         </div>
       </ConfirmDialog>
@@ -773,13 +779,16 @@ export function ProposalDetailPage() {
           );
         }}
       >
-        <div className="form-field">
-          <label htmlFor={`${reasonId}-cancel`}>Motivo</label>
+        <div className="flex min-w-0 flex-col gap-1.5">
+          <label htmlFor={`${reasonId}-cancel`} className="text-sm font-semibold text-gray-700">
+            Motivo
+          </label>
           <textarea
             id={`${reasonId}-cancel`}
             value={cancelReason}
             onChange={(event) => setCancelReason(event.target.value)}
             rows={3}
+            className="min-h-24 rounded-md border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 shadow-sm focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 focus:outline-none"
           />
         </div>
       </ConfirmDialog>
