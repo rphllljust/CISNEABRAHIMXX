@@ -218,9 +218,15 @@ export function ContractsListPage() {
         ZONA 1 — CABECALHO DA WORKLIST, na gramatica `WorklistHeader` que as worklists
         enterprise irmaes (pedidos de compra, ordens de servico) ja usam.
 
-        HIERARQUIA: o titulo da tela e a contagem ficam no maior peso da pagina; o contexto de
-        dominio entra como UMA linha de leitura, no lugar do antigo paragrafo solto. A acao
-        primaria aparece UMA UNICA VEZ em toda a tela.
+        HIERARQUIA: o titulo da tela concentra o maior peso da pagina; o contexto de dominio
+        entra como UMA linha de leitura, no lugar do antigo paragrafo solto. A acao primaria
+        aparece UMA UNICA VEZ em toda a tela.
+
+        CONTAGEM — declarada UMA VEZ, na barra de filtros ("N nesta página"). O chip de contagem
+        do cabecalho foi removido: ele repetia o mesmo numero que a faixa de metricas ja
+        descreve por classe (vigente/exigindo atenção/rascunho/encerrado), e a tela tinha o
+        total da pagina escrito em tres lugares. Reference de densidade: Fiori/Dynamics declaram
+        o tamanho uma vez, junto do recorte que o produziu.
 
         ACAO PRIMARIA — UMA UNICA EXPRESSAO. Quando nao ha contrato nenhum e a criacao e
         permitida, ela desce para DENTRO do painel de estado vazio (que ja explica o que um
@@ -235,7 +241,6 @@ export function ContractsListPage() {
       */}
       <WorklistHeader
         title="Contratos"
-        count={items.length}
         context="Carteira de contratos comerciais, com vigência, situação e unidade de cada um."
         action={
           showCreateInHeader ? (
@@ -397,10 +402,20 @@ export function ContractsListPage() {
                     onClick={() => setSelected(item)}
                   >
                     {/*
-                      IDENTIDADE — contrato, cliente e titulo num bloco so. O link estica a area
-                      de clique por TODA a linha (`.worklist-row-link::after` no theme.css), sem
-                      duplicar destino: continua sendo um `<a>` real, entao clique do meio, nova
-                      aba, foco e leitor de tela seguem intactos.
+                      IDENTIDADE — contrato, cliente e titulo num bloco so.
+
+                      O `WorklistRowLink` estica a area de clique do link por meio de um
+                      pseudo-elemento posicionado contra o ancestral posicionado mais proximo.
+                      Medido no gate visual: esse ancestral e a PROPRIA `<td>` (402px), nao a
+                      linha — e por isso o overlay engolia o `onClick` do `<tr>` em TODA a
+                      celula de identidade e o painel de contexto nunca abria (`drawerOpen: 0`),
+                      navegando para o detalhe em vez de mostrar o contexto.
+
+                      A correcao NAO e empilhar z-index: e dar ao link um ancestral posicionado
+                      do tamanho do proprio codigo (`relative` no `<span>` do numero). O overlay
+                      passa a cobrir apenas o codigo do contrato — que continua sendo um `<a>`
+                      real, com clique do meio, nova aba e foco — e o restante da linha segue
+                      abrindo o painel de contexto, como nas worklists irmas.
                     */}
                     <td className={cn(worklistCellClass, 'pl-3')}>
                       <span
@@ -412,9 +427,11 @@ export function ContractsListPage() {
                       />
                       <div className="min-w-0">
                         <div className="flex flex-wrap items-baseline gap-x-2">
-                          <WorklistRowLink href={`/app/contracts/${item.id}`}>
-                            {item.contractNumber}
-                          </WorklistRowLink>
+                          <span className="relative">
+                            <WorklistRowLink href={`/app/contracts/${item.id}`}>
+                              {item.contractNumber}
+                            </WorklistRowLink>
+                          </span>
                           <span className="text-[12px] text-gray-500">
                             {formatClientSnapshot(item.clientSnapshot)}
                           </span>

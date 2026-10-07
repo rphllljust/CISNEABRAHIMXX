@@ -16819,3 +16819,68 @@ worklists enterprise irmãs (pedidos de compra, ordens de serviço) já usam.
 WORKING_TREE: DIRTY antes do commit (apenas a tela de Contratos)
 COMMIT: incluído no commit desta sessão
 NEXT_PROMPT_EXECUTED: NO
+
+---
+
+## CONTRATOS — GATE VISUAL 1440x900 E CORRECAO DE DEFEITO REAL
+
+DATA: 2026-10-06T21:35:00-04:00
+STATUS: **PASS**
+
+### Escopo executado
+
+Pedido do responsável: validar a tela de Contratos no browser em 1440x900 e corrigir somente
+defeitos visuais concretos, sem refatorar, sem nova auditoria e sem tocar outra página.
+
+Classificação: **interpretação de engenharia visual**. Nenhuma regra empresarial criada ou
+alterada; nenhum backend, API, migration, permissão ou contrato tocado; nenhum componente novo.
+
+### Defeito REAL encontrado e corrigido (regressão introduzida no commit anterior)
+
+Medido por Playwright no browser real (não por inspeção visual):
+
+- Sintoma: clicar em qualquer ponto da linha NAVEGAVA para o detalhe e o painel de contexto
+  nunca abria (`drawerOpen: 0`). A comparação de contratos sem sair da lista estava destruída.
+- Causa raiz: o pseudo-elemento `.worklist-row-link::after` estica a área de clique do link
+  contra o **ancestral posicionado mais próximo**. Nesta tela esse ancestral era a própria `<td>`
+  de identidade (457px medidos), não a linha — o overlay cobria toda a célula e engolia o
+  `onClick` do `<tr>` que abre o `DynamicContextDrawer`.
+- Correção: `relative` no `<span>` que envolve apenas o número do contrato, dando ao link um
+  ancestral posicionado do tamanho do próprio código. O overlay caiu de 457px para 119px.
+- Evidência antes → depois:
+  - clique no vazio da linha: `drawerOpen: 0`, URL mudou → **`drawerOpen: 1`, URL inalterada**
+  - clique no número: navegação para a ficha **preservada** (continua um `<a>` real)
+
+### Refinamento de densidade
+
+- Removido o chip de contagem do cabeçalho: o total da página estava declarado em TRÊS lugares
+  (chip do cabeçalho, faixa de métricas e meta da barra de filtros). A contagem permanece UMA vez,
+  na barra de filtros, junto do recorte que a produziu. As métricas por classe seguem no cabeçalho.
+
+### Validação visual (Playwright, Chromium, 1440x900, dev server real)
+
+- Populado: `docOverflowX=0`, `clippedCount=0`, `overlaps=0`, alturas de linha uniformes (71px),
+  `trailingSpaceInMain=0`, 7 linhas inteiras na dobra, 1 único link de ação primária, 1 `<h1>`.
+- Gaps entre blocos: 12/4/8/12px — sem área morta.
+- Vazio: painel de 122px, 1 ação primária, sem overflow e sem dead space.
+- Screenshots gravados em `tmp/contracts-gate/` (gitignored) para inspeção humana.
+
+### Validação de código
+
+- `pnpm --filter @cisne/web exec eslint src/contracts/pages/ContractsListPage.tsx` — **PASS**
+- `pnpm --filter @cisne/web typecheck` (`tsc -b --force`) — **PASS**
+- `pnpm --filter @cisne/web exec vitest run --config vite.config.ts src/contracts/contracts.e2e.test.tsx`
+  — **PASS** (2/2)
+- `git diff --check` — **PASS**
+- `git status --short` — apenas `apps/web/src/contracts/pages/ContractsListPage.tsx`
+
+### Limitação declarada
+
+O modelo desta sessão não aceita entrada de imagem, então a inspeção dos screenshots foi feita
+por geometria medida no DOM renderizado (posição, tamanho, sobreposição, overflow, altura de
+linha) e não por leitura visual direta do PNG. Os PNGs ficam em `tmp/contracts-gate/` para
+conferência humana.
+
+WORKING_TREE: DIRTY antes do commit (apenas a tela de Contratos)
+COMMIT: incluído no commit desta sessão
+NEXT_PROMPT_EXECUTED: NO
