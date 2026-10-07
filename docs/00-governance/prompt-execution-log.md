@@ -17225,6 +17225,72 @@ NEXT_PROMPT_EXECUTED: NO
 
 ---
 
+## PROPOSTAS — FORMULARIO DE PROPOSTA (CREATE/EDIT): MAIN + ASIDE CONTEXTUAL
+
+DATA: 2026-10-06T23:41:14-04:00
+STATUS: **PASS**
+
+### Escopo executado
+
+Continuidade da wave frontend Enterprise Tier-1, uma função por vez.
+
+Módulo: **Propostas**.
+Função: **Formulário de proposta** (`/app/proposals/new` e composição compartilhada com edição).
+Classificação principal: **FORM**.
+
+Classificação: **interpretação de engenharia visual / experiência operacional**. Nenhuma regra
+empresarial criada, promovida ou alterada; nenhum backend, API, migration, seed, permissão ou
+contrato de dados tocado.
+
+### Arquivo alterado
+
+- `apps/web/src/proposals/components/ProposalForm.tsx`
+
+### Baseline medido
+
+O formulário exibia o resumo antes das seções principais e mantinha barra de ação sticky no fluxo
+visual do builder.
+
+### Alteração aplicada
+
+- O formulário passou para composição `main + aside`: identificação, condições comerciais,
+  composição e observações à esquerda; resumo e pendências à direita.
+- A action bar local deixou de funcionar como overlay sticky e passou a ficar estática ao final
+  do formulário.
+- Validação, normalização monetária, coleção de itens, payload, navegação e chamadas de API foram
+  preservadas.
+
+### Evidência depois
+
+- Medição DOM/Playwright em `/app/proposals/new`, Chromium 1440x900:
+  - `docOverflowX=0`.
+  - `summary` presente em `form aside` (`left=1080`, `width=320`).
+  - `occluded=[]`.
+- Artefatos temporários em `tmp/proposal-create-gate/` (gitignored).
+
+### Validação
+
+- `node tmp/measure-proposal-create.mjs` — **PASS**
+- `pnpm --filter @cisne/web exec vitest run --config vite.config.ts src/proposals/proposal-create.ui.test.tsx src/proposals/proposals.components.test.tsx` — **PASS** (11/11)
+- `pnpm --filter @cisne/web exec eslint src/proposals/components/ProposalForm.tsx src/proposals/pages/ProposalCreatePage.tsx src/proposals/pages/ProposalEditPage.tsx` — **PASS**
+- `pnpm --filter @cisne/web typecheck` — **PASS**
+- `git diff --check` — **PASS**
+
+### Quality gate
+
+- [x] Alteração restrita ao formulário de Propostas
+- [x] Nenhum componente novo criado
+- [x] Nenhum dado, KPI, relação ou capability inventado
+- [x] Nenhuma regra empresarial nova
+- [x] Nenhuma migration, seed, backend, permissão ou contrato de API
+- [x] Validação, payload, itens e normalização monetária preservados
+
+WORKING_TREE: limpo após commit
+COMMIT: incluído no commit desta sessão
+NEXT_PROMPT_EXECUTED: NO
+
+---
+
 ## SOLICITACOES — CRIAR SOLICITACAO (FORM): MAIN + ASIDE CONTEXTUAL SEM OVERLAY
 
 DATA: 2026-10-06T23:28:44-04:00
