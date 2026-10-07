@@ -33,6 +33,8 @@ export function PurchaseOrderEditPage() {
   const { capabilities } = usePurchaseOrderCapabilities();
   const [values, setValues] = useState<PurchaseOrderFormValues>(EMPTY_PURCHASE_ORDER_FORM);
   const [rowVersion, setRowVersion] = useState(0);
+  const [internalCode, setInternalCode] = useState('');
+  const [poNumber, setPoNumber] = useState('');
   const [loading, setLoading] = useState(true);
   const [loadError, setLoadError] = useState<string | null>(null);
   const [fieldErrors, setFieldErrors] = useState<PurchaseOrderFormFieldErrors>({});
@@ -56,6 +58,8 @@ export function PurchaseOrderEditPage() {
         return;
       }
       setCanEdit(true);
+      setInternalCode(po.internalCode);
+      setPoNumber(po.poNumber);
       setRowVersion(po.rowVersion);
       setValues({
         clientId: po.clientId,
@@ -186,8 +190,20 @@ export function PurchaseOrderEditPage() {
   return (
     <ModulePage>
       <ModulePageHeader
-        title="Editar pedido de compra"
-        description="Atualiza o rascunho do pedido; o servidor recusa alterações concorrentes."
+        title={internalCode ? `Editar ${internalCode}` : 'Editar pedido de compra'}
+        description={
+          poNumber
+            ? `Pedido ${poNumber} em rascunho; o servidor recusa alterações concorrentes.`
+            : 'Atualiza o rascunho do pedido; o servidor recusa alterações concorrentes.'
+        }
+        action={
+          <Link
+            to={`/app/purchase-orders/${purchaseOrderId}`}
+            className="inline-flex min-h-9 items-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-700 no-underline ring-1 ring-gray-300 ring-inset hover:bg-gray-50"
+          >
+            Voltar ao detalhe
+          </Link>
+        }
       />
       {versionConflict ? <VersionConflictNotice onReload={() => void load()} /> : null}
       <PurchaseOrderForm

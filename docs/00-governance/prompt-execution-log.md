@@ -17419,6 +17419,66 @@ NEXT_PROMPT_EXECUTED: NO
 
 ---
 
+## PEDIDOS DE COMPRA — EDITAR PEDIDO (FORM): IDENTIDADE DA ENTIDADE NO WRAPPER
+
+DATA: 2026-10-06T23:55:19-04:00
+STATUS: **PASS**
+
+### Escopo executado
+
+Continuidade global da wave frontend Enterprise Tier-1, uma função por vez.
+
+Módulo: **Pedidos de compra**.
+Função: **Editar pedido de compra** (`/app/purchase-orders/:purchaseOrderId/edit`).
+Classificação principal: **FORM**.
+
+Classificação: **interpretação de engenharia visual / experiência operacional**. Nenhuma regra
+empresarial criada, promovida ou alterada; nenhum backend, API, migration, seed, permissão ou
+contrato de dados tocado.
+
+### Arquivos alterados
+
+- `apps/web/src/purchase-orders/pages/PurchaseOrderEditPage.tsx`
+- `apps/web/src/purchase-orders/pages/PurchaseOrderEditPage.test.tsx`
+
+### Alteração aplicada
+
+- O carregamento da edição passou a preservar `internalCode` e `poNumber` retornados pelo read model.
+- O `ModulePageHeader` passou a identificar a entidade real: `Editar <internalCode>`.
+- O subtítulo passou a declarar o número do pedido em rascunho.
+- Adicionado retorno explícito ao detalhe do mesmo pedido no header.
+- PATCH, validação, payload, controle de versão e navegação pós-salvamento foram preservados.
+
+### Evidência depois
+
+- Medição DOM/Playwright em `/app/purchase-orders/:purchaseOrderId/edit`, Chromium 1440x900:
+  - `h1="Editar PO-2026-EDIT01"`.
+  - `docOverflowX=0`.
+  - `summary` presente em `form aside` (`left=1080`, `width=320`).
+
+### Validação
+
+- `node tmp/measure-purchase-order-edit.mjs` — **PASS**
+- `pnpm --filter @cisne/web exec vitest run --config vite.config.ts src/purchase-orders/pages/PurchaseOrderEditPage.test.tsx` — **PASS** (1/1)
+- `pnpm --filter @cisne/web exec eslint src/purchase-orders/pages/PurchaseOrderEditPage.tsx src/purchase-orders/pages/PurchaseOrderEditPage.test.tsx` — **PASS**
+- `pnpm --filter @cisne/web typecheck` — **PASS**
+- `git diff --check` — **PASS**
+
+### Quality gate
+
+- [x] Alteração restrita à edição de Pedidos de compra
+- [x] Nenhum componente novo criado
+- [x] Nenhum dado, KPI, relação ou capability inventado
+- [x] Nenhuma regra empresarial nova
+- [x] Nenhuma migration, seed, backend, permissão ou contrato de API
+- [x] PATCH, validação, versão e navegação preservados
+
+WORKING_TREE: limpo após commit
+COMMIT: incluído no commit desta sessão
+NEXT_PROMPT_EXECUTED: NO
+
+---
+
 ## SOLICITACOES — CRIAR SOLICITACAO (FORM): MAIN + ASIDE CONTEXTUAL SEM OVERLAY
 
 DATA: 2026-10-06T23:28:44-04:00
