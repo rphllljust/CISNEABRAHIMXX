@@ -323,7 +323,19 @@ export function ClientsListPage() {
             </span>
           ) : null}
         </div>
-        {capabilities.canCreate ? (
+        {/*
+          ACAO PRIMARIA — UMA UNICA EXPRESSAO, E SO.
+
+          MEDIDO no DOM real com a carteira vazia: a tela renderizava DOIS links primarios de
+          criacao ao mesmo tempo — "Novo cliente" no cabecalho e "Cadastrar Cliente" dentro do
+          painel de estado vazio (dois `ModulePrimaryLink`, ambos com peso de acao primaria).
+          Duas CTAs primarias na mesma dobra: o operador nao sabe qual e a acao.
+
+          Sem carteira, a criacao desce para DENTRO do painel vazio, que ja explica o que um
+          Cliente e. Havendo carteira — ou havendo recorte aplicado — ela fica no cabecalho e o
+          painel NAO a repete. As duas condicoes sao mutuamente exclusivas por construcao.
+        */}
+        {capabilities.canCreate && !isEmptyCatalogue ? (
           <ModulePrimaryLink to="/app/clients/new" className="min-h-0 px-3 py-1 text-[13px]">
             Novo cliente
           </ModulePrimaryLink>
