@@ -16743,3 +16743,79 @@ foi tocado.
 WORKING_TREE: DIRTY antes do commit (diff visual desta segunda passada)
 COMMIT: incluído no commit desta sessão
 NEXT_PROMPT_EXECUTED: NO
+
+---
+
+## CONTRATOS — DESIGN ERP ENTERPRISE TIER-1 (worklist)
+
+DATA: 2026-10-06T20:55:00-04:00
+STATUS: **PASS**
+
+### Escopo executado
+
+Pedido do responsável: a tela de Contratos está funcional, mas ainda parecia administrativa e pouco
+sofisticada. Elevar SOMENTE esta tela usando o arcabouço CISNE existente, sem redesenho, sem backend,
+sem inventar dados/KPI/capabilities e sem componente novo.
+
+Classificação: **interpretação de engenharia visual**. Nenhuma regra empresarial foi criada,
+promovida ou alterada. Nenhuma API, migration, seed, permissão, estado ou contrato de backend foi
+tocado. Nenhum componente novo foi criado: a tela passou a usar as primitivas OPT-IN que as
+worklists enterprise irmãs (pedidos de compra, ordens de serviço) já usam.
+
+### Arquivo alterado
+
+- `apps/web/src/contracts/pages/ContractsListPage.tsx` (único arquivo; nenhuma outra página tocada)
+
+### Ajuste aplicado
+
+- Cabeçalho: substituído o `<header>` ad-hoc pelo primitivo `WorklistHeader` (título, contagem e
+  contexto de domínio em uma linha), restaurando a hierarquia entre título, filtros e worklist.
+- Métricas: a faixa `QueueStripCell` (números de 22px, quatro células com borda e fundo vermelho)
+  foi substituída por `EnterpriseMetric` dentro do cabeçalho — mesma leitura de ciclo de vida, sem
+  a faixa que empurrava a grade para fora da primeira dobra.
+- Filtros: barra compacta `WorklistFilterBar` + `WorklistField`, com "Limpar filtros" via
+  `WorklistClearFilters`, alinhados como os demais módulos e sem aparência de formulário cru.
+- Visões salvas: `DynamicSavedViewsBar` integrada à faixa de filtros que ela restaura (antes ficava
+  em bloco próprio com `mb-3`), mantendo o mesmo componente e a mesma persistência.
+- Worklist: grade densa `worklist*` (cabeçalho pegajoso, altura de linha reduzida), identidade via
+  `WorklistRowLink` (área de clique na linha inteira) e situação via `RecordStatusCell`, com acento
+  no contrato que exige o operador. A exceção "Vigência encerrada no relógio" passou a ser o
+  `context` do primitivo, no mesmo bloco do badge.
+- Estado vazio: removido o enquadramento local de altura mínima e de padding largo
+  (`min-h-[18rem]`, `px-8 py-10`); o painel `WorklistStatePanel` voltou à densidade padrão,
+  menor e mais funcional.
+- Rodapé: substituído o `<div>` ad-hoc por `WorklistFooter` + `ModulePagination`.
+- Removidas a constante morta `QueueStripCell` e as classes locais `headCellClass`/`cellClass`,
+  agora substituídas pelas primitivas compartilhadas.
+
+### Preservado (sem regressão de comportamento)
+
+- A ação primária continua nascendo de UMA única expressão (`showCreateInHeader` /
+  `showCreateInEmptyState`), mutuamente exclusivas: um único link "Novo contrato" por estado.
+- Filtros seguem sendo exatamente cliente + unidade (o recorte que o servidor executa).
+- Nenhuma métrica nova: as contagens continuam derivadas de `status`/`validTo` já publicados pela
+  listagem, rotuladas como da página. A listagem não publica `total` e nenhum total foi afirmado.
+- `DynamicContextDrawer`, `useSavedViews`, `UnitScopeLabel` e o acento de exceção preservados.
+
+### Validação
+
+- `pnpm --filter @cisne/web exec eslint src/contracts/pages/ContractsListPage.tsx` — **PASS**
+- `pnpm --filter @cisne/web typecheck` (`tsc -b --force`) — **PASS**
+- `pnpm --filter @cisne/web exec vitest run --config vite.config.ts src/contracts/contracts.e2e.test.tsx`
+  — **PASS** (2/2 testes; avisos `act(...)` do BrowserRouter são preexistentes, não falhas)
+- `git diff --check` — **PASS**
+- `git status --short` — apenas `apps/web/src/contracts/pages/ContractsListPage.tsx` modificado
+
+### Quality gate
+
+- [x] Leitura obrigatória realizada (`AGENTS.md`, `README.md`, `docs/README.md`, execution log,
+      protocolo e arcabouço aplicável)
+- [x] Alteração restrita à tela de Contratos (nenhuma outra página tocada)
+- [x] Nenhum componente novo criado — somente primitivas/tokens existentes
+- [x] Nenhuma regra empresarial nova, nenhum KPI ou capability inventado
+- [x] Nenhuma migration, seed, backend, permissão ou contrato de API
+- [x] Lint focado, typecheck, teste focado e `git diff --check` aprovados
+
+WORKING_TREE: DIRTY antes do commit (apenas a tela de Contratos)
+COMMIT: incluído no commit desta sessão
+NEXT_PROMPT_EXECUTED: NO
