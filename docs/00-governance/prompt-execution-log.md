@@ -17658,6 +17658,57 @@ NEXT_PROMPT_EXECUTED: NO
 
 ---
 
+## CATALOGO — DETALHE DA VERSAO: RESUMO E CONFIGURACAO ESTRUTURADA
+
+DATA: 2026-10-07T00:44:00-04:00
+STATUS: **PASS**
+
+### Escopo executado
+
+Continuidade da wave frontend Enterprise Tier-1, uma função por vez.
+
+Módulo: **Catálogo**.
+Função: **Detalhe da versão de serviço** (`/app/catalog/:definitionId/versions/:version`).
+Classificação principal: **OBJECT / DETAIL PAGE**.
+
+Classificação: **interpretação de engenharia visual / experiência operacional**. Nenhuma regra
+empresarial criada, promovida ou alterada; nenhum backend, API, migration, seed, permissão ou
+contrato de dados tocado.
+
+### Arquivo alterado
+
+- `apps/web/src/catalog/pages/ServiceDefinitionVersionDetailPage.tsx`
+
+### Alteração aplicada
+
+- O aviso de versão publicada deixou `form-notice` legado e passou para faixa utilitária.
+- O resumo da versão saiu de `catalog-section/catalog-details` para `DefinitionList`.
+- A configuração estruturada passou a usar painéis responsivos por bloco: unidades, preços,
+  recursos, mão de obra e evidências.
+- Status, links de editar rascunho/criar nova versão, imutabilidade e carregamento da API foram
+  preservados.
+
+### Validação
+
+- `pnpm --filter @cisne/web exec vitest run --config vite.config.ts src/catalog/catalog.e2e.test.tsx` — **PASS** (2/2)
+- `pnpm --filter @cisne/web exec eslint src/catalog/pages/ServiceDefinitionVersionDetailPage.tsx` — **PASS**
+- `pnpm --filter @cisne/web typecheck` — **PASS**
+- `git diff --check` — **PASS**
+
+### Quality gate
+
+- [x] Alteração restrita ao detalhe da versão de Catálogo
+- [x] Nenhum dado, KPI, relação ou capability inventado
+- [x] Nenhuma regra empresarial nova
+- [x] Nenhuma migration, seed, backend, permissão ou contrato de API
+- [x] Status, imutabilidade, links e carregamento preservados
+
+WORKING_TREE: limpo após commit
+COMMIT: incluído no commit desta sessão
+NEXT_PROMPT_EXECUTED: NO
+
+---
+
 ## CATALOGO — DETALHE DA DEFINICAO: SECOES E TABELA EM PRIMITIVAS COMPARTILHADAS
 
 DATA: 2026-10-07T00:38:00-04:00
