@@ -41,7 +41,7 @@ import {
 } from '../../enterprise-object';
 import { ActivityTimeline } from '../../operator';
 import { BusinessChain, useBusinessChain } from '../../business-chain';
-import { ModulePage, ModulePageHeader } from '../../ui';
+import { Alert, Button, ModulePage, ModulePageHeader } from '../../ui';
 
 /**
  * OBJECT PAGE DO CLIENTE — leitura canônica do contrato `enterprise-object`.
@@ -314,6 +314,65 @@ export function ClientDetailPage() {
         relations={<SmartRelationBar relations={relations} />}
         aside={
           <>
+            {/*
+              COLUNA DE APOIO — o cadastro operacional do Cliente, em leitura paralela ao corpo.
+              Contatos e enderecos sao consulta pontual; a contagem no titulo diz de imediato se
+              vale abrir. Historico e administracao fecham a coluna.
+            */}
+            <ObjectPanel
+              title={`Contatos${client.contacts.length > 0 ? ` · ${client.contacts.length}` : ''}`}
+            >
+              {client.contacts.length === 0 ? (
+                <p className="m-0 text-sm text-gray-500">Nenhum contato cadastrado.</p>
+              ) : (
+                <ul className="m-0 flex list-none flex-col gap-2 p-0">
+                  {client.contacts.map((contact) => (
+                    <li key={contact.id ?? `${contact.name}-${contact.purpose}`}>
+                      <strong className="text-[13px] text-gray-900">{contact.name}</strong>
+                      <span className="text-[11px] text-gray-500">
+                        {' '}
+                        · {formatPurposeLabel(contact.purpose)}
+                      </span>
+                      <div className="text-[11px] text-gray-600">
+                        {contact.email ? <span>{contact.email}</span> : null}
+                        {contact.email && contact.phone ? <span> · </span> : null}
+                        {contact.phone ? <span>{contact.phone}</span> : null}
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </ObjectPanel>
+
+            <ObjectPanel
+              title={`Endereços${client.addresses.length > 0 ? ` · ${client.addresses.length}` : ''}`}
+            >
+              {client.addresses.length === 0 ? (
+                <p className="m-0 text-sm text-gray-500">Nenhum endereço cadastrado.</p>
+              ) : (
+                <ul className="m-0 flex list-none flex-col gap-2 p-0">
+                  {client.addresses.map((address) => (
+                    <li key={address.id ?? address.purpose}>
+                      <strong className="text-[13px] text-gray-900">
+                        {formatPurposeLabel(address.purpose)}
+                      </strong>
+                      <div className="text-[11px] text-gray-600">
+                        {[address.street, address.number, address.complement, address.district, address.city, address.state]
+                          .filter(Boolean)
+                          .join(', ') || '—'}
+                      </div>
+                      {address.postalCode ? (
+                        <div className="text-[11px] text-gray-600">CEP: {address.postalCode}</div>
+                      ) : null}
+                      {address.country ? (
+                        <div className="text-[11px] text-gray-600">País: {address.country}</div>
+                      ) : null}
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </ObjectPanel>
+
             <ObjectPanel>
               <ActivityTimeline facts={buildClientHistoryFacts(client)} title="Histórico" />
             </ObjectPanel>
@@ -351,26 +410,42 @@ export function ClientDetailPage() {
         }
       >
         {/*
-          CONTEXTO: a moldura declara um slot `context`, mas o primitivo não o renderiza hoje
-          (`EnterpriseObjectPage` o recebe e não o compõe). Como este trabalho não altera o contrato
-          compartilhado, o bloco entra como PRIMEIRO conteúdo do corpo — logo depois de estado,
-          próxima ação e relações, que é a ordem canônica de leitura do contrato.
+          AREA DE TRABALHO — CONTEXTO E LINHAGEM NA COLUNA PRINCIPAL, CADASTRO NA DE APOIO.
+
+          MEDIDO antes desta recomposicao (1440x900, DOM real):
+            - span vertical de 1082px; 13 containers com borda/sombra; 10 <h2> de MESMO peso
+            - cadeia, relacionados, contatos e enderecos empilhados em largura total, um por
+              faixa: cada bloco custava uma linha inteira e o operador rolava para saber o basico
+            - 93 folhas de conteudo, quase tudo fora da dobra
+
+          A composicao passa a usar a grade de duas colunas que a PROPRIA moldura
+          (`EnterpriseObjectPage`) ja monta quando recebe `aside`. A coluna principal carrega o
+          que responde "o que e este cliente e o que nasceu dele" (contexto, cadeia, relacionados)
+          e a coluna de apoio carrega o cadastro operacional (contatos, enderecos, administrativo
+          e historico). O que era uma sequencia de faixas passa a ser leitura em paralelo.
+
+          Isso NAO duplica a grade no corpo: uma grade aninhada dentro da outra espremeria a
+          coluna principal e as fichas de relacionamento — foi exatamente o defeito que a
+          primeira tentativa produziu e que a medicao pegou (coluna principal caindo para 380px e
+          fichas para 185px). Os paineis sao os mesmos; o que muda e onde sao compostos.
         */}
         <ObjectContextBlock fields={buildClientContextFields(client)} />
 
         {actionError ? (
-          <p className="form-error" role="alert">
+          <Alert tone="error" title="Não foi possível concluir a ação">
             {actionError}
-          </p>
+          </Alert>
         ) : null}
 
         {versionConflict ? (
-          <div className="form-notice" role="status">
-            <p>{VERSION_CONFLICT_MESSAGE}</p>
-            <button type="button" onClick={() => void reload()}>
-              Recarregar dados atuais
-            </button>
-          </div>
+          <Alert tone="warning" title="Cadastro alterado em outra sessão">
+            <p className="m-0">{VERSION_CONFLICT_MESSAGE}</p>
+            <div className="mt-2">
+              <Button type="button" variant="secondary" onClick={() => void reload()}>
+                Recarregar dados atuais
+              </Button>
+            </div>
+          </Alert>
         ) : null}
 
         {/* Linhagem autorizada: o que nasceu deste Cliente, do pedido ao dinheiro. */}
@@ -383,46 +458,6 @@ export function ClientDetailPage() {
         />
 
         <ClientRelatedRecords modules={related} />
-
-        <ObjectPanel title="Contatos">
-          {client.contacts.length === 0 ? (
-            <p className="m-0 text-sm text-gray-500">Nenhum contato cadastrado.</p>
-          ) : (
-            <ul className="m-0 flex list-none flex-col gap-2 p-0">
-              {client.contacts.map((contact) => (
-                <li key={contact.id ?? `${contact.name}-${contact.purpose}`}>
-                  <strong>{contact.name}</strong> — {formatPurposeLabel(contact.purpose)}
-                  <div className="text-xs text-gray-600">
-                    {contact.email ? <span>E-mail: {contact.email}</span> : null}
-                    {contact.email && contact.phone ? <span> · </span> : null}
-                    {contact.phone ? <span>Telefone: {contact.phone}</span> : null}
-                  </div>
-                </li>
-              ))}
-            </ul>
-          )}
-        </ObjectPanel>
-
-        <ObjectPanel title="Endereços">
-          {client.addresses.length === 0 ? (
-            <p className="m-0 text-sm text-gray-500">Nenhum endereço cadastrado.</p>
-          ) : (
-            <ul className="m-0 flex list-none flex-col gap-2 p-0">
-              {client.addresses.map((address) => (
-                <li key={address.id ?? address.purpose}>
-                  <strong>{formatPurposeLabel(address.purpose)}</strong>
-                  <div className="text-xs text-gray-600">
-                    {[address.street, address.number, address.complement, address.district, address.city, address.state]
-                      .filter(Boolean)
-                      .join(', ') || '—'}
-                  </div>
-                  {address.postalCode ? <div className="text-xs text-gray-600">CEP: {address.postalCode}</div> : null}
-                  {address.country ? <div className="text-xs text-gray-600">País: {address.country}</div> : null}
-                </li>
-              ))}
-            </ul>
-          )}
-        </ObjectPanel>
       </EnterpriseObjectPage>
 
       <ConfirmDialog
