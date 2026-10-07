@@ -17658,6 +17658,67 @@ NEXT_PROMPT_EXECUTED: NO
 
 ---
 
+## CONTRATOS — CRIAR CONTRATO (FORM): ACTION BAR ESTATICA E SEM ESPACADOR
+
+DATA: 2026-10-07T00:22:00-04:00
+STATUS: **PASS**
+
+### Escopo executado
+
+Continuidade da wave frontend Enterprise Tier-1, uma função por vez.
+
+Módulo: **Contratos**.
+Função: **Criar contrato** (`/app/contracts/new`).
+Classificação principal: **FORM**.
+
+Classificação: **interpretação de engenharia visual / experiência operacional**. Nenhuma regra
+empresarial criada, promovida ou alterada; nenhum backend, API, migration, seed, permissão ou
+contrato de dados tocado.
+
+### Arquivo alterado
+
+- `apps/web/src/contracts/pages/ContractsCreatePage.tsx`
+
+### Alteração aplicada
+
+- A `StickyActionBar` do formulário de criação de contrato passou a ser estática no fluxo.
+- O espaçador artificial usado para compensar a antiga barra fixa foi removido.
+- Validação, `createContract`, `buildCreateContractPayload`, carregamento de clientes, moeda,
+  vigência, capacidade e redirecionamento pós-cadastro foram preservados.
+
+### Evidência depois
+
+- Medição DOM/Playwright em `/app/contracts/new`, Chromium 1440x900, dev server real em porta local
+  isolada:
+  - `docOverflowX=0`
+  - `h1="Novo contrato"`
+  - `form top=228 left=288 width=1120 height=653 bottom=881`
+  - `actionBar top=827 bottom=871`
+- Screenshots e métricas gerados em `tmp/contract-create-gate/` (gitignored) para revisão humana.
+
+### Validação
+
+- `node tmp/measure-contract-create.mjs` — **PASS**
+- `pnpm --filter @cisne/web exec vitest run --config vite.config.ts src/contracts/contracts.e2e.test.tsx` — **PASS** (2/2; avisos `act(...)` preexistentes do BrowserRouter)
+- `pnpm --filter @cisne/web exec eslint src/contracts/pages/ContractsCreatePage.tsx` — **PASS**
+- `pnpm --filter @cisne/web typecheck` — **PASS**
+- `git diff --check` — **PASS**
+
+### Quality gate
+
+- [x] Alteração restrita ao formulário de Contratos
+- [x] Nenhum componente novo criado
+- [x] Nenhum dado, KPI, relação ou capability inventado
+- [x] Nenhuma regra empresarial nova
+- [x] Nenhuma migration, seed, backend, permissão ou contrato de API
+- [x] Submit, validação, payload, moeda, cliente e vigência preservados
+
+WORKING_TREE: limpo após commit
+COMMIT: incluído no commit desta sessão
+NEXT_PROMPT_EXECUTED: NO
+
+---
+
 ## CLIENTES — CRIAR/EDITAR CLIENTE (FORM): ACTION BAR ESTATICA SEM OVERLAY
 
 DATA: 2026-10-07T00:14:00-04:00
