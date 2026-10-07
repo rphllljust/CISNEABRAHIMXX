@@ -32,6 +32,8 @@ export function ProposalEditPage() {
   const [values, setValues] = useState<ProposalFormValues>(EMPTY_PROPOSAL_FORM);
   const [rowVersion, setRowVersion] = useState(0);
   const [versionNumber, setVersionNumber] = useState(1);
+  const [proposalCode, setProposalCode] = useState('');
+  const [proposalTitle, setProposalTitle] = useState('');
   const [loading, setLoading] = useState(true);
   const [loadError, setLoadError] = useState<string | null>(null);
   const [fieldErrors, setFieldErrors] = useState<ProposalFormFieldErrors>({});
@@ -55,6 +57,8 @@ export function ProposalEditPage() {
         return;
       }
       setCanEdit(true);
+      setProposalCode(detail.proposal.proposalCode);
+      setProposalTitle(detail.proposal.title);
       setRowVersion(version.rowVersion);
       setVersionNumber(version.versionNumber);
       setValues({
@@ -184,8 +188,20 @@ export function ProposalEditPage() {
   return (
     <ModulePage>
       <ModulePageHeader
-        title="Editar proposta"
-        description="Atualiza o rascunho da versão corrente; o servidor recusa alterações concorrentes."
+        title={proposalCode ? `Editar ${proposalCode}` : 'Editar proposta'}
+        description={
+          proposalTitle
+            ? `${proposalTitle} — rascunho da versão ${versionNumber}.`
+            : 'Atualiza o rascunho da versão corrente; o servidor recusa alterações concorrentes.'
+        }
+        action={
+          <Link
+            to={`/app/proposals/${proposalId}`}
+            className="inline-flex min-h-9 items-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-700 no-underline ring-1 ring-gray-300 ring-inset hover:bg-gray-50"
+          >
+            Voltar ao detalhe
+          </Link>
+        }
       />
       {versionConflict ? <VersionConflictNotice onReload={() => void load()} /> : null}
       <ProposalForm

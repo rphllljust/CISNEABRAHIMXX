@@ -17291,6 +17291,73 @@ NEXT_PROMPT_EXECUTED: NO
 
 ---
 
+## PROPOSTAS — EDITAR PROPOSTA (FORM): IDENTIDADE DA ENTIDADE NO WRAPPER
+
+DATA: 2026-10-06T23:47:51-04:00
+STATUS: **PASS**
+
+### Escopo executado
+
+Continuidade global da wave frontend Enterprise Tier-1, uma função por vez.
+
+Módulo: **Propostas**.
+Função: **Editar proposta** (`/app/proposals/:proposalId/edit`).
+Classificação principal: **FORM**.
+
+Classificação: **interpretação de engenharia visual / experiência operacional**. Nenhuma regra
+empresarial criada, promovida ou alterada; nenhum backend, API, migration, seed, permissão ou
+contrato de dados tocado.
+
+### Arquivos alterados
+
+- `apps/web/src/proposals/pages/ProposalEditPage.tsx`
+- `apps/web/src/proposals/pages/ProposalEditPage.test.tsx`
+
+### Baseline medido
+
+O formulário já herdava a composição `main + aside` do `ProposalForm`, mas o wrapper da página
+exibia título genérico `Editar proposta`, sem código da proposta nem retorno contextual no header.
+
+### Alteração aplicada
+
+- O carregamento da edição passou a preservar `proposalCode` e `proposalTitle` retornados pelo
+  read model.
+- O `ModulePageHeader` passou a identificar a entidade real: `Editar <proposalCode>`.
+- O subtítulo passou a declarar título da proposta e versão corrente do rascunho.
+- Adicionado retorno explícito ao detalhe da mesma proposta no header.
+- PATCH, validação, payload, controle de versão e navegação pós-salvamento foram preservados.
+
+### Evidência depois
+
+- Medição DOM/Playwright em `/app/proposals/:proposalId/edit`, Chromium 1440x900:
+  - `h1="Editar PROP-2026-EDIT01"`.
+  - `docOverflowX=0`.
+  - `summary` presente em `form aside` (`left=1080`, `width=320`).
+  - `occluded=[]`.
+
+### Validação
+
+- `node tmp/measure-proposal-edit.mjs` — **PASS**
+- `pnpm --filter @cisne/web exec vitest run --config vite.config.ts src/proposals/pages/ProposalEditPage.test.tsx` — **PASS** (1/1)
+- `pnpm --filter @cisne/web exec eslint src/proposals/pages/ProposalEditPage.tsx src/proposals/pages/ProposalEditPage.test.tsx` — **PASS**
+- `pnpm --filter @cisne/web typecheck` — **PASS**
+- `git diff --check` — **PASS**
+
+### Quality gate
+
+- [x] Alteração restrita à edição de Propostas
+- [x] Nenhum componente novo criado
+- [x] Nenhum dado, KPI, relação ou capability inventado
+- [x] Nenhuma regra empresarial nova
+- [x] Nenhuma migration, seed, backend, permissão ou contrato de API
+- [x] PATCH, validação, versão e navegação preservados
+
+WORKING_TREE: limpo após commit
+COMMIT: incluído no commit desta sessão
+NEXT_PROMPT_EXECUTED: NO
+
+---
+
 ## SOLICITACOES — CRIAR SOLICITACAO (FORM): MAIN + ASIDE CONTEXTUAL SEM OVERLAY
 
 DATA: 2026-10-06T23:28:44-04:00
