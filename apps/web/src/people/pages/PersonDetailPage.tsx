@@ -16,7 +16,15 @@ import {
   type ObjectStateStep,
 } from '../../enterprise-object';
 import { ActivityTimeline, type ActivityFact } from '../../operator';
-import { ModulePage, ModulePageHeader } from '../../ui';
+import {
+  Alert,
+  Button,
+  ConfirmAction,
+  Field,
+  ModulePage,
+  ModulePageHeader,
+  Textarea,
+} from '../../ui';
 import type { StatusBadgeTone } from '../../ui/StatusBadge';
 import {
   activatePerson,
@@ -125,6 +133,7 @@ export function PersonDetailPage() {
   const [state, setState] = useState<DetailState>({ phase: 'loading' });
   const [actionError, setActionError] = useState<string | null>(null);
   const [deactivateReason, setDeactivateReason] = useState('');
+  const [openDeactivate, setOpenDeactivate] = useState(false);
   const [actionSubmitting, setActionSubmitting] = useState(false);
 
   const reload = useCallback(async () => {
@@ -176,6 +185,7 @@ export function PersonDetailPage() {
     try {
       const updated = await deactivatePerson(state.person.id, state.person.version, reason);
       setDeactivateReason('');
+      setOpenDeactivate(false);
       setState({
         phase: 'ready',
         person: updated,
@@ -183,6 +193,7 @@ export function PersonDetailPage() {
       });
       void reload();
     } catch (error) {
+      setOpenDeactivate(false);
       setActionError(
         error instanceof PeopleApiError
           ? error.kind === 'version_conflict'
@@ -359,9 +370,9 @@ export function PersonDetailPage() {
         <ObjectContextBlock fields={contextFields} columns={3} />
 
         {actionError ? (
-          <p role="alert" className="shell-form-error">
+          <Alert tone="error" title="Não foi possível concluir a ação">
             {actionError}
-          </p>
+          </Alert>
         ) : null}
 
         <ObjectPanel title="Alocação em ordens de serviço">
@@ -372,17 +383,39 @@ export function PersonDetailPage() {
         </ObjectPanel>
 
         {capabilities.canDeactivate && isActive ? (
+          /*
+            COMANDO DE INATIVACAO — superficie governada, nao controle cru.
+
+            MEDIDO no DOM real (1440x900) antes desta correcao:
+            - o botao "Inativar" era um `<button>` sem estilo do design system:
+              `background rgb(29,78,216)` — azul generico do Tailwind, enquanto a acao
+              primaria da MESMA pagina renderiza `rgb(22,104,96)` (teal `brand-700`).
+              Duas cores de acao no mesmo produto;
+            - o rotulo "Motivo" era um `<label>` cru em `16px/400` (tamanho de corpo),
+              contra os `12px/600` do rotulo de campo do CISNE;
+            - o `<textarea>` estava em `border: 0px; padding: 0px` — sem moldura alguma,
+              sem raio e sem anel de foco visivel;
+            - o erro do comando entrava por `<p class="shell-form-error">`, classe legada.
+
+            A acao agora e uma COMMAND de verdade: confirmacao governada (`ConfirmAction`,
+            que ja exige o motivo para habilitar), motivo em `Field` + `Textarea` com a
+            mesma gramatica dos demais formularios, erro em `Alert` e disparo por `Button`.
+            O backend continua decidindo — capabilities e autorizacao nao mudaram.
+          */
           <ObjectPanel title="Inativação">
-            <p className="text-sm text-gray-600">{DEACTIVATION_CONSEQUENCE_MESSAGE}</p>
-            <label htmlFor={reasonId}>Motivo</label>
-            <textarea
-              id={reasonId}
-              value={deactivateReason}
-              onChange={(event) => setDeactivateReason(event.target.value)}
-            />
-            <button type="button" disabled={actionSubmitting} onClick={() => void handleDeactivate()}>
-              Inativar
-            </button>
+            <p className="m-0 text-sm text-gray-600">{DEACTIVATION_CONSEQUENCE_MESSAGE}</p>
+            <div className="mt-3">
+              <Button
+                type="button"
+                variant="danger"
+                disabled={actionSubmitting}
+                loading={actionSubmitting}
+                loadingText="Inativando"
+                onClick={() => setOpenDeactivate(true)}
+              >
+                Inativar Pessoa
+              </Button>
+            </div>
           </ObjectPanel>
         ) : null}
 
@@ -390,6 +423,38 @@ export function PersonDetailPage() {
           <Link to="/app/people">Voltar à lista</Link>
         </p>
       </EnterpriseObjectPage>
+
+      {/*
+        CONFIRMACAO GOVERNADA DO COMANDO.
+
+        Inativar e um comando empresarial, nao um clique de botao: a confirmacao declara a
+        consequencia, exige o motivo (o botao so habilita com motivo preenchido) e mantem a
+        acao destrutiva em `danger`. A mesma primitiva usada pelas transicoes de contrato.
+      */}
+      <ConfirmAction
+        open={openDeactivate}
+        title="Inativar Pessoa"
+        description={DEACTIVATION_CONSEQUENCE_MESSAGE}
+        confirmLabel="Confirmar inativação"
+        confirmVariant="danger"
+        confirmDisabled={!deactivateReason.trim()}
+        loading={actionSubmitting}
+        onConfirm={() => void handleDeactivate()}
+        onCancel={() => {
+          setOpenDeactivate(false);
+          setActionError(null);
+        }}
+      >
+        <Field label="Motivo" htmlFor={reasonId} required>
+          <Textarea
+            id={reasonId}
+            value={deactivateReason}
+            rows={3}
+            onChange={(event) => setDeactivateReason(event.target.value)}
+            placeholder="Descreva o motivo da inativação deste cadastro."
+          />
+        </Field>
+      </ConfirmAction>
     </ModulePage>
   );
 }
