@@ -20,6 +20,11 @@ describe('ServiceRequestEditPage', () => {
     const user = userEvent.setup();
     renderRequestRoutes('/app/requests/bbbbbbbb-bbbb-4bbb-8bbb-bbbbbbbbbbbb/edit');
 
+    expect(await screen.findByRole('heading', { name: /editar SR-2026-DEMO01/i })).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: /voltar ao detalhe/i })).toHaveAttribute(
+      'href',
+      '/app/requests/bbbbbbbb-bbbb-4bbb-8bbb-bbbbbbbbbbbb',
+    );
     const description = await screen.findByLabelText(/^descrição/i, { selector: 'textarea' });
     expect(description).toBeInTheDocument();
 

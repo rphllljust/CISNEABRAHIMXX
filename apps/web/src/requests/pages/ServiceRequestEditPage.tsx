@@ -32,7 +32,12 @@ type EditState =
   | { phase: 'not_found' }
   | { phase: 'invalid_state' }
   | { phase: 'error'; message: string }
-  | { phase: 'ready'; values: ServiceRequestFormValues; rowVersion: number };
+  | {
+      phase: 'ready';
+      values: ServiceRequestFormValues;
+      rowVersion: number;
+      requestCode: string;
+    };
 
 export function ServiceRequestEditPage() {
   const { serviceRequestId = '' } = useParams();
@@ -60,6 +65,7 @@ export function ServiceRequestEditPage() {
       setState({
         phase: 'ready',
         rowVersion: request.rowVersion,
+        requestCode: request.requestCode,
         values: {
           unitId: request.unitId,
           originSource: request.originSource,
@@ -198,7 +204,7 @@ export function ServiceRequestEditPage() {
     return null;
   }
 
-  const { values, rowVersion } = state;
+  const { values, rowVersion, requestCode } = state;
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -242,8 +248,16 @@ export function ServiceRequestEditPage() {
   return (
     <ModulePage>
       <ModulePageHeader
-        title="Editar rascunho"
-        description="Atualiza o rascunho da solicitação; o servidor recusa alterações concorrentes."
+        title={`Editar ${requestCode}`}
+        description="Rascunho de solicitação: ajuste os fatos da demanda antes de enviar para análise."
+        action={
+          <Link
+            to={`/app/requests/${serviceRequestId}`}
+            className="inline-flex min-h-9 items-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-700 no-underline ring-1 ring-gray-300 ring-inset hover:bg-gray-50"
+          >
+            Voltar ao detalhe
+          </Link>
+        }
       />
       {versionConflict ? <VersionConflictNotice onReload={() => void load()} /> : null}
       <ServiceRequestForm
@@ -255,7 +269,7 @@ export function ServiceRequestEditPage() {
         submitError={submitError}
         submitting={submitting}
         onChange={(nextValues) => {
-          setState({ phase: 'ready', rowVersion, values: nextValues });
+          setState({ phase: 'ready', rowVersion, requestCode, values: nextValues });
         }}
         onSubmit={(event) => void handleSubmit(event)}
         cancelHref={`/app/requests/${serviceRequestId}`}

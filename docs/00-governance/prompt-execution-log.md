@@ -17158,6 +17158,73 @@ NEXT_PROMPT_EXECUTED: NO
 
 ---
 
+## SOLICITACOES — EDITAR RASCUNHO (FORM): IDENTIDADE DA ENTIDADE NO WRAPPER
+
+DATA: 2026-10-06T23:36:04-04:00
+STATUS: **PASS**
+
+### Escopo executado
+
+Continuidade da wave frontend Enterprise Tier-1, uma função por vez.
+
+Módulo: **Solicitações**.
+Função: **Editar rascunho** (`/app/requests/:serviceRequestId/edit`).
+Classificação principal: **FORM**.
+
+Classificação: **interpretação de engenharia visual / experiência operacional**. Nenhuma regra
+empresarial criada, promovida ou alterada; nenhum backend, API, migration, seed, permissão ou
+contrato de dados tocado.
+
+### Arquivos alterados
+
+- `apps/web/src/requests/pages/ServiceRequestEditPage.tsx`
+- `apps/web/src/requests/pages/ServiceRequestEditPage.test.tsx`
+
+### Baseline medido
+
+Medição DOM/Playwright, Chromium 1440x900, dev server real, API mockada somente para esta função:
+
+- `docOverflowX=0`, `h1Count=1`.
+- Formulário já herdava a composição `main + aside` do `ServiceRequestForm`.
+- Header da página exibia título genérico: `Editar rascunho`, sem o código da solicitação.
+
+### Alteração aplicada
+
+- O estado pronto da edição passou a preservar `requestCode` retornado pelo read model.
+- O `ModulePageHeader` passou a identificar a entidade real: `Editar <requestCode>`.
+- Adicionado retorno explícito ao detalhe da mesma solicitação no header da página.
+- PATCH, validação, payload, controle de versão e navegação pós-salvamento foram preservados.
+
+### Evidência depois
+
+- `docOverflowX=0`, `h1Count=1`.
+- H1 medido: `Editar SR-2026-EDIT01`.
+- Formulário permanece em duas colunas: área principal `width=740`, aside `width=320`.
+- `occluded=[]` para controles inteiros visíveis na viewport.
+
+### Validação
+
+- `node tmp/measure-requests-edit.mjs` — **PASS**
+- `pnpm --filter @cisne/web exec vitest run --config vite.config.ts src/requests/pages/ServiceRequestEditPage.test.tsx` — **PASS** (1/1)
+- `pnpm --filter @cisne/web exec eslint src/requests/pages/ServiceRequestEditPage.tsx src/requests/pages/ServiceRequestEditPage.test.tsx` — **PASS**
+- `pnpm --filter @cisne/web typecheck` — **PASS**
+- `git diff --check` — **PASS**
+
+### Quality gate
+
+- [x] Alteração restrita à edição de Solicitações
+- [x] Nenhum componente novo criado
+- [x] Nenhum dado, KPI, relação ou capability inventado
+- [x] Nenhuma regra empresarial nova
+- [x] Nenhuma migration, seed, backend, permissão ou contrato de API
+- [x] PATCH, validação, versão e navegação preservados
+
+WORKING_TREE: limpo após commit
+COMMIT: incluído no commit desta sessão
+NEXT_PROMPT_EXECUTED: NO
+
+---
+
 ## SOLICITACOES — CRIAR SOLICITACAO (FORM): MAIN + ASIDE CONTEXTUAL SEM OVERLAY
 
 DATA: 2026-10-06T23:28:44-04:00
