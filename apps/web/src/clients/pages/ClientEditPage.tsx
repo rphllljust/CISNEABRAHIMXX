@@ -229,7 +229,7 @@ export function ClientEditPage() {
         >
           <BuilderSection
             title="Identificação"
-            description="Razão social é obrigatória. O CNPJ identifica o cadastro e não é editável."
+            description="Razão social é obrigatória. O CNPJ identifica o cadastro e não é editável. A referência externa é o código deste cadastro no ERP de origem, quando existir."
           >
             <div className="grid gap-3 sm:grid-cols-2">
               <Field label="Razão social" htmlFor={legalNameId} required>
@@ -249,11 +249,16 @@ export function ClientEditPage() {
                   disabled={submitting}
                 />
               </Field>
-              <Field
-                label="Referência externa (opcional)"
-                htmlFor={externalErpIdId}
-                hint="Código do cadastro no ERP de origem, quando existir."
-              >
+              {/*
+                SEM `hint` POR CAMPO — ele desalinhava o par da grade.
+
+                MEDIDO no DOM real (1440x900): o campo de referencia externa saia em y=484,
+                sozinho na linha, enquanto os demais pares fechavam alinhados. O primitivo
+                `Field` empilha rotulo + hint + controle, entao so a celula com hint crescia
+                20px e o controle descia. A instrucao passou para a descricao da SECAO.
+                Mesmo padrao ja aplicado em Contratos, Pessoas e no cadastro de Cliente.
+              */}
+              <Field label="Referência externa (opcional)" htmlFor={externalErpIdId}>
                 <Input
                   id={externalErpIdId}
                   value={externalErpId}
