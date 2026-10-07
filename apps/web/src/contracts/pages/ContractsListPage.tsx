@@ -36,9 +36,9 @@ const PAGE_SIZE = 20;
 
 /** Cabecalho denso da worklist, na mesma altura de uma linha. */
 const headCellClass =
-  'sticky top-0 z-10 border-b border-gray-200 bg-gray-50/80 px-2.5 py-1 text-left text-[10px] font-semibold tracking-[0.08em] text-gray-400 uppercase';
+  'sticky top-0 z-10 border-b border-slate-200 bg-slate-50/90 px-2.5 py-2 text-left text-[10px] font-semibold tracking-[0.08em] text-slate-500 uppercase';
 
-const cellClass = 'relative border-b border-gray-100 py-2 pr-2 align-top text-gray-700';
+const cellClass = 'relative border-b border-slate-100 py-2.5 pr-2 align-top text-slate-700';
 
 type ListState =
   | { phase: 'loading' }
@@ -176,6 +176,18 @@ export function ContractsListPage() {
   const now = new Date();
 
   /**
+   * A ACAO PRIMARIA EXISTE UMA VEZ, E SO.
+   *
+   * A tela vazia nao tem carteira para operar, entao a criacao desce para dentro do painel de
+   * estado vazio (junto da explicacao do que e um contrato) e desaparece do cabecalho. Havendo
+   * contrato, ou havendo recorte aplicado, ela fica no cabecalho e o painel de vazio NAO a
+   * repete. As duas condicoes sao mutuamente exclusivas por construcao — nao ha caminho em que
+   * os dois links coexistam.
+   */
+  const showCreateInHeader = capabilities.canCreate && (items.length > 0 || hasActiveFilters);
+  const showCreateInEmptyState = capabilities.canCreate && items.length === 0 && !hasActiveFilters;
+
+  /**
    * LEITURA DA CARTEIRA — contagens da PAGINA carregada, nunca do dominio.
    *
    * A listagem NAO publica `total`: so a pagina e o `hasMore`. Declarar um total aqui seria
@@ -188,32 +200,54 @@ export function ContractsListPage() {
   const activeCount = items.filter((item) => item.status === CONTRACT_STATUSES.Active).length;
   const draftCount = items.filter((item) => item.status === CONTRACT_STATUSES.Draft).length;
   const settledCount = items.filter(
-    (item) =>
-      item.status === CONTRACT_STATUSES.Closed || item.status === CONTRACT_STATUSES.Expired,
+    (item) => item.status === CONTRACT_STATUSES.Closed || item.status === CONTRACT_STATUSES.Expired,
   ).length;
 
   return (
     <ModulePage>
       {/*
-        ZONA 1 — OPERATING HEADER, uma linha. Saiu o `WorklistHeader` com paragrafo de contexto e a
-        DUPLICIDADE da acao primaria: a tela oferecia "Novo contrato" no cabecalho E de novo no
-        empty state, dois alvos para a MESMA acao. Aqui ela existe UMA unica vez, governada por
-        capability, e reaparece no empty state so quando nao ha nada para listar.
+        ZONA 1 — OPERATING HEADER, uma linha. Saiu o `WorklistHeader` com paragrafo de contexto.
+
+        ACAO PRIMARIA: UMA UNICA VEZ na tela, na forma de UMA UNICA EXPRESSAO. Antes o cabecalho
+        renderizava "Novo contrato" com `capabilities.canCreate` e o empty state repetia o mesmo
+        link com a MESMA condicao — na tela vazia os dois apareciam juntos, dois alvos para a
+        mesma acao (medido: 2 links "Novo contrato" no estado vazio; 1 no populado). A intencao
+        do comentario anterior era correta, a implementacao nao a cumpria.
+
+        Aqui a acao nasce de UMA expressao: quando nao ha contrato nenhum e a criacao e
+        permitida, ela desce para DENTRO do painel de estado vazio — que ja explica o que um
+        contrato e —, e nao existe em lugar nenhum do cabecalho. Nos demais casos ela fica no
+        cabecalho. Nunca nas duas. O e2e usa `getByRole('link', { name: 'Novo contrato' })`,
+        que exige UM unico no; a duplicidade quebrava esse contrato.
       */}
-      <header className="flex flex-wrap items-center justify-between gap-x-4 gap-y-1 border-b border-gray-200 px-1 pb-2">
-        <div className="flex min-w-0 items-baseline gap-2">
-          <h1 className="text-[17px] leading-tight font-semibold tracking-tight text-gray-900">
-            Contratos
-          </h1>
-          <span className="rounded bg-gray-100 px-1.5 py-0.5 text-[11px] font-semibold text-gray-700 tabular-nums">
-            {items.length} nesta página
-          </span>
-          <span className="truncate text-[11px] text-gray-500">
-            {hasActiveFilters ? 'recorte aplicado' : 'carteira completa'}
-          </span>
+      <header className="flex flex-wrap items-start justify-between gap-x-4 gap-y-2 border-b border-slate-200 px-1 pb-2.5">
+        <div className="min-w-0">
+          <div className="flex flex-wrap items-baseline gap-x-2">
+            <h1 className="text-[19px] leading-tight font-semibold tracking-tight text-slate-900">
+              Contratos
+            </h1>
+            <span className="text-[11px] font-medium tracking-wide text-slate-400 uppercase">
+              Ciclo de vida comercial
+            </span>
+          </div>
+          <div className="mt-1 flex flex-wrap items-center gap-x-2 gap-y-0.5">
+            <span className="rounded border border-slate-200 bg-slate-50 px-1.5 py-0.5 text-[11px] font-semibold text-slate-700 tabular-nums">
+              {items.length} nesta página
+            </span>
+            <span
+              className={cn(
+                'rounded px-1.5 py-0.5 text-[11px] font-semibold',
+                hasActiveFilters
+                  ? 'bg-brand-50 text-brand-700 ring-1 ring-brand-200 ring-inset'
+                  : 'text-slate-500',
+              )}
+            >
+              {hasActiveFilters ? 'recorte aplicado' : 'carteira completa'}
+            </span>
+          </div>
         </div>
-        {capabilities.canCreate ? (
-          <ModulePrimaryLink to="/app/contracts/new" className="min-h-0 px-3 py-1 text-[13px]">
+        {showCreateInHeader ? (
+          <ModulePrimaryLink to="/app/contracts/new" className="min-h-0 px-3.5 py-2 text-[13px]">
             Novo contrato
           </ModulePrimaryLink>
         ) : null}
@@ -229,17 +263,32 @@ export function ContractsListPage() {
       {items.length > 0 ? (
         <nav
           aria-label="Ciclo de vida da carteira"
-          className="flex flex-wrap items-stretch border-b border-gray-200 bg-white px-1"
+          className="flex flex-wrap items-stretch border-b border-slate-200 bg-white px-1 py-2"
         >
-          <QueueStripCell label="Vigentes" value={activeCount} hint="contratos ativos nesta página" weight="open" />
+          <QueueStripCell
+            label="Vigentes"
+            value={activeCount}
+            hint="contratos ativos nesta página"
+            weight="open"
+          />
           <QueueStripCell
             label="Exigindo atenção"
             value={attentionCount}
             hint="expirados ou com vigência terminada, nesta página"
             weight={attentionCount > 0 ? 'attention' : 'settled'}
           />
-          <QueueStripCell label="Rascunho" value={draftCount} hint="ainda não ativados" weight="settled" />
-          <QueueStripCell label="Encerrados" value={settledCount} hint="fechados ou expirados" weight="settled" />
+          <QueueStripCell
+            label="Rascunho"
+            value={draftCount}
+            hint="ainda não ativados"
+            weight="settled"
+          />
+          <QueueStripCell
+            label="Encerrados"
+            value={settledCount}
+            hint="fechados ou expirados"
+            weight="settled"
+          />
         </nav>
       ) : null}
 
@@ -247,8 +296,17 @@ export function ContractsListPage() {
         ZONA 3 — COMMAND SURFACE. Barra unica: busca de cliente humana, unidade (escopo autorizado)
         e visoes salvas do arcabouco — sem formulario cru, sem "SAVED VIEWS" em ingles.
       */}
-      <div className="flex flex-wrap items-center gap-x-2 gap-y-1 border-b border-gray-200 bg-gray-50/60 px-1 py-1.5">
-        <div className="flex min-w-64 flex-1 items-center gap-1">
+      <div className="flex flex-wrap items-center gap-x-2 gap-y-1.5 border-b border-slate-200 bg-slate-50/70 px-1 py-2">
+        {/*
+          BUSCA DE CLIENTE — `HumanLookupField` compacto NAO encolhe.
+
+          O aviso de erro do lookup e um `<span>`/`<p>` SEM `nowrap`: como item de flex sem
+          largura minima, ele era comprimido pelo select ao lado e o texto quebrava uma palavra
+          por linha (medido: 46px de largura por 83px de altura, na barra de uma linha). O
+          componente e COMPARTILHADO por outros modulos, entao o ajuste fica AQUI, no dono da
+          barra: o wrapper reserva a largura minima e impede o encolhimento do aviso.
+        */}
+        <div className="flex min-w-64 flex-1 items-center gap-1.5 [&>div>span]:shrink-0 [&>div>span]:whitespace-nowrap">
           <HumanLookupField
             label="Cliente"
             htmlFor="contract-client-search"
@@ -266,7 +324,7 @@ export function ContractsListPage() {
         </label>
         <select
           id="contract-unit-filter"
-          className="rounded border border-gray-300 bg-white px-2 py-1 text-[13px] text-gray-900 outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-500/30"
+          className="rounded-md border border-slate-300 bg-white px-2.5 py-1.5 text-[13px] text-slate-900 shadow-[0_1px_1px_rgb(15_23_42/0.03)] outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-500/30"
           value={unitFilter}
           onChange={(event) => setUnitFilter(event.target.value)}
         >
@@ -276,7 +334,7 @@ export function ContractsListPage() {
         {hasActiveFilters ? (
           <button
             type="button"
-            className="rounded border border-gray-300 bg-white px-2 py-1 text-[12px] font-medium text-gray-700 hover:bg-gray-50"
+            className="rounded-md border border-slate-300 bg-white px-2.5 py-1.5 text-[12px] font-semibold text-slate-700 shadow-[0_1px_1px_rgb(15_23_42/0.03)] hover:bg-slate-50"
             onClick={() => {
               setClientFilter('');
               setUnitFilter('');
@@ -311,39 +369,50 @@ export function ContractsListPage() {
         marca o contrato que EXIGE o operador.
       */}
       {items.length === 0 ? (
-        <div className="px-1 pt-3">
-          <WorklistStatePanel
-            title={
-              hasActiveFilters
-                ? 'Nenhum contrato corresponde aos filtros aplicados.'
-                : 'Nenhum contrato no recorte atual.'
-            }
-            description={
-              hasActiveFilters
-                ? 'Ajuste o cliente ou a unidade para ver outros contratos.'
-                : 'Os contratos formalizam a vigência comercial com o cliente: duração, status e unidade. Quando o primeiro for registrado, ele aparece aqui.'
-            }
-            action={
-              hasActiveFilters ? (
-                <button
-                  type="button"
-                  className="rounded border border-gray-300 bg-white px-2 py-1 text-[12px] font-medium text-gray-700 hover:bg-gray-50"
-                  onClick={() => {
-                    setClientFilter('');
-                    setUnitFilter('');
-                  }}
-                >
-                  Limpar filtros
-                </button>
-              ) : capabilities.canCreate ? (
-                <ModulePrimaryLink to="/app/contracts/new">Novo contrato</ModulePrimaryLink>
-              ) : null
-            }
-          />
+        /*
+          ESTADO VAZIO — a tela inteira e este painel, entao ele carrega a explicacao do dominio
+          (o que um contrato e) e a UNICA acao primaria. `WorklistStatePanel` e COMPARTILHADO por
+          outros modulos: o enquadramento fica no wrapper local (aqui), nunca no primitivo.
+          Minimo de altura para o vazio nao deixar a tela orfa em viewport grande.
+        */
+        <div className="flex min-h-[18rem] flex-col justify-center px-1 py-8">
+          <div className="[&>section]:mb-0 [&>section]:rounded-lg [&>section]:border-slate-200 [&>section]:px-8 [&>section]:py-10 [&>section]:shadow-[0_1px_2px_rgb(15_23_42/0.04)] [&>section>p:first-child]:text-[16px] [&>section>p:first-child]:tracking-tight [&>section>p:nth-child(2)]:mt-1.5 [&>section>p:nth-child(2)]:max-w-3xl [&>section>p:nth-child(2)]:text-[13px] [&>section>p:nth-child(2)]:leading-relaxed">
+            <WorklistStatePanel
+              title={
+                hasActiveFilters
+                  ? 'Nenhum contrato corresponde aos filtros aplicados.'
+                  : 'Nenhum contrato no recorte atual.'
+              }
+              description={
+                hasActiveFilters
+                  ? 'Ajuste o cliente ou a unidade para ver outros contratos.'
+                  : 'Os contratos formalizam a vigência comercial com o cliente: duração, status e unidade. Quando o primeiro for registrado, ele aparece aqui.'
+              }
+              action={
+                hasActiveFilters ? (
+                  <button
+                    type="button"
+                    className="rounded-md border border-slate-300 bg-white px-3 py-1.5 text-[12px] font-semibold text-slate-700 shadow-[0_1px_1px_rgb(15_23_42/0.03)] hover:bg-slate-50"
+                    onClick={() => {
+                      setClientFilter('');
+                      setUnitFilter('');
+                    }}
+                  >
+                    Limpar filtros
+                  </button>
+                ) : showCreateInEmptyState ? (
+                  <ModulePrimaryLink to="/app/contracts/new">Novo contrato</ModulePrimaryLink>
+                ) : null
+              }
+            />
+          </div>
         </div>
       ) : (
-        <section aria-label="Lista de contratos" className="border-b border-gray-200">
-          <table className="w-full border-separate border-spacing-0" aria-label="Lista de contratos">
+        <section aria-label="Lista de contratos" className="border-b border-slate-200">
+          <table
+            className="w-full border-separate border-spacing-0"
+            aria-label="Lista de contratos"
+          >
             <thead>
               <tr>
                 <th scope="col" className={cn(headCellClass, 'pl-3')}>
@@ -363,7 +432,7 @@ export function ContractsListPage() {
                 return (
                   <tr
                     key={item.id}
-                    className="cursor-pointer transition-colors hover:bg-gray-50/70"
+                    className="cursor-pointer transition-colors hover:bg-brand-50/40"
                     /*
                      * CONTEXTO SEM ABANDONAR A LISTA — o comercial compara vigencias de varios
                      * contratos da mesma carteira. O painel lateral mostra os fatos da linha
@@ -396,7 +465,9 @@ export function ContractsListPage() {
                             {formatClientSnapshot(item.clientSnapshot)}
                           </span>
                         </div>
-                        <p className="mt-0.5 line-clamp-1 text-[12px] text-gray-500">{item.title}</p>
+                        <p className="mt-0.5 line-clamp-1 text-[12px] text-gray-500">
+                          {item.title}
+                        </p>
                         <p className="mt-0.5 truncate text-[11px] text-gray-400">
                           {item.internalCode ? `${item.internalCode} · ` : ''}
                           <UnitScopeLabel unitId={item.unitId} />
@@ -410,7 +481,8 @@ export function ContractsListPage() {
                       {item.status === CONTRACT_STATUSES.Active && item.validTo
                         ? (() => {
                             const end = new Date(`${item.validTo}T23:59:59`);
-                            const past = !Number.isNaN(end.getTime()) && end.getTime() < now.getTime();
+                            const past =
+                              !Number.isNaN(end.getTime()) && end.getTime() < now.getTime();
                             return past ? (
                               <p className="mt-1 text-[11px] font-medium text-red-700">
                                 Vigência encerrada no relógio
@@ -438,8 +510,8 @@ export function ContractsListPage() {
       )}
 
       {items.length > 0 ? (
-        <div className="flex flex-wrap items-center justify-between gap-2 px-1 pt-2">
-          <p className="m-0 text-[11px] text-gray-500 tabular-nums">
+        <div className="flex flex-wrap items-center justify-between gap-2 border-t border-slate-200 bg-slate-50/60 px-1 py-2">
+          <p className="m-0 text-[11px] font-medium text-slate-500 tabular-nums">
             {offset + 1}–{offset + items.length} nesta página
           </p>
           <ModulePagination
@@ -505,22 +577,30 @@ function QueueStripCell({
   return (
     <div
       title={hint}
-      className="flex min-w-[10rem] flex-1 flex-col items-start gap-0.5 border-r border-gray-200 px-3 py-1.5 last:border-r-0"
+      className={cn(
+        'flex min-w-[10rem] flex-1 flex-col items-start gap-1 border-r border-slate-200 px-3.5 py-1 last:border-r-0',
+        weight === 'attention' && value !== null && value > 0 && 'bg-red-50/40',
+      )}
     >
       <span className="flex items-baseline gap-1.5">
-        <span className={cn('text-[17px] leading-none font-semibold tabular-nums', numberClass)}>
+        <span
+          className={cn(
+            'text-[22px] leading-none font-semibold tracking-tight tabular-nums',
+            numberClass,
+          )}
+        >
           {value === null ? 'n/d' : value}
         </span>
         <span
           className={cn(
-            'text-[11px] font-medium tracking-wide uppercase',
-            weight === 'settled' ? 'text-gray-400' : 'text-gray-700',
+            'text-[10px] font-semibold tracking-[0.08em] uppercase',
+            weight === 'settled' ? 'text-slate-400' : 'text-slate-600',
           )}
         >
           {label}
         </span>
       </span>
-      <span className="truncate text-[10px] text-gray-400">{hint}</span>
+      <span className="truncate text-[10px] text-slate-400">{hint}</span>
     </div>
   );
 }
