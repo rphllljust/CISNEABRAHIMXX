@@ -17658,6 +17658,55 @@ NEXT_PROMPT_EXECUTED: NO
 
 ---
 
+## CLIENTES — DETALHE: AVISO E DIALOG SEM CLASSES LEGADAS
+
+DATA: 2026-10-07T10:44:00-04:00
+STATUS: **PASS**
+
+### Escopo executado
+
+Continuidade da wave frontend Enterprise Tier-1, uma função por vez.
+
+Módulo: **Clientes**.
+Função: **Detalhe do Cliente** (`/app/clients/:id`) — aviso administrativo e dialog de desativação.
+Classificação principal: **OBJECT / DETAIL PAGE**.
+
+Classificação: **interpretação de engenharia visual / experiência operacional**. Nenhuma regra
+empresarial criada, promovida ou alterada; nenhum backend, API, migration, seed, permissão ou
+contrato de dados tocado.
+
+### Arquivo alterado
+
+- `apps/web/src/clients/pages/ClientDetailPage.tsx`
+
+### Alteração aplicada
+
+- Aviso de histórico de reativação deixou `form-notice`.
+- Textarea de motivo da desativação deixou `form-field`.
+- `deactivateClient`, `activateClient`, rowVersion, motivo obrigatório e reload de conflito foram
+  preservados.
+
+### Validação
+
+- `pnpm --filter @cisne/web exec vitest run --config vite.config.ts src/clients/client-object-page.ui.test.tsx src/clients/clients.e2e.test.tsx` — **PASS** (13/13)
+- `pnpm --filter @cisne/web exec eslint src/clients/pages/ClientDetailPage.tsx` — **PASS**
+- `pnpm --filter @cisne/web typecheck` — **PASS**
+- `git diff --check` — **PASS**
+
+### Quality gate
+
+- [x] Alteração restrita ao detalhe de Cliente
+- [x] Nenhum dado, KPI, relação ou capability inventado
+- [x] Nenhuma regra empresarial nova
+- [x] Nenhuma migration, seed, backend, permissão ou contrato de API
+- [x] Desativação, reativação, rowVersion e motivo preservados
+
+WORKING_TREE: limpo após commit
+COMMIT: incluído no commit desta sessão
+NEXT_PROMPT_EXECUTED: NO
+
+---
+
 ## PEDIDOS DE COMPRA — DETALHE: DIALOG DE CANCELAMENTO SEM FORM-FIELD LEGADO
 
 DATA: 2026-10-07T10:42:00-04:00

@@ -401,7 +401,10 @@ export function ClientDetailPage() {
                 ) : null}
               </dl>
               {client.deactivatedAt && client.status === CLIENT_STATUSES.Active ? (
-                <p className="form-notice mt-2" role="note">
+                <p
+                  className="mt-2 mb-0 rounded-md border border-amber-200 bg-amber-50 px-3 py-2 text-sm text-amber-800"
+                  role="note"
+                >
                   A reativação preserva o histórico de desativação anterior.
                 </p>
               ) : null}
@@ -474,8 +477,10 @@ export function ClientDetailPage() {
         }}
         onConfirm={() => void handleDeactivate()}
       >
-        <div className="form-field">
-          <label htmlFor={reasonId}>Motivo da desativação</label>
+        <div className="flex min-w-0 flex-col gap-1.5">
+          <label htmlFor={reasonId} className="text-sm font-semibold text-gray-700">
+            Motivo da desativação
+          </label>
           <textarea
             id={reasonId}
             value={deactivateReason}
@@ -483,6 +488,7 @@ export function ClientDetailPage() {
             rows={3}
             required
             disabled={actionSubmitting}
+            className="min-h-24 rounded-md border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 shadow-sm focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 focus:outline-none disabled:bg-gray-50 disabled:text-gray-500"
           />
         </div>
       </ConfirmDialog>
