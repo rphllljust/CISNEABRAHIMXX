@@ -16884,3 +16884,139 @@ conferência humana.
 WORKING_TREE: DIRTY antes do commit (apenas a tela de Contratos)
 COMMIT: incluído no commit desta sessão
 NEXT_PROMPT_EXECUTED: NO
+
+---
+
+## CONTRATOS — CRIAR CONTRATO (FORM): DEFEITOS REAIS DE DENSIDADE E DE HIT-TARGET
+
+DATA: 2026-10-06T22:05:00-04:00
+STATUS: **PASS**
+COMMIT: `68c6c88`
+
+### Escopo executado
+
+Pedido do responsável: elevar SOMENTE o cadastro de contrato (`/app/contracts/new`) ao padrão
+Tier-1, sem transformar em workspace, sem Worklist, sem inventar dado e sem componente novo.
+Classificação: **FORM EMPRESARIAL**.
+
+Classificação: **interpretação de engenharia visual**. Nenhuma regra empresarial criada ou
+alterada; nenhum backend, API, migration, seed, permissão ou contrato tocado.
+
+### Arquivos alterados
+
+| Arquivo | Papel |
+| ------- | ----- |
+| `apps/web/src/contracts/pages/ContractsCreatePage.tsx` | página do formulário |
+| `apps/web/src/contracts/components/ContractFormFields.tsx` | campos diretamente importados |
+
+### Defeitos REAIS medidos (DOM renderizado, Chromium 1440x900, dev server real)
+
+**1. Vão morto de 38px na célula "Unidade operacional".** Era o único campo da grade com `hint`
+por campo. O primitivo `Field` empilha `rótulo + hint + controle`, então o par rótulo/controle
+saía 38px mais baixo que o do vizinho "Cliente" (12px nos demais). A instrução passou a viver no
+hint da SEÇÃO, uma vez para o grupo. Gap agora uniforme em 12px nos 10 campos.
+
+**2. A barra de ação cobria o campo "Moeda".** `elementFromPoint` no centro do controle devolvia
+a própria barra `sticky bottom-0`: o campo estava inacessível ao clique, com 28px cobertos
+(barra 835–900; controle 872–908). A seção "Vigência e moeda" é a última a encostar no rodapé.
+Um espaçador de fim de fluxo devolveu o vão, sem deslocar a primeira dobra.
+
+### Evidência antes → depois
+
+| Medida | Antes | Depois |
+| ------ | ----- | ------ |
+| Campos cobertos pela barra | 1 (Moeda, 28px) | **0** |
+| Clique em "Moeda" | interceptado pela barra | **recebe foco; aceita digitação** |
+| Gaps rótulo→controle | 12 e 38 | **12 (uniforme)** |
+| Colunas da grade | 2/2/1/3/2 | **2/2/1/3/2 preservadas** |
+| `docOverflowX` / `clippedCount` | 0 / 0 | **0 / 0** |
+| `<h1>` / ação primária | 1 / 1 | **1 / 1** |
+
+### Alteração global REVERTIDA (decisão declarada)
+
+Uma alteração chegou a ser tentada em `apps/web/src/ui/Field.tsx` para mover o `aria-describedby`
+do contêiner para o controle. Ela **não funcionou** (continuou `0/5` campos descritos) e foi
+**revertida por inteiro**, conforme a regra de não alterar primitive compartilhada sem evidência
+objetiva de bug preexistente e teste focado de compatibilidade. Nenhuma linha global permanece
+no diff.
+
+**Gap preexistente e global registrado como pendência, não resolvido:** o erro de validação é
+anunciado (`role="alert"`) mas não fica associado ao controle — medido: 5 campos inválidos, 0 com
+`aria-describedby`. Afeta o primitivo `Field` em todo o sistema; fora do escopo desta função.
+
+### Validação
+
+- `eslint` focado (2 arquivos) — **PASS**
+- `typecheck` (`tsc -b --force`) — **PASS**
+- `vitest run src/contracts/contracts.e2e.test.tsx` — **PASS** (2/2; avisos `act(...)` preexistentes)
+- `git diff --check` — **PASS**; `git status --short` limpo
+- Diff: 2 arquivos, +28/−1
+
+### Quality gate
+
+- [x] Alteração restrita ao formulário de cadastro e ao componente que ele importa
+- [x] Nenhum componente novo; nenhum dado, KPI ou capability inventado
+- [x] Nenhuma migration, seed, backend, permissão ou contrato de API
+- [x] Preservados: campos, validação, submit, capabilities
+
+WORKING_TREE: limpo após commit
+NEXT_PROMPT_EXECUTED: NO
+
+---
+
+## CONTRATOS — DETALHE (OBJECT PAGE): REVISAO SEM DEFEITO + RETRATACAO DE FALSO POSITIVO
+
+DATA: 2026-10-06T22:20:00-04:00
+STATUS: **PASS (sem diff)** — nenhuma alteração de produto aplicada.
+
+### Retratação obrigatória (AGENTS.md regra 22 — não ocultar falhas)
+
+Durante a revisão desta função foi **afirmado** que "status ACTIVE é apresentado como Encerrado".
+Essa afirmação era uma **inferência não verificada**, derivada do texto agregado da página, e
+estava **ERRADA**. A medição do DOM a refuta objetivamente:
+
+| Status | Badge | Passo com `aria-current="step"` | Realce |
+| ------ | ----- | ------------------------------- | ------ |
+| ACTIVE | Ativo | **Ativo** | `bg-brand-600 text-white` |
+| DRAFT | Rascunho | Rascunho | correto |
+| CLOSED | Encerrado | Encerrado | correto |
+| EXPIRED | Expirado | Expirado | correto |
+
+No estado ACTIVE, `Encerrado` aparece apenas como o passo TERMINAL PENDENTE (`text-gray-500
+italic`), que é o futuro do ciclo de vida e não o estado corrente. A falha de leitura veio de
+comparar o badge com o código em inglês (`ACTIVE`) em vez do rótulo pt-BR (`Ativo`) que a UI
+corretamente renderiza.
+
+### Fato verificado no código (não presumido)
+
+- `apps/api/src/commercial/domain/contract.ts:43-48` — `DRAFT:['ACTIVE']`,
+  `ACTIVE:['CLOSED','EXPIRED']`, `CLOSED:[]`, `EXPIRED:[]`.
+- `contractStateSteps` em `ContractsDetailPage.tsx:86-102` espelha exatamente essa máquina,
+  inclusive a troca do passo terminal CLOSED/EXPIRED conforme o status atual.
+- `contract-status-labels.ts:8-20` — os 4 status com rótulo e tom corretos.
+
+Nenhum estado foi inventado e nenhuma transição foi redefinida. **O mapeamento está correto e
+não requer alteração.**
+
+### Veredito
+
+**CONTRATOS / DETALHE = FROZEN — nenhum defeito real.** Nenhuma mudança aplicada (regra explícita:
+não inventar mudança só para gerar diff).
+
+Medido no DOM (1440x900): 1 `<h1>`, `EnterpriseObjectHeader` com badge + ação primária +
+secundária, `ObjectStateFlow` correto nos 4 estados, `ObjectContextBlock`, itens formatados com
+`Money`, documentos com hrefs distintos, `ActivityTimeline`. `docOverflowX=0`, `mainScrollX=0`,
+`clippedCount=0`.
+
+### Ressalva honesta registrada (não corrigida — fora do escopo)
+
+Os documentos vinculados renderizam o **mesmo texto** "Documento vinculado" para `documentId`
+diferentes. Os hrefs medidos são distintos (navegação correta), mas o rótulo não distingue os
+itens. Corrigir exigiria o número/tipo do documento, que o contrato **não publica**:
+`contracts/types.ts:88-93` expõe apenas `documentId`, `linkPurpose`, `createdAt`. Um rótulo
+derivado do UUID seria dado inventado — não foi feito. **PARK registrado: rótulo humano do
+documento vinculado.**
+
+WORKING_TREE: limpo (sem diff)
+COMMIT: NENHUM (sem diff a commitar)
+NEXT: próximo módulo frontend, uma função por vez
