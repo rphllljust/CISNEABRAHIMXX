@@ -24,6 +24,15 @@ import { ServiceDefinitionStatusBadge } from '../components/ServiceDefinitionSta
 import { VersionConflictNotice } from '../components/VersionConflictNotice';
 import { VersionStatusBadge } from '../components/VersionStatusBadge';
 import { useCatalogCapabilities } from '../hooks/useCatalogCapabilities';
+import { DefinitionList } from '../../financial-ui/DefinitionList';
+import {
+  DataTable,
+  DataTableBody,
+  DataTableCell,
+  DataTableHead,
+  DataTableHeaderCell,
+  DataTableRow,
+} from '../../ui/DataTable';
 import {
   CATALOG_LINEAGE_STATUSES,
   VERSION_STATUSES,
@@ -215,31 +224,31 @@ export function ServiceDefinitionDetailPage() {
       ) : null}
       {versionConflict ? <VersionConflictNotice onReload={() => void reload()} /> : null}
 
-      <section className="catalog-section" aria-labelledby="definition-admin-heading">
-        <h2 id="definition-admin-heading">Linha de definição</h2>
-        <dl className="catalog-details">
-          <div>
-            <dt>Versão de concorrência (lineage)</dt>
-            <dd>{definition.version}</dd>
-          </div>
-          <div>
-            <dt>Última versão publicada</dt>
-            <dd>{definition.latestPublishedVersion ?? '—'}</dd>
-          </div>
-          <div>
-            <dt>Rascunho atual</dt>
-            <dd>{definition.currentDraftVersion ?? '—'}</dd>
-          </div>
-          <div>
-            <dt>Atualizado em</dt>
-            <dd>{formatDateTime(definition.updatedAt)}</dd>
-          </div>
-        </dl>
+      <section
+        className="rounded-md border border-slate-200 bg-white p-4 shadow-[0_1px_2px_rgb(15_23_42/0.04)]"
+        aria-labelledby="definition-admin-heading"
+      >
+        <h2 id="definition-admin-heading" className="mt-0 mb-3 text-base font-semibold text-gray-900">
+          Linha de definição
+        </h2>
+        <DefinitionList
+          items={[
+            { label: 'Versão de concorrência (lineage)', value: definition.version },
+            { label: 'Última versão publicada', value: definition.latestPublishedVersion ?? '—' },
+            { label: 'Rascunho atual', value: definition.currentDraftVersion ?? '—' },
+            { label: 'Atualizado em', value: formatDateTime(definition.updatedAt) },
+          ]}
+        />
       </section>
 
-      <section className="catalog-section" aria-labelledby="versions-heading">
-        <div className="catalog-page__header">
-          <h2 id="versions-heading">Versões</h2>
+      <section
+        className="rounded-md border border-slate-200 bg-white shadow-[0_1px_2px_rgb(15_23_42/0.04)]"
+        aria-labelledby="versions-heading"
+      >
+        <div className="flex flex-wrap items-center justify-between gap-3 border-b border-slate-200 px-4 py-3">
+          <h2 id="versions-heading" className="m-0 text-base font-semibold text-gray-900">
+            Versões
+          </h2>
           {versions.length >= 2 ? (
             <Link
               to={`/app/catalog/${definition.id}/compare`}
@@ -249,49 +258,47 @@ export function ServiceDefinitionDetailPage() {
             </Link>
           ) : null}
         </div>
-        <div className="catalog-table-wrap">
-          <table className="catalog-table" aria-label="Versões da definição">
-            <thead>
-              <tr>
-                <th scope="col">Versão</th>
-                <th scope="col">Status</th>
-                <th scope="col">Nome</th>
-                <th scope="col">Publicada em</th>
-                <th scope="col">Ações</th>
-              </tr>
-            </thead>
-            <tbody>
-              {sortedVersions.map((version) => (
-                <tr key={version.id}>
-                  <td>v{version.version}</td>
-                  <td>
-                    <VersionStatusBadge status={version.status} />
-                  </td>
-                  <td>{version.name}</td>
-                  <td>{formatDateTime(version.publishedAt)}</td>
-                  <td>
-                    <div className="button-row">
-                      <Link to={`/app/catalog/${definition.id}/versions/${version.version}`}>
-                        Detalhe
+        <DataTable aria-label="Versões da definição">
+          <DataTableHead>
+            <DataTableRow>
+              <DataTableHeaderCell scope="col">Versão</DataTableHeaderCell>
+              <DataTableHeaderCell scope="col">Status</DataTableHeaderCell>
+              <DataTableHeaderCell scope="col">Nome</DataTableHeaderCell>
+              <DataTableHeaderCell scope="col">Publicada em</DataTableHeaderCell>
+              <DataTableHeaderCell scope="col">Ações</DataTableHeaderCell>
+            </DataTableRow>
+          </DataTableHead>
+          <DataTableBody>
+            {sortedVersions.map((version) => (
+              <DataTableRow key={version.id}>
+                <DataTableCell className="font-semibold text-gray-900">v{version.version}</DataTableCell>
+                <DataTableCell>
+                  <VersionStatusBadge status={version.status} />
+                </DataTableCell>
+                <DataTableCell>{version.name}</DataTableCell>
+                <DataTableCell>{formatDateTime(version.publishedAt)}</DataTableCell>
+                <DataTableCell>
+                  <div className="flex flex-wrap items-center gap-2">
+                    <Link to={`/app/catalog/${definition.id}/versions/${version.version}`}>
+                      Detalhe
+                    </Link>
+                    {version.status === VERSION_STATUSES.Draft && capabilities.canUpdate ? (
+                      <Link to={`/app/catalog/${definition.id}/versions/${version.version}/edit`}>
+                        Editar rascunho
                       </Link>
-                      {version.status === VERSION_STATUSES.Draft && capabilities.canUpdate ? (
-                        <Link to={`/app/catalog/${definition.id}/versions/${version.version}/edit`}>
-                          Editar rascunho
-                        </Link>
-                      ) : null}
-                      {version.status === VERSION_STATUSES.Draft && capabilities.canPublish ? (
-                        <button type="button" onClick={() => setPublishVersion(version.version)}>
-                          Publicar
-                        </button>
-                      ) : null}
-                    </div>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-        <p className="form-hint" role="note">
+                    ) : null}
+                    {version.status === VERSION_STATUSES.Draft && capabilities.canPublish ? (
+                      <button type="button" onClick={() => setPublishVersion(version.version)}>
+                        Publicar
+                      </button>
+                    ) : null}
+                  </div>
+                </DataTableCell>
+              </DataTableRow>
+            ))}
+          </DataTableBody>
+        </DataTable>
+        <p className="m-0 border-t border-slate-100 px-4 py-3 text-xs text-gray-500" role="note">
           Versões publicadas não são editáveis diretamente. Para alterar, crie uma nova versão em rascunho.
         </p>
       </section>
@@ -325,8 +332,10 @@ export function ServiceDefinitionDetailPage() {
           })
         }
       >
-        <div className="form-field">
-          <label htmlFor={reasonId}>Motivo da desativação</label>
+        <div className="flex min-w-0 flex-col gap-1.5">
+          <label htmlFor={reasonId} className="text-sm font-semibold text-gray-700">
+            Motivo da desativação
+          </label>
           <textarea
             id={reasonId}
             value={deactivateReason}
@@ -334,6 +343,7 @@ export function ServiceDefinitionDetailPage() {
             rows={3}
             required
             disabled={actionSubmitting}
+            className="min-h-24 rounded-md border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 shadow-sm focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 focus:outline-none disabled:bg-gray-50 disabled:text-gray-500"
           />
         </div>
       </ConfirmDialog>

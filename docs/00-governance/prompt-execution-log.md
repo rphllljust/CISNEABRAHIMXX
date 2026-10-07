@@ -17658,6 +17658,58 @@ NEXT_PROMPT_EXECUTED: NO
 
 ---
 
+## CATALOGO — DETALHE DA DEFINICAO: SECOES E TABELA EM PRIMITIVAS COMPARTILHADAS
+
+DATA: 2026-10-07T00:38:00-04:00
+STATUS: **PASS**
+
+### Escopo executado
+
+Continuidade da wave frontend Enterprise Tier-1, uma função por vez.
+
+Módulo: **Catálogo**.
+Função: **Detalhe da definição de serviço** (`/app/catalog/:definitionId`).
+Classificação principal: **OBJECT / DETAIL PAGE**.
+
+Classificação: **interpretação de engenharia visual / experiência operacional**. Nenhuma regra
+empresarial criada, promovida ou alterada; nenhum backend, API, migration, seed, permissão ou
+contrato de dados tocado.
+
+### Arquivo alterado
+
+- `apps/web/src/catalog/pages/ServiceDefinitionDetailPage.tsx`
+
+### Alteração aplicada
+
+- A linha administrativa da definição saiu de `catalog-section/catalog-details` para
+  `DefinitionList` dentro de painel compartilhado.
+- A tabela de versões saiu de `catalog-table`/`catalog-table-wrap` para `DataTable`.
+- Ações de versão trocaram `button-row` por flex utilitário consistente com o restante do ERP.
+- O campo do diálogo de desativação deixou `form-field` legado e recebeu classes utilitárias locais.
+- Lineage, versões, publicação, desativação, reativação, conflito e navegação foram preservados.
+
+### Validação
+
+- `pnpm --filter @cisne/web exec vitest run --config vite.config.ts src/catalog/catalog.e2e.test.tsx` — **PASS** (2/2)
+- `pnpm --filter @cisne/web exec eslint src/catalog/pages/ServiceDefinitionDetailPage.tsx` — **PASS**
+- `pnpm --filter @cisne/web typecheck` — **PASS**
+- `git diff --check` — **PASS**
+
+### Quality gate
+
+- [x] Alteração restrita ao detalhe da definição de Catálogo
+- [x] Nenhum componente novo criado
+- [x] Nenhum dado, KPI, relação ou capability inventado
+- [x] Nenhuma regra empresarial nova
+- [x] Nenhuma migration, seed, backend, permissão ou contrato de API
+- [x] Ações de versão, lineage, conflitos e estados preservados
+
+WORKING_TREE: limpo após commit
+COMMIT: incluído no commit desta sessão
+NEXT_PROMPT_EXECUTED: NO
+
+---
+
 ## CATALOGO — CRIAR NOVA VERSAO: ACTION BAR ESTATICA E PRIMITIVE CORRIGIDO
 
 DATA: 2026-10-07T00:31:00-04:00
