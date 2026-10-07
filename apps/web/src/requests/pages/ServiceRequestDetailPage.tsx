@@ -671,14 +671,17 @@ export function ServiceRequestDetailPage() {
           });
         }}
       >
-        <div className="form-field">
-          <label htmlFor={reasonId}>Motivo da rejeição</label>
+        <div className="flex min-w-0 flex-col gap-1.5">
+          <label htmlFor={reasonId} className="text-sm font-semibold text-gray-700">
+            Motivo da rejeição
+          </label>
           <textarea
             id={reasonId}
             value={rejectReason}
             onChange={(event) => setRejectReason(event.target.value)}
             rows={3}
             required
+            className="min-h-24 rounded-md border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 shadow-sm focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 focus:outline-none"
           />
         </div>
       </ConfirmDialog>
@@ -705,14 +708,17 @@ export function ServiceRequestDetailPage() {
           });
         }}
       >
-        <div className="form-field">
-          <label htmlFor={`${reasonId}-cancel`}>Motivo do cancelamento</label>
+        <div className="flex min-w-0 flex-col gap-1.5">
+          <label htmlFor={`${reasonId}-cancel`} className="text-sm font-semibold text-gray-700">
+            Motivo do cancelamento
+          </label>
           <textarea
             id={`${reasonId}-cancel`}
             value={cancelReason}
             onChange={(event) => setCancelReason(event.target.value)}
             rows={3}
             required
+            className="min-h-24 rounded-md border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 shadow-sm focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 focus:outline-none"
           />
         </div>
       </ConfirmDialog>
@@ -735,11 +741,14 @@ export function ServiceRequestDetailPage() {
           });
         }}
       >
-        <div className="form-field">
-          <label htmlFor={`${reasonId}-priority`}>Prioridade</label>
+        <div className="flex min-w-0 flex-col gap-1.5">
+          <label htmlFor={`${reasonId}-priority`} className="text-sm font-semibold text-gray-700">
+            Prioridade
+          </label>
           <select
             id={`${reasonId}-priority`}
             value={approvePriority}
+            className="min-h-9 rounded-md border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 shadow-sm focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 focus:outline-none"
             onChange={(event) => setApprovePriority(event.target.value)}
           >
             {Object.values(SERVICE_REQUEST_PRIORITIES).map((priority) => (

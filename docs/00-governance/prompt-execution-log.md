@@ -17658,6 +17658,56 @@ NEXT_PROMPT_EXECUTED: NO
 
 ---
 
+## SOLICITACOES — DETALHE: DIALOGS E CONFLITO SEM CLASSES LEGADAS
+
+DATA: 2026-10-07T10:39:00-04:00
+STATUS: **PASS**
+
+### Escopo executado
+
+Continuidade da wave frontend Enterprise Tier-1, uma função por vez.
+
+Módulo: **Solicitações**.
+Função: **Detalhe da solicitação** (`/app/requests/:id`) — dialogs de ação e aviso de conflito.
+Classificação principal: **OBJECT / DETAIL PAGE**.
+
+Classificação: **interpretação de engenharia visual / experiência operacional**. Nenhuma regra
+empresarial criada, promovida ou alterada; nenhum backend, API, migration, seed, permissão ou
+contrato de dados tocado.
+
+### Arquivos alterados
+
+- `apps/web/src/requests/pages/ServiceRequestDetailPage.tsx`
+- `apps/web/src/requests/components/VersionConflictNotice.tsx`
+
+### Alteração aplicada
+
+- Campos dos dialogs de rejeição, cancelamento e aprovação deixaram `form-field` legado.
+- Aviso de conflito de versão deixou `form-notice requests-conflict-notice`.
+- `rejectServiceRequest`, `cancelServiceRequest`, `approveServiceRequest`, reload e rowVersion
+  foram preservados.
+
+### Validação
+
+- `pnpm --filter @cisne/web exec vitest run --config vite.config.ts src/requests/pages/ServiceRequestDetailPage.test.tsx src/requests/service-requests.e2e.test.tsx` — **PASS** (7/7)
+- `pnpm --filter @cisne/web exec eslint src/requests/pages/ServiceRequestDetailPage.tsx src/requests/components/VersionConflictNotice.tsx` — **PASS**
+- `pnpm --filter @cisne/web typecheck` — **PASS**
+- `git diff --check` — **PASS**
+
+### Quality gate
+
+- [x] Alteração restrita aos dialogs/aviso de conflito de Solicitações
+- [x] Nenhum dado, KPI, relação ou capability inventado
+- [x] Nenhuma regra empresarial nova
+- [x] Nenhuma migration, seed, backend, permissão ou contrato de API
+- [x] Ações, rowVersion, validações de motivo e reload preservados
+
+WORKING_TREE: limpo após commit
+COMMIT: incluído no commit desta sessão
+NEXT_PROMPT_EXECUTED: NO
+
+---
+
 ## CATALOGO — COMPARACAO DE VERSOES: TOOLBAR, DATATABLE E AVISO DE CONFLITO
 
 DATA: 2026-10-07T00:50:00-04:00
