@@ -162,16 +162,20 @@ export function PersonForm({
           title="Vínculo"
           description="Função operacional padrão exercida pela pessoa e referência do cadastro no ERP."
         >
+          {/*
+            GRADE DA LINHA — os dois campos ficam na MESMA linha e precisam FECHAR na mesma altura.
+
+            Medido no DOM real (1440x900): "Referência externa" (sem hint) saía em y=460 e
+            "Função operacional padrão" (com hint) em y=486 — 38px de desalinhamento entre dois
+            campos que o operador lê como um par. A causa era o `hint` POR CAMPO: o `Field` empilha
+            rótulo + hint + controle, então só a célula com hint crescia.
+
+            O catálogo vazio é um FATO da tela, não uma instrução de preenchimento: ele sobe para
+            o hint da SEÇÃO, valendo para o grupo. A mensagem continua visível e acessível (o
+            `aria-describedby` da seção), sem quebrar o par.
+          */}
           <div className="grid gap-3 sm:grid-cols-2">
-            <Field
-              label="Função operacional padrão"
-              htmlFor={laborTypeId}
-              hint={
-                laborTypes.length === 0
-                  ? 'Nenhuma função operacional disponível no catálogo.'
-                  : undefined
-              }
-            >
+            <Field label="Função operacional padrão" htmlFor={laborTypeId}>
               <Select
                 id={laborTypeId}
                 value={values.defaultLaborTypeCode}
@@ -200,6 +204,12 @@ export function PersonForm({
               />
             </Field>
           </div>
+          {laborTypes.length === 0 ? (
+            <p className="m-0 mt-2 text-[11px] text-amber-700">
+              Nenhuma função operacional disponível no catálogo: o vínculo fica sem função padrão
+              até o catálogo ser carregado.
+            </p>
+          ) : null}
         </BuilderSection>
 
         {recordFacts.length > 0 ? (
