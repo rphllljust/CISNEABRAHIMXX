@@ -338,6 +338,8 @@ export function ServiceRequestsListPage() {
   const total = summary?.total ?? null;
   const scope = describeScope(filters, relationScope.clientId !== undefined);
   const updatedAt = formatRelativePast(latestTimestamp(items), now);
+  // Fila vazia sem recorte: a criacao nasce no painel vazio; recorte vazio oferece limpar.
+  const isEmptyQueue = items.length === 0 && total === 0 && !hasFilterChips;
 
   return (
     <ModulePage>
@@ -365,7 +367,7 @@ export function ServiceRequestsListPage() {
             </span>
           ) : null}
         </div>
-        {capabilities.canCreate ? (
+        {capabilities.canCreate && !isEmptyQueue ? (
           <ModulePrimaryLink to="/app/requests/new" className="min-h-0 px-3 py-1 text-[13px]">
             Nova solicitação
           </ModulePrimaryLink>
@@ -441,7 +443,7 @@ export function ServiceRequestsListPage() {
                 type="button"
                 aria-pressed={active}
                 className={cn(
-                  'border-r border-gray-200 px-2.5 py-1 text-[12px] font-medium last:border-r-0',
+                  'min-h-8 border-r border-gray-200 px-2.5 py-1 text-[12px] font-medium last:border-r-0',
                   active
                     ? 'bg-brand-700 text-white'
                     : 'bg-white text-gray-600 hover:bg-gray-50 hover:text-gray-900',
@@ -465,7 +467,7 @@ export function ServiceRequestsListPage() {
             id="request-search-filter"
             type="search"
             aria-label="Buscar solicitação"
-            className="w-full min-w-0 rounded border border-gray-300 bg-white px-2 py-1 text-[13px] text-gray-900 outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-500/30"
+            className="min-h-8 w-full min-w-0 rounded border border-gray-300 bg-white px-2 py-1 text-[13px] text-gray-900 outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-500/30"
             value={searchInput}
             onChange={(event) => setSearchInput(event.target.value)}
             placeholder="Buscar solicitação…"
@@ -477,7 +479,7 @@ export function ServiceRequestsListPage() {
         </label>
         <select
           id="request-status-filter"
-          className="rounded border border-gray-300 bg-white px-2 py-1 text-[13px] text-gray-900 outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-500/30"
+          className="min-h-8 rounded border border-gray-300 bg-white px-2 py-1 text-[13px] text-gray-900 outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-500/30"
           value={filters.status}
           onChange={(event) =>
             applyFilter('status', event.target.value as '' | ServiceRequestStatus)
@@ -494,7 +496,7 @@ export function ServiceRequestsListPage() {
         <button
           type="button"
           aria-expanded={moreOpen}
-          className="rounded border border-gray-300 bg-white px-2 py-1 text-[12px] font-medium text-gray-700 hover:bg-gray-50"
+          className="min-h-8 rounded border border-gray-300 bg-white px-2 py-1 text-[12px] font-medium text-gray-700 hover:bg-gray-50"
           onClick={() => setMoreOpen((current) => !current)}
         >
           {moreOpen ? 'Menos filtros' : 'Mais filtros'}
@@ -504,7 +506,7 @@ export function ServiceRequestsListPage() {
           <>
             <select
               aria-label="Prioridade"
-              className="rounded border border-gray-300 bg-white px-2 py-1 text-[13px]"
+              className="min-h-8 rounded border border-gray-300 bg-white px-2 py-1 text-[13px]"
               value={filters.priority}
               onChange={(event) =>
                 applyFilter('priority', event.target.value as '' | ServiceRequestPriority)
@@ -519,7 +521,7 @@ export function ServiceRequestsListPage() {
             </select>
             <select
               aria-label="Origem"
-              className="rounded border border-gray-300 bg-white px-2 py-1 text-[13px]"
+              className="min-h-8 rounded border border-gray-300 bg-white px-2 py-1 text-[13px]"
               value={filters.originSource}
               onChange={(event) =>
                 applyFilter('originSource', event.target.value as '' | ServiceRequestOrigin)
@@ -534,7 +536,7 @@ export function ServiceRequestsListPage() {
             </select>
             <select
               aria-label="Ordenar por"
-              className="rounded border border-gray-300 bg-white px-2 py-1 text-[13px]"
+              className="min-h-8 rounded border border-gray-300 bg-white px-2 py-1 text-[13px]"
               value={filters.sort}
               onChange={(event) =>
                 applyFilter('sort', event.target.value as ServiceRequestListSort)
@@ -548,7 +550,7 @@ export function ServiceRequestsListPage() {
             </select>
             <select
               aria-label="Sentido"
-              className="rounded border border-gray-300 bg-white px-2 py-1 text-[13px]"
+              className="min-h-8 rounded border border-gray-300 bg-white px-2 py-1 text-[13px]"
               value={filters.direction}
               onChange={(event) =>
                 applyFilter('direction', event.target.value as ServiceRequestListDirection)
@@ -563,7 +565,7 @@ export function ServiceRequestsListPage() {
         {hasFilterChips ? (
           <button
             type="button"
-            className="rounded border border-gray-300 bg-white px-2 py-1 text-[12px] font-medium text-gray-700 hover:bg-gray-50"
+            className="min-h-8 rounded border border-gray-300 bg-white px-2 py-1 text-[12px] font-medium text-gray-700 hover:bg-gray-50"
             onClick={clearFilters}
           >
             Limpar filtros
@@ -607,33 +609,40 @@ export function ServiceRequestsListPage() {
         ao lado; o codigo continua sendo o link para a ficha completa.
       */}
       {items.length === 0 ? (
-        <div className="px-1 pt-3">
-          <WorklistStatePanel
-            title={
-              hasFilterChips
-                ? 'Nenhuma solicitação corresponde aos filtros aplicados.'
-                : 'Nenhuma solicitação registrada.'
-            }
-            description={
-              hasFilterChips
-                ? 'Ajuste a busca, a situação ou a prioridade — ou limpe os filtros para ver a fila completa.'
-                : 'Quando a primeira solicitação chegar, ela aparece aqui com prioridade, janela desejada e próximo passo.'
-            }
-            action={
-              hasFilterChips ? (
-                <button
-                  type="button"
-                  className="rounded border border-gray-300 bg-white px-2 py-1 text-[12px] font-medium text-gray-700 hover:bg-gray-50"
-                  onClick={clearFilters}
-                >
-                  Limpar filtros
-                </button>
-              ) : capabilities.canCreate ? (
-                <ModulePrimaryLink to="/app/requests/new">Nova solicitação</ModulePrimaryLink>
-              ) : null
-            }
-          />
-        </div>
+        <section aria-label="Fila operacional de solicitações" className="border-b border-gray-200">
+          <div className="flex items-center gap-3 border-b border-gray-100 bg-gray-50/80 px-2 py-1 text-[10px] font-semibold tracking-[0.08em] text-gray-400 uppercase">
+            <span>Solicitação e demanda</span>
+            <span className="ml-auto">Situação</span>
+            <span className="w-28 shrink-0 text-right">Idade</span>
+          </div>
+          <div className="px-1 py-3">
+            <WorklistStatePanel
+              title={
+                hasFilterChips
+                  ? 'Nenhuma solicitação corresponde aos filtros aplicados.'
+                  : 'Nenhuma solicitação registrada.'
+              }
+              description={
+                hasFilterChips
+                  ? 'Ajuste a busca, a situação ou a prioridade — ou limpe os filtros para ver a fila completa.'
+                  : 'Quando a primeira solicitação chegar, ela aparece aqui com prioridade, janela desejada e próximo passo.'
+              }
+              action={
+                hasFilterChips ? (
+                  <button
+                    type="button"
+                    className="min-h-8 rounded border border-gray-300 bg-white px-2 py-1 text-[12px] font-medium text-gray-700 hover:bg-gray-50"
+                    onClick={clearFilters}
+                  >
+                    Limpar filtros
+                  </button>
+                ) : capabilities.canCreate ? (
+                  <ModulePrimaryLink to="/app/requests/new">Nova solicitação</ModulePrimaryLink>
+                ) : null
+              }
+            />
+          </div>
+        </section>
       ) : (
         <section aria-label="Fila operacional de solicitações" className="border-b border-gray-200">
           <div className="flex items-center gap-3 border-b border-gray-100 bg-gray-50/80 px-2 py-1 text-[10px] font-semibold tracking-[0.08em] text-gray-400 uppercase">

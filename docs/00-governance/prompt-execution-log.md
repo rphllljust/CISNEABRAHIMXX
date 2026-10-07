@@ -17020,3 +17020,69 @@ documento vinculado.**
 WORKING_TREE: limpo (sem diff)
 COMMIT: NENHUM (sem diff a commitar)
 NEXT: próximo módulo frontend, uma função por vez
+
+---
+
+## SOLICITACOES — LISTA (WORKLIST): EMPTY STATE DENTRO DA FILA + CTA UNICO
+
+DATA: 2026-10-06T23:15:43-04:00
+STATUS: **PASS**
+
+### Escopo executado
+
+Continuidade da wave frontend Enterprise Tier-1, uma função por vez.
+
+Módulo: **Solicitações**.
+Função: **Listagem / Worklist** (`/app/requests`).
+Classificação principal: **WORKLIST**.
+
+Classificação: **interpretação de engenharia visual / experiência operacional**. Nenhuma regra
+empresarial criada, promovida ou alterada; nenhum backend, API, migration, seed, permissão ou
+contrato de dados tocado.
+
+### Arquivo alterado
+
+- `apps/web/src/requests/pages/ServiceRequestsListPage.tsx`
+
+### Baseline medido
+
+Medição DOM/Playwright, Chromium 1440x900, dev server real, API mockada somente para esta função:
+
+- Estado populado: `docOverflowX=0`, 1 `<h1>`, 1 ação primária, 7 linhas inteiras visíveis.
+- Estado vazio: `docOverflowX=0`, 1 `<h1>`, 1 ação primária, mas **sem região de worklist** (`worklist=null`); o painel vazio ficava solto abaixo da command surface.
+- Command surface: controles frequentes com altura medida de 26px nos segmentos de filtro.
+- `clippedCount=1` identificado como o skip link global intencional do shell (`shell__skip-link`, `left:-9999`), fora da função.
+
+### Alteração aplicada
+
+- A ação "Nova solicitação" agora é mutuamente exclusiva: no estado populado aparece no header; no estado vazio sem recorte aparece dentro do painel vazio. Com recorte aplicado, o painel oferece "Limpar filtros", não criar.
+- O estado vazio passou a viver dentro da mesma região `section[aria-label="Fila operacional de solicitações"]`, preservando cabeçalho da worklist e arquitetura da fila mesmo com zero registros.
+- Controles da command surface receberam `min-h-8`, elevando alvos de clique dos filtros frequentes sem alterar contrato, filtros server-side ou paginação.
+
+### Evidência depois
+
+- Populado: `docOverflowX=0`, 1 `<h1>`, 1 ação primária, `worklist` presente, 7 linhas inteiras visíveis, command surface 47px.
+- Vazio: `docOverflowX=0`, 1 `<h1>`, 1 ação primária, `worklist` presente (183px), fila mantém cabeçalho e painel vazio dentro da área operacional.
+- Screenshots e métricas gerados em `tmp/requests-worklist-gate/` (gitignored) para revisão humana.
+
+### Validação
+
+- `node tmp/measure-requests-worklist.mjs populated` — **PASS**
+- `node tmp/measure-requests-worklist.mjs empty` — **PASS**
+- `pnpm --filter @cisne/web exec vitest run --config vite.config.ts src/requests/pages/ServiceRequestsListPage.test.tsx` — **PASS** (9/9)
+- `pnpm --filter @cisne/web exec eslint src/requests/pages/ServiceRequestsListPage.tsx` — **PASS**
+- `pnpm --filter @cisne/web typecheck` — **PASS**
+- `git diff --check` — **PASS**
+
+### Quality gate
+
+- [x] Alteração restrita à worklist de Solicitações
+- [x] Nenhum componente novo criado
+- [x] Nenhum dado, KPI, total ou capability inventado
+- [x] Nenhuma regra empresarial nova
+- [x] Nenhuma migration, seed, backend, permissão ou contrato de API
+- [x] Server-side filtering/pagination preservados
+
+WORKING_TREE: limpo após commit
+COMMIT: incluído no commit desta sessão
+NEXT_PROMPT_EXECUTED: NO
