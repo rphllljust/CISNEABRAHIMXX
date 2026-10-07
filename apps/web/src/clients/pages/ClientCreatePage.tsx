@@ -254,10 +254,18 @@ export function ClientCreatePage() {
             em 1440px cada input atravessava a tela inteira, a hierarquia sumia e o formulario
             nao cabia na primeira dobra. Razao social e nome fantasia sao fatos irmaos e dividem
             a linha; CNPJ e referencia externa dividem a seguinte.
+
+            ALINHAMENTO DO PAR — `hint` POR CAMPO QUEBRAVA A LINHA. MEDIDO no DOM real
+            (1440x900): com o hint no campo de referencia externa, esse controle saia em y=507 e
+            o CNPJ ao lado em y=481 — 38px de desalinhamento entre dois campos que o operador le
+            como par (a grade registrava 5 topos distintos onde deveria ter 4). O primitivo
+            `Field` empilha rotulo + hint + controle, entao so a celula com hint crescia.
+            A instrucao da referencia externa passou para a descricao da SECAO, valendo para o
+            grupo e sem desalinhar o par. Mesmo padrao ja aplicado em Contratos e Pessoas.
           */}
           <BuilderSection
             title="Identificação jurídica"
-            description="Razão social e CNPJ identificam a pessoa jurídica no ERP."
+            description="Razão social e CNPJ identificam a pessoa jurídica no ERP. A referência externa é o identificador deste cliente em outro sistema, quando existir."
           >
             <div className="grid gap-3 sm:grid-cols-2">
               <Field
@@ -295,11 +303,7 @@ export function ClientCreatePage() {
                   disabled={submitting}
                 />
               </Field>
-              <Field
-                label="Referência externa (opcional)"
-                htmlFor={externalErpIdId}
-                hint="Identificador do cliente em outro sistema, quando existir."
-              >
+              <Field label="Referência externa (opcional)" htmlFor={externalErpIdId}>
                 <Input
                   id={externalErpIdId}
                   value={externalErpId}
