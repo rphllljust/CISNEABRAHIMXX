@@ -305,7 +305,10 @@ export function ClientEditPage() {
           </BuilderSection>
         </fieldset>
 
-        <StickyActionBar note="Alterações concorrentes são recusadas pelo servidor; o CNPJ não muda.">
+        <StickyActionBar
+          className="!static"
+          note="Alterações concorrentes são recusadas pelo servidor; o CNPJ não muda."
+        >
           <Link to={`/app/clients/${client.id}`} className={SECONDARY_LINK_CLASS}>
             Cancelar
           </Link>

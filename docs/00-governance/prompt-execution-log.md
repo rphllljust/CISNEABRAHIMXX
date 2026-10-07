@@ -17658,6 +17658,68 @@ NEXT_PROMPT_EXECUTED: NO
 
 ---
 
+## CLIENTES — CRIAR/EDITAR CLIENTE (FORM): ACTION BAR ESTATICA SEM OVERLAY
+
+DATA: 2026-10-07T00:14:00-04:00
+STATUS: **PASS**
+
+### Escopo executado
+
+Continuidade da wave frontend Enterprise Tier-1, uma função por vez.
+
+Módulo: **Clientes**.
+Funções: **Criar Cliente** (`/app/clients/new`) e **Editar Cliente** (`/app/clients/:id/edit`).
+Classificação principal: **FORM**.
+
+Classificação: **interpretação de engenharia visual / experiência operacional**. Nenhuma regra
+empresarial criada, promovida ou alterada; nenhum backend, API, migration, seed, permissão ou
+contrato de dados tocado.
+
+### Arquivos alterados
+
+- `apps/web/src/clients/pages/ClientCreatePage.tsx`
+- `apps/web/src/clients/pages/ClientEditPage.tsx`
+
+### Alteração aplicada
+
+- A `StickyActionBar` de criação e edição de Cliente passou a ser estática no fluxo do formulário.
+- A tela continua usando os mesmos campos, validações, mensagens, `createClient`, `updateClient`,
+  CNPJ imutável e controle de `version`.
+- Nenhum payload, capability, endpoint, permissão ou regra de negócio foi alterado.
+
+### Evidência depois
+
+- Medição DOM/Playwright em `/app/clients/new`, Chromium 1440x900, dev server real em porta local
+  isolada:
+  - `docOverflowX=0`
+  - `h1="Novo Cliente"`
+  - `form top=228 left=288 width=1120 height=559 bottom=787`
+  - `actionBar top=733 bottom=777`
+- Screenshots e métricas gerados em `tmp/client-create-gate/` (gitignored) para revisão humana.
+
+### Validação
+
+- `node tmp/measure-client-create.mjs` — **PASS**
+- `pnpm --filter @cisne/web exec vitest run --config vite.config.ts src/clients/pages/ClientCreatePage.test.tsx src/clients/pages/ClientEditPage.test.tsx` — **PASS** (4/4)
+- `pnpm --filter @cisne/web exec eslint src/clients/pages/ClientCreatePage.tsx src/clients/pages/ClientEditPage.tsx` — **PASS**
+- `pnpm --filter @cisne/web typecheck` — **PASS**
+- `git diff --check` — **PASS**
+
+### Quality gate
+
+- [x] Alteração restrita aos formulários de Cliente
+- [x] Nenhum componente novo criado
+- [x] Nenhum dado, KPI, relação ou capability inventado
+- [x] Nenhuma regra empresarial nova
+- [x] Nenhuma migration, seed, backend, permissão ou contrato de API
+- [x] Submit, validação, payload, CNPJ imutável e versionamento preservados
+
+WORKING_TREE: limpo após commit
+COMMIT: incluído no commit desta sessão
+NEXT_PROMPT_EXECUTED: NO
+
+---
+
 ## SOLICITACOES — CRIAR SOLICITACAO (FORM): MAIN + ASIDE CONTEXTUAL SEM OVERLAY
 
 DATA: 2026-10-06T23:28:44-04:00

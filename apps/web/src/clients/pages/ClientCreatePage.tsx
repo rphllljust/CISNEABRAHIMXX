@@ -363,8 +363,11 @@ export function ClientCreatePage() {
           </BuilderSection>
         </fieldset>
 
-        {/* ACTION BAR: a acao principal acompanha a rolagem em vez de ficar no fim da pagina. */}
-        <StickyActionBar note="Somente razão social, CNPJ e nome do contato são obrigatórios; informe e-mail ou telefone.">
+        {/* ACTION BAR: a acao principal fecha o formulario sem sobrepor os ultimos campos. */}
+        <StickyActionBar
+          className="!static"
+          note="Somente razão social, CNPJ e nome do contato são obrigatórios; informe e-mail ou telefone."
+        >
           <Link to="/app/clients" className={SECONDARY_LINK_CLASS}>
             Cancelar
           </Link>
