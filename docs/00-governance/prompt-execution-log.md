@@ -17089,6 +17089,75 @@ NEXT_PROMPT_EXECUTED: NO
 
 ---
 
+## SOLICITACOES — DETALHE DA SOLICITACAO (OBJECT PAGE): FLUXO E RELACOES ENTERPRISE
+
+DATA: 2026-10-06T23:33:15-04:00
+STATUS: **PASS**
+
+### Escopo executado
+
+Continuidade da wave frontend Enterprise Tier-1, uma função por vez.
+
+Módulo: **Solicitações**.
+Função: **Detalhe da solicitação** (`/app/requests/:serviceRequestId`).
+Classificação principal: **OBJECT PAGE**.
+
+Classificação: **interpretação de engenharia visual / experiência operacional**. Nenhuma regra
+empresarial criada, promovida ou alterada; nenhum backend, API, migration, seed, permissão ou
+contrato de dados tocado.
+
+### Arquivos alterados
+
+- `apps/web/src/requests/pages/ServiceRequestDetailPage.tsx`
+- `apps/web/src/requests/pages/ServiceRequestDetailPage.test.tsx`
+
+### Baseline medido
+
+Medição DOM/Playwright, Chromium 1440x1100, dev server real, API mockada somente para esta função:
+
+- `docOverflowX=0`.
+- A página já usava `EnterpriseObjectPage`, `EnterpriseObjectHeader` e `NextActionPanel`.
+- `ObjectStateFlow` ausente (`hasStateFlow=false`).
+- `SmartRelationBar` ausente (`hasRelations=false`).
+
+### Alteração aplicada
+
+- Inclusão de `ObjectStateFlow` no nível canônico da `EnterpriseObjectPage`, com estados reais
+  da solicitação: rascunho, enviada, em análise, aprovada, convertida, rejeitada e cancelada.
+- Inclusão de `SmartRelationBar` com relações navegáveis e autorizadas já presentes no read model:
+  cliente, documentos existentes e cadeia relacionada existente.
+- Histórico, resumo operacional, documentos, ações de ciclo, transições e payloads foram preservados.
+
+### Evidência depois
+
+- `docOverflowX=0`.
+- `hasStateFlow=true`, com `aria-label="Fluxo da solicitação"`.
+- `hasRelations=true`, com `aria-label="Relações"`.
+- Screenshot e medição temporária gerados por `tmp/measure-requests-detail.mjs` / `tmp/requests-detail-gate.png` (gitignored).
+
+### Validação
+
+- `node tmp/measure-requests-detail.mjs` — **PASS**
+- `pnpm --filter @cisne/web exec vitest run --config vite.config.ts src/requests/pages/ServiceRequestDetailPage.test.tsx` — **PASS** (6/6)
+- `pnpm --filter @cisne/web exec eslint src/requests/pages/ServiceRequestDetailPage.tsx src/requests/pages/ServiceRequestDetailPage.test.tsx` — **PASS**
+- `pnpm --filter @cisne/web typecheck` — **PASS**
+- `git diff --check` — **PASS**
+
+### Quality gate
+
+- [x] Alteração restrita ao detalhe de Solicitações
+- [x] Nenhum componente novo criado
+- [x] Nenhum dado, KPI, relação ou capability inventado
+- [x] Nenhuma regra empresarial nova
+- [x] Nenhuma migration, seed, backend, permissão ou contrato de API
+- [x] Transições, ações, histórico e documentos preservados
+
+WORKING_TREE: limpo após commit
+COMMIT: incluído no commit desta sessão
+NEXT_PROMPT_EXECUTED: NO
+
+---
+
 ## SOLICITACOES — CRIAR SOLICITACAO (FORM): MAIN + ASIDE CONTEXTUAL SEM OVERLAY
 
 DATA: 2026-10-06T23:28:44-04:00

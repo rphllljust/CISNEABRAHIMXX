@@ -52,6 +52,8 @@ describe('ServiceRequestDetailPage', () => {
     expect(screen.getByRole('heading', { name: /próximo passo/i })).toBeInTheDocument();
     expect(screen.getByRole('heading', { name: /histórico do ciclo/i })).toBeInTheDocument();
     expect(screen.getByRole('heading', { name: /cadeia relacionada/i })).toBeInTheDocument();
+    expect(screen.getByLabelText('Fluxo da solicitação')).toBeInTheDocument();
+    expect(screen.getByLabelText('Relações')).toBeInTheDocument();
     // Nome humano do cliente (módulo CLIENTES autorizado) — nunca o UUID.
     expect(screen.getAllByText('Cliente Demo Ltda').length).toBeGreaterThan(0);
     expect(

@@ -50,9 +50,13 @@ import {
   EnterpriseObjectPage,
   NextActionPanel,
   ObjectPanel,
+  ObjectStateFlow,
+  SmartRelationBar,
+  buildAuthorizedRelations,
   type NextAction,
   type ObjectAction,
   type ObjectMetadataField,
+  type ObjectStateStep,
 } from '../../enterprise-object';
 import type { StatusBadgeTone } from '../../ui/StatusBadge';
 import { DefinitionList } from '../../financial-ui/DefinitionList';
@@ -64,6 +68,8 @@ import { cn } from '../../ui/utils/cn';
  *
  *   breadcrumb (Solicitações -> Solicitação)
  *     EnterpriseObjectHeader   código, cliente, estado, prioridade e ações do ciclo
+ *     ObjectStateFlow          estados reais da solicitação
+ *     SmartRelationBar         relações realmente autorizadas e navegáveis
  *     NextActionPanel          declarado SOMENTE quando o próximo passo não é um botão desta tela
  *     corpo + coluna lateral   resumo compacto, cadeia, histórico e decisões pendentes
  *
@@ -95,6 +101,16 @@ const STATUS_TONES: Record<ServiceRequestStatus, StatusBadgeTone> = {
   [SERVICE_REQUEST_STATUSES.Cancelled]: 'neutral',
   [SERVICE_REQUEST_STATUSES.Converted]: 'operational',
 };
+
+const SERVICE_REQUEST_STATE_FLOW: ObjectStateStep[] = [
+  { id: SERVICE_REQUEST_STATUSES.Draft, label: 'Rascunho' },
+  { id: SERVICE_REQUEST_STATUSES.Submitted, label: 'Enviada' },
+  { id: SERVICE_REQUEST_STATUSES.UnderReview, label: 'Em análise' },
+  { id: SERVICE_REQUEST_STATUSES.Approved, label: 'Aprovada' },
+  { id: SERVICE_REQUEST_STATUSES.Converted, label: 'Convertida', terminal: true },
+  { id: SERVICE_REQUEST_STATUSES.Rejected, label: 'Rejeitada', terminal: true },
+  { id: SERVICE_REQUEST_STATUSES.Cancelled, label: 'Cancelada', terminal: true },
+];
 
 export function ServiceRequestDetailPage() {
   const { serviceRequestId = '' } = useParams();
@@ -293,6 +309,32 @@ export function ServiceRequestDetailPage() {
   const serviceOrderLink = serviceRequest.convertedServiceOrderId
     ? `/app/service-orders/${serviceRequest.convertedServiceOrderId}/planning`
     : null;
+  const relations = buildAuthorizedRelations([
+    {
+      id: 'client',
+      label: 'Cliente',
+      count: related.client ? 1 : 0,
+      to: related.client ? `/app/clients/${related.client.id}` : '',
+      allowed: Boolean(related.client),
+      hint: 'Cliente vinculado à solicitação',
+    },
+    {
+      id: 'documents',
+      label: 'Documentos',
+      count: detail.documentLinks.length,
+      to: `/app/documents?scope=SERVICE_REQUEST&entityId=${serviceRequest.id}`,
+      allowed: detail.documentLinks.length > 0,
+      hint: 'Documentos vinculados à solicitação',
+    },
+    {
+      id: 'chain',
+      label: 'Cadeia',
+      count: linkedChain.length,
+      to: `/app/requests/${serviceRequest.id}`,
+      allowed: linkedChain.length > 0,
+      hint: 'Elos de negócio autorizados para esta solicitação',
+    },
+  ]);
 
   const blocked = readiness.blockers.length > 0;
 
@@ -398,7 +440,15 @@ export function ServiceRequestDetailPage() {
             secondaryActions={secondaryActions}
           />
         }
+        stateFlow={
+          <ObjectStateFlow
+            steps={SERVICE_REQUEST_STATE_FLOW}
+            currentId={serviceRequest.status}
+            title="Fluxo da solicitação"
+          />
+        }
         nextAction={<NextActionPanel action={nextAction} />}
+        relations={<SmartRelationBar relations={relations} />}
         aside={
           <>
             <ObjectPanel title="Próximo passo">
