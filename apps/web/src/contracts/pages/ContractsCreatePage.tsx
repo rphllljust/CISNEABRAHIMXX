@@ -1,17 +1,13 @@
 import { Link, useNavigate } from 'react-router-dom';
-import { useEffect, useState, type FormEvent } from 'react';
+import { useEffect, useState, type FormEvent, type ReactNode } from 'react';
+import { ScrollText } from 'lucide-react';
 import { listClients } from '../../clients/api/clients-api';
 import { ContractsApiError, createContract } from '../api/contracts-api';
 import { mapContractErrorToMessage } from '../api/contracts-error-messages';
 import { ContractFormFields, type ClientOption } from '../components/ContractFormFields';
 import { useContractCapabilities } from '../hooks/useContractCapabilities';
-import {
-  BuilderSection,
-  BuilderSummary,
-  Button,
-  FieldError,
-  StickyActionBar,
-} from '../../ui';
+import { formatDate } from '../utils/contract-status-labels';
+import { BuilderSection, Button, FieldError, StickyActionBar } from '../../ui';
 import {
   ModuleDeniedState,
   ModuleLoadingState,
@@ -31,6 +27,44 @@ const CREATE_DESCRIPTION =
 const SECONDARY_LINK_CLASS =
   'inline-flex min-h-9 items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-semibold text-gray-700 no-underline ring-1 ring-gray-300 ring-inset hover:bg-gray-50';
 
+/**
+ * ETIQUETA DE OBRIGATORIEDADE — o asterisco do `Field` diz QUE o campo e obrigatorio, nao
+ * QUANTOS nem QUAIS. A faixa declara o conjunto de uma vez, para o operador saber o custo real
+ * do cadastro antes de digitar. Texto acessivel (nao e so cor nem so asterisco) e nunca
+ * substitui a marcacao por campo.
+ */
+function RequiredLegend({ children }: { children: ReactNode }) {
+  return (
+    <p className="m-0 text-[11px] font-medium text-gray-500">
+      <span className="text-error-fg" aria-hidden="true">
+        *
+      </span>{' '}
+      {children}
+    </p>
+  );
+}
+
+/**
+ * NOVO CONTRATO — cadastro no padrao empresarial do CISNE.
+ *
+ * Antes: `ModulePageHeader` com paragrafo + `BuilderSummary` como faixa SOLTA e um unico
+ * `BuilderSection` com dez campos em grade continua.
+ *
+ * O resumo solto tinha um defeito visivel: `currencyCode` nasce `'BRL'` em `EMPTY_CONTRACT_FORM`
+ * e o `BuilderSummary` remove valores vazios, entao no formulario em branco sobrava a pilula
+ * "MOEDA BRL" flutuando acima do cartao — o unico item "preenchido" era justamente o unico que
+ * o operador nao escolheu. Aqui o resumo passa a viver DENTRO do painel de identificacao, com
+ * travessao para o que ainda nao foi preenchido e SEM a moeda (padrao, nao decisao do operador),
+ * e o Cliente aparece pelo NOME escolhido — nunca pelo identificador tecnico.
+ *
+ * Os campos passam a ser agrupados em secoes semanticas por `ContractFormFields` (identificacao,
+ * escopo, vigencia e moeda, condicoes de pagamento), compartilhadas com a pagina de edicao.
+ *
+ * NADA da regra mudou: `createContract`, `validateContractCreateForm`,
+ * `buildCreateContractPayload`, o carregamento de clientes, o estado de submissao, o bloqueio
+ * por capability e o redirecionamento pos-cadastro permanecem iguais. Os rotulos acessiveis de
+ * todos os campos continuam identicos (o e2e depende deles).
+ */
 export function ContractsCreatePage() {
   const navigate = useNavigate();
   const { capabilities, loading: capabilitiesLoading } = useContractCapabilities();
@@ -118,9 +152,11 @@ export function ContractsCreatePage() {
     }
   }
 
+  const selectedClient = clients.find((client) => client.id === values.clientId);
+
   return (
     <ModulePage>
-      <ModulePageHeader title="Novo contrato" description={CREATE_DESCRIPTION} />
+      <ModulePageHeader title="Novo contrato" />
       <form
         onSubmit={(event) => void handleSubmit(event)}
         noValidate
@@ -133,19 +169,78 @@ export function ContractsCreatePage() {
           </div>
         ) : null}
 
-        <BuilderSummary
-          items={[
-            { label: 'Número', value: values.contractNumber.trim() || null },
-            { label: 'Título', value: values.title.trim() || null },
-            { label: 'Vigência', value: values.validFrom || null },
-            { label: 'Vigência final', value: values.validTo || null },
-            { label: 'Moeda', value: values.currencyCode.trim().toUpperCase() || null },
-          ]}
-        />
+        {/*
+          PAINEL DE IDENTIFICACAO — titulo, obrigatoriedade e resumo dividem UMA moldura.
+
+          ATENCAO ao nome do `<h2>`: a pagina ja tem `<h1>Novo contrato</h1>` e o e2e resolve o
+          titulo por `getByRole('heading', { name: /^novo contrato$/i })`, que exige UM unico no.
+          Repetir "Novo contrato" aqui quebraria a prova — o painel nomeia a ATIVIDADE
+          ("Novo cadastro"), o `<h1>` nomeia a tela.
+        */}
+        <section
+          aria-labelledby="contract-create-panel-heading"
+          className="rounded-lg border border-slate-200 bg-white shadow-[0_1px_2px_rgb(15_23_42/0.04)]"
+        >
+          <div className="flex flex-wrap items-start justify-between gap-x-6 gap-y-3 px-4 py-3">
+            <div className="flex min-w-0 items-start gap-3">
+              <span
+                className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-brand-50 text-brand-700 ring-1 ring-brand-200 ring-inset"
+                aria-hidden="true"
+              >
+                <ScrollText className="h-[18px] w-[18px]" />
+              </span>
+              <div className="min-w-0">
+                <h2
+                  id="contract-create-panel-heading"
+                  className="m-0 text-sm font-semibold text-gray-900"
+                >
+                  Novo cadastro
+                </h2>
+                <p className="m-0 mt-0.5 max-w-2xl text-xs text-gray-500">{CREATE_DESCRIPTION}</p>
+              </div>
+            </div>
+            <RequiredLegend>Número, título, cliente, unidade e vigência inicial.</RequiredLegend>
+          </div>
+
+          {/*
+            RESUMO DA PROPRIA EDICAO, no rodape do painel. Sem a moeda (valor padrao, nao escolha
+            do operador) e com travessao no que falta — assim o formulario em branco le como
+            estado vazio intencional, e nao como uma pilula solta de "MOEDA BRL".
+          */}
+          <dl
+            aria-label="Resumo do cadastro em andamento"
+            className="m-0 flex flex-wrap items-center gap-x-6 gap-y-2 rounded-b-lg border-t border-slate-100 bg-slate-50/70 px-4 py-2.5"
+          >
+            {[
+              { label: 'Número', value: values.contractNumber.trim() },
+              { label: 'Título', value: values.title.trim() },
+              { label: 'Cliente', value: selectedClient?.label ?? '' },
+              {
+                label: 'Vigência inicial',
+                value: values.validFrom ? formatDate(values.validFrom) : '',
+              },
+            ].map((item) => (
+              <div key={item.label} className="flex min-w-0 items-baseline gap-1.5">
+                <dt className="text-[10px] font-semibold tracking-wide text-gray-500 uppercase">
+                  {item.label}
+                </dt>
+                <dd
+                  className={
+                    item.value
+                      ? 'm-0 max-w-[16rem] truncate text-sm font-semibold text-gray-900 tabular-nums'
+                      : 'm-0 text-sm font-medium text-gray-400'
+                  }
+                >
+                  {item.value || '—'}
+                </dd>
+              </div>
+            ))}
+          </dl>
+        </section>
 
         <BuilderSection
           title="Dados do contrato"
-          description="Cliente, unidade, identificação comercial e vigência desta versão."
+          description="Cliente, unidade, identificação comercial, escopo e vigência desta versão."
         >
           <ContractFormFields
             mode="create"
@@ -162,7 +257,12 @@ export function ContractsCreatePage() {
           <Link to="/app/contracts" className={SECONDARY_LINK_CLASS}>
             Cancelar
           </Link>
-          <Button type="submit" disabled={submitting} loading={submitting} loadingText="Cadastrando">
+          <Button
+            type="submit"
+            disabled={submitting}
+            loading={submitting}
+            loadingText="Cadastrando"
+          >
             Cadastrar contrato
           </Button>
         </StickyActionBar>
