@@ -266,6 +266,21 @@ export function ContractsCreatePage() {
             Cadastrar contrato
           </Button>
         </StickyActionBar>
+
+        {/*
+          RESPIRO PARA A BARRA FIXA.
+
+          A barra de acao e `sticky bottom-0` e fica no fluxo da pagina, sobre o ultimo trecho do
+          formulario. MEDIDO no DOM real em 1440x900 (elementFromPoint no centro do controle
+          "Moeda"): o ponto devolvia a propria barra, e o campo "Moeda" ficava 28px coberto por ela
+          — o operador clicava no campo e acertava a barra. Sem `total` na listagem e sem
+          paginacao aqui, a ultima secao do formulario e sempre a que encosta no rodape.
+
+          Este espacador devolve o vao que a barra ocupa quando ela esta no fim do scroll, de modo
+          que o ultimo campo (e o rotulo dele) nunca fique sob a acao primaria. Nao desloca a
+          primeira dobra: fica depois da barra, no fim do fluxo.
+        */}
+        <div aria-hidden="true" className="h-[4.5rem] shrink-0" />
       </form>
     </ModulePage>
   );

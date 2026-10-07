@@ -56,6 +56,19 @@ function FormSection({
         </h3>
         {hint ? <p className="m-0 mt-0.5 text-[11px] text-slate-400">{hint}</p> : null}
       </div>
+      {/*
+        GRADE DE CAMPOS — alinhamento por LINHA, nunca por celula.
+
+        Os campos usam `gap-4` (16px): 12px vem do `gap-1.5` interno do `Field` e 4px do
+        espacamento entre a ultima parte do rotulo e o controle. Medido no DOM real, cada campo
+        entrega o par rotulo/controle com 12px entre eles — sem vao morto.
+
+        O vazio de 38px que existia na celula "Unidade operacional" vinha de um `hint` POR CAMPO:
+        o `Field` empilha rotulo + hint + controle, entao o campo crescia 20px e, por ser o unico
+        da linha com hint, o par rotulo/controle dele saia 38px mais baixo que o do vizinho.
+        A instrucao da unidade passou a viver no hint da SECAO (uma vez, valendo para o grupo),
+        nao repetida em um campo isolado da grade.
+      */}
       {children}
     </section>
   );
@@ -99,7 +112,6 @@ export function ContractFormFields({
             htmlFor="contract-unit"
             required
             error={fieldErrors.unitId}
-            hint="Identificador da unidade autorizada."
           >
             <Input
               id="contract-unit"
