@@ -153,121 +153,107 @@ export function ServiceRequestForm({
     <form
       onSubmit={onSubmit}
       noValidate
-      className="flex flex-col gap-3"
+      className="grid gap-3 lg:grid-cols-[minmax(0,1fr)_20rem]"
       aria-describedby={submitError ? formErrorId : undefined}
     >
-      <BuilderSummary
-        items={[
-          { label: 'Cliente', value: clientLabel },
-          {
-            label: 'Contato externo',
-            value: values.externalContactName.trim() || null,
-          },
-          {
-            label: 'Origem',
-            value: values.originSource
-              ? formatServiceRequestOrigin(values.originSource)
-              : null,
-          },
-          { label: 'Unidade', value: values.unitId.trim() || null },
-          { label: 'Serviço', value: selectedService?.label ?? null },
-          { label: 'Início desejado', value: formatDesiredAt(values.desiredStartAt) },
-        ]}
-      />
-
       {submitError ? (
-        <p id={formErrorId} className="m-0 rounded-md bg-red-50 px-3 py-2 text-sm text-red-700" role="alert">
+        <p
+          id={formErrorId}
+          className="m-0 rounded-md bg-red-50 px-3 py-2 text-sm text-red-700 lg:col-span-2"
+          role="alert"
+        >
           {submitError}
         </p>
       ) : null}
 
-      <BuilderSection
-        title="Origem da solicitação"
-        description="Canal ou fonte externa da demanda — diferente de quem registrou internamente no sistema."
-      >
-        <div className={FIELD_GRID}>
-          <Field
-            label="Origem"
-            htmlFor="request-origin-source"
-            required
-            error={fieldErrors.originSource}
-          >
-            <Select
-              id="request-origin-source"
-              value={values.originSource}
-              onChange={(event) =>
-                updateField('originSource', event.target.value as ServiceRequestOrigin | '')
-              }
+      <div className="flex min-w-0 flex-col gap-3">
+        <BuilderSection
+          title="Origem da solicitação"
+          description="Canal ou fonte externa da demanda — diferente de quem registrou internamente no sistema."
+        >
+          <div className={FIELD_GRID}>
+            <Field
+              label="Origem"
+              htmlFor="request-origin-source"
               required
-              disabled={submitting}
-              invalid={Boolean(fieldErrors.originSource)}
+              error={fieldErrors.originSource}
             >
-              <option value="">Selecione…</option>
-              {Object.values(SERVICE_REQUEST_ORIGINS).map((origin) => (
-                <option key={origin} value={origin}>
-                  {SERVICE_REQUEST_ORIGIN_LABELS[origin]}
-                </option>
-              ))}
-            </Select>
-          </Field>
-
-          <Field label="Referência externa" htmlFor="request-external-ref">
-            <Input
-              id="request-external-ref"
-              value={values.externalOriginReference}
-              onChange={(event) => updateField('externalOriginReference', event.target.value)}
-              disabled={submitting}
-              placeholder="Protocolo, ticket, etc."
-            />
-          </Field>
-        </div>
-      </BuilderSection>
-
-      <BuilderSection
-        title="Cliente, unidade e contato"
-        description="Selecione um Cliente autorizado ou informe o contato externo — não criamos Cliente a partir de texto livre."
-        action={
-          mode === 'create' && onRegisterUnit ? (
-            <div className="flex items-center gap-2">
-              <Input
-                id="request-unit-new"
-                aria-label="Código da nova unidade operacional"
-                value={unitDraft}
-                onChange={(event) => setUnitDraft(event.target.value)}
+              <Select
+                id="request-origin-source"
+                value={values.originSource}
+                onChange={(event) =>
+                  updateField('originSource', event.target.value as ServiceRequestOrigin | '')
+                }
+                required
                 disabled={submitting}
-                placeholder="Nova unidade, ex. UN-POA-01"
-                className="w-52"
-              />
-              <Button
-                type="button"
-                variant="secondary"
-                disabled={submitting || unitDraft.trim().length < 2}
-                onClick={() => {
-                  void onRegisterUnit(unitDraft)
-                    .then((items) => {
-                      setUnitMessage('Unidade registrada.');
-                      setUnitDraft('');
-                      if (items.includes(unitDraft.trim().toUpperCase())) {
-                        updateField('unitId', unitDraft.trim().toUpperCase());
-                      }
-                    })
-                    .catch(() => setUnitMessage('Não foi possível registrar a unidade.'));
-                }}
+                invalid={Boolean(fieldErrors.originSource)}
               >
-                Registrar unidade
-              </Button>
-            </div>
-          ) : null
-        }
-        footer={
-          unitMessage ? (
-            <p className="m-0" role="status">
-              {unitMessage}
-            </p>
-          ) : null
-        }
-      >
-        <div className={FIELD_GRID}>
+                <option value="">Selecione…</option>
+                {Object.values(SERVICE_REQUEST_ORIGINS).map((origin) => (
+                  <option key={origin} value={origin}>
+                    {SERVICE_REQUEST_ORIGIN_LABELS[origin]}
+                  </option>
+                ))}
+              </Select>
+            </Field>
+
+            <Field label="Referência externa" htmlFor="request-external-ref">
+              <Input
+                id="request-external-ref"
+                value={values.externalOriginReference}
+                onChange={(event) => updateField('externalOriginReference', event.target.value)}
+                disabled={submitting}
+                placeholder="Protocolo, ticket, etc."
+              />
+            </Field>
+          </div>
+        </BuilderSection>
+
+        <BuilderSection
+          title="Cliente, unidade e contato"
+          description="Selecione um Cliente autorizado ou informe o contato externo — não criamos Cliente a partir de texto livre."
+          action={
+            mode === 'create' && onRegisterUnit ? (
+              <div className="flex items-center gap-2">
+                <Input
+                  id="request-unit-new"
+                  aria-label="Código da nova unidade operacional"
+                  value={unitDraft}
+                  onChange={(event) => setUnitDraft(event.target.value)}
+                  disabled={submitting}
+                  placeholder="Nova unidade, ex. UN-POA-01"
+                  className="w-52"
+                />
+                <Button
+                  type="button"
+                  variant="secondary"
+                  disabled={submitting || unitDraft.trim().length < 2}
+                  onClick={() => {
+                    void onRegisterUnit(unitDraft)
+                      .then((items) => {
+                        setUnitMessage('Unidade registrada.');
+                        setUnitDraft('');
+                        if (items.includes(unitDraft.trim().toUpperCase())) {
+                          updateField('unitId', unitDraft.trim().toUpperCase());
+                        }
+                      })
+                      .catch(() => setUnitMessage('Não foi possível registrar a unidade.'));
+                  }}
+                >
+                  Registrar unidade
+                </Button>
+              </div>
+            ) : null
+          }
+          footer={
+            unitMessage ? (
+              <p className="m-0" role="status">
+                {unitMessage}
+              </p>
+            ) : null
+          }
+        >
+          <div className={FIELD_GRID}>
           {mode === 'create' ? (
             <HumanLookupField
               label="Cliente"
@@ -385,14 +371,14 @@ export function ServiceRequestForm({
               disabled={submitting}
             />
           </Field>
-        </div>
-      </BuilderSection>
+          </div>
+        </BuilderSection>
 
-      <BuilderSection
-        title="Detalhes da demanda"
-        description="Serviço do catálogo, o que precisa ser feito, onde e quando."
-      >
-        <div className={FIELD_GRID}>
+        <BuilderSection
+          title="Detalhes da demanda"
+          description="Serviço do catálogo, o que precisa ser feito, onde e quando."
+        >
+          <div className={FIELD_GRID}>
           {mode === 'create' && services.length > 0 ? (
             <HumanLookupField
               label="Serviço do catálogo"
@@ -510,25 +496,59 @@ export function ServiceRequestForm({
               disabled={submitting}
             />
           </Field>
-        </div>
-      </BuilderSection>
+          </div>
+        </BuilderSection>
 
-      <BuilderSection
-        title="Observações operacionais"
-        description="Instruções de acesso, janelas de execução e ressalvas da equipe."
+        <BuilderSection
+          title="Observações operacionais"
+          description="Instruções de acesso, janelas de execução e ressalvas da equipe."
+        >
+          <Field label="Observações operacionais" htmlFor="request-notes">
+            <Textarea
+              id="request-notes"
+              value={values.operationalNotes}
+              onChange={(event) => updateField('operationalNotes', event.target.value)}
+              rows={3}
+              disabled={submitting}
+            />
+          </Field>
+        </BuilderSection>
+      </div>
+
+      <aside
+        className="self-start rounded-lg bg-white px-4 py-3 shadow-sm ring-1 ring-gray-900/5 lg:sticky lg:top-4"
       >
-        <Field label="Observações operacionais" htmlFor="request-notes">
-          <Textarea
-            id="request-notes"
-            value={values.operationalNotes}
-            onChange={(event) => updateField('operationalNotes', event.target.value)}
-            rows={3}
-            disabled={submitting}
-          />
-        </Field>
-      </BuilderSection>
+        <p className="m-0 text-[11px] font-semibold tracking-wide text-gray-500 uppercase">
+          Resumo da configuração
+        </p>
+        <BuilderSummary
+          className="mt-2 rounded-none bg-transparent p-0 shadow-none ring-0"
+          items={[
+            { label: 'Cliente', value: clientLabel },
+            {
+              label: 'Contato externo',
+              value: values.externalContactName.trim() || null,
+            },
+            {
+              label: 'Origem',
+              value: values.originSource
+                ? formatServiceRequestOrigin(values.originSource)
+                : null,
+            },
+            { label: 'Unidade', value: values.unitId.trim() || null },
+            { label: 'Serviço', value: selectedService?.label ?? null },
+            { label: 'Início desejado', value: formatDesiredAt(values.desiredStartAt) },
+          ]}
+        />
+        <p className="mt-3 mb-0 text-[12px] text-gray-500">
+          {note ?? 'Demanda mínima suficiente para registrar a solicitação.'}
+        </p>
+      </aside>
 
-      <StickyActionBar note={note}>
+      <StickyActionBar
+        note={null}
+        className="!static mx-0 mt-0 rounded-lg border border-gray-200 bg-white px-4 py-3 shadow-sm backdrop-blur-none sm:mx-0 sm:px-4 lg:col-span-2"
+      >
         <Link to={cancelHref} className="button-link button-secondary">
           Cancelar
         </Link>

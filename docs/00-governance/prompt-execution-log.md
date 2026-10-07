@@ -17086,3 +17086,69 @@ Medição DOM/Playwright, Chromium 1440x900, dev server real, API mockada soment
 WORKING_TREE: limpo após commit
 COMMIT: incluído no commit desta sessão
 NEXT_PROMPT_EXECUTED: NO
+
+---
+
+## SOLICITACOES — CRIAR SOLICITACAO (FORM): MAIN + ASIDE CONTEXTUAL SEM OVERLAY
+
+DATA: 2026-10-06T23:28:44-04:00
+STATUS: **PASS**
+
+### Escopo executado
+
+Continuidade da wave frontend Enterprise Tier-1, uma função por vez.
+
+Módulo: **Solicitações**.
+Função: **Criar solicitação** (`/app/requests/new`).
+Classificação principal: **FORM**.
+
+Classificação: **interpretação de engenharia visual / experiência operacional**. Nenhuma regra
+empresarial criada, promovida ou alterada; nenhum backend, API, migration, seed, permissão ou
+contrato de dados tocado.
+
+### Arquivo alterado
+
+- `apps/web/src/requests/components/ServiceRequestForm.tsx`
+
+### Baseline medido
+
+Medição DOM/Playwright, Chromium 1440x900, dev server real, API mockada somente para esta função:
+
+- `docOverflowX=0`, 1 `<h1>`, 4 seções semânticas.
+- Formulário em coluna única de 1072px; resumo só aparecia inline quando havia valores.
+- Barra de ação `sticky bottom-0` ficava em `top=835..900` na viewport e interceptava campos da seção "Detalhes da demanda" antes do scroll.
+- Controles cobertos medidos: serviço, local, cidade, UF, início/fim desejados e observações.
+
+### Alteração aplicada
+
+- O formulário passou para composição `main + aside`: seções principais à esquerda e resumo/pedências à direita, usando `BuilderSummary` existente.
+- A action bar da função deixou de ser overlay sticky e passou a ser superfície de ação estática ao final do form, preservando `StickyActionBar` como primitive composta localmente.
+- O resumo contextual continua usando fatos reais da edição: Cliente, contato externo, origem, unidade, serviço e início desejado. Nenhum campo, validação, capability ou payload foi alterado.
+
+### Evidência depois
+
+- `docOverflowX=0`, 1 `<h1>`, `summary` presente (`left=1080`, `width=320`), action bar fora da primeira viewport (`top=1322`).
+- `occluded=[]` para controles inteiros visíveis na viewport.
+- Seções principais ficaram em `width=740`; aside contextual fixo em `width=320`.
+- Screenshots e métricas gerados em `tmp/requests-create-gate/` (gitignored) para revisão humana.
+
+### Validação
+
+- `node tmp/measure-requests-create.mjs` — **PASS**
+- `pnpm --filter @cisne/web exec vitest run --config vite.config.ts src/requests/service-request-create.ui.test.tsx src/requests/pages/ServiceRequestCreatePage.test.tsx` — **PASS** (8/8)
+- `pnpm --filter @cisne/web exec eslint src/requests/components/ServiceRequestForm.tsx src/requests/pages/ServiceRequestCreatePage.tsx` — **PASS**
+- `pnpm --filter @cisne/web typecheck` — **PASS**
+- `git diff --check` — **PASS**
+
+### Quality gate
+
+- [x] Alteração restrita ao formulário de Solicitações
+- [x] Nenhum componente novo criado
+- [x] Nenhum dado, KPI, relação ou capability inventado
+- [x] Nenhuma regra empresarial nova
+- [x] Nenhuma migration, seed, backend, permissão ou contrato de API
+- [x] Submit, validação, payload e navegação preservados
+
+WORKING_TREE: limpo após commit
+COMMIT: incluído no commit desta sessão
+NEXT_PROMPT_EXECUTED: NO
