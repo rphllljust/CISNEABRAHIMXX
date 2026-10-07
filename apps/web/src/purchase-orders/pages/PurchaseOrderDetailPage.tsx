@@ -495,13 +495,16 @@ export function PurchaseOrderDetailPage() {
           });
         }}
       >
-        <div className="form-field">
-          <label htmlFor={`${reasonId}-cancel`}>Motivo</label>
+        <div className="flex min-w-0 flex-col gap-1.5">
+          <label htmlFor={`${reasonId}-cancel`} className="text-sm font-semibold text-gray-700">
+            Motivo
+          </label>
           <textarea
             id={`${reasonId}-cancel`}
             value={cancelReason}
             onChange={(event) => setCancelReason(event.target.value)}
             rows={3}
+            className="min-h-24 rounded-md border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 shadow-sm focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 focus:outline-none"
           />
         </div>
       </ConfirmDialog>

@@ -17658,6 +17658,53 @@ NEXT_PROMPT_EXECUTED: NO
 
 ---
 
+## PEDIDOS DE COMPRA — DETALHE: DIALOG DE CANCELAMENTO SEM FORM-FIELD LEGADO
+
+DATA: 2026-10-07T10:42:00-04:00
+STATUS: **PASS**
+
+### Escopo executado
+
+Continuidade da wave frontend Enterprise Tier-1, uma função por vez.
+
+Módulo: **Pedidos de compra**.
+Função: **Detalhe do pedido** (`/app/purchase-orders/:id`) — dialog de cancelamento.
+Classificação principal: **OBJECT / DETAIL PAGE**.
+
+Classificação: **interpretação de engenharia visual / experiência operacional**. Nenhuma regra
+empresarial criada, promovida ou alterada; nenhum backend, API, migration, seed, permissão ou
+contrato de dados tocado.
+
+### Arquivo alterado
+
+- `apps/web/src/purchase-orders/pages/PurchaseOrderDetailPage.tsx`
+
+### Alteração aplicada
+
+- Textarea de motivo do cancelamento deixou `form-field` legado.
+- `cancelPurchaseOrder`, rowVersion, motivo opcional e fechamento do dialog foram preservados.
+
+### Validação
+
+- `pnpm --filter @cisne/web exec vitest run --config vite.config.ts src/purchase-orders/purchase-orders.e2e.test.tsx src/purchase-orders/purchase-orders.components.test.tsx` — **PASS** (19/19)
+- `pnpm --filter @cisne/web exec eslint src/purchase-orders/pages/PurchaseOrderDetailPage.tsx` — **PASS**
+- `pnpm --filter @cisne/web typecheck` — **PASS**
+- `git diff --check` — **PASS**
+
+### Quality gate
+
+- [x] Alteração restrita ao dialog de cancelamento de Pedido de compra
+- [x] Nenhum dado, KPI, relação ou capability inventado
+- [x] Nenhuma regra empresarial nova
+- [x] Nenhuma migration, seed, backend, permissão ou contrato de API
+- [x] Cancelamento, rowVersion e motivo preservados
+
+WORKING_TREE: limpo após commit
+COMMIT: incluído no commit desta sessão
+NEXT_PROMPT_EXECUTED: NO
+
+---
+
 ## PROPOSTAS — DETALHE: DIALOGS SEM FORM-FIELD LEGADO
 
 DATA: 2026-10-07T10:41:00-04:00
