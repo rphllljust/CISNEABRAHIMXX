@@ -17600,6 +17600,64 @@ NEXT_PROMPT_EXECUTED: NO
 
 ---
 
+## PESSOAS — FORMULARIO DE PESSOA (CREATE/EDIT): MAIN + ASIDE CONTEXTUAL
+
+DATA: 2026-10-07T00:05:53-04:00
+STATUS: **PASS**
+
+### Escopo executado
+
+Continuidade global da wave frontend Enterprise Tier-1, uma função por vez.
+
+Módulo: **Pessoas**.
+Função: **Formulário de pessoa** (`/app/people/new` e composição compartilhada com edição).
+Classificação principal: **FORM**.
+
+Classificação: **interpretação de engenharia visual / experiência operacional**. Nenhuma regra
+empresarial criada, promovida ou alterada; nenhum backend, API, migration, seed, permissão ou
+contrato de dados tocado.
+
+### Arquivo alterado
+
+- `apps/web/src/people/components/PersonForm.tsx`
+
+### Alteração aplicada
+
+- O formulário passou para composição `main + aside`: identificação, vínculo e situação persistida
+  à esquerda; resumo e nota contextual à direita.
+- A action bar local deixou de funcionar como overlay sticky e passou a ficar estática ao final
+  do formulário.
+- Validação, payload, catálogo de funções, fatos persistidos e navegação foram preservados.
+
+### Evidência depois
+
+- Medição DOM/Playwright em `/app/people/new`, Chromium 1440x900:
+  - `docOverflowX=0`.
+  - `summary` presente em `form aside` (`left=1080`, `width=320`).
+
+### Validação
+
+- `node tmp/measure-person-create.mjs` — **PASS**
+- `pnpm --filter @cisne/web exec vitest run --config vite.config.ts src/people/people-create-edit.ui.test.tsx src/people/pages/PersonCreatePage.test.tsx src/people/PeopleListPage.test.tsx` — **PASS** (14/14 executados)
+- `pnpm --filter @cisne/web exec eslint src/people/components/PersonForm.tsx src/people/pages/PersonCreatePage.tsx src/people/pages/PersonEditPage.tsx` — **PASS**
+- `pnpm --filter @cisne/web typecheck` — **PASS**
+- `git diff --check` — **PASS**
+
+### Quality gate
+
+- [x] Alteração restrita ao formulário de Pessoas
+- [x] Nenhum componente novo criado
+- [x] Nenhum dado, KPI, relação ou capability inventado
+- [x] Nenhuma regra empresarial nova
+- [x] Nenhuma migration, seed, backend, permissão ou contrato de API
+- [x] Validação, payload, catálogo e fatos persistidos preservados
+
+WORKING_TREE: limpo após commit
+COMMIT: incluído no commit desta sessão
+NEXT_PROMPT_EXECUTED: NO
+
+---
+
 ## SOLICITACOES — CRIAR SOLICITACAO (FORM): MAIN + ASIDE CONTEXTUAL SEM OVERLAY
 
 DATA: 2026-10-06T23:28:44-04:00

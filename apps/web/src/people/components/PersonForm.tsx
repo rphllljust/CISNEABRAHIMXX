@@ -99,34 +99,25 @@ export function PersonForm({
     <form
       onSubmit={onSubmit}
       noValidate
-      className="flex flex-col gap-3"
+      className="grid gap-3 lg:grid-cols-[minmax(0,1fr)_20rem]"
       aria-describedby={submitError ? formErrorId : undefined}
     >
-      {submitError ? (
-        <p
-          id={formErrorId}
-          role="alert"
-          className="m-0 rounded-md bg-red-50 px-3 py-2 text-sm text-red-700 ring-1 ring-red-500/20 ring-inset"
+      <div className="flex min-w-0 flex-col gap-3">
+        {submitError ? (
+          <p
+            id={formErrorId}
+            role="alert"
+            className="m-0 rounded-md bg-red-50 px-3 py-2 text-sm text-red-700 ring-1 ring-red-500/20 ring-inset"
+          >
+            {submitError}
+          </p>
+        ) : null}
+
+        <fieldset
+          disabled={submitting}
+          className="m-0 flex min-w-0 flex-col gap-3 border-0 p-0"
+          aria-label="Dados da pessoa"
         >
-          {submitError}
-        </p>
-      ) : null}
-
-      <BuilderSummary
-        items={[
-          { label: 'Nome legal', value: values.legalName.trim() || null },
-          { label: 'Nome de uso', value: values.preferredName.trim() || null },
-          { label: 'Função operacional', value: laborTypeLabel || null },
-          { label: 'Referência externa', value: values.externalErpId.trim() || null },
-          { label: 'Situação', value: person ? STATUS_LABELS[person.status] : null },
-        ]}
-      />
-
-      <fieldset
-        disabled={submitting}
-        className="m-0 flex min-w-0 flex-col gap-3 border-0 p-0"
-        aria-label="Dados da pessoa"
-      >
         <BuilderSection
           title="Identificação"
           description="Nome legal (obrigatório no cadastro) e nome pelo qual a pessoa é chamada."
@@ -220,22 +211,34 @@ export function PersonForm({
             <DefinitionList items={recordFacts} />
           </BuilderSection>
         ) : null}
-      </fieldset>
+        </fieldset>
 
-      <StickyActionBar
-        note={
-          isEdit
+        <StickyActionBar className="!static" note={null}>
+          <Link to={cancelHref} className={SECONDARY_LINK_CLASS}>
+            Cancelar
+          </Link>
+          <Button type="submit" loading={submitting} loadingText="Salvando…">
+            {isEdit ? 'Salvar alterações' : 'Cadastrar'}
+          </Button>
+        </StickyActionBar>
+      </div>
+
+      <aside className="min-w-0">
+        <BuilderSummary
+          items={[
+            { label: 'Nome legal', value: values.legalName.trim() || null },
+            { label: 'Nome de uso', value: values.preferredName.trim() || null },
+            { label: 'Função operacional', value: laborTypeLabel || null },
+            { label: 'Referência externa', value: values.externalErpId.trim() || null },
+            { label: 'Situação', value: person ? STATUS_LABELS[person.status] : null },
+          ]}
+        />
+        <p className="mt-2 rounded-md bg-gray-50 px-3 py-2 text-xs text-gray-600 ring-1 ring-gray-200 ring-inset">
+          {isEdit
             ? 'Salva a versão atual do cadastro; alterações concorrentes são recusadas pelo servidor.'
-            : 'Somente o nome legal é obrigatório; função padrão e referência podem ficar vazias.'
-        }
-      >
-        <Link to={cancelHref} className={SECONDARY_LINK_CLASS}>
-          Cancelar
-        </Link>
-        <Button type="submit" loading={submitting} loadingText="Salvando…">
-          {isEdit ? 'Salvar alterações' : 'Cadastrar'}
-        </Button>
-      </StickyActionBar>
+            : 'Somente o nome legal é obrigatório; função padrão e referência podem ficar vazias.'}
+        </p>
+      </aside>
     </form>
   );
 }
