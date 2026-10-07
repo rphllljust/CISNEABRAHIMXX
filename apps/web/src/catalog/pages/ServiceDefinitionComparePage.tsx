@@ -107,12 +107,15 @@ export function ServiceDefinitionComparePage() {
         description="A comparação usa as versões carregadas do servidor; nada é inferido no navegador."
       />
 
-      <div className="catalog-toolbar">
-        <div className="form-field catalog-filter">
-          <label htmlFor="compare-left">Versão esquerda</label>
+      <div className="flex flex-wrap items-end gap-3 rounded-md border border-slate-200 bg-white px-3 py-3 shadow-[0_1px_2px_rgb(15_23_42/0.04)]">
+        <div className="flex min-w-52 flex-col gap-1.5">
+          <label htmlFor="compare-left" className="text-sm font-semibold text-gray-700">
+            Versão esquerda
+          </label>
           <select
             id="compare-left"
             value={state.leftVersion}
+            className="min-h-9 rounded-md border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 shadow-sm focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 focus:outline-none"
             onChange={(event) => {
               const next = new URLSearchParams(searchParams);
               next.set('left', event.target.value);
@@ -126,11 +129,14 @@ export function ServiceDefinitionComparePage() {
             ))}
           </select>
         </div>
-        <div className="form-field catalog-filter">
-          <label htmlFor="compare-right">Versão direita</label>
+        <div className="flex min-w-52 flex-col gap-1.5">
+          <label htmlFor="compare-right" className="text-sm font-semibold text-gray-700">
+            Versão direita
+          </label>
           <select
             id="compare-right"
             value={state.rightVersion}
+            className="min-h-9 rounded-md border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 shadow-sm focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 focus:outline-none"
             onChange={(event) => {
               const next = new URLSearchParams(searchParams);
               next.set('right', event.target.value);

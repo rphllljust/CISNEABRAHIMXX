@@ -17658,6 +17658,58 @@ NEXT_PROMPT_EXECUTED: NO
 
 ---
 
+## CATALOGO — COMPARACAO DE VERSOES: TOOLBAR, DATATABLE E AVISO DE CONFLITO
+
+DATA: 2026-10-07T00:50:00-04:00
+STATUS: **PASS**
+
+### Escopo executado
+
+Continuidade da wave frontend Enterprise Tier-1, uma função por vez.
+
+Módulo: **Catálogo**.
+Função: **Comparar versões** (`/app/catalog/:definitionId/compare`) e aviso de conflito de versão.
+Classificação principal: **COMPARE / DETAIL PAGE**.
+
+Classificação: **interpretação de engenharia visual / experiência operacional**. Nenhuma regra
+empresarial criada, promovida ou alterada; nenhum backend, API, migration, seed, permissão ou
+contrato de dados tocado.
+
+### Arquivos alterados
+
+- `apps/web/src/catalog/pages/ServiceDefinitionComparePage.tsx`
+- `apps/web/src/catalog/components/VersionComparePanel.tsx`
+- `apps/web/src/catalog/components/VersionConflictNotice.tsx`
+
+### Alteração aplicada
+
+- A toolbar de seleção saiu de `catalog-toolbar/form-field` para controles utilitários densos.
+- O painel de diferenças saiu de `catalog-table` para `DataTable`.
+- O aviso de conflito saiu de `form-notice catalog-conflict-notice` para faixa utilitária.
+- A função `compareServiceDefinitionVersions`, os parâmetros `left/right`, a tabela acessível e o
+  reload do conflito foram preservados.
+
+### Validação
+
+- `pnpm --filter @cisne/web exec vitest run --config vite.config.ts src/catalog/components/VersionComparePanel.test.tsx src/catalog/catalog.e2e.test.tsx` — **PASS** (3/3)
+- `pnpm --filter @cisne/web exec eslint src/catalog/components/VersionComparePanel.tsx src/catalog/components/VersionConflictNotice.tsx src/catalog/pages/ServiceDefinitionComparePage.tsx` — **PASS**
+- `pnpm --filter @cisne/web typecheck` — **PASS**
+- `git diff --check` — **PASS**
+
+### Quality gate
+
+- [x] Alteração restrita à comparação/aviso de conflito do Catálogo
+- [x] Nenhum dado, KPI, relação ou capability inventado
+- [x] Nenhuma regra empresarial nova
+- [x] Nenhuma migration, seed, backend, permissão ou contrato de API
+- [x] Diff, parâmetros, acessibilidade da tabela e reload preservados
+
+WORKING_TREE: limpo após commit
+COMMIT: incluído no commit desta sessão
+NEXT_PROMPT_EXECUTED: NO
+
+---
+
 ## CATALOGO — DETALHE DA VERSAO: RESUMO E CONFIGURACAO ESTRUTURADA
 
 DATA: 2026-10-07T00:44:00-04:00
