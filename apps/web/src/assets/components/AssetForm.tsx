@@ -134,33 +134,25 @@ export function AssetForm({
     <form
       onSubmit={onSubmit}
       noValidate
-      className="flex flex-col gap-3"
+      className="grid gap-3 lg:grid-cols-[minmax(0,1fr)_20rem]"
       aria-describedby={submitError ? formErrorId : undefined}
     >
-      {submitError ? (
-        <p
-          id={formErrorId}
-          role="alert"
-          className="m-0 rounded-md bg-red-50 px-3 py-2 text-sm text-red-700 ring-1 ring-red-500/20 ring-inset"
+      <div className="flex min-w-0 flex-col gap-3">
+        {submitError ? (
+          <p
+            id={formErrorId}
+            role="alert"
+            className="m-0 rounded-md bg-red-50 px-3 py-2 text-sm text-red-700 ring-1 ring-red-500/20 ring-inset"
+          >
+            {submitError}
+          </p>
+        ) : null}
+
+        <fieldset
+          disabled={submitting}
+          className="m-0 flex min-w-0 flex-col gap-3 border-0 p-0"
+          aria-label="Dados do ativo"
         >
-          {submitError}
-        </p>
-      ) : null}
-
-      <BuilderSummary
-        items={[
-          { label: 'Código', value: values.assetCode.trim() || null },
-          { label: 'Tipo de recurso', value: typeLabel },
-          { label: 'Unidade operacional', value: values.unitId.trim() || null },
-          { label: 'Situação', value: asset ? LIFECYCLE_LABELS[asset.lifecycleStatus] : null },
-        ]}
-      />
-
-      <fieldset
-        disabled={submitting}
-        className="m-0 flex min-w-0 flex-col gap-3 border-0 p-0"
-        aria-label="Dados do ativo"
-      >
         <BuilderSection
           title="Identificação"
           description="Código e nome pelos quais o ativo é reconhecido na operação."
@@ -287,22 +279,33 @@ export function AssetForm({
             <DefinitionList items={availabilityFacts} />
           </BuilderSection>
         ) : null}
-      </fieldset>
+        </fieldset>
 
-      <StickyActionBar
-        note={
-          isEdit
+        <StickyActionBar className="!static" note={null}>
+          <Link to={cancelHref} className={SECONDARY_LINK_CLASS}>
+            Cancelar
+          </Link>
+          <Button type="submit" loading={submitting} loadingText="Salvando…">
+            {isEdit ? 'Salvar alterações' : 'Cadastrar ativo'}
+          </Button>
+        </StickyActionBar>
+      </div>
+
+      <aside className="min-w-0">
+        <BuilderSummary
+          items={[
+            { label: 'Código', value: values.assetCode.trim() || null },
+            { label: 'Tipo de recurso', value: typeLabel },
+            { label: 'Unidade operacional', value: values.unitId.trim() || null },
+            { label: 'Situação', value: asset ? LIFECYCLE_LABELS[asset.lifecycleStatus] : null },
+          ]}
+        />
+        <p className="mt-2 rounded-md bg-gray-50 px-3 py-2 text-xs text-gray-600 ring-1 ring-gray-200 ring-inset">
+          {isEdit
             ? 'Salva a versão atual do cadastro; alterações concorrentes são recusadas pelo servidor.'
-            : 'O tipo de recurso define os campos exigidos e o código é único.'
-        }
-      >
-        <Link to={cancelHref} className={SECONDARY_LINK_CLASS}>
-          Cancelar
-        </Link>
-        <Button type="submit" loading={submitting} loadingText="Salvando…">
-          {isEdit ? 'Salvar alterações' : 'Cadastrar ativo'}
-        </Button>
-      </StickyActionBar>
+            : 'O tipo de recurso define os campos exigidos e o código é único.'}
+        </p>
+      </aside>
     </form>
   );
 }

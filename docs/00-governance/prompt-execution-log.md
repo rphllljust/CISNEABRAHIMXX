@@ -17541,6 +17541,65 @@ NEXT_PROMPT_EXECUTED: NO
 
 ---
 
+## ATIVOS FISICOS — FORMULARIO DE ATIVO (CREATE/EDIT): MAIN + ASIDE CONTEXTUAL
+
+DATA: 2026-10-07T00:02:51-04:00
+STATUS: **PASS**
+
+### Escopo executado
+
+Continuidade global da wave frontend Enterprise Tier-1, uma função por vez.
+
+Módulo: **Ativos físicos / Frota**.
+Função: **Formulário de ativo físico** (`/app/assets/new` e composição compartilhada com edição).
+Classificação principal: **FORM**.
+
+Classificação: **interpretação de engenharia visual / experiência operacional**. Nenhuma regra
+empresarial criada, promovida ou alterada; nenhum backend, API, migration, seed, permissão ou
+contrato de dados tocado.
+
+### Arquivo alterado
+
+- `apps/web/src/assets/components/AssetForm.tsx`
+
+### Alteração aplicada
+
+- O formulário passou para composição `main + aside`: identificação, classificação, dados de
+  veículo e disponibilidade à esquerda; resumo e nota contextual à direita.
+- A action bar local deixou de funcionar como overlay sticky e passou a ficar estática ao final
+  do formulário.
+- Validação, payload, lookups de tipo/unidade, campos condicionais de veículo e controle de versão
+  foram preservados.
+
+### Evidência depois
+
+- Medição DOM/Playwright em `/app/assets/new`, Chromium 1440x900:
+  - `docOverflowX=0`.
+  - `summary` presente em `form aside` (`left=1080`, `width=320`).
+
+### Validação
+
+- `node tmp/measure-asset-create.mjs` — **PASS**
+- `pnpm --filter @cisne/web exec vitest run --config vite.config.ts src/assets/physical-assets-create-edit.ui.test.tsx src/assets/PhysicalAssetsListPage.test.tsx` — **PASS** (12/12 executados)
+- `pnpm --filter @cisne/web exec eslint src/assets/components/AssetForm.tsx src/assets/pages/PhysicalAssetCreatePage.tsx src/assets/pages/PhysicalAssetEditPage.tsx` — **PASS**
+- `pnpm --filter @cisne/web typecheck` — **PASS**
+- `git diff --check` — **PASS**
+
+### Quality gate
+
+- [x] Alteração restrita ao formulário de Ativos físicos
+- [x] Nenhum componente novo criado
+- [x] Nenhum dado, KPI, relação ou capability inventado
+- [x] Nenhuma regra empresarial nova
+- [x] Nenhuma migration, seed, backend, permissão ou contrato de API
+- [x] Validação, payload, lookups e campos condicionais preservados
+
+WORKING_TREE: limpo após commit
+COMMIT: incluído no commit desta sessão
+NEXT_PROMPT_EXECUTED: NO
+
+---
+
 ## SOLICITACOES — CRIAR SOLICITACAO (FORM): MAIN + ASIDE CONTEXTUAL SEM OVERLAY
 
 DATA: 2026-10-06T23:28:44-04:00
