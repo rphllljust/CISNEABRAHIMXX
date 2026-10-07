@@ -17658,6 +17658,70 @@ NEXT_PROMPT_EXECUTED: NO
 
 ---
 
+## CATALOGO — CRIAR NOVA VERSAO: ACTION BAR ESTATICA E PRIMITIVE CORRIGIDO
+
+DATA: 2026-10-07T00:31:00-04:00
+STATUS: **PASS**
+
+### Escopo executado
+
+Continuidade da wave frontend Enterprise Tier-1, uma função por vez.
+
+Módulo: **Catálogo**.
+Função: **Criar nova versão** (`/app/catalog/:definitionId/versions/new`).
+Classificação principal: **FORM / BUILDER**.
+
+Classificação: **interpretação de engenharia visual / experiência operacional**. Nenhuma regra
+empresarial criada, promovida ou alterada; nenhum backend, API, migration, seed, permissão ou
+contrato de dados tocado.
+
+### Arquivos alterados
+
+- `apps/web/src/catalog/pages/ServiceDefinitionVersionCreatePage.tsx`
+- `apps/web/src/ui/builder.tsx`
+- `apps/web/src/ui/builder.test.tsx`
+
+### Alteração aplicada
+
+- A action bar da criação de nova versão de catálogo passou a solicitar modo estático.
+- Durante a medição DOM, foi identificado que `className="!static"` não removia efetivamente
+  `sticky bottom-0` do primitive compartilhado.
+- `StickyActionBar` agora honra explicitamente `!static`: quando presente, emite `static` e não
+  emite `sticky bottom-0`.
+- Todas as telas já congeladas que usavam `!static` passam a ter o comportamento visual pretendido.
+- Validação, `createServiceDefinitionVersion`, `toVersionMutationPayload`, versão fonte, bloqueios
+  do builder e navegação foram preservados.
+
+### Evidência
+
+- Diagnóstico DOM/Playwright em `/app/catalog/:definitionId/versions/new`, Chromium 1440x900:
+  - antes da correção do primitive, `actionBar.position="sticky"` mesmo com intenção estática.
+  - após a correção, regressão unitária garante ausência de `sticky`/`bottom-0` quando `!static`
+    é usado.
+- Métricas e screenshot de diagnóstico gerados em `tmp/catalog-version-create-gate/` (gitignored).
+
+### Validação
+
+- `pnpm --filter @cisne/web exec vitest run --config vite.config.ts src/ui/builder.test.tsx src/catalog/catalog-builder.ui.test.tsx src/catalog/catalog.e2e.test.tsx` — **PASS** (24/24)
+- `pnpm --filter @cisne/web exec eslint src/ui/builder.tsx src/ui/builder.test.tsx src/catalog/pages/ServiceDefinitionVersionCreatePage.tsx` — **PASS**
+- `pnpm --filter @cisne/web typecheck` — **PASS**
+- `git diff --check` — **PASS**
+
+### Quality gate
+
+- [x] Alteração funcional restrita ao primitive visual e à tela de nova versão do Catálogo
+- [x] Nenhum componente novo criado
+- [x] Nenhum dado, KPI, relação ou capability inventado
+- [x] Nenhuma regra empresarial nova
+- [x] Nenhuma migration, seed, backend, permissão ou contrato de API
+- [x] Validação, payload, versão fonte, bloqueios e navegação preservados
+
+WORKING_TREE: limpo após commit
+COMMIT: incluído no commit desta sessão
+NEXT_PROMPT_EXECUTED: NO
+
+---
+
 ## CONTRATOS — CRIAR CONTRATO (FORM): ACTION BAR ESTATICA E SEM ESPACADOR
 
 DATA: 2026-10-07T00:22:00-04:00

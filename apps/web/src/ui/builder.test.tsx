@@ -197,4 +197,17 @@ describe('BuilderSection, BuilderSummary e StickyActionBar', () => {
     expect(screen.getByRole('button', { name: 'Criar rascunho' })).toBeInTheDocument();
     expect(screen.getByText(/decididas pelo servidor/)).toBeInTheDocument();
   });
+
+  it('honra o modo estatico quando a tela congela a action bar no fluxo', () => {
+    renderWithProviders(
+      <StickyActionBar className="!static" note={null}>
+        <button type="button">Salvar</button>
+      </StickyActionBar>,
+    );
+
+    const actionBar = screen.getByRole('button', { name: 'Salvar' }).closest('.static');
+    expect(actionBar).toBeInTheDocument();
+    expect(actionBar).not.toHaveClass('sticky');
+    expect(actionBar).not.toHaveClass('bottom-0');
+  });
 });

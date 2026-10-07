@@ -239,10 +239,13 @@ export type StickyActionBarProps = {
  * STICKY ACTION BAR — a acao principal nao fica perdida no fim de uma pagina longa.
  */
 export function StickyActionBar({ children, note, className }: StickyActionBarProps) {
+  const staticActionBar = className?.split(/\s+/).includes('!static') ?? false;
+
   return (
     <div
       className={cn(
-        'sticky bottom-0 z-10 -mx-4 mt-1 border-t border-gray-200 bg-white/95 px-4 py-2.5 backdrop-blur sm:-mx-6 sm:px-6',
+        staticActionBar ? 'static' : 'sticky bottom-0',
+        'z-10 -mx-4 mt-1 border-t border-gray-200 bg-white/95 px-4 py-2.5 backdrop-blur sm:-mx-6 sm:px-6',
         className,
       )}
     >
