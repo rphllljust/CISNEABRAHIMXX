@@ -118,6 +118,7 @@ export function ServiceDefinitionCreatePage() {
       />
 
       <StickyActionBar
+        className="!static"
         note={
           blockers.length > 0
             ? `Faltam: ${blockers.join(', ')}.`

@@ -17479,6 +17479,68 @@ NEXT_PROMPT_EXECUTED: NO
 
 ---
 
+## CATALOGO DE SERVICOS — BUILDER DE DEFINICAO (CREATE/EDIT): MAIN + ASIDE CONTEXTUAL
+
+DATA: 2026-10-06T23:59:46-04:00
+STATUS: **PASS**
+
+### Escopo executado
+
+Continuidade global da wave frontend Enterprise Tier-1, uma função por vez.
+
+Módulo: **Catálogo de serviços**.
+Função: **Builder de definição de serviço** (`/app/catalog/new` e composição compartilhada com edição de rascunho).
+Classificação principal: **FORM**.
+
+Classificação: **interpretação de engenharia visual / experiência operacional**. Nenhuma regra
+empresarial criada, promovida ou alterada; nenhum backend, API, migration, seed, permissão ou
+contrato de dados tocado.
+
+### Arquivos alterados
+
+- `apps/web/src/catalog/components/ServiceDefinitionForm.tsx`
+- `apps/web/src/catalog/pages/ServiceDefinitionCreatePage.tsx`
+- `apps/web/src/catalog/pages/ServiceDefinitionDraftEditPage.tsx`
+
+### Alteração aplicada
+
+- O builder passou para composição `main + aside`: seções de identificação, medição/faturamento,
+  unidades, preço, recursos, mão de obra e evidências à esquerda; resumo da configuração à direita.
+- A action bar das páginas de criação/edição deixou de funcionar como overlay sticky e passou a
+  ficar estática ao final do fluxo.
+- Validação, payload, vocabulário, lookups, repetidores, custo interno condicionado por capability
+  e chamadas de API foram preservados.
+
+### Evidência depois
+
+- Medição DOM/Playwright em `/app/catalog/new`, Chromium 1440x900:
+  - `docOverflowX=0`.
+  - `summary` presente em `form aside` (`left=1080`, `width=320`).
+  - action bar estática abaixo do form (`top=1981`), sem overlay de primeira dobra.
+
+### Validação
+
+- `node tmp/measure-catalog-create.mjs` — **PASS**
+- `pnpm --filter @cisne/web exec vitest run --config vite.config.ts src/catalog/catalog-builder.ui.test.tsx src/catalog/ServiceDefinitionsListPage.test.tsx` — **PASS** (10/10 executados)
+- `pnpm --filter @cisne/web exec eslint src/catalog/components/ServiceDefinitionForm.tsx src/catalog/pages/ServiceDefinitionCreatePage.tsx src/catalog/pages/ServiceDefinitionDraftEditPage.tsx` — **PASS**
+- `pnpm --filter @cisne/web typecheck` — **PASS**
+- `git diff --check` — **PASS**
+
+### Quality gate
+
+- [x] Alteração restrita ao builder de Catálogo
+- [x] Nenhum componente novo criado
+- [x] Nenhum dado, KPI, relação ou capability inventado
+- [x] Nenhuma regra empresarial nova
+- [x] Nenhuma migration, seed, backend, permissão ou contrato de API
+- [x] Validação, payload, vocabulário e dados sensíveis preservados
+
+WORKING_TREE: limpo após commit
+COMMIT: incluído no commit desta sessão
+NEXT_PROMPT_EXECUTED: NO
+
+---
+
 ## SOLICITACOES — CRIAR SOLICITACAO (FORM): MAIN + ASIDE CONTEXTUAL SEM OVERLAY
 
 DATA: 2026-10-06T23:28:44-04:00

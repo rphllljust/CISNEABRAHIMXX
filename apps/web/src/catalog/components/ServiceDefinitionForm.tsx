@@ -304,48 +304,8 @@ export function ServiceDefinitionForm({
   const pricingModelsError = errorFor('pricingModels');
 
   return (
-    <form id={formId} className="grid gap-3" noValidate>
-      <BuilderSummary
-        items={[
-          {
-            label: 'Tipo de serviço',
-            value: ARCHETYPE_LABELS[state.archetype] ?? state.archetype,
-          },
-          {
-            label: 'Precificação',
-            value: countLabel(
-              state.pricingModels.length,
-              'modelo de preço',
-              'modelos de preço',
-            ),
-          },
-          {
-            label: 'Recursos',
-            value: countLabel(
-              state.resourceRequirements.length,
-              'recurso físico',
-              'recursos físicos',
-            ),
-          },
-          {
-            label: 'Mão de obra',
-            value: countLabel(
-              state.laborRequirements.length,
-              'requisito de mão de obra',
-              'requisitos de mão de obra',
-            ),
-          },
-          {
-            label: 'Evidências',
-            value: countLabel(
-              state.executionRequirements.length,
-              'requisito de evidência',
-              'requisitos de evidência',
-            ),
-          },
-        ]}
-      />
-
+    <form id={formId} className="grid gap-3 lg:grid-cols-[minmax(0,1fr)_20rem]" noValidate>
+      <div className="grid min-w-0 gap-3">
       <BuilderSection
         title="Identificação"
         description="O que o serviço é e como o negócio o classifica."
@@ -1086,6 +1046,50 @@ export function ServiceDefinitionForm({
           disabled={readOnly}
         />
       </BuilderSection>
+      </div>
+
+      <aside className="min-w-0">
+        <BuilderSummary
+          items={[
+            {
+              label: 'Tipo de serviço',
+              value: ARCHETYPE_LABELS[state.archetype] ?? state.archetype,
+            },
+            {
+              label: 'Precificação',
+              value: countLabel(
+                state.pricingModels.length,
+                'modelo de preço',
+                'modelos de preço',
+              ),
+            },
+            {
+              label: 'Recursos',
+              value: countLabel(
+                state.resourceRequirements.length,
+                'recurso físico',
+                'recursos físicos',
+              ),
+            },
+            {
+              label: 'Mão de obra',
+              value: countLabel(
+                state.laborRequirements.length,
+                'requisito de mão de obra',
+                'requisitos de mão de obra',
+              ),
+            },
+            {
+              label: 'Evidências',
+              value: countLabel(
+                state.executionRequirements.length,
+                'requisito de evidência',
+                'requisitos de evidência',
+              ),
+            },
+          ]}
+        />
+      </aside>
     </form>
   );
 }
