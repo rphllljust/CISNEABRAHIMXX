@@ -240,14 +240,41 @@ export function PeopleListPage() {
     <ModulePage>
       <WorklistHeader
         title="Pessoas"
-        count={listState.total ?? items.length}
+        /*
+          CONTAGEM — o cabecalho NAO publica tamanho de carteira.
+
+          `listState.total` e sempre `null`: o contrato de listagem de Pessoas nao publica `total`,
+          e o codigo ja declarava isso no load. Apesar disso o cabecalho renderizava
+          `total ?? items.length`, ou seja imprimia o TAMANHO DA PAGINA como se fosse a populacao.
+          Medido no DOM real com universo de 137 pessoas: o cabecalho anunciava "20" — exatamente
+          o `limit` da pagina — enquanto o rodape dizia "1–20 nesta pagina". As duas frases se
+          contradiziam na mesma tela.
+
+          AUSENCIA != ZERO e PAGINA PAGINADA != DATASET. O chip de contagem some quando nao ha
+          contagem autoritativa; o tamanho real da pagina continua declarado UMA vez, no rodape,
+          junto do recorte que o produziu.
+        */
+        count={listState.total ?? undefined}
         context={
           items.length > 0
             ? `Mão de obra no seu escopo autorizado${hasFilters ? ' para os filtros aplicados' : ''}.`
             : 'Cadastro de mão de obra do CISNE.'
         }
         action={
-          capabilities.canCreate ? (
+          /*
+            ACAO PRIMARIA — UMA UNICA EXPRESSAO, E SO.
+
+            Medido no DOM real com a lista vazia: a tela renderizava DOIS links primarios de
+            criacao ao mesmo tempo — "Nova Pessoa" no cabecalho e "Cadastrar Pessoa" dentro do
+            painel de estado vazio (dois `ModulePrimaryLink`, ambos com peso de acao primaria).
+            Duas CTAs primarias na mesma dobra e exatamente o que a regra de hierarquia proibe:
+            o operador nao sabe qual e a acao.
+
+            Sem carteira, a criacao desce para DENTRO do painel vazio, que ja explica o que uma
+            Pessoa e. Havendo registro — ou havendo recorte aplicado — ela fica no cabecalho e o
+            painel NAO a repete. As duas condicoes sao mutuamente exclusivas por construcao.
+          */
+          capabilities.canCreate && (items.length > 0 || hasFilters) ? (
             <ModulePrimaryLink to="/app/people/new">Nova Pessoa</ModulePrimaryLink>
           ) : null
         }
