@@ -1,0 +1,56 @@
+name: cisne-rondonia-erp
+
+services:
+  db:
+    image: postgres:16
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: cisne
+      POSTGRES_USER: ${CISNE_DB_USER:-odoo}
+      POSTGRES_PASSWORD: ${CISNE_DB_PASSWORD:?set CISNE_DB_PASSWORD}
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "pg_isready -U ${CISNE_DB_USER:-odoo} -d cisne",
+        ]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+    volumes:
+      - cisne-db-data:/var/lib/postgresql/data
+
+  erp:
+    build:
+      context: .
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DB_HOST: db
+      DB_PORT: "5432"
+      DB_USER: ${CISNE_DB_USER:-odoo}
+      DB_PASSWORD: ${CISNE_DB_PASSWORD:?set CISNE_DB_PASSWORD}
+      CISNE_BOOTSTRAP_MODULES: ${CISNE_BOOTSTRAP_MODULES:-base,web,mail,contacts,sale_management,purchase,stock,account,project,maintenance,fleet,hr_timesheet,contract,fieldservice,l10n_br_base,l10n_br_fiscal,cisne_branding}
+      CISNE_WITHOUT_DEMO: ${CISNE_WITHOUT_DEMO:-true}
+    ports:
+      - "${CISNE_HTTP_PORT:-8069}:8069"
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "python3",
+          "-c",
+          "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8069/web/login', timeout=5).read(1)",
+        ]
+      interval: 10s
+      timeout: 7s
+      retries: 30
+      start_period: 45s
+    volumes:
+      - cisne-odoo-data:/var/lib/odoo
+
+volumes:
+  cisne-db-data:
+  cisne-odoo-data:

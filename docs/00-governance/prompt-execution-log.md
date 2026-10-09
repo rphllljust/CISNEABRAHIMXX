@@ -1,6 +1,6 @@
 # Prompt execution log
 
-Registro append-only. Execuções anteriores não são apagadas.
+Registro append-only. ExecuÃ§Ãµes anteriores nÃ£o sÃ£o apagadas.
 
 Template: [`../templates/prompt-completion-template.md`](../templates/prompt-completion-template.md).
 
@@ -8,7 +8,7 @@ Template: [`../templates/prompt-completion-template.md`](../templates/prompt-com
 
 ```text
 PROMPT: 00
-TITLE: Fundação e governança do repositório
+TITLE: FundaÃ§Ã£o e governanÃ§a do repositÃ³rio
 STARTED_AT: 2026-08-28T20:40:45-04:00
 FINISHED_AT: 2026-08-28T20:47:07-04:00
 STATUS: PASS
@@ -47,43 +47,43 @@ FILES_CREATED:
   docs/templates/source-conflict-template.md
   docs/templates/risk-template.md
   docs/templates/prompt-completion-template.md
-FILES_CHANGED: (nenhum preexistente; workspace estava vazio além do .git criado nesta etapa)
+FILES_CHANGED: (nenhum preexistente; workspace estava vazio alÃ©m do .git criado nesta etapa)
 QUALITY_GATE: PASS
 FUNCTIONAL_CODE_CREATED: NO
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
-  Workspace C:\CISNEABRAHIM inspecionado vazio; git init local (branch master, sem remoto, sem commit até o encerramento desta etapa).
-  Identidade Git já existia (user.name / user.email); commit desta etapa previsto após este registro.
-  SRC-000 classificado como governança, não prova operacional.
+  Workspace C:\CISNEABRAHIM inspecionado vazio; git init local (branch master, sem remoto, sem commit atÃ© o encerramento desta etapa).
+  Identidade Git jÃ¡ existia (user.name / user.email); commit desta etapa previsto apÃ³s este registro.
+  SRC-000 classificado como governanÃ§a, nÃ£o prova operacional.
   BR-001..BR-003 apenas CANDIDATE; 0 CONFIRMED.
   DDP-001..DDP-020 abertos, sem respostas inventadas.
   RISK-001..RISK-016 OPEN, probability UNKNOWN.
-  Fontes empresariais NOT_PROVIDED (sem SOURCE-ID fictício).
-  ED-001..ED-004 ACCEPTED (somente governança desta fase).
+  Fontes empresariais NOT_PROVIDED (sem SOURCE-ID fictÃ­cio).
+  ED-001..ED-004 ACCEPTED (somente governanÃ§a desta fase).
   Carta: DISCOVERY_NOT_STARTED. Fase: FOUNDATION.
-  Prompt 01 não executado.
+  Prompt 01 nÃ£o executado.
 ```
 
-## Quality gate Prompt 00 (evidência)
+## Quality gate Prompt 00 (evidÃªncia)
 
 - [x] o workspace foi inspecionado
 - [x] o Git foi inicializado ou preservado
-- [x] a estrutura documental obrigatória existe
-- [x] nenhum arquivo obrigatório está vazio
-- [x] nenhuma implementação empresarial foi criada
+- [x] a estrutura documental obrigatÃ³ria existe
+- [x] nenhum arquivo obrigatÃ³rio estÃ¡ vazio
+- [x] nenhuma implementaÃ§Ã£o empresarial foi criada
 - [x] nenhuma tecnologia definitiva foi escolhida
-- [x] nenhuma regra não comprovada virou `CONFIRMED`
-- [x] as fontes ausentes estão explicitamente registradas
-- [x] as decisões pendentes continuam abertas
-- [x] os riscos iniciais estão registrados
-- [x] existe política de rastreabilidade
+- [x] nenhuma regra nÃ£o comprovada virou `CONFIRMED`
+- [x] as fontes ausentes estÃ£o explicitamente registradas
+- [x] as decisÃµes pendentes continuam abertas
+- [x] os riscos iniciais estÃ£o registrados
+- [x] existe polÃ­tica de rastreabilidade
 - [x] existe Definition of Ready
 - [x] existe Definition of Done
-- [x] existe protocolo de execução
+- [x] existe protocolo de execuÃ§Ã£o
 - [x] existe roadmap
 - [x] existe registro do Prompt 00
-- [x] o Prompt 01 não foi executado
-- [x] o estado final do Git foi verificado (pré-commit: repositório local, sem commits; pós-commit: ver `git log` / `git status`)
+- [x] o Prompt 01 nÃ£o foi executado
+- [x] o estado final do Git foi verificado (prÃ©-commit: repositÃ³rio local, sem commits; pÃ³s-commit: ver `git log` / `git status`)
 
 ---
 
@@ -102,31 +102,31 @@ QUALITY_GATE: PASS
 FUNCTIONAL_CODE_CREATED: NO
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
-  Pré-condições: Prompt 00 STATUS PASS; git working tree limpa; identidade Git configurada.
+  PrÃ©-condiÃ§Ãµes: Prompt 00 STATUS PASS; git working tree limpa; identidade Git configurada.
   SRC-000 preservado. SRC-001 registrado como SPONSOR_CONTEXT_RECONSTRUCTED e PENDING_BUSINESS_VALIDATION.
-  Fonte não substitui originais primários; lista NOT_PROVIDED mantida.
-  Data de consolidação do arquivo: 2026-08-28 (data real de criação).
-  Nenhuma regra alterada para CONFIRMED. Nenhum DDP encerrado. Análise atômica não executada.
-  Prompt 01 não executado.
+  Fonte nÃ£o substitui originais primÃ¡rios; lista NOT_PROVIDED mantida.
+  Data de consolidaÃ§Ã£o do arquivo: 2026-08-28 (data real de criaÃ§Ã£o).
+  Nenhuma regra alterada para CONFIRMED. Nenhum DDP encerrado. AnÃ¡lise atÃ´mica nÃ£o executada.
+  Prompt 01 nÃ£o executado.
 ```
 
-## Quality gate Prompt 00.1 (evidência)
+## Quality gate Prompt 00.1 (evidÃªncia)
 
 - [x] arquivo criado em `docs/inputs/`
-- [x] conteúdo não vazio
+- [x] conteÃºdo nÃ£o vazio
 - [x] SRC-001 no registro de fontes
 - [x] SRC-000 preservado
 - [x] nenhuma regra `CONFIRMED`
-- [x] nenhuma decisão pendente encerrada
-- [x] nenhum código funcional criado
-- [x] nenhuma dependência instalada
-- [x] Prompt 01 não executado
+- [x] nenhuma decisÃ£o pendente encerrada
+- [x] nenhum cÃ³digo funcional criado
+- [x] nenhuma dependÃªncia instalada
+- [x] Prompt 01 nÃ£o executado
 
 ---
 
 ```text
 PROMPT: 01
-TITLE: Análise atômica das fontes e descoberta empresarial
+TITLE: AnÃ¡lise atÃ´mica das fontes e descoberta empresarial
 STARTED_AT: 2026-08-28T21:04:41-04:00
 FINISHED_AT: 2026-08-28T21:10:33-04:00
 STATUS: PASS
@@ -182,25 +182,25 @@ CONFIRMED_RULES: 0
 SOURCE_CONFLICTS: 0
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
-  Fontes: SRC-000 (governança), SRC-001 (SPONSOR_CONTEXT_RECONSTRUCTED, LEVEL_3).
-  Análise atômica SRC-001 COMPLETE. 0 regras CONFIRMED.
-  Locação registrada como FUTURE_SCOPE_CANDIDATE com prioridade candidata (§21).
-  Prompt 02 não executado.
+  Fontes: SRC-000 (governanÃ§a), SRC-001 (SPONSOR_CONTEXT_RECONSTRUCTED, LEVEL_3).
+  AnÃ¡lise atÃ´mica SRC-001 COMPLETE. 0 regras CONFIRMED.
+  LocaÃ§Ã£o registrada como FUTURE_SCOPE_CANDIDATE com prioridade candidata (Â§21).
+  Prompt 02 nÃ£o executado.
 ```
 
-## Quality gate Prompt 01 (evidência)
+## Quality gate Prompt 01 (evidÃªncia)
 
-- [x] pasta `02-source-analysis/` com 28 artefatos não vazios
-- [x] 70–90 evidências atômicas de SRC-001 (84)
+- [x] pasta `02-source-analysis/` com 28 artefatos nÃ£o vazios
+- [x] 70â€“90 evidÃªncias atÃ´micas de SRC-001 (84)
 - [x] SRC-001 marcado analisado no source-registry
 - [x] BR-004..BR-025 adicionadas como CANDIDATE/PENDING_VALIDATION
-- [x] BR-001..BR-003 atualizadas com referências EV
+- [x] BR-001..BR-003 atualizadas com referÃªncias EV
 - [x] DDP-021..DDP-035 adicionados (OPEN)
 - [x] RISK-017..RISK-022 adicionados (OPEN)
 - [x] 0 regras CONFIRMED
 - [x] 0 conflitos de fonte fabricados
-- [x] nenhum código funcional, package.json, DB
-- [x] Prompt 01 não executado (histórico Prompt 00.1 gate)
+- [x] nenhum cÃ³digo funcional, package.json, DB
+- [x] Prompt 01 nÃ£o executado (histÃ³rico Prompt 00.1 gate)
 
 ---
 
@@ -256,32 +256,32 @@ EV_USED: 54
 CONFIRMED_RULES: 0
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
-  Fonte operacional única: SRC-001 (LEVEL_3, PENDING_BUSINESS_VALIDATION).
+  Fonte operacional Ãºnica: SRC-001 (LEVEL_3, PENDING_BUSINESS_VALIDATION).
   0 regras CONFIRMED. 0 FR CONFIRMED.
-  WhatsApp: CAPABILITY_ONLY. Integrações: PENDING_EXTERNAL_DOCUMENTATION.
-  Sem código, endpoints, telas, RBAC técnico ou emissão fiscal presumida.
-  Prompt 03 não executado.
+  WhatsApp: CAPABILITY_ONLY. IntegraÃ§Ãµes: PENDING_EXTERNAL_DOCUMENTATION.
+  Sem cÃ³digo, endpoints, telas, RBAC tÃ©cnico ou emissÃ£o fiscal presumida.
+  Prompt 03 nÃ£o executado.
 ```
 
-## Quality gate Prompt 02 (evidência)
+## Quality gate Prompt 02 (evidÃªncia)
 
-- [x] pasta `03-requirements/` com 20 artefatos não vazios
-- [x] 42 FRs atômicos FR-001..FR-042
+- [x] pasta `03-requirements/` com 20 artefatos nÃ£o vazios
+- [x] 42 FRs atÃ´micos FR-001..FR-042
 - [x] 26 UCs UC-001..UC-026
-- [x] 52 ACs AC-001..AC-052 em formato DADO/QUANDO/ENTÃO
+- [x] 52 ACs AC-001..AC-052 em formato DADO/QUANDO/ENTÃƒO
 - [x] 27 capacidades com first release UNKNOWN
 - [x] 0 regras ou requisitos CONFIRMED
 - [x] rastreabilidade atualizada (requirements-traceability, provenance-matrix)
 - [x] cobertura auditada (requirements-coverage, coverage-audit)
-- [x] nenhum código funcional, package.json, DB
-- [x] SRC-001 não alterado
-- [x] Prompt 03 não executado
+- [x] nenhum cÃ³digo funcional, package.json, DB
+- [x] SRC-001 nÃ£o alterado
+- [x] Prompt 03 nÃ£o executado
 
 ---
 
 ```text
 PROMPT: 02-CORRECTIVE
-TITLE: Auditoria corretiva — remoção de artefato e revalidação documental
+TITLE: Auditoria corretiva â€” remoÃ§Ã£o de artefato e revalidaÃ§Ã£o documental
 STARTED_AT: 2026-08-28T21:46:00-04:00
 FINISHED_AT: 2026-08-28T21:52:00-04:00
 STATUS: PASS_WITH_RESTRICTIONS
@@ -295,35 +295,35 @@ FUNCTIONAL_CODE_CREATED: NO
 AUXILIARY_CODE_REMAINING: NO
 PROMPT_03_EXECUTED: NO
 GENERATOR_ARTIFACT:
-  scripts/generate-prompt-02.py — criado exclusivamente pelo agente no Prompt 02; removido antes do commit; ausente no Git e no workspace na auditoria
+  scripts/generate-prompt-02.py â€” criado exclusivamente pelo agente no Prompt 02; removido antes do commit; ausente no Git e no workspace na auditoria
 COMMIT_PROMPT_02: 7cc97fd docs: define evidence-based functional requirements
 NOTES:
-  Auditoria corretiva solicitada explicitamente. Nenhum commit de remoção necessário (artefato nunca versionado).
+  Auditoria corretiva solicitada explicitamente. Nenhum commit de remoÃ§Ã£o necessÃ¡rio (artefato nunca versionado).
   20 arquivos em docs/03-requirements/ revisados; contagens recalculadas.
-  54 EV em FR; 30 EV sem FR direto justificadas; 84 EV preservadas no registro atômico.
+  54 EV em FR; 30 EV sem FR direto justificadas; 84 EV preservadas no registro atÃ´mico.
   0 CONFIRMED; SRC-001 PENDING_BUSINESS_VALIDATION; WhatsApp CAPABILITY_ONLY.
-  Prompt 03 não executado.
+  Prompt 03 nÃ£o executado.
 ```
 
-## Quality gate Prompt 02 corretivo (evidência)
+## Quality gate Prompt 02 corretivo (evidÃªncia)
 
 - [x] 20 documentos em `03-requirements/` revisados
 - [x] contagens recalculadas
-- [x] IDs únicos
-- [x] evidências não utilizadas em FR justificadas
+- [x] IDs Ãºnicos
+- [x] evidÃªncias nÃ£o utilizadas em FR justificadas
 - [x] nenhuma regra confirmada
-- [x] nenhuma fonte reconstruída elevada
-- [x] nenhum artefato de código permanece
-- [x] `scripts/generate-prompt-02.py` não permanece
+- [x] nenhuma fonte reconstruÃ­da elevada
+- [x] nenhum artefato de cÃ³digo permanece
+- [x] `scripts/generate-prompt-02.py` nÃ£o permanece
 - [x] nenhum cache permanece
-- [x] Git contém somente alterações esperadas (pós-auditoria: docs corretivos)
-- [x] Prompt 03 não executado (no encerramento da auditoria corretiva)
+- [x] Git contÃ©m somente alteraÃ§Ãµes esperadas (pÃ³s-auditoria: docs corretivos)
+- [x] Prompt 03 nÃ£o executado (no encerramento da auditoria corretiva)
 
 ---
 
 ```text
 PROMPT: 03
-TITLE: Requisitos não funcionais e cenários de qualidade
+TITLE: Requisitos nÃ£o funcionais e cenÃ¡rios de qualidade
 STARTED_AT: 2026-08-28T22:39:00-04:00
 FINISHED_AT: 2026-08-28T22:55:00-04:00
 STATUS: PASS_WITH_RESTRICTIONS
@@ -372,32 +372,32 @@ RISK_ADDED: RISK-023..RISK-024 (2)
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
   Fonte: SRC-001 (PENDING_BUSINESS_VALIDATION). 0 NFR CONFIRMED.
-  RPO/RTO TARGET_PENDING. Sem stack, scripts ou código.
-  Concorrência e idempotência classificadas sem mecanismo.
-  Prompt 04 não executado.
+  RPO/RTO TARGET_PENDING. Sem stack, scripts ou cÃ³digo.
+  ConcorrÃªncia e idempotÃªncia classificadas sem mecanismo.
+  Prompt 04 nÃ£o executado.
 ```
 
-## Quality gate Prompt 03 (evidência)
+## Quality gate Prompt 03 (evidÃªncia)
 
-- [x] pasta `04-quality-attributes/` com 23 artefatos não vazios
-- [x] 40 NFRs com proveniência e campos obrigatórios
-- [x] 28 cenários QA-SC sem metas numéricas inventadas
+- [x] pasta `04-quality-attributes/` com 23 artefatos nÃ£o vazios
+- [x] 40 NFRs com proveniÃªncia e campos obrigatÃ³rios
+- [x] 28 cenÃ¡rios QA-SC sem metas numÃ©ricas inventadas
 - [x] 24 SEC-REQ classificados (business / application / infrastructure / open)
 - [x] RPO/RTO TARGET_PENDING (DDP-016)
 - [x] AUDIT_TRAIL separado de TECHNICAL_LOG
-- [x] Concorrência e idempotência classificadas por operação
+- [x] ConcorrÃªncia e idempotÃªncia classificadas por operaÃ§Ã£o
 - [x] Trade-offs documentados sem vencedor imposto
 - [x] 0 tecnologias escolhidas
-- [x] 0 scripts ou código funcional
+- [x] 0 scripts ou cÃ³digo funcional
 - [x] DDP-036..040 e RISK-023..024 adicionados
 - [x] rastreabilidade atualizada
-- [x] Prompt 04 não executado (no encerramento do Prompt 03)
+- [x] Prompt 04 nÃ£o executado (no encerramento do Prompt 03)
 
 ---
 
 ```text
 PROMPT: 03-REVISED
-TITLE: Requisitos não funcionais — revisão estrutural (nomenclatura e rastreabilidade)
+TITLE: Requisitos nÃ£o funcionais â€” revisÃ£o estrutural (nomenclatura e rastreabilidade)
 STARTED_AT: 2026-08-28T23:15:00-04:00
 FINISHED_AT: 2026-08-28T23:35:00-04:00
 STATUS: PASS_WITH_RESTRICTIONS
@@ -451,30 +451,30 @@ NFR_CONFIRMED: 0
 ARTIFACT_COUNT_04: 24
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
-  Revisão estrutural do Prompt 03 conforme spec atualizada.
-  TARGET_PENDING → TARGET_NOT_DEFINED; PENDING_TARGET_DEFINITION → PENDING_MEASUREMENT.
+  RevisÃ£o estrutural do Prompt 03 conforme spec atualizada.
+  TARGET_PENDING â†’ TARGET_NOT_DEFINED; PENDING_TARGET_DEFINITION â†’ PENDING_MEASUREMENT.
   requirement-dependency-map.md atualizado com cadeia NFR.
-  Prompt 04 (glossário) já existia no repositório — não reexecutado nesta rodada.
-  0 scripts; working tree limpo após commit.
+  Prompt 04 (glossÃ¡rio) jÃ¡ existia no repositÃ³rio â€” nÃ£o reexecutado nesta rodada.
+  0 scripts; working tree limpo apÃ³s commit.
 ```
 
-## Quality gate Prompt 03 revisado (evidência)
+## Quality gate Prompt 03 revisado (evidÃªncia)
 
-- [x] pasta `04-quality-attributes/` com 24 artefatos não vazios
-- [x] 40 NFRs com proveniência preservada
-- [x] 28 cenários QA-SC
+- [x] pasta `04-quality-attributes/` com 24 artefatos nÃ£o vazios
+- [x] 40 NFRs com proveniÃªncia preservada
+- [x] 28 cenÃ¡rios QA-SC
 - [x] 24 SEC-REQ
 - [x] SLOs pendentes sem valores inventados
 - [x] rastreabilidade NFR em requirement-dependency-map.md
 - [x] 0 tecnologias escolhidas
-- [x] 0 scripts ou código
-- [x] Prompt 04 não executado nesta rodada
+- [x] 0 scripts ou cÃ³digo
+- [x] Prompt 04 nÃ£o executado nesta rodada
 
 ---
 
 ```text
 PROMPT: 04
-TITLE: Glossário empresarial e linguagem ubíqua
+TITLE: GlossÃ¡rio empresarial e linguagem ubÃ­qua
 STARTED_AT: 2026-08-28T22:44:00-04:00
 FINISHED_AT: 2026-08-28T23:05:00-04:00
 STATUS: PASS_WITH_RESTRICTIONS
@@ -512,29 +512,29 @@ GLQ_COUNT: 12
 TERM_CONFIRMED: 0
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
-  48 TERM com proveniência SRC-001/EV-*. 38 ambiguidades AT-001 mapeadas.
+  48 TERM com proveniÃªncia SRC-001/EV-*. 38 ambiguidades AT-001 mapeadas.
   0 termos CONFIRMED. Sem enums, API, tabelas ou scripts.
-  Separação negócio/técnico e documento lógico×versão×arquivo.
-  Prompt 05 não executado.
+  SeparaÃ§Ã£o negÃ³cio/tÃ©cnico e documento lÃ³gicoÃ—versÃ£oÃ—arquivo.
+  Prompt 05 nÃ£o executado.
 ```
 
-## Quality gate Prompt 04 (evidência)
+## Quality gate Prompt 04 (evidÃªncia)
 
-- [x] pasta `05-ubiquitous-language/` com 21 artefatos não vazios
-- [x] 48 TERM com campos obrigatórios e proveniência
-- [x] ambiguidades não resolvidas sem fonte permanecem abertas
-- [x] 0 definições CONFIRMED
-- [x] negócio ≠ técnico documentado
-- [x] IDs históricos (FR, EV, BR) preservados
-- [x] 0 código, scripts, enums ou nomes de API congelados
+- [x] pasta `05-ubiquitous-language/` com 21 artefatos nÃ£o vazios
+- [x] 48 TERM com campos obrigatÃ³rios e proveniÃªncia
+- [x] ambiguidades nÃ£o resolvidas sem fonte permanecem abertas
+- [x] 0 definiÃ§Ãµes CONFIRMED
+- [x] negÃ³cio â‰  tÃ©cnico documentado
+- [x] IDs histÃ³ricos (FR, EV, BR) preservados
+- [x] 0 cÃ³digo, scripts, enums ou nomes de API congelados
 - [x] rastreabilidade atualizada
-- [x] Prompt 05 não executado
+- [x] Prompt 05 nÃ£o executado
 
 ---
 
 ```text
 PROMPT: 04-REVISED
-TITLE: Glossário — revisão estrutural (catálogos, semântica, auditoria)
+TITLE: GlossÃ¡rio â€” revisÃ£o estrutural (catÃ¡logos, semÃ¢ntica, auditoria)
 STARTED_AT: 2026-08-28T23:40:00-04:00
 FINISHED_AT: 2026-08-29T00:05:00-04:00
 STATUS: PASS_WITH_RESTRICTIONS
@@ -579,32 +579,32 @@ GLQ_COUNT: 12
 ARTIFACT_COUNT_05: 22
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
-  Revisão estrutural Prompt 04. Status enum atualizado.
-  RC não evidenciado em SRC-001 — não registrado como TERM.
-  RC inventado: NO. Prompt 05 não executado.
+  RevisÃ£o estrutural Prompt 04. Status enum atualizado.
+  RC nÃ£o evidenciado em SRC-001 â€” nÃ£o registrado como TERM.
+  RC inventado: NO. Prompt 05 nÃ£o executado.
 ```
 
-## Quality gate Prompt 04 revisado (evidência)
+## Quality gate Prompt 04 revisado (evidÃªncia)
 
-- [x] pasta `05-ubiquitous-language/` com 22 artefatos não vazios
-- [x] 48 TERM com proveniência
-- [x] catálogos de verbos e substantivos obrigatórios
-- [x] normalizações críticas documentadas
+- [x] pasta `05-ubiquitous-language/` com 22 artefatos nÃ£o vazios
+- [x] 48 TERM com proveniÃªncia
+- [x] catÃ¡logos de verbos e substantivos obrigatÃ³rios
+- [x] normalizaÃ§Ãµes crÃ­ticas documentadas
 - [x] 0 termos CONFIRMED
-- [x] 0 bounded contexts / código / scripts
+- [x] 0 bounded contexts / cÃ³digo / scripts
 - [x] rastreabilidade atualizada
-- [x] Prompt 05 não executado (no encerramento Prompt 04 revisado)
+- [x] Prompt 05 nÃ£o executado (no encerramento Prompt 04 revisado)
 
 ---
 
 ```text
 PROMPT: 05
-TITLE: Domínios, subdomínios e bounded contexts candidatos
+TITLE: DomÃ­nios, subdomÃ­nios e bounded contexts candidatos
 STARTED_AT: 2026-08-29T00:10:00-04:00
 FINISHED_AT: 2026-08-29T00:45:00-04:00
 STATUS: PASS_WITH_RESTRICTIONS
 FILES_CREATED:
-  docs/06-domain-boundaries/ (23 artefatos — ver README.md)
+  docs/06-domain-boundaries/ (23 artefatos â€” ver README.md)
 FILES_CHANGED:
   docs/01-foundation/requirements-traceability.md
   docs/00-governance/prompt-execution-log.md
@@ -620,32 +620,32 @@ NEXT_PROMPT_EXECUTED: NO
 NOTES:
   PROBLEM_SPACE vs SOLUTION_SPACE separados.
   27 CAP mapeadas. 8 fluxos transversais. 0 SHARED_KERNEL aprovado.
-  SoT pagamento/PO/ERP pendente. Prompt 06 não executado.
+  SoT pagamento/PO/ERP pendente. Prompt 06 nÃ£o executado.
 ```
 
-## Quality gate Prompt 05 (evidência)
+## Quality gate Prompt 05 (evidÃªncia)
 
-- [x] pasta `06-domain-boundaries/` com 23 artefatos não vazios
-- [x] 12 SUBD com classificação candidata
+- [x] pasta `06-domain-boundaries/` com 23 artefatos nÃ£o vazios
+- [x] 12 SUBD com classificaÃ§Ã£o candidata
 - [x] 18 BC-CAND com ownership documentado
-- [x] problema ≠ solução documentado
-- [x] sem divisão por CRUD/tela
+- [x] problema â‰  soluÃ§Ã£o documentado
+- [x] sem divisÃ£o por CRUD/tela
 - [x] fluxos transversais WF-001..008
-- [x] modular monolith avaliado sem decisão final
-- [x] 0 microserviços, código, aggregates, máquinas de estado
+- [x] modular monolith avaliado sem decisÃ£o final
+- [x] 0 microserviÃ§os, cÃ³digo, aggregates, mÃ¡quinas de estado
 - [x] rastreabilidade atualizada
-- [x] Prompt 06 não executado (no encerramento Prompt 05)
+- [x] Prompt 06 nÃ£o executado (no encerramento Prompt 05)
 
 ---
 
 ```text
 PROMPT: 06
-TITLE: Invariantes, comandos, eventos e consistência do domínio
+TITLE: Invariantes, comandos, eventos e consistÃªncia do domÃ­nio
 STARTED_AT: 2026-08-29T01:00:00-04:00
 FINISHED_AT: 2026-08-29T01:35:00-04:00
 STATUS: PASS_WITH_RESTRICTIONS
 FILES_CREATED:
-  docs/07-domain-behavior/ (24 artefatos — ver README.md)
+  docs/07-domain-behavior/ (24 artefatos â€” ver README.md)
 FILES_CHANGED:
   docs/01-foundation/requirements-traceability.md
   docs/00-governance/prompt-execution-log.md
@@ -661,32 +661,32 @@ CODE_CREATED: NO
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
   Comportamento candidato formalizado. 0 INV CONFIRMED.
-  Histórico/audit/domínio separados. DDP-037 mecanismos não escolhidos.
-  Prompt 07 não executado.
+  HistÃ³rico/audit/domÃ­nio separados. DDP-037 mecanismos nÃ£o escolhidos.
+  Prompt 07 nÃ£o executado.
 ```
 
-## Quality gate Prompt 06 (evidência)
+## Quality gate Prompt 06 (evidÃªncia)
 
-- [x] pasta `07-domain-behavior/` com 24 artefatos não vazios
-- [x] 22 INV com proveniência ou pendência explícita
-- [x] 22 CMD agnósticos de tecnologia
+- [x] pasta `07-domain-behavior/` com 24 artefatos nÃ£o vazios
+- [x] 22 INV com proveniÃªncia ou pendÃªncia explÃ­cita
+- [x] 22 CMD agnÃ³sticos de tecnologia
 - [x] 20 DE no passado; DE-006 AUDIT_ONLY candidato
 - [x] 18 REJ empresariais
-- [x] concorrência e idempotência classificadas
-- [x] 0 CONFIRMED, 0 aggregate, 0 código
-- [x] rastreabilidade EV→DE atualizada
-- [x] Prompt 07 não executado
+- [x] concorrÃªncia e idempotÃªncia classificadas
+- [x] 0 CONFIRMED, 0 aggregate, 0 cÃ³digo
+- [x] rastreabilidade EVâ†’DE atualizada
+- [x] Prompt 07 nÃ£o executado
 
 ---
 
 ```text
 PROMPT: 07
-TITLE: Máquinas de estado empresariais candidatas
+TITLE: MÃ¡quinas de estado empresariais candidatas
 STARTED_AT: 2026-08-28T23:00:00-04:00
 FINISHED_AT: 2026-08-28T23:30:00-04:00
 STATUS: PASS_WITH_RESTRICTIONS
 FILES_CREATED:
-  docs/08-state-machines/ (24 artefatos — ver README.md)
+  docs/08-state-machines/ (24 artefatos â€” ver README.md)
 FILES_CHANGED:
   docs/01-foundation/requirements-traceability.md
   docs/00-governance/prompt-execution-log.md
@@ -704,33 +704,33 @@ SM_DEFINITIVE: 0
 CODE_CREATED: NO
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
-  10 ciclos separados. VIEWED/ACK não promovidos a estado OS.
-  Convertida = vínculo+evento (SDD-001). Pagamento parcial/estorno não confirmados.
-  DDP-004, DDP-005, DDP-032 bloqueiam transições. Prompt 08 não executado.
+  10 ciclos separados. VIEWED/ACK nÃ£o promovidos a estado OS.
+  Convertida = vÃ­nculo+evento (SDD-001). Pagamento parcial/estorno nÃ£o confirmados.
+  DDP-004, DDP-005, DDP-032 bloqueiam transiÃ§Ãµes. Prompt 08 nÃ£o executado.
 ```
 
-## Quality gate Prompt 07 (evidência)
+## Quality gate Prompt 07 (evidÃªncia)
 
-- [x] pasta `08-state-machines/` com 24 artefatos não vazios
+- [x] pasta `08-state-machines/` com 24 artefatos nÃ£o vazios
 - [x] 10 SM-CAND com ciclos separados
 - [x] 52 STATE-CAND definidos semanticamente (pendentes marcados)
 - [x] 48 TR-CAND com comando, guarda e resultado
-- [x] VIEWED/ACKNOWLEDGED/PAID classificados — não contaminam OS
-- [x] cancelamento/reabertura não inventados (DDP-004, DDP-005)
-- [x] 0 máquinas definitivas, 0 código/enum/script
+- [x] VIEWED/ACKNOWLEDGED/PAID classificados â€” nÃ£o contaminam OS
+- [x] cancelamento/reabertura nÃ£o inventados (DDP-004, DDP-005)
+- [x] 0 mÃ¡quinas definitivas, 0 cÃ³digo/enum/script
 - [x] rastreabilidade atualizada
-- [x] Prompt 08 não executado
+- [x] Prompt 08 nÃ£o executado
 
 ---
 
 ```text
 PROMPT: 08
-TITLE: Modelo empresarial de autorização e segregação de funções
+TITLE: Modelo empresarial de autorizaÃ§Ã£o e segregaÃ§Ã£o de funÃ§Ãµes
 STARTED_AT: 2026-08-28T23:40:00-04:00
 FINISHED_AT: 2026-08-29T00:10:00-04:00
 STATUS: PASS_WITH_RESTRICTIONS
 FILES_CREATED:
-  docs/09-authorization/ (21 artefatos — ver README.md)
+  docs/09-authorization/ (21 artefatos â€” ver README.md)
 FILES_CHANGED:
   docs/01-foundation/requirements-traceability.md
   docs/00-governance/prompt-execution-log.md
@@ -746,33 +746,33 @@ TECHNICAL_ROLES: 0
 CODE_CREATED: NO
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
-  Autorização funcional e contextual separadas. Admin técnico sem poder empresarial automático.
+  AutorizaÃ§Ã£o funcional e contextual separadas. Admin tÃ©cnico sem poder empresarial automÃ¡tico.
   Custo/margem protegidos (SEC-REQ-009). DDP-003, DDP-015, DDP-022 bloqueiam SoD definitiva.
-  Sem JWT, guards, middleware ou código. Prompt 09 não executado.
+  Sem JWT, guards, middleware ou cÃ³digo. Prompt 09 nÃ£o executado.
 ```
 
-## Quality gate Prompt 08 (evidência)
+## Quality gate Prompt 08 (evidÃªncia)
 
-- [x] pasta `09-authorization/` com 21 artefatos não vazios
+- [x] pasta `09-authorization/` com 21 artefatos nÃ£o vazios
 - [x] 12 ACT e 16 ROLE-CAND (nenhum definitivo)
-- [x] 42 AUTHZ com campos obrigatórios
+- [x] 42 AUTHZ com campos obrigatÃ³rios
 - [x] 12 SOD incluindo conflitos do enunciado
-- [x] 28 ações sensíveis mapeadas
-- [x] custo/margem e admin técnico tratados
-- [x] 0 roles técnicas, 0 código
+- [x] 28 aÃ§Ãµes sensÃ­veis mapeadas
+- [x] custo/margem e admin tÃ©cnico tratados
+- [x] 0 roles tÃ©cnicas, 0 cÃ³digo
 - [x] rastreabilidade atualizada
-- [x] Prompt 09 não executado
+- [x] Prompt 09 nÃ£o executado
 
 ---
 
 ```text
 PROMPT: 09
-TITLE: Drivers arquiteturais, opções e ADRs fundamentais
+TITLE: Drivers arquiteturais, opÃ§Ãµes e ADRs fundamentais
 STARTED_AT: 2026-08-29T00:15:00-04:00
 FINISHED_AT: 2026-08-29T00:45:00-04:00
 STATUS: PASS_WITH_RESTRICTIONS
 FILES_CREATED:
-  docs/10-architecture/ (20 artefatos + 6 ADRs — ver README.md)
+  docs/10-architecture/ (20 artefatos + 6 ADRs â€” ver README.md)
 FILES_CHANGED:
   docs/01-foundation/requirements-traceability.md
   docs/00-governance/prompt-execution-log.md
@@ -790,35 +790,35 @@ FRAMEWORK_CHOSEN: 0
 CODE_CREATED: NO
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
-  Opções A–E comparadas. Microservices rejeitado para início.
+  OpÃ§Ãµes Aâ€“E comparadas. Microservices rejeitado para inÃ­cio.
   ADR-002 domain boundaries e ADR-003 data ownership ACCEPTED.
-  ADR-001/004/005/006 PROPOSED. PostgreSQL candidato, não stack definitiva.
-  Camadas PRESENTATION→APPLICATION→DOMAIN←INFRASTRUCTURE. Prompt 10 não executado.
+  ADR-001/004/005/006 PROPOSED. PostgreSQL candidato, nÃ£o stack definitiva.
+  Camadas PRESENTATIONâ†’APPLICATIONâ†’DOMAINâ†INFRASTRUCTURE. Prompt 10 nÃ£o executado.
 ```
 
-## Quality gate Prompt 09 (evidência)
+## Quality gate Prompt 09 (evidÃªncia)
 
-- [x] pasta `10-architecture/` com artefatos e ADRs não vazios
-- [x] 22 drivers rastreáveis
-- [x] 5 estilos comparados com critérios do enunciado
+- [x] pasta `10-architecture/` com artefatos e ADRs nÃ£o vazios
+- [x] 22 drivers rastreÃ¡veis
+- [x] 5 estilos comparados com critÃ©rios do enunciado
 - [x] 6 ADRs com template completo
 - [x] modularidade baseada em BC-CAND-001..018
 - [x] ownership de dados documentado (ADR-003)
-- [x] domínio independente de framework
-- [x] 0 implementação, 0 script, 0 framework silencioso
+- [x] domÃ­nio independente de framework
+- [x] 0 implementaÃ§Ã£o, 0 script, 0 framework silencioso
 - [x] rastreabilidade atualizada
-- [x] Prompt 10 não executado
+- [x] Prompt 10 nÃ£o executado
 
 ---
 
 ```text
 PROMPT: 10
-TITLE: Seleção técnica da stack e ADRs de tecnologia
+TITLE: SeleÃ§Ã£o tÃ©cnica da stack e ADRs de tecnologia
 STARTED_AT: 2026-08-29T00:50:00-04:00
 FINISHED_AT: 2026-08-29T01:20:00-04:00
 STATUS: PASS_WITH_RESTRICTIONS
 FILES_CREATED:
-  docs/11-technology/ (24 artefatos — ver README.md)
+  docs/11-technology/ (24 artefatos â€” ver README.md)
 FILES_CHANGED:
   docs/01-foundation/requirements-traceability.md
   docs/01-foundation/engineering-decisions-register.md
@@ -835,30 +835,30 @@ CODE_CREATED: NO
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
   Stack: Node 24 LTS, TS 5, NestJS 11+Fastify, React 19+Vite 7, PG 18, Drizzle, pnpm+Turbo, Vitest+Playwright.
-  Versões Node/PG verificadas em fontes oficiais 2026-08-28. Equipe UNKNOWN. Prompt 11 não executado.
+  VersÃµes Node/PG verificadas em fontes oficiais 2026-08-28. Equipe UNKNOWN. Prompt 11 nÃ£o executado.
 ```
 
-## Quality gate Prompt 10 (evidência)
+## Quality gate Prompt 10 (evidÃªncia)
 
-- [x] pasta `11-technology/` com avaliações e 7 ADR-TECH
-- [x] scorecard com pesos pré-definidos
-- [x] stack compatível com arquitetura modular monolith (Prompt 09)
+- [x] pasta `11-technology/` com avaliaÃ§Ãµes e 7 ADR-TECH
+- [x] scorecard com pesos prÃ©-definidos
+- [x] stack compatÃ­vel com arquitetura modular monolith (Prompt 09)
 - [x] PostgreSQL como autoridade transacional
-- [x] 0 package.json, 0 dependências instaladas, 0 código
+- [x] 0 package.json, 0 dependÃªncias instaladas, 0 cÃ³digo
 - [x] alternativas rejeitadas documentadas
 - [x] rastreabilidade e ED-004 atualizados
-- [x] Prompt 11 não executado
+- [x] Prompt 11 nÃ£o executado
 
 ---
 
 ```text
 PROMPT: 11
-TITLE: Modelo conceitual do domínio e aggregates candidatos
+TITLE: Modelo conceitual do domÃ­nio e aggregates candidatos
 STARTED_AT: 2026-08-29T01:25:00-04:00
 FINISHED_AT: 2026-08-29T01:55:00-04:00
 STATUS: PASS_WITH_RESTRICTIONS
 FILES_CREATED:
-  docs/12-domain-model/ (20 artefatos — ver README.md)
+  docs/12-domain-model/ (20 artefatos â€” ver README.md)
 FILES_CHANGED:
   docs/01-foundation/requirements-traceability.md
   docs/00-governance/prompt-execution-log.md
@@ -874,31 +874,31 @@ INV_MAPPED: 22/22
 ORM_TABLES_CODE: NO
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
-  Solicitação≠OS; medição≠faturamento≠nota≠pagamento. PO consumo CARD-DDP pendente.
-  Doc/versão/arquivo separados. Money e Quantity como VO. 0 FINAL. Prompt 12 não executado.
+  SolicitaÃ§Ã£oâ‰ OS; mediÃ§Ã£oâ‰ faturamentoâ‰ notaâ‰ pagamento. PO consumo CARD-DDP pendente.
+  Doc/versÃ£o/arquivo separados. Money e Quantity como VO. 0 FINAL. Prompt 12 nÃ£o executado.
 ```
 
-## Quality gate Prompt 11 (evidência)
+## Quality gate Prompt 11 (evidÃªncia)
 
-- [x] pasta `12-domain-model/` com 20 artefatos não vazios
-- [x] 14 AGG-CAND com campos obrigatórios
+- [x] pasta `12-domain-model/` com 20 artefatos nÃ£o vazios
+- [x] 14 AGG-CAND com campos obrigatÃ³rios
 - [x] 22/22 INV mapeadas
-- [x] 12 CARD-DDP explícitas
-- [x] sem ORM, tabela, código
-- [x] aggregates pequenos; maciços rejeitados
+- [x] 12 CARD-DDP explÃ­citas
+- [x] sem ORM, tabela, cÃ³digo
+- [x] aggregates pequenos; maciÃ§os rejeitados
 - [x] rastreabilidade atualizada
-- [x] Prompt 12 não executado
+- [x] Prompt 12 nÃ£o executado
 
 ---
 
 ```text
 PROMPT: 12
-TITLE: Modelo lógico de dados e constraints candidatas
+TITLE: Modelo lÃ³gico de dados e constraints candidatas
 STARTED_AT: 2026-08-29T02:00:00-04:00
 FINISHED_AT: 2026-08-29T02:35:00-04:00
 STATUS: PASS_WITH_RESTRICTIONS
 FILES_CREATED:
-  docs/13-data-model/ (25 artefatos — ver README.md)
+  docs/13-data-model/ (25 artefatos â€” ver README.md)
 FILES_CHANGED:
   docs/01-foundation/requirements-traceability.md
   docs/00-governance/prompt-execution-log.md
@@ -916,33 +916,33 @@ MIGRATIONS_CREATED: NO
 DATABASE_CREATED: NO
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
-  Modelo rastreável a 14 AGG-CAND e 22 INV. Cancelamento ≠ delete.
+  Modelo rastreÃ¡vel a 14 AGG-CAND e 22 INV. Cancelamento â‰  delete.
   12 CARD-DDP abertas; UNQ/FK parciais PENDING. Sem JSON indiscriminado.
-  Prompt 13 não executado.
+  Prompt 13 nÃ£o executado.
 ```
 
-## Quality gate Prompt 12 (evidência)
+## Quality gate Prompt 12 (evidÃªncia)
 
-- [x] pasta `13-data-model/` com 25 artefatos não vazios
-- [x] 25 TBL-CAND com campos obrigatórios
+- [x] pasta `13-data-model/` com 25 artefatos nÃ£o vazios
+- [x] 25 TBL-CAND com campos obrigatÃ³rios
 - [x] 16 UNQ-CAND e 14 CHK-CAND mapeadas a invariantes
-- [x] nullability justificada; audit separado de domínio
-- [x] dados sensíveis classificados
-- [x] 0 DDL, 0 migrations, 0 schema físico
+- [x] nullability justificada; audit separado de domÃ­nio
+- [x] dados sensÃ­veis classificados
+- [x] 0 DDL, 0 migrations, 0 schema fÃ­sico
 - [x] ERD com cardinalidades pendentes marcadas
 - [x] rastreabilidade atualizada
-- [x] Prompt 13 não executado
+- [x] Prompt 13 nÃ£o executado
 
 ---
 
 ```text
 PROMPT: 13
-TITLE: Arquitetura de transações, concorrência e idempotência
+TITLE: Arquitetura de transaÃ§Ãµes, concorrÃªncia e idempotÃªncia
 STARTED_AT: 2026-08-29T02:40:00-04:00
 FINISHED_AT: 2026-08-29T03:15:00-04:00
 STATUS: PASS_WITH_RESTRICTIONS
 FILES_CREATED:
-  docs/14-transaction-design/ (21 artefatos — ver README.md)
+  docs/14-transaction-design/ (21 artefatos â€” ver README.md)
 FILES_CHANGED:
   docs/01-foundation/requirements-traceability.md
   docs/00-governance/prompt-execution-log.md
@@ -957,23 +957,23 @@ OUTBOX_STATUS: PROPOSED
 CODE_CREATED: NO
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
-  OPT vs PESS por cenário; RC default. Efeitos externos pós-commit.
+  OPT vs PESS por cenÃ¡rio; RC default. Efeitos externos pÃ³s-commit.
   Outbox/inbox PROPOSED BC-015/018. Sem lost update silencioso.
-  Prompt 14 não executado.
+  Prompt 14 nÃ£o executado.
 ```
 
-## Quality gate Prompt 13 (evidência)
+## Quality gate Prompt 13 (evidÃªncia)
 
-- [x] pasta `14-transaction-design/` com 21 artefatos não vazios
-- [x] 11 comandos críticos com análise completa (12 dimensões)
-- [x] optimistic vs pessimistic comparado por cenário
-- [x] 6 operações FINANCIAL_RACE classificadas
-- [x] retry não duplica efeito documentado
+- [x] pasta `14-transaction-design/` com 21 artefatos nÃ£o vazios
+- [x] 11 comandos crÃ­ticos com anÃ¡lise completa (12 dimensÃµes)
+- [x] optimistic vs pessimistic comparado por cenÃ¡rio
+- [x] 6 operaÃ§Ãµes FINANCIAL_RACE classificadas
+- [x] retry nÃ£o duplica efeito documentado
 - [x] efeitos externos separados do commit local
-- [x] outbox avaliado — PROPOSED (não ACCEPTED global)
-- [x] 0 código, migrations, filas
+- [x] outbox avaliado â€” PROPOSED (nÃ£o ACCEPTED global)
+- [x] 0 cÃ³digo, migrations, filas
 - [x] rastreabilidade atualizada
-- [x] Prompt 14 não executado
+- [x] Prompt 14 nÃ£o executado
 
 ---
 
@@ -984,7 +984,7 @@ STARTED_AT: 2026-08-29T03:20:00-04:00
 FINISHED_AT: 2026-08-29T03:55:00-04:00
 STATUS: PASS_WITH_RESTRICTIONS
 FILES_CREATED:
-  docs/15-security/ (25 artefatos — ver README.md)
+  docs/15-security/ (25 artefatos â€” ver README.md)
 FILES_CHANGED:
   docs/01-foundation/requirements-traceability.md
   docs/00-governance/prompt-execution-log.md
@@ -1000,33 +1000,33 @@ DFD_FLOWS: 8
 CODE_CREATED: NO
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
-  STRIDE por fluxo; AuthZ backend obrigatório. Custo/margem/doc protegidos.
-  Sem conformidade jurídica inventada. IdP/MFA Prompt 20. Prompt 15 não executado.
+  STRIDE por fluxo; AuthZ backend obrigatÃ³rio. Custo/margem/doc protegidos.
+  Sem conformidade jurÃ­dica inventada. IdP/MFA Prompt 20. Prompt 15 nÃ£o executado.
 ```
 
-## Quality gate Prompt 14 (evidência)
+## Quality gate Prompt 14 (evidÃªncia)
 
-- [x] pasta `15-security/` com 25 artefatos não vazios
+- [x] pasta `15-security/` com 25 artefatos nÃ£o vazios
 - [x] 8 fluxos e 7 trust boundaries modelados
-- [x] 36 ameaças STRIDE com campos completos
+- [x] 36 ameaÃ§as STRIDE com campos completos
 - [x] 16 casos abuso empresarial
-- [x] custo/margem/documentos com controles explícitos
-- [x] autorização não depende do frontend (SEC-DEC-005)
-- [x] 14 riscos residuais explícitos
-- [x] 0 código
+- [x] custo/margem/documentos com controles explÃ­citos
+- [x] autorizaÃ§Ã£o nÃ£o depende do frontend (SEC-DEC-005)
+- [x] 14 riscos residuais explÃ­citos
+- [x] 0 cÃ³digo
 - [x] rastreabilidade atualizada
-- [x] Prompt 15 não executado
+- [x] Prompt 15 nÃ£o executado
 
 ---
 
 ```text
 PROMPT: 15
-TITLE: Arquitetura de testes e estratégia de qualidade
+TITLE: Arquitetura de testes e estratÃ©gia de qualidade
 STARTED_AT: 2026-08-29T04:00:00-04:00
 FINISHED_AT: 2026-08-29T04:35:00-04:00
 STATUS: PASS_WITH_RESTRICTIONS
 FILES_CREATED:
-  docs/16-testing/ (25 artefatos — ver README.md)
+  docs/16-testing/ (25 artefatos â€” ver README.md)
 FILES_CHANGED:
   docs/01-foundation/requirements-traceability.md
   docs/00-governance/prompt-execution-log.md
@@ -1040,28 +1040,28 @@ REQ_GAPS: 6
 TEST_CODE_CREATED: NO
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
-  Risk-based; PG real Testcontainers L3/L4. Negativo+corrida em críticos.
-  Mocks não validam UNQ/CHK. Dados sintéticos. Prompt 16 não executado.
+  Risk-based; PG real Testcontainers L3/L4. Negativo+corrida em crÃ­ticos.
+  Mocks nÃ£o validam UNQ/CHK. Dados sintÃ©ticos. Prompt 16 nÃ£o executado.
 ```
 
-## Quality gate Prompt 15 (evidência)
+## Quality gate Prompt 15 (evidÃªncia)
 
-- [x] pasta `16-testing/` com 25 artefatos não vazios
+- [x] pasta `16-testing/` com 25 artefatos nÃ£o vazios
 - [x] 58 TEST-CAND com rastreabilidade EV/BR/FR/UC/NFR/INV/CMD/TR/AUTHZ/RISK
 - [x] 22/22 INV com TEST-CAND
-- [x] concorrência e idempotência cobertas
-- [x] segurança negativa mapeada (SEC-TEST)
-- [x] PostgreSQL real previsto — sem mock PG behavior
+- [x] concorrÃªncia e idempotÃªncia cobertas
+- [x] seguranÃ§a negativa mapeada (SEC-TEST)
+- [x] PostgreSQL real previsto â€” sem mock PG behavior
 - [x] test-data sem dados reais
-- [x] 0 código de teste
+- [x] 0 cÃ³digo de teste
 - [x] rastreabilidade atualizada
-- [x] Prompt 16 não executado
+- [x] Prompt 16 nÃ£o executado
 
 ---
 
 ```text
 PROMPT: 16
-TITLE: Bootstrap técnico do repositório
+TITLE: Bootstrap tÃ©cnico do repositÃ³rio
 STARTED_AT: 2026-08-29T00:00:00-04:00
 FINISHED_AT: 2026-08-29T00:15:00-04:00
 STATUS: PASS_WITH_RESTRICTIONS
@@ -1075,8 +1075,8 @@ FILES_CREATED:
   pnpm-lock.yaml
   prettier.config.mjs
   turbo.json
-  apps/api/ (NestJS 11 + Fastify — health only)
-  apps/web/ (React 19 + Vite 7 — bootstrap shell)
+  apps/api/ (NestJS 11 + Fastify â€” health only)
+  apps/web/ (React 19 + Vite 7 â€” bootstrap shell)
   packages/tsconfig/
   packages/eslint-config/
   docs/17-bootstrap/ (6 artefatos)
@@ -1085,7 +1085,7 @@ FILES_CHANGED:
   docs/README.md
   docs/01-foundation/requirements-traceability.md
   docs/00-governance/prompt-execution-log.md
-  docs/** (formatação incidental Prettier em tentativa inicial — conteúdo preservado)
+  docs/** (formataÃ§Ã£o incidental Prettier em tentativa inicial â€” conteÃºdo preservado)
 QUALITY_GATE: PASS_WITH_RESTRICTIONS
 LINT: PASS
 TYPECHECK: PASS
@@ -1101,31 +1101,31 @@ CODE_CREATED: YES (foundation only)
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
   Stack ADR-TECH-001..003, 006, 007. Drizzle/PG adiado Prompt 17.
-  pnpm global EPERM — npx pnpm@9.15.9 documentado.
-  format:check escopado a código + docs/17-bootstrap (BOOT-DEC-011).
-  Prompt 17 não executado.
+  pnpm global EPERM â€” npx pnpm@9.15.9 documentado.
+  format:check escopado a cÃ³digo + docs/17-bootstrap (BOOT-DEC-011).
+  Prompt 17 nÃ£o executado.
 ```
 
-## Quality gate Prompt 16 (evidência)
+## Quality gate Prompt 16 (evidÃªncia)
 
 - [x] monorepo pnpm + Turborepo conforme ADR-TECH-006
-- [x] apps/api NestJS + Fastify com GET /health técnico
+- [x] apps/api NestJS + Fastify com GET /health tÃ©cnico
 - [x] apps/web React 19 + Vite 7 shell
 - [x] TypeScript strict + ESLint (no-explicit-any)
-- [x] Vitest — 2 testes fundação passando
-- [x] lint, format:check, typecheck, test, build — PASS
-- [x] pnpm-lock.yaml presente; 0 vulnerabilidades críticas (audit)
+- [x] Vitest â€” 2 testes fundaÃ§Ã£o passando
+- [x] lint, format:check, typecheck, test, build â€” PASS
+- [x] pnpm-lock.yaml presente; 0 vulnerabilidades crÃ­ticas (audit)
 - [x] .env.example sem segredos reais
-- [x] 0 módulos empresariais, 0 tabelas, 0 auth, 0 CRUD
+- [x] 0 mÃ³dulos empresariais, 0 tabelas, 0 auth, 0 CRUD
 - [x] docs/17-bootstrap/ com 6 artefatos
 - [x] rastreabilidade atualizada
-- [x] Prompt 17 não executado
+- [x] Prompt 17 nÃ£o executado
 
 ---
 
 ```text
 PROMPT: 17
-TITLE: Fundação local PostgreSQL e persistência técnica
+TITLE: FundaÃ§Ã£o local PostgreSQL e persistÃªncia tÃ©cnica
 STARTED_AT: 2026-08-29T00:10:00-04:00
 FINISHED_AT: 2026-08-29T00:20:00-04:00
 STATUS: PASS_WITH_RESTRICTIONS
@@ -1165,29 +1165,29 @@ SECRETS_COMMITTED: 0
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
   PG 18 volume mount /var/lib/postgresql. Drizzle-kit >=0.31.7.
-  Credenciais locais placeholder. Prompt 18 não executado.
+  Credenciais locais placeholder. Prompt 18 nÃ£o executado.
 ```
 
-## Quality gate Prompt 17 (evidência)
+## Quality gate Prompt 17 (evidÃªncia)
 
 - [x] Docker Compose PG 18 healthy, porta 127.0.0.1
 - [x] Volume nomeado `cisne_local_pg_data`
 - [x] `@cisne/database` com Drizzle + pool pg
-- [x] 1 migration técnica (`infrastructure.schema_baseline`)
+- [x] 1 migration tÃ©cnica (`infrastructure.schema_baseline`)
 - [x] 0 tabelas empresariais
 - [x] Health check API com status de DB
-- [x] Teste integração PG real (transação + rollback)
-- [x] lint, typecheck, test, build — PASS
+- [x] Teste integraÃ§Ã£o PG real (transaÃ§Ã£o + rollback)
+- [x] lint, typecheck, test, build â€” PASS
 - [x] `.env` ignorado; `.env.example` sem segredos reais
 - [x] docs/18-database-foundation/ com 9 artefatos
 - [x] rastreabilidade atualizada
-- [x] Prompt 18 não executado
+- [x] Prompt 18 nÃ£o executado
 
 ---
 
 ```text
 PROMPT: 18
-TITLE: Persistência segura de identidade
+TITLE: PersistÃªncia segura de identidade
 STARTED_AT: 2026-08-29T00:30:00-04:00
 FINISHED_AT: 2026-08-29T00:40:00-04:00
 STATUS: PASS_WITH_RESTRICTIONS
@@ -1225,21 +1225,21 @@ DOC_FILES_CREATED: 1
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
   Schema identity; refresh family SEC-DEC-002. Sem AuthN runtime nem roles empresariais.
-  Prompt 19 não executado.
+  Prompt 19 nÃ£o executado.
 ```
 
-## Quality gate Prompt 18 (evidência)
+## Quality gate Prompt 18 (evidÃªncia)
 
-- [x] schema `identity` com 5 tabelas técnicas
-- [x] UUID interno, login normalizado único, hashes only
-- [x] FK RESTRICT, CHECK, índices, expiração/revogação
-- [x] 1 migration determinística (`0001_striped_the_liberteens.sql`)
+- [x] schema `identity` com 5 tabelas tÃ©cnicas
+- [x] UUID interno, login normalizado Ãºnico, hashes only
+- [x] FK RESTRICT, CHECK, Ã­ndices, expiraÃ§Ã£o/revogaÃ§Ã£o
+- [x] 1 migration determinÃ­stica (`0001_striped_the_liberteens.sql`)
 - [x] 0 tabelas empresariais, 0 roles empresariais
-- [x] 11 testes integração PostgreSQL real
-- [x] lint, typecheck, test, test:integration, build — PASS
-- [x] docs/implementation/18-identity-persistence.md (único doc novo)
+- [x] 11 testes integraÃ§Ã£o PostgreSQL real
+- [x] lint, typecheck, test, test:integration, build â€” PASS
+- [x] docs/implementation/18-identity-persistence.md (Ãºnico doc novo)
 - [x] prompt-execution-log atualizado
-- [x] Prompt 19 não executado
+- [x] Prompt 19 nÃ£o executado
 
 ---
 
@@ -1276,28 +1276,28 @@ TEST: PASS
 BUILD: PASS
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
-  Sem seed em startup. Senha dev via DEV_SEED_PASSWORD ou geração runtime.
-  Prompt 20 não executado.
+  Sem seed em startup. Senha dev via DEV_SEED_PASSWORD ou geraÃ§Ã£o runtime.
+  Prompt 20 nÃ£o executado.
 ```
 
-## Quality gate Prompt 19 (evidência)
+## Quality gate Prompt 19 (evidÃªncia)
 
 - [x] DEVELOPMENT_SEED / TEST_DATA_BUILDERS / PRODUCTION_BOOTSTRAP separados
 - [x] Seed dev idempotente; bloqueado em production NODE_ENV
-- [x] Bootstrap manual com confirmação e política de senha
+- [x] Bootstrap manual com confirmaÃ§Ã£o e polÃ­tica de senha
 - [x] 6 builders de teste com dados `@cisne.invalid`
 - [x] 0 credenciais commitadas; `.env.example` sem segredos
-- [x] testes unitários + integração (seed/bootstrap)
-- [x] lint, typecheck, test, test:integration, build — PASS
-- [x] docs/implementation/19-seeding.md (único doc novo)
+- [x] testes unitÃ¡rios + integraÃ§Ã£o (seed/bootstrap)
+- [x] lint, typecheck, test, test:integration, build â€” PASS
+- [x] docs/implementation/19-seeding.md (Ãºnico doc novo)
 - [x] prompt-execution-log atualizado
-- [x] Prompt 20 não executado
+- [x] Prompt 20 nÃ£o executado
 
 ---
 
 ```text
 PROMPT: 20
-TITLE: Autenticação backend
+TITLE: AutenticaÃ§Ã£o backend
 STARTED_AT: 2026-08-29T00:30:00-04:00
 FINISHED_AT: 2026-08-29T01:00:00-04:00
 STATUS: PASS_WITH_RESTRICTIONS
@@ -1333,28 +1333,28 @@ BUILD: PASS
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
   JWT HS256 (HMAC) access curto + refresh opaco rotacionado (SEC-DEC-002).
-  Sem autorização empresarial nem recuperação de senha.
+  Sem autorizaÃ§Ã£o empresarial nem recuperaÃ§Ã£o de senha.
   Rate limit login in-memory (5/min IP+UA).
-  Prompt 21 não executado.
+  Prompt 21 nÃ£o executado.
 ```
 
-## Quality gate Prompt 20 (evidência)
+## Quality gate Prompt 20 (evidÃªncia)
 
-- [x] Login, sessão atual, refresh, logout, logout-all implementados
-- [x] Conta desativada, revogação e detecção de reuse de refresh
+- [x] Login, sessÃ£o atual, refresh, logout, logout-all implementados
+- [x] Conta desativada, revogaÃ§Ã£o e detecÃ§Ã£o de reuse de refresh
 - [x] scrypt verify, JWT curto, refresh rotacionado, hash-only em PG
-- [x] Erros estáveis sem enumeração; DTO allowlist; correlation ID em erros
-- [x] Testes unitários, integração PostgreSQL e E2E — PASS
-- [x] lint, typecheck, build — PASS
-- [x] docs/implementation/20-authentication-backend.md (único doc novo)
+- [x] Erros estÃ¡veis sem enumeraÃ§Ã£o; DTO allowlist; correlation ID em erros
+- [x] Testes unitÃ¡rios, integraÃ§Ã£o PostgreSQL e E2E â€” PASS
+- [x] lint, typecheck, build â€” PASS
+- [x] docs/implementation/20-authentication-backend.md (Ãºnico doc novo)
 - [x] 0 vazamentos de hash/senha/token em respostas (assertNoSensitiveLeak)
-- [x] Prompt 21 não executado
+- [x] Prompt 21 nÃ£o executado
 
 ---
 
 ```text
 PROMPT: 21
-TITLE: Hardening adversarial da autenticação
+TITLE: Hardening adversarial da autenticaÃ§Ã£o
 STARTED_AT: 2026-08-29T01:00:00-04:00
 FINISHED_AT: 2026-08-29T01:10:00-04:00
 STATUS: PASS_WITH_RESTRICTIONS
@@ -1397,27 +1397,27 @@ E2E: PASS
 BUILD: PASS
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
-  JWT guard valida sessão+identidade no PG; refresh com FOR UPDATE.
-  Login anti-enumeração para conta desativada.
+  JWT guard valida sessÃ£o+identidade no PG; refresh com FOR UPDATE.
+  Login anti-enumeraÃ§Ã£o para conta desativada.
   Riscos residuais: rate limit in-memory, sem limit refresh.
-  Prompt 22 não executado.
+  Prompt 22 nÃ£o executado.
 ```
 
-## Quality gate Prompt 21 (evidência)
+## Quality gate Prompt 21 (evidÃªncia)
 
-- [x] Revisão adversarial documentada (hash, rotação, revogação, enumeração, etc.)
+- [x] RevisÃ£o adversarial documentada (hash, rotaÃ§Ã£o, revogaÃ§Ã£o, enumeraÃ§Ã£o, etc.)
 - [x] Falhas reais corrigidas sem remover asserts
-- [x] Testes adversariais unitários, integração e E2E — PASS
-- [x] 0 vulnerabilidade crítica conhecida; `pnpm audit --prod` limpo
-- [x] Sem regressão nos testes Prompt 20
-- [x] docs/implementation/21-authentication-hardening.md (único doc novo)
-- [x] Prompt 22 não executado
+- [x] Testes adversariais unitÃ¡rios, integraÃ§Ã£o e E2E â€” PASS
+- [x] 0 vulnerabilidade crÃ­tica conhecida; `pnpm audit --prod` limpo
+- [x] Sem regressÃ£o nos testes Prompt 20
+- [x] docs/implementation/21-authentication-hardening.md (Ãºnico doc novo)
+- [x] Prompt 22 nÃ£o executado
 
 ---
 
 ```text
 PROMPT: 22
-TITLE: Autorização backend deny-by-default
+TITLE: AutorizaÃ§Ã£o backend deny-by-default
 STARTED_AT: 2026-08-29T01:05:00-04:00
 FINISHED_AT: 2026-08-29T01:18:00-04:00
 STATUS: PASS
@@ -1467,24 +1467,24 @@ MIGRATION: PASS (0002_authorization_baseline)
 BUILD: PASS
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
-  PDP/PEP deny-by-default; concessões explícitas por identity_id (sem array no usuário).
-  Schema "authorization" (palavra reservada PG — SQL com aspas).
-  Escopo PLATFORM bloqueia recursos não técnicos (SOD-012).
-  Negação HTTP genérica; motivo interno em decision_audits.
+  PDP/PEP deny-by-default; concessÃµes explÃ­citas por identity_id (sem array no usuÃ¡rio).
+  Schema "authorization" (palavra reservada PG â€” SQL com aspas).
+  Escopo PLATFORM bloqueia recursos nÃ£o tÃ©cnicos (SOD-012).
+  NegaÃ§Ã£o HTTP genÃ©rica; motivo interno em decision_audits.
   E2E serializado (fileParallelism: false) para evitar deadlock em TRUNCATE.
-  Prompt 23 não executado.
+  Prompt 23 nÃ£o executado.
 ```
 
-## Quality gate Prompt 22 (evidência)
+## Quality gate Prompt 22 (evidÃªncia)
 
-- [x] Actions e resources tipados (vocabulário técnico apenas)
-- [x] PDP + PEP integrados às rotas `/api/v1/authz/*`
-- [x] Persistência: grants com validade, scope, granted_by, version, constraints, revogação
+- [x] Actions e resources tipados (vocabulÃ¡rio tÃ©cnico apenas)
+- [x] PDP + PEP integrados Ã s rotas `/api/v1/authz/*`
+- [x] PersistÃªncia: grants com validade, scope, granted_by, version, constraints, revogaÃ§Ã£o
 - [x] Migration `0002_authorization_baseline` aplicada (dev + test)
-- [x] Testes negativos: anônimo, sem concessão, ação/recurso errado, expirado, revogado, rota direta, sem vazamento, deny default, concorrência revogação
-- [x] 0 papéis empresariais inventados
+- [x] Testes negativos: anÃ´nimo, sem concessÃ£o, aÃ§Ã£o/recurso errado, expirado, revogado, rota direta, sem vazamento, deny default, concorrÃªncia revogaÃ§Ã£o
+- [x] 0 papÃ©is empresariais inventados
 - [x] docs/implementation/22-authorization-backend.md
-- [x] Prompt 23 não executado
+- [x] Prompt 23 nÃ£o executado
 
 ---
 
@@ -1542,28 +1542,28 @@ MIGRATION: PASS (0003/0004 + fallback test bootstrap)
 BUILD: PASS
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
-  Escopos OWN/ASSIGNED/UNIT/CLIENT/CONTRACT/DOCUMENT/FINANCIAL/GLOBAL (+ PLATFORM técnico).
-  Sem tenant_id; âncoras em scope_refs; filtros SQL obrigatórios em listagem.
+  Escopos OWN/ASSIGNED/UNIT/CLIENT/CONTRACT/DOCUMENT/FINANCIAL/GLOBAL (+ PLATFORM tÃ©cnico).
+  Sem tenant_id; Ã¢ncoras em scope_refs; filtros SQL obrigatÃ³rios em listagem.
   Anti self-escalation em GrantAdminService; GLOBAL exige resource_id null.
-  Fixture scoped_records para isolamento técnico (não domínio empresarial).
-  Prompt 24 não executado.
+  Fixture scoped_records para isolamento tÃ©cnico (nÃ£o domÃ­nio empresarial).
+  Prompt 24 nÃ£o executado.
 ```
 
-## Quality gate Prompt 23 (evidência)
+## Quality gate Prompt 23 (evidÃªncia)
 
 - [x] Escopos contextuais implementados conforme AUTHZ-SCOPE-001 (somente os listados)
-- [x] Resolução de escopo efetivo + validação action/resource/scope
-- [x] Filtros obrigatórios no acesso a dados (listagem + lookup por ID)
-- [x] Prevenção self-escalation e concessão não órfã (scope_refs)
+- [x] ResoluÃ§Ã£o de escopo efetivo + validaÃ§Ã£o action/resource/scope
+- [x] Filtros obrigatÃ³rios no acesso a dados (listagem + lookup por ID)
+- [x] PrevenÃ§Ã£o self-escalation e concessÃ£o nÃ£o Ã³rfÃ£ (scope_refs)
 - [x] 0 vazamentos cross-scope nos testes de isolamento
 - [x] docs/implementation/23-contextual-scope.md
-- [x] Prompt 24 não executado
+- [x] Prompt 24 nÃ£o executado
 
 ---
 
 ```text
 PROMPT: 24
-TITLE: Autenticação e sessão no frontend
+TITLE: AutenticaÃ§Ã£o e sessÃ£o no frontend
 STARTED_AT: 2026-08-29T12:20:00-04:00
 FINISHED_AT: 2026-08-29T12:38:00-04:00
 STATUS: PASS
@@ -1603,24 +1603,24 @@ E2E: PASS (vitest jsdom + fetch mocks)
 BUILD: PASS
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
-  Bearer JWT SPA (SEC-DEC-004): access em memória, refresh em sessionStorage (não localStorage).
+  Bearer JWT SPA (SEC-DEC-004): access em memÃ³ria, refresh em sessionStorage (nÃ£o localStorage).
   Login, bootstrap/refresh, logout/logout-all, rota protegida /app, access-denied, unavailable.
-  Mensagem única para credenciais inválidas; sanitizeRedirectPath contra open redirect.
-  Shell técnico em /app — sem dashboard ou módulos empresariais.
-  Prompt 25 não executado.
+  Mensagem Ãºnica para credenciais invÃ¡lidas; sanitizeRedirectPath contra open redirect.
+  Shell tÃ©cnico em /app â€” sem dashboard ou mÃ³dulos empresariais.
+  Prompt 25 nÃ£o executado.
 ```
 
-## Quality gate Prompt 24 (evidência)
+## Quality gate Prompt 24 (evidÃªncia)
 
-- [x] Página de login acessível com validação, loading e mensagem segura
-- [x] Bootstrap de sessão com refresh mutex e cancelamento (AbortController)
+- [x] PÃ¡gina de login acessÃ­vel com validaÃ§Ã£o, loading e mensagem segura
+- [x] Bootstrap de sessÃ£o com refresh mutex e cancelamento (AbortController)
 - [x] Logout e logout-all limpam estado local
-- [x] Rota protegida, acesso negado, redirect seguro, rede/indisponível
-- [x] Zero segredo no bundle; tokens não em localStorage
-- [x] Testes unit/component/E2E (vitest) — 15 testes @cisne/web
-- [x] lint, typecheck, test, build — PASS
+- [x] Rota protegida, acesso negado, redirect seguro, rede/indisponÃ­vel
+- [x] Zero segredo no bundle; tokens nÃ£o em localStorage
+- [x] Testes unit/component/E2E (vitest) â€” 15 testes @cisne/web
+- [x] lint, typecheck, test, build â€” PASS
 - [x] docs/implementation/24-frontend-authentication.md
-- [x] Prompt 25 não executado
+- [x] Prompt 25 nÃ£o executado
 
 ---
 
@@ -1669,20 +1669,20 @@ NEXT_PROMPT_EXECUTED: NO
 NOTES:
   Shell com header, nav estrutural, skip link, landmarks e responsividade.
   Menu reflete CAP-001 via GET /api/v1/authz/probe; backend permanece autoridade.
-  Páginas técnicas apenas — sem dashboard, cards, gráficos ou módulos empresariais.
-  Prompt 26 não executado.
+  PÃ¡ginas tÃ©cnicas apenas â€” sem dashboard, cards, grÃ¡ficos ou mÃ³dulos empresariais.
+  Prompt 26 nÃ£o executado.
 ```
 
-## Quality gate Prompt 25 (evidência)
+## Quality gate Prompt 25 (evidÃªncia)
 
-- [x] Layout protegido com header, nav, logout e identificação mínima de sessão
-- [x] Carregamento, acesso negado (capability), sessão expirada, erro inesperado, indisponível
-- [x] Acessibilidade mínima: skip link, landmarks, foco, teclado, contraste
-- [x] 0 módulos empresariais criados
-- [x] Testes: sessão válida/ausente/expirada, sem capability, deep link, mobile, logout, rede
-- [x] lint, typecheck, test, build — PASS
+- [x] Layout protegido com header, nav, logout e identificaÃ§Ã£o mÃ­nima de sessÃ£o
+- [x] Carregamento, acesso negado (capability), sessÃ£o expirada, erro inesperado, indisponÃ­vel
+- [x] Acessibilidade mÃ­nima: skip link, landmarks, foco, teclado, contraste
+- [x] 0 mÃ³dulos empresariais criados
+- [x] Testes: sessÃ£o vÃ¡lida/ausente/expirada, sem capability, deep link, mobile, logout, rede
+- [x] lint, typecheck, test, build â€” PASS
 - [x] docs/implementation/25-protected-shell.md
-- [x] Prompt 26 não executado
+- [x] Prompt 26 nÃ£o executado
 
 ---
 
@@ -1741,41 +1741,41 @@ BUILD: PASS
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
   Canal SECURITY_AUDIT separado de AUDIT_TRAIL, DOMAIN_HISTORY e TECHNICAL_LOG.
-  Persistência append-only em audit.security_audit_events (trigger PostgreSQL; sem hash chain).
-  Redaction, sanitização, acesso restrito (platform:diagnostics:read) e falha de persistência tratada por criticidade.
-  Prompt 27 não executado.
+  PersistÃªncia append-only em audit.security_audit_events (trigger PostgreSQL; sem hash chain).
+  Redaction, sanitizaÃ§Ã£o, acesso restrito (platform:diagnostics:read) e falha de persistÃªncia tratada por criticidade.
+  Prompt 27 nÃ£o executado.
 ```
 
-## Quality gate Prompt 26 (evidência)
+## Quality gate Prompt 26 (evidÃªncia)
 
-- [x] SECURITY_AUDIT distinto de histórico de domínio e logs técnicos
-- [x] Eventos sensíveis existentes auditados (login, falha, logout, logout-all, refresh reuse, grant create/revoke, deny, bootstrap)
-- [x] Sem senha, token, hash ou payload sensível nos registros (containsForbiddenSecret = 0)
-- [x] Append-only com trigger; sem alegação de imutabilidade criptográfica
-- [x] Testes: criação, negação, redaction, append-only, concorrência, correlação, segredo, persistência, acesso indevido
-- [x] lint, typecheck, test, test:integration, test:e2e, build — PASS
+- [x] SECURITY_AUDIT distinto de histÃ³rico de domÃ­nio e logs tÃ©cnicos
+- [x] Eventos sensÃ­veis existentes auditados (login, falha, logout, logout-all, refresh reuse, grant create/revoke, deny, bootstrap)
+- [x] Sem senha, token, hash ou payload sensÃ­vel nos registros (containsForbiddenSecret = 0)
+- [x] Append-only com trigger; sem alegaÃ§Ã£o de imutabilidade criptogrÃ¡fica
+- [x] Testes: criaÃ§Ã£o, negaÃ§Ã£o, redaction, append-only, concorrÃªncia, correlaÃ§Ã£o, segredo, persistÃªncia, acesso indevido
+- [x] lint, typecheck, test, test:integration, test:e2e, build â€” PASS
 - [x] docs/implementation/26-audit-trail.md
-- [x] Prompt 27 não executado
+- [x] Prompt 27 nÃ£o executado
 
 ---
 
 ```text
 PROMPT: 27
-TITLE: Gate integrado da fundação técnica
+TITLE: Gate integrado da fundaÃ§Ã£o tÃ©cnica
 STARTED_AT: 2026-08-29T13:13:00-04:00
 FINISHED_AT: 2026-08-29T13:20:00-04:00
 STATUS: PASS_WITH_RESTRICTIONS
 FILES_CREATED:
   docs/implementation/27-foundation-quality-gate.md
 FILES_CHANGED:
-  apps/api/src/**/*.ts (Prettier — 35 arquivos)
-  apps/web/src/**/*.ts(x) (Prettier — 27 arquivos)
-  packages/database/src/**/*.ts (Prettier — 7 arquivos)
+  apps/api/src/**/*.ts (Prettier â€” 35 arquivos)
+  apps/web/src/**/*.ts(x) (Prettier â€” 27 arquivos)
+  packages/database/src/**/*.ts (Prettier â€” 7 arquivos)
   docs/00-governance/prompt-execution-log.md
 QUALITY_GATE: PASS_WITH_RESTRICTIONS
 TECHNICAL_FOUNDATION: READY_WITH_RESTRICTIONS
 BUSINESS_MODULES: NOT_STARTED
-FORMAT: PASS (após correção drift 69 arquivos)
+FORMAT: PASS (apÃ³s correÃ§Ã£o drift 69 arquivos)
 LINT: PASS
 TYPECHECK: PASS
 UNIT: PASS (database 3, api 37, web 28)
@@ -1788,39 +1788,39 @@ AUTHORIZATION: PASS
 CROSS_SCOPE: PASS
 AUDIT_REDACTION: PASS
 CRITICAL_VULNERABILITIES: 0
-MODERATE_VULNERABILITIES: 1 (esbuild dev via drizzle-kit — aceito)
+MODERATE_VULNERABILITIES: 1 (esbuild dev via drizzle-kit â€” aceito)
 SECRETS_COMMITTED: 0
 BUSINESS_TABLES: 0
 DOC_FILES_CREATED: 1
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
   Gate integrado executado sobre base 3b7572b (Prompt 26).
-  Instalação frozen-lockfile, lint, typecheck, test, integration, e2e, build — PASS.
-  Migrations em banco vazio (cisne_migration_gate_test) — 12 tabelas técnicas.
-  Correção única: drift Prettier em 69 arquivos (sem mudança de comportamento).
+  InstalaÃ§Ã£o frozen-lockfile, lint, typecheck, test, integration, e2e, build â€” PASS.
+  Migrations em banco vazio (cisne_migration_gate_test) â€” 12 tabelas tÃ©cnicas.
+  CorreÃ§Ã£o Ãºnica: drift Prettier em 69 arquivos (sem mudanÃ§a de comportamento).
   Riscos residuais: rate limit in-memory, esbuild dev-only moderate, ensure-migrations fallback.
-  Prompt 28 não executado.
+  Prompt 28 nÃ£o executado.
 ```
 
-## Quality gate Prompt 27 (evidência)
+## Quality gate Prompt 27 (evidÃªncia)
 
-- [x] Instalação reproduzível (`pnpm install --frozen-lockfile`)
-- [x] format:check, lint, typecheck — PASS
-- [x] Unit, integração PostgreSQL real, E2E API, E2E frontend — PASS
-- [x] Build sem segredo commitado — PASS
-- [x] Migrations em banco vazio — PASS
-- [x] Seed idempotente — PASS (integração)
-- [x] 12 cenários integrados cobertos por testes existentes
-- [x] Revisão de código: sem `any`, skip, mock PG, tabelas empresariais, segredos
-- [x] `pnpm audit --prod` — 0 críticas; 1 moderate dev-only documentada
+- [x] InstalaÃ§Ã£o reproduzÃ­vel (`pnpm install --frozen-lockfile`)
+- [x] format:check, lint, typecheck â€” PASS
+- [x] Unit, integraÃ§Ã£o PostgreSQL real, E2E API, E2E frontend â€” PASS
+- [x] Build sem segredo commitado â€” PASS
+- [x] Migrations em banco vazio â€” PASS
+- [x] Seed idempotente â€” PASS (integraÃ§Ã£o)
+- [x] 12 cenÃ¡rios integrados cobertos por testes existentes
+- [x] RevisÃ£o de cÃ³digo: sem `any`, skip, mock PG, tabelas empresariais, segredos
+- [x] `pnpm audit --prod` â€” 0 crÃ­ticas; 1 moderate dev-only documentada
 - [x] `docs/implementation/27-foundation-quality-gate.md`
-- [x] Prompt 28 não executado
+- [x] Prompt 28 nÃ£o executado
 
 ---
 
 ```text
 PROMPT: 28
-TITLE: Gate de validação empresarial antes dos módulos
+TITLE: Gate de validaÃ§Ã£o empresarial antes dos mÃ³dulos
 STARTED_AT: 2026-08-29T13:22:00-04:00
 FINISHED_AT: 2026-08-29T13:28:00-04:00
 STATUS: BLOCKED
@@ -1831,7 +1831,7 @@ FILES_CHANGED:
   docs/00-governance/prompt-execution-log.md
 QUALITY_GATE: BLOCKED
 BUSINESS_READINESS: BLOCKED_AWAITING_BUSINESS_CONFIRMATION
-TECHNICAL_FOUNDATION: READY_WITH_RESTRICTIONS (Prompt 27 — inalterado)
+TECHNICAL_FOUNDATION: READY_WITH_RESTRICTIONS (Prompt 27 â€” inalterado)
 CONFIRMED_BUSINESS_SOURCE: NONE
 CONFIRMED_RULES: 0
 BLOCKING_DECISIONS: DDP-001,002,003,009,010,011,012,013,015,020,022,023,026,028,029,037 (+ 25 DDPs OPEN)
@@ -1840,31 +1840,31 @@ CODE_CREATED: NO
 DOC_FILES_CREATED: 2
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
-  Inspeção integral de fontes, regras (0 CONFIRMED), DDPs (40 OPEN), UCs (26), BCs candidatos, invariantes, estados, authz, modelo.
-  Nenhuma fonte formal pós-SRC-001 assinada — criado questionário SRC-002 aguardando patrocinador.
-  Fundação técnica pronta ≠ domínio validado. Nenhum módulo empresarial autorizado.
-  Source registry, DDPs e regras NÃO atualizados (sem resposta real).
-  Prompt 29 não executado.
+  InspeÃ§Ã£o integral de fontes, regras (0 CONFIRMED), DDPs (40 OPEN), UCs (26), BCs candidatos, invariantes, estados, authz, modelo.
+  Nenhuma fonte formal pÃ³s-SRC-001 assinada â€” criado questionÃ¡rio SRC-002 aguardando patrocinador.
+  FundaÃ§Ã£o tÃ©cnica pronta â‰  domÃ­nio validado. Nenhum mÃ³dulo empresarial autorizado.
+  Source registry, DDPs e regras NÃƒO atualizados (sem resposta real).
+  Prompt 29 nÃ£o executado.
 ```
 
-## Quality gate Prompt 28 (evidência)
+## Quality gate Prompt 28 (evidÃªncia)
 
 - [x] Fontes, regras, DDPs, requisitos, UCs, linguagem, BCs, invariantes, estados, authz e modelo inspecionados
-- [x] Relatório Prompt 27 considerado (fundação técnica READY_WITH_RESTRICTIONS)
-- [x] Nenhuma fonte confirmada pós-SRC-001 — SRC-002 questionário criado, não respondido
+- [x] RelatÃ³rio Prompt 27 considerado (fundaÃ§Ã£o tÃ©cnica READY_WITH_RESTRICTIONS)
+- [x] Nenhuma fonte confirmada pÃ³s-SRC-001 â€” SRC-002 questionÃ¡rio criado, nÃ£o respondido
 - [x] Nenhuma regra promovida sem resposta
 - [x] Conflitos preservados (0 SC-*)
-- [x] Decisões bloqueantes listadas
+- [x] DecisÃµes bloqueantes listadas
 - [x] Escopo inicial: UNKNOWN
-- [x] Zero código empresarial
+- [x] Zero cÃ³digo empresarial
 - [x] docs/implementation/28-business-readiness-gate.md
-- [x] Prompt 29 não executado
+- [x] Prompt 29 nÃ£o executado
 
 ---
 
 ```text
 PROMPT: 29
-TITLE: Módulo de Clientes — backend e persistência
+TITLE: MÃ³dulo de Clientes â€” backend e persistÃªncia
 STARTED_AT: 2026-08-29T13:30:00-04:00
 FINISHED_AT: 2026-08-29T13:31:00-04:00
 STATUS: NOT_EXECUTED
@@ -1876,28 +1876,28 @@ FILES_CHANGED:
 QUALITY_GATE: NOT_RUN
 CODE_CREATED: NO
 BUSINESS_TABLES_ADDED: 0
-BLOCK_REASON: Prompt 28 BLOCKED_AWAITING_BUSINESS_CONFIRMATION — módulo Clientes não liberado; SRC-002 vazio; DDP-028 OPEN; 0 regras CONFIRMED
+BLOCK_REASON: Prompt 28 BLOCKED_AWAITING_BUSINESS_CONFIRMATION â€” mÃ³dulo Clientes nÃ£o liberado; SRC-002 vazio; DDP-028 OPEN; 0 regras CONFIRMED
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
-  Pré-condição explícita do prompt não atendida. Nenhum código, migration, endpoint ou teste criado.
-  AGENTS.md — parada obrigatória em NOT_READY_FOR_IMPLEMENTATION.
-  Prompt 30 não executado.
+  PrÃ©-condiÃ§Ã£o explÃ­cita do prompt nÃ£o atendida. Nenhum cÃ³digo, migration, endpoint ou teste criado.
+  AGENTS.md â€” parada obrigatÃ³ria em NOT_READY_FOR_IMPLEMENTATION.
+  Prompt 30 nÃ£o executado.
 ```
 
-## Quality gate Prompt 29 (evidência)
+## Quality gate Prompt 29 (evidÃªncia)
 
-- [x] Pré-condição Prompt 28 verificada — módulo Clientes **não** liberado
-- [x] Nenhum código empresarial criado
+- [x] PrÃ©-condiÃ§Ã£o Prompt 28 verificada â€” mÃ³dulo Clientes **nÃ£o** liberado
+- [x] Nenhum cÃ³digo empresarial criado
 - [x] Nenhuma regra inventada (CPF/CNPJ, campos cadastrais)
 - [x] docs/implementation/29-clients-backend.md (registro de bloqueio)
-- [x] Lint / typecheck / test / build — **não executados** (sem alteração de código)
-- [x] Prompt 30 não executado
+- [x] Lint / typecheck / test / build â€” **nÃ£o executados** (sem alteraÃ§Ã£o de cÃ³digo)
+- [x] Prompt 30 nÃ£o executado
 
 ---
 
 ```text
 PROMPT: 29-A
-TITLE: Resolução controlada do gate SRC-002 e preparação do módulo Clientes
+TITLE: ResoluÃ§Ã£o controlada do gate SRC-002 e preparaÃ§Ã£o do mÃ³dulo Clientes
 STARTED_AT: 2026-08-29T13:35:00-04:00
 FINISHED_AT: 2026-08-29T13:42:00-04:00
 STATUS: BLOCKED
@@ -1907,38 +1907,38 @@ FILES_CHANGED:
   docs/inputs/SRC-002-business-baseline-confirmation.md
   package.json
   docs/00-governance/prompt-execution-log.md
-QUALITY_GATE: PASS (lint, typecheck, test, integration, build — sem regressão)
+QUALITY_GATE: PASS (lint, typecheck, test, integration, build â€” sem regressÃ£o)
 SRC_002_STATUS: BLOQUEADO
 CLIENTS_MODULE_READY: false
 CONFIRMED_BUSINESS_RULES: 0
-GATE_SCRIPT: pnpm gate:src-002 → FAIL (esperado)
+GATE_SCRIPT: pnpm gate:src-002 â†’ FAIL (esperado)
 CODE_CREATED: NO
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
-  Análise documental integral; SRC-002 atualizado com matriz de evidências, bloqueios e MAP-001/002.
-  DDP-020 e DDP-028 analisados — permanecem OPEN/UNKNOWN. Assinatura PENDING_HUMAN_CONFIRMATION.
-  Nenhuma regra promovida; source-registry/DDPs/regras não alterados (sem resposta humana).
-  Prompt 29 (implementação) permanece bloqueado. Prompt 30 não executado.
+  AnÃ¡lise documental integral; SRC-002 atualizado com matriz de evidÃªncias, bloqueios e MAP-001/002.
+  DDP-020 e DDP-028 analisados â€” permanecem OPEN/UNKNOWN. Assinatura PENDING_HUMAN_CONFIRMATION.
+  Nenhuma regra promovida; source-registry/DDPs/regras nÃ£o alterados (sem resposta humana).
+  Prompt 29 (implementaÃ§Ã£o) permanece bloqueado. Prompt 30 nÃ£o executado.
 ```
 
-## Quality gate Prompt 29-A (evidência)
+## Quality gate Prompt 29-A (evidÃªncia)
 
-- [x] Baseline empresarial reconstruído em SRC-002
-- [x] Evidências verificadas (SRC-001, BR-REG, DDP-REG, TERM-004, DBND-SOT-001, DEM-001)
+- [x] Baseline empresarial reconstruÃ­do em SRC-002
+- [x] EvidÃªncias verificadas (SRC-001, BR-REG, DDP-REG, TERM-004, DBND-SOT-001, DEM-001)
 - [x] Conflitos MAP-001/002 identificados (mapeamento documental)
-- [x] DDP-028 e DDP-020 analisados — não resolvidos
+- [x] DDP-028 e DDP-020 analisados â€” nÃ£o resolvidos
 - [x] Nenhuma assinatura inventada
-- [x] Nenhuma decisão empresarial inventada
+- [x] Nenhuma decisÃ£o empresarial inventada
 - [x] Gate automatizado `pnpm gate:src-002` implementado e executado (FAIL esperado)
-- [x] lint, typecheck, test, test:integration, build — PASS
-- [x] Nenhum código de Clientes criado
-- [x] Prompt 30 não executado
+- [x] lint, typecheck, test, test:integration, build â€” PASS
+- [x] Nenhum cÃ³digo de Clientes criado
+- [x] Prompt 30 nÃ£o executado
 
 ---
 
 ```text
 PROMPT: 29-A (corretivo)
-TITLE: Resolução definitiva controlada do SRC-002 e liberação do módulo Clientes
+TITLE: ResoluÃ§Ã£o definitiva controlada do SRC-002 e liberaÃ§Ã£o do mÃ³dulo Clientes
 STARTED_AT: 2026-08-29T14:00:00-04:00
 FINISHED_AT: 2026-08-29T14:30:00-04:00
 STATUS: BLOCKED_BY_SIGNATURE_ONLY
@@ -1953,38 +1953,38 @@ FILES_CHANGED:
   docs/00-governance/prompt-execution-log.md
 QUALITY_GATE: PASS (lint, typecheck, test, integration, build)
 SRC_002_STATUS: BLOCKED_BY_SIGNATURE_ONLY
-CLIENTS_MODULE_READY: true (decisões resolvidas; aguarda assinatura)
+CLIENTS_MODULE_READY: true (decisÃµes resolvidas; aguarda assinatura)
 CONFIRMED_BUSINESS_RULES: 16 (BR-025..BR-040)
 CONDITIONAL_BUSINESS_RULES: 1 (BR-041)
 MANDATORY_BLOCKERS_BEFORE: 14
 MANDATORY_BLOCKERS_AFTER: 1 (assinatura humana)
-GATE_SCRIPT: pnpm gate:src-002 → BLOCKED_BY_SIGNATURE_ONLY (exit 1 esperado)
+GATE_SCRIPT: pnpm gate:src-002 â†’ BLOCKED_BY_SIGNATURE_ONLY (exit 1 esperado)
 CODE_CREATED: NO
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
-  Decisões empresariais Q01–Q15 registradas; DDP-020 (CLIENT), DDP-028, DDP-041 resolvidos.
+  DecisÃµes empresariais Q01â€“Q15 registradas; DDP-020 (CLIENT), DDP-028, DDP-041 resolvidos.
   MAP-001/002 corrigidos. Nenhuma assinatura inventada.
-  Prompt 29 (implementação) aguarda assinatura formal. Prompt 30 não executado.
+  Prompt 29 (implementaÃ§Ã£o) aguarda assinatura formal. Prompt 30 nÃ£o executado.
 ```
 
-## Quality gate Prompt 29-A corretivo (evidência)
+## Quality gate Prompt 29-A corretivo (evidÃªncia)
 
-- [x] Decisões empresariais Q01–Q15 registradas em SRC-002
+- [x] DecisÃµes empresariais Q01â€“Q15 registradas em SRC-002
 - [x] BR-025..BR-040 promovidas a CONFIRMED; BR-041 CONDITIONAL
 - [x] DDP-020 (CLIENT_SCOPE), DDP-028, DDP-041 atualizados
 - [x] MAP-001/002 corrigidos
 - [x] source-registry.md atualizado (SRC-002)
 - [x] Nenhuma assinatura inventada
-- [x] Nenhum código de Clientes criado
-- [x] gate:src-002 → BLOCKED_BY_SIGNATURE_ONLY
-- [x] lint, typecheck, test, test:integration, build — PASS
-- [x] Prompt 30 não executado
+- [x] Nenhum cÃ³digo de Clientes criado
+- [x] gate:src-002 â†’ BLOCKED_BY_SIGNATURE_ONLY
+- [x] lint, typecheck, test, test:integration, build â€” PASS
+- [x] Prompt 30 nÃ£o executado
 
 ---
 
 ```text
-PROMPT: 29-A (aprovação humana)
-TITLE: Aprovação formal SRC-002 — baseline empresarial Clientes
+PROMPT: 29-A (aprovaÃ§Ã£o humana)
+TITLE: AprovaÃ§Ã£o formal SRC-002 â€” baseline empresarial Clientes
 STARTED_AT: 2026-08-29T14:52:00-04:00
 FINISHED_AT: 2026-08-29T14:55:00-04:00
 STATUS: LIBERADO
@@ -1999,31 +1999,31 @@ QUALITY_GATE: PASS
 SRC_002_STATUS: LIBERADO
 MANDATORY_BLOCKERS: 0
 CONFIRMED_BUSINESS_RULES: 16
-GATE_SCRIPT: pnpm gate:src-002 → PASS
+GATE_SCRIPT: pnpm gate:src-002 â†’ PASS
 CODE_CREATED: NO
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
-  Assinatura formal registrada. Decisões Q01–Q15 e BR-025..BR-040 inalteradas.
-  BR-041 permanece CONDITIONAL. Prompt 29 autorizado; não executado. Prompt 30 não executado.
+  Assinatura formal registrada. DecisÃµes Q01â€“Q15 e BR-025..BR-040 inalteradas.
+  BR-041 permanece CONDITIONAL. Prompt 29 autorizado; nÃ£o executado. Prompt 30 nÃ£o executado.
 ```
 
-## Quality gate Prompt 29-A aprovação (evidência)
+## Quality gate Prompt 29-A aprovaÃ§Ã£o (evidÃªncia)
 
 - [x] Assinatura formal registrada (Abrahim Jabour Junior, Administrador, 2026-08-29)
-- [x] Decisões Q01–Q15 não alteradas
+- [x] DecisÃµes Q01â€“Q15 nÃ£o alteradas
 - [x] BR-025..BR-040 inalteradas; BR-041 CONDITIONAL preservada
 - [x] Provenance de fases anteriores preservada
-- [x] gate:src-002 → PASS
-- [x] lint, typecheck, test, test:integration, build — PASS
-- [x] Nenhum código de Clientes criado
-- [x] Prompt 29 não executado automaticamente
-- [x] Prompt 30 não executado
+- [x] gate:src-002 â†’ PASS
+- [x] lint, typecheck, test, test:integration, build â€” PASS
+- [x] Nenhum cÃ³digo de Clientes criado
+- [x] Prompt 29 nÃ£o executado automaticamente
+- [x] Prompt 30 nÃ£o executado
 
 ---
 
 ```text
 PROMPT: 29
-TITLE: Módulo de Clientes — backend e persistência
+TITLE: MÃ³dulo de Clientes â€” backend e persistÃªncia
 STARTED_AT: 2026-08-29T15:00:00-04:00
 FINISHED_AT: 2026-08-29T15:10:00-04:00
 STATUS: EXECUTED
@@ -2047,19 +2047,19 @@ SRC_002_GATE: PASS
 CODE_CREATED: YES (clients backend only)
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
-  CRUD PJ com CNPJ único, desativação lógica, autorização por capabilities, audit trail.
-  Sem PF, sem DELETE físico, sem ERP fictício. Prompt 30 não executado.
+  CRUD PJ com CNPJ Ãºnico, desativaÃ§Ã£o lÃ³gica, autorizaÃ§Ã£o por capabilities, audit trail.
+  Sem PF, sem DELETE fÃ­sico, sem ERP fictÃ­cio. Prompt 30 nÃ£o executado.
 ```
 
-## Quality gate Prompt 29 (evidência)
+## Quality gate Prompt 29 (evidÃªncia)
 
-- [x] SRC-002 gate PASS (pré-condição)
+- [x] SRC-002 gate PASS (prÃ©-condiÃ§Ã£o)
 - [x] Schema `pty` + migration 0006
-- [x] Operações create/read/list/update/deactivate/activate
-- [x] Autorização `client:client:*` + escopo GLOBAL/CLIENT
-- [x] Unit, integration, E2E, migration tests — PASS
-- [x] lint, typecheck, build — PASS
-- [x] Prompt 30 não executado
+- [x] OperaÃ§Ãµes create/read/list/update/deactivate/activate
+- [x] AutorizaÃ§Ã£o `client:client:*` + escopo GLOBAL/CLIENT
+- [x] Unit, integration, E2E, migration tests â€” PASS
+- [x] lint, typecheck, build â€” PASS
+- [x] Prompt 30 nÃ£o executado
 
 ---
 
@@ -2086,29 +2086,29 @@ QUALITY_GATE: PASS
 SRC_002_GATE: PASS
 AUDIT_RESULT: PASS
 FIXES:
-  - listagem restrita a escopo GLOBAL (empregado não enumera Clientes)
-  - activate usa capability ClientActivate; histórico de desativação preservado
+  - listagem restrita a escopo GLOBAL (empregado nÃ£o enumera Clientes)
+  - activate usa capability ClientActivate; histÃ³rico de desativaÃ§Ã£o preservado
   - setStatus valida version antes de INVALID_STATE (optimistic lock)
   - guard BR-037 assertClientEligibleForServiceOrderRelease para ReleaseServiceOrder futuro
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
-  ReleaseServiceOrder ainda inexistente; invariante BR-037 coberta por guard de domínio + testes.
-  Prompt 30 não executado.
+  ReleaseServiceOrder ainda inexistente; invariante BR-037 coberta por guard de domÃ­nio + testes.
+  Prompt 30 nÃ£o executado.
 ```
 
-## Quality gate Prompt 29-B (evidência)
+## Quality gate Prompt 29-B (evidÃªncia)
 
 - [x] Baseline 8e31b02 confirmado
-- [x] Lacunas corrigidas: enumeração empregado, activate capability, histórico desativação, stale version deactivate/activate
-- [x] Testes negativos create PJ, CNPJ concorrente, IDOR, soft deactivate, migration 0005→0006
-- [x] lint, typecheck, test, test:integration, test:e2e, build, gate:src-002 — PASS
-- [x] Prompt 30 não executado
+- [x] Lacunas corrigidas: enumeraÃ§Ã£o empregado, activate capability, histÃ³rico desativaÃ§Ã£o, stale version deactivate/activate
+- [x] Testes negativos create PJ, CNPJ concorrente, IDOR, soft deactivate, migration 0005â†’0006
+- [x] lint, typecheck, test, test:integration, test:e2e, build, gate:src-002 â€” PASS
+- [x] Prompt 30 nÃ£o executado
 
 ---
 
 ```text
 PROMPT: 30
-TITLE: Interface web do módulo Clientes
+TITLE: Interface web do mÃ³dulo Clientes
 STARTED_AT: 2026-08-29T15:45:00-04:00
 FINISHED_AT: 2026-08-29T16:06:00-04:00
 STATUS: EXECUTED
@@ -2133,23 +2133,23 @@ CODE_CREATED: YES (clients frontend only)
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
   Listagem paginada via API; filtro status; create/edit/deactivate/activate;
-  optimistic concurrency; autorização visual por probes; E2E frontend completo.
-  Prompt 31 não executado.
+  optimistic concurrency; autorizaÃ§Ã£o visual por probes; E2E frontend completo.
+  Prompt 31 nÃ£o executado.
 ```
 
-## Quality gate Prompt 30 (evidência)
+## Quality gate Prompt 30 (evidÃªncia)
 
 - [x] Telas list/detail/create/edit implementadas
 - [x] Contratos reais `/api/v1/clients` consumidos
-- [x] Sem PF, CRM, autoridade de negócio no frontend
-- [x] lint, typecheck, test, test:integration, test:e2e API, build, gate:src-002 — PASS
-- [x] Prompt 31 não executado
+- [x] Sem PF, CRM, autoridade de negÃ³cio no frontend
+- [x] lint, typecheck, test, test:integration, test:e2e API, build, gate:src-002 â€” PASS
+- [x] Prompt 31 nÃ£o executado
 
 ---
 
 ```text
 PROMPT: 31
-TITLE: Arquitetura orientada a catálogo de serviços (domínio)
+TITLE: Arquitetura orientada a catÃ¡logo de serviÃ§os (domÃ­nio)
 STARTED_AT: 2026-08-29T16:10:00-04:00
 FINISHED_AT: 2026-08-29T16:25:00-04:00
 STATUS: EXECUTED
@@ -2160,27 +2160,27 @@ FILES_CHANGED:
   docs/00-governance/prompt-execution-log.md
 QUALITY_GATE: PASS
 SRC_002_GATE: PASS
-CODE_CREATED: NO (documentação de domínio apenas)
+CODE_CREATED: NO (documentaÃ§Ã£o de domÃ­nio apenas)
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
-  CNAE ≠ ServiceDefinition; 12 arquétipos; contrato conceitual versionado;
-  variabilidade vs invariantes; snapshots para OS histórica; grupos CISNE reconhecidos.
+  CNAE â‰  ServiceDefinition; 12 arquÃ©tipos; contrato conceitual versionado;
+  variabilidade vs invariantes; snapshots para OS histÃ³rica; grupos CISNE reconhecidos.
   Sem banco, frontend, Clients ou Prompt 32.
 ```
 
-## Quality gate Prompt 31 (evidência)
+## Quality gate Prompt 31 (evidÃªncia)
 
-- [x] `31-service-catalog-domain.md` criado com fronteiras, invariantes, arquétipos, versionamento, CNAE↔catálogo
-- [x] Configurável vs código obrigatório separado
+- [x] `31-service-catalog-domain.md` criado com fronteiras, invariantes, arquÃ©tipos, versionamento, CNAEâ†”catÃ¡logo
+- [x] ConfigurÃ¡vel vs cÃ³digo obrigatÃ³rio separado
 - [x] Grupos empresariais CISNE reconhecidos sem fluxo por item
-- [x] Clients não alterado; Prompt 32 não executado
-- [x] lint, typecheck, test, test:integration, build, gate:src-002 — PASS
+- [x] Clients nÃ£o alterado; Prompt 32 nÃ£o executado
+- [x] lint, typecheck, test, test:integration, build, gate:src-002 â€” PASS
 
 ---
 
 ```text
 PROMPT: 32
-TITLE: Persistência versionada do Catálogo de Serviços
+TITLE: PersistÃªncia versionada do CatÃ¡logo de ServiÃ§os
 STARTED_AT: 2026-08-29T16:12:00-04:00
 FINISHED_AT: 2026-08-29T16:20:00-04:00
 STATUS: EXECUTED
@@ -2203,19 +2203,19 @@ SRC_002_GATE: PASS
 CODE_CREATED: YES (database catalog persistence only)
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
-  Schema cat com 8 tabelas, enums, trigger de imutabilidade pós-publicação;
-  JSONB com schema_version; 9 testes integração migration/constraints/versionamento.
-  Clients inalterado; Prompt 33 não executado.
+  Schema cat com 8 tabelas, enums, trigger de imutabilidade pÃ³s-publicaÃ§Ã£o;
+  JSONB com schema_version; 9 testes integraÃ§Ã£o migration/constraints/versionamento.
+  Clients inalterado; Prompt 33 nÃ£o executado.
 ```
 
-## Quality gate Prompt 32 (evidência)
+## Quality gate Prompt 32 (evidÃªncia)
 
-- [x] Migration `0007` forward-only aplicável em banco vazio e incremental
-- [x] UUID, code único, version>=1, status, soft deactivation, actors, FKs, CHECKs, índices
-- [x] Versão publicada imutável (trigger); evolução semântica via nova versão
-- [x] Testes: duplicidade code, versionamento, FK inválida, rollback transacional
-- [x] lint, typecheck, test, test:integration, build, gate:src-002 — PASS
-- [x] Prompt 33 não executado
+- [x] Migration `0007` forward-only aplicÃ¡vel em banco vazio e incremental
+- [x] UUID, code Ãºnico, version>=1, status, soft deactivation, actors, FKs, CHECKs, Ã­ndices
+- [x] VersÃ£o publicada imutÃ¡vel (trigger); evoluÃ§Ã£o semÃ¢ntica via nova versÃ£o
+- [x] Testes: duplicidade code, versionamento, FK invÃ¡lida, rollback transacional
+- [x] lint, typecheck, test, test:integration, build, gate:src-002 â€” PASS
+- [x] Prompt 33 nÃ£o executado
 
 ---
 
@@ -2245,23 +2245,23 @@ NEXT_PROMPT_EXECUTED: NO
 NOTES:
   Pipeline GitHub Actions com lint, typecheck, audit, unit, database gate,
   integration, API e2e, build e artifact metadata. Sem secrets em Git.
-  Branch protection documentada como pendência operacional.
+  Branch protection documentada como pendÃªncia operacional.
 ```
 
-## Quality gate Prompt 33 (evidência)
+## Quality gate Prompt 33 (evidÃªncia)
 
-- [x] `.github/workflows/ci.yml` — jobs sequenciais sem continue-on-error
-- [x] `gate:database` — fresh + incremental migrations, constraints, baseline
-- [x] `audit:deps` — high/critical threshold
+- [x] `.github/workflows/ci.yml` â€” jobs sequenciais sem continue-on-error
+- [x] `gate:database` â€” fresh + incremental migrations, constraints, baseline
+- [x] `audit:deps` â€” high/critical threshold
 - [x] Artifact traceability (`build-metadata.json`)
-- [x] lint, typecheck, test, test:integration, test:e2e, build, gate:src-002 — PASS
-- [x] Prompt 34 não executado
+- [x] lint, typecheck, test, test:integration, test:e2e, build, gate:src-002 â€” PASS
+- [x] Prompt 34 nÃ£o executado
 
 ---
 
 ```text
 PROMPT: 34
-TITLE: Catálogo de serviços — backend, domínio e API
+TITLE: CatÃ¡logo de serviÃ§os â€” backend, domÃ­nio e API
 STARTED_AT: 2026-08-29T16:20:00-04:00
 FINISHED_AT: 2026-08-29T16:50:00-04:00
 STATUS: EXECUTED
@@ -2300,27 +2300,27 @@ SRC_002_GATE: PASS
 CODE_CREATED: YES (catalog backend + API)
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
-  ServiceDefinition versionado com comandos explícitos, PDP, auditoria,
+  ServiceDefinition versionado com comandos explÃ­citos, PDP, auditoria,
   optimistic locking na linhagem, publish transacional e DTOs camelCase.
-  Prompt 35 não executado.
+  Prompt 35 nÃ£o executado.
 ```
 
-## Quality gate Prompt 34 (evidência)
+## Quality gate Prompt 34 (evidÃªncia)
 
-- [x] Agregado ServiceDefinition + versões separadas (code estável, version 1..N)
+- [x] Agregado ServiceDefinition + versÃµes separadas (code estÃ¡vel, version 1..N)
 - [x] Estados DRAFT / PUBLISHED (DB ACTIVE) / INACTIVE linhagem
-- [x] Versão publicada imutável (domínio + trigger Prompt 32)
+- [x] VersÃ£o publicada imutÃ¡vel (domÃ­nio + trigger Prompt 32)
 - [x] Capabilities catalog:service:* integradas ao PDP
-- [x] VERSION_CONFLICT em mutações concorrentes
-- [x] Testes unit, integration, e2e — PASS
-- [x] lint, typecheck, test, test:integration, test:e2e, build, gate:database, gate:src-002 — PASS
-- [x] Prompt 35 não executado
+- [x] VERSION_CONFLICT em mutaÃ§Ãµes concorrentes
+- [x] Testes unit, integration, e2e â€” PASS
+- [x] lint, typecheck, test, test:integration, test:e2e, build, gate:database, gate:src-002 â€” PASS
+- [x] Prompt 35 nÃ£o executado
 
 ---
 
 ```text
 PROMPT: 36
-TITLE: Catálogo de unidades de medida
+TITLE: CatÃ¡logo de unidades de medida
 STARTED_AT: 2026-08-29T16:54:00-04:00
 FINISHED_AT: 2026-08-29T17:01:00-04:00
 STATUS: EXECUTED
@@ -2368,61 +2368,61 @@ CODE_CREATED: YES (units of measure catalog)
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
   cat.units_of_measure com seed idempotente (UN, M3, DAY, etc.), FK em allowed_units
-  e default_unit_code; API administrativa; validação de precisão centralizada;
-  correções residuais do Prompt 34 (lint + SOURCE_NOT_FOUND). Prompt 35 não executado.
-  Prompt 37 não executado.
+  e default_unit_code; API administrativa; validaÃ§Ã£o de precisÃ£o centralizada;
+  correÃ§Ãµes residuais do Prompt 34 (lint + SOURCE_NOT_FOUND). Prompt 35 nÃ£o executado.
+  Prompt 37 nÃ£o executado.
 ```
 
-## Quality gate Prompt 36 (evidência)
+## Quality gate Prompt 36 (evidÃªncia)
 
-- [x] Tabela `cat.units_of_measure` com code único, category, decimalScale, status, version
+- [x] Tabela `cat.units_of_measure` com code Ãºnico, category, decimalScale, status, version
 - [x] Seed idempotente das 13 unidades iniciais
 - [x] FK impedindo unit_code livre em service definitions
-- [x] Validação de precisão via `measured-quantity` (domínio)
-- [x] Publish/create rejeitam unidade inexistente/inativa; histórico preservado
+- [x] ValidaÃ§Ã£o de precisÃ£o via `measured-quantity` (domÃ­nio)
+- [x] Publish/create rejeitam unidade inexistente/inativa; histÃ³rico preservado
 - [x] API `/api/v1/catalog/units-of-measure` com authz, audit e optimistic locking
-- [x] lint, typecheck, test, test:integration, test:e2e, gate:database, gate:src-002 — PASS
-- [x] Prompt 37 não executado
+- [x] lint, typecheck, test, test:integration, test:e2e, gate:database, gate:src-002 â€” PASS
+- [x] Prompt 37 nÃ£o executado
 
 ---
 
-## Prompt 37 — Catálogo de tipos de recursos físicos
+## Prompt 37 â€” CatÃ¡logo de tipos de recursos fÃ­sicos
 
 | Campo | Valor |
 | ----- | ----- |
 | ID | 37 |
-| Título | Catálogo de tipos de recursos físicos |
+| TÃ­tulo | CatÃ¡logo de tipos de recursos fÃ­sicos |
 | Status | PASS |
 | Commit | feat(resources): implement physical resource type catalog |
 | Executado em | 2026-08-29 |
 
 ```
 Resumo:
-  cat.physical_resource_types com classificação (VEHICLE/MACHINE/EQUIPMENT/CONSUMABLE/MATERIAL),
+  cat.physical_resource_types com classificaÃ§Ã£o (VEHICLE/MACHINE/EQUIPMENT/CONSUMABLE/MATERIAL),
   seed baseline, API resources/physical-resource-types, requirements em ServiceDefinition
-  (REQUIRED/OPTIONAL/CONDITIONAL + minQuantity), histórico imutável em versões publicadas.
-  Prompt 38 não executado.
+  (REQUIRED/OPTIONAL/CONDITIONAL + minQuantity), histÃ³rico imutÃ¡vel em versÃµes publicadas.
+  Prompt 38 nÃ£o executado.
 ```
 
-## Quality gate Prompt 37 (evidência)
+## Quality gate Prompt 37 (evidÃªncia)
 
-- [x] Tabela `cat.physical_resource_types` com code único, classification, status, version
-- [x] Seed idempotente dos 17 tipos físicos iniciais (sem pessoas/mão de obra)
+- [x] Tabela `cat.physical_resource_types` com code Ãºnico, classification, status, version
+- [x] Seed idempotente dos 17 tipos fÃ­sicos iniciais (sem pessoas/mÃ£o de obra)
 - [x] FK `physical_resource_type_code` em `service_resource_requirements`
-- [x] Níveis REQUIRED, OPTIONAL, CONDITIONAL com minQuantity
+- [x] NÃ­veis REQUIRED, OPTIONAL, CONDITIONAL com minQuantity
 - [x] API `/api/v1/resources/physical-resource-types` com authz, audit e optimistic locking
-- [x] Service catalog aceita `resourceRequirements`; histórico preservado após inativação de tipo
-- [x] lint, typecheck, test, test:integration, test:e2e, gate:database — PASS
-- [x] Prompt 38 não executado
+- [x] Service catalog aceita `resourceRequirements`; histÃ³rico preservado apÃ³s inativaÃ§Ã£o de tipo
+- [x] lint, typecheck, test, test:integration, test:e2e, gate:database â€” PASS
+- [x] Prompt 38 nÃ£o executado
 
 ---
 
-## Prompt 38 — Tipos de mão de obra e capacidades operacionais
+## Prompt 38 â€” Tipos de mÃ£o de obra e capacidades operacionais
 
 | Campo | Valor |
 | ----- | ----- |
 | ID | 38 |
-| Título | Tipos de mão de obra e capacidades operacionais |
+| TÃ­tulo | Tipos de mÃ£o de obra e capacidades operacionais |
 | Status | PASS |
 | Commit | feat(resources): implement operational labor types |
 | Executado em | 2026-08-29 |
@@ -2431,59 +2431,59 @@ Resumo:
 Resumo:
   cat.operational_labor_types com seed baseline (DRIVER, ELECTRICIAN, etc.),
   API resources/labor-types, laborRequirements em ServiceDefinition,
-  sem Employee/Assignment/RH. Prompt 39 não executado.
+  sem Employee/Assignment/RH. Prompt 39 nÃ£o executado.
 ```
 
-## Quality gate Prompt 38 (evidência)
+## Quality gate Prompt 38 (evidÃªncia)
 
-- [x] Tabela `cat.operational_labor_types` com code único, status, version
+- [x] Tabela `cat.operational_labor_types` com code Ãºnico, status, version
 - [x] Seed idempotente dos 10 tipos operacionais iniciais
 - [x] FK `labor_type_code` em `service_labor_requirements`
 - [x] API `/api/v1/resources/labor-types` com authz, audit e optimistic locking
-- [x] Service catalog aceita `laborRequirements`; histórico preservado
+- [x] Service catalog aceita `laborRequirements`; histÃ³rico preservado
 - [x] Sem acoplamento a Employee/Assignment (schema + testes)
-- [x] lint, typecheck, test, test:integration, test:e2e, gate:database — PASS
-- [x] Prompt 39 não executado
+- [x] lint, typecheck, test, test:integration, test:e2e, gate:database â€” PASS
+- [x] Prompt 39 nÃ£o executado
 
 ---
 
-## Prompt 39 — Modelos comerciais, precificação e medição
+## Prompt 39 â€” Modelos comerciais, precificaÃ§Ã£o e mediÃ§Ã£o
 
 | Campo | Valor |
 | ----- | ----- |
 | ID | 39 |
-| Título | Modelos comerciais, precificação e medição |
+| TÃ­tulo | Modelos comerciais, precificaÃ§Ã£o e mediÃ§Ã£o |
 | Status | PASS |
 | Commit | feat(commercial): implement pricing and measurement models |
 | Executado em | 2026-08-29 |
 
 ```
 Resumo:
-  Módulo commercial com vocabulário de pricing/measurement,
+  MÃ³dulo commercial com vocabulÃ¡rio de pricing/measurement,
   numeric(18,4) para salePrice/internalCost, measurement_basis,
-  pricingModels no service catalog. Sem tributação nem Measurement agregado.
-  Prompt 40 não executado.
+  pricingModels no service catalog. Sem tributaÃ§Ã£o nem Measurement agregado.
+  Prompt 40 nÃ£o executado.
 ```
 
-## Quality gate Prompt 39 (evidência)
+## Quality gate Prompt 39 (evidÃªncia)
 
-- [x] Vocabulário comercial mapeado para enums SQL existentes
+- [x] VocabulÃ¡rio comercial mapeado para enums SQL existentes
 - [x] `measurement_basis` + policies de compatibilidade UoM/modo
-- [x] `sale_price_amount` / `internal_cost_amount` numeric — sem float
+- [x] `sale_price_amount` / `internal_cost_amount` numeric â€” sem float
 - [x] API `/commercial/pricing-models` e `/commercial/measurement-models`
 - [x] Service catalog integra `pricingModels` e `measurementBasis`
 - [x] Exemplos global price e PO negociado cobertos em testes
-- [x] lint, typecheck, test, test:integration, test:e2e, gate:database — PASS
-- [x] Prompt 40 não executado
+- [x] lint, typecheck, test, test:integration, test:e2e, gate:database â€” PASS
+- [x] Prompt 40 nÃ£o executado
 
 ---
 
-## Prompt 40 — Requisitos de execução e evidências tipadas
+## Prompt 40 â€” Requisitos de execuÃ§Ã£o e evidÃªncias tipadas
 
 | Campo | Valor |
 | ----- | ----- |
 | ID | 40 |
-| Título | Requisitos de execução e evidências tipadas |
+| TÃ­tulo | Requisitos de execuÃ§Ã£o e evidÃªncias tipadas |
 | Status | PASS |
 | Commit | feat(catalog): implement typed execution requirements |
 | Executado em | 2026-08-29 |
@@ -2491,156 +2491,156 @@ Resumo:
 ```
 Resumo:
   executionRequirements[] no service catalog com 13 tipos aprovados,
-  níveis REQUIRED/OPTIONAL/CONDITIONAL, condições tipadas e schema JSONB v1.
-  Migration 0013 estende evidence_kind. Sem motor de expressão aberta.
-  Prompt 41 não executado.
+  nÃ­veis REQUIRED/OPTIONAL/CONDITIONAL, condiÃ§Ãµes tipadas e schema JSONB v1.
+  Migration 0013 estende evidence_kind. Sem motor de expressÃ£o aberta.
+  Prompt 41 nÃ£o executado.
 ```
 
-## Quality gate Prompt 40 (evidência)
+## Quality gate Prompt 40 (evidÃªncia)
 
 - [x] Tipos aprovados mapeados para `cat.evidence_kind` (enum estendido)
 - [x] Obrigatoriedade REQUIRED / OPTIONAL / CONDITIONAL validada no backend
-- [x] CONDITIONAL apenas com condições tipadas suportadas
+- [x] CONDITIONAL apenas com condiÃ§Ãµes tipadas suportadas
 - [x] Chaves proibidas (`eval`, `script`, `sql`, etc.) rejeitadas
-- [x] Requirements versionados por `ServiceDefinition`; publicado imutável
-- [x] `CatalogExecutionRequirementConfigV1` com validação explícita
+- [x] Requirements versionados por `ServiceDefinition`; publicado imutÃ¡vel
+- [x] `CatalogExecutionRequirementConfigV1` com validaÃ§Ã£o explÃ­cita
 - [x] Testes: required, optional, conditional, unknown condition, invalid payload, version, immutability, authz
-- [x] lint, typecheck, test, test:integration, test:e2e, gate:database — PASS
-- [x] Prompt 41 não executado
+- [x] lint, typecheck, test, test:integration, test:e2e, gate:database â€” PASS
+- [x] Prompt 41 nÃ£o executado
 
 ---
 
-## Prompt 41 — Seed canônico do portfólio de serviços CISNE
+## Prompt 41 â€” Seed canÃ´nico do portfÃ³lio de serviÃ§os CISNE
 
 | Campo | Valor |
 | ----- | ----- |
 | ID | 41 |
-| Título | Seed canônico do portfólio de serviços CISNE |
+| TÃ­tulo | Seed canÃ´nico do portfÃ³lio de serviÃ§os CISNE |
 | Status | PASS |
 | Commit | feat(catalog): seed complete Cisne service portfolio |
 | Executado em | 2026-08-29 |
 
 ```
 Resumo:
-  49 ServiceDefinitions idempotentes com CNAE como referência legal,
-  arquétipos mapeados, v1 publicada, sem preço/imposto/requisitos inventados.
-  Prompt 42 não executado.
+  49 ServiceDefinitions idempotentes com CNAE como referÃªncia legal,
+  arquÃ©tipos mapeados, v1 publicada, sem preÃ§o/imposto/requisitos inventados.
+  Prompt 42 nÃ£o executado.
 ```
 
-## Quality gate Prompt 41 (evidência)
+## Quality gate Prompt 41 (evidÃªncia)
 
-- [x] 49 atividades CNAE cadastradas com codes únicos
-- [x] Arquétipos operacionais válidos (sem nova policy)
-- [x] Seed idempotente — segunda execução sem novas versões
-- [x] Versões publicadas (ACTIVE v1)
+- [x] 49 atividades CNAE cadastradas com codes Ãºnicos
+- [x] ArquÃ©tipos operacionais vÃ¡lidos (sem nova policy)
+- [x] Seed idempotente â€” segunda execuÃ§Ã£o sem novas versÃµes
+- [x] VersÃµes publicadas (ACTIVE v1)
 - [x] Sem pricing, evidence, labor ou resource requirements inventados
-- [x] lint, typecheck, test, test:integration, gate:database — PASS
-- [x] Prompt 42 não executado
+- [x] lint, typecheck, test, test:integration, gate:database â€” PASS
+- [x] Prompt 42 nÃ£o executado
 
 ---
 
-## Prompt 42 — Frontend administrativo do catálogo
+## Prompt 42 â€” Frontend administrativo do catÃ¡logo
 
 | Campo | Valor |
 | ----- | ----- |
 | ID | 42 |
-| Título | Frontend administrativo do catálogo |
+| TÃ­tulo | Frontend administrativo do catÃ¡logo |
 | Status | PASS |
 | Commit | feat(web): implement service catalog administration |
 | Executado em | 2026-08-29 |
 
 ```
 Resumo:
-  Módulo web /app/catalog com listagem, CRUD de rascunho, versionamento,
-  comparação client-side, publicação e lifecycle. Capabilities e VERSION_CONFLICT.
-  Prompt 43 não executado.
+  MÃ³dulo web /app/catalog com listagem, CRUD de rascunho, versionamento,
+  comparaÃ§Ã£o client-side, publicaÃ§Ã£o e lifecycle. Capabilities e VERSION_CONFLICT.
+  Prompt 43 nÃ£o executado.
 ```
 
-## Quality gate Prompt 42 (evidência)
+## Quality gate Prompt 42 (evidÃªncia)
 
-- [x] Listagem, paginação, filtros e busca (página atual)
-- [x] Detalhe, criação, edição de DRAFT, nova versão, comparação
-- [x] Publicação, desativação e reativação via API
-- [x] Publicada não editável — UX direciona para nova versão
-- [x] Formulário estruturado (arquétipo, UoM, pricing, requirements)
-- [x] Capabilities controlam UX; conflito de versão tratado
+- [x] Listagem, paginaÃ§Ã£o, filtros e busca (pÃ¡gina atual)
+- [x] Detalhe, criaÃ§Ã£o, ediÃ§Ã£o de DRAFT, nova versÃ£o, comparaÃ§Ã£o
+- [x] PublicaÃ§Ã£o, desativaÃ§Ã£o e reativaÃ§Ã£o via API
+- [x] Publicada nÃ£o editÃ¡vel â€” UX direciona para nova versÃ£o
+- [x] FormulÃ¡rio estruturado (arquÃ©tipo, UoM, pricing, requirements)
+- [x] Capabilities controlam UX; conflito de versÃ£o tratado
 - [x] Testes component, integration, accessibility, e2e
-- [x] lint, typecheck, test, test:integration, test:e2e — PASS
-- [x] Prompt 43 não executado
+- [x] lint, typecheck, test, test:integration, test:e2e â€” PASS
+- [x] Prompt 43 nÃ£o executado
 
 ---
 
-## Prompt 43 — Ativos físicos e veículos (backend)
+## Prompt 43 â€” Ativos fÃ­sicos e veÃ­culos (backend)
 
 | Campo | Valor |
 | ----- | ----- |
 | ID | 43 |
-| Título | Ativos físicos e veículos: backend |
+| TÃ­tulo | Ativos fÃ­sicos e veÃ­culos: backend |
 | Status | PASS |
 | Commit | feat(resources): implement physical asset registry |
 | Executado em | 2026-08-29 |
 
 ```
 Resumo:
-  Schema ast.physical_assets + ast.vehicle_profiles (extensão VEHICLE).
+  Schema ast.physical_assets + ast.vehicle_profiles (extensÃ£o VEHICLE).
   API CRUD com lifecycle/allocation separados, optimistic locking,
-  authz resources:asset:* com escopo UNIT, auditoria de mutações.
-  Prompt 44 não executado.
+  authz resources:asset:* com escopo UNIT, auditoria de mutaÃ§Ãµes.
+  Prompt 44 nÃ£o executado.
 ```
 
-## Quality gate Prompt 43 (evidência)
+## Quality gate Prompt 43 (evidÃªncia)
 
 - [x] Create vehicle e create machine
 - [x] Duplicate assetCode e duplicate plate
 - [x] Inactive resource type rejeitado
 - [x] Update stale (VERSION_CONFLICT)
 - [x] Deactivate / activate lifecycle
-- [x] Histórico em security_audit_events
+- [x] HistÃ³rico em security_audit_events
 - [x] Authorization e cross-unit scope
 - [x] DTO sem campos internos (normalized_plate, created_by)
 - [x] Migration 0014 + persistence test
 - [x] E2E HTTP
-- [x] lint, typecheck, test:integration, test:e2e — PASS
-- [x] Prompt 44 não executado
+- [x] lint, typecheck, test:integration, test:e2e â€” PASS
+- [x] Prompt 44 nÃ£o executado
 
 ---
 
-## Prompt 44 — Ativos físicos e veículos (frontend)
+## Prompt 44 â€” Ativos fÃ­sicos e veÃ­culos (frontend)
 
 | Campo | Valor |
 | ----- | ----- |
 | ID | 44 |
-| Título | Ativos físicos e veículos: frontend |
+| TÃ­tulo | Ativos fÃ­sicos e veÃ­culos: frontend |
 | Status | PASS |
 | Commit | feat(web): implement physical asset management |
 | Executado em | 2026-08-29 |
 
 ```
 Resumo:
-  Módulo /app/assets com listagem, CRUD, lifecycle e formulário condicional
-  por ResourceType (placa só para VEHICLE). Capabilities, conflito de versão
-  e estados loading/empty/403/404. Prompt 45 não executado.
+  MÃ³dulo /app/assets com listagem, CRUD, lifecycle e formulÃ¡rio condicional
+  por ResourceType (placa sÃ³ para VEHICLE). Capabilities, conflito de versÃ£o
+  e estados loading/empty/403/404. Prompt 45 nÃ£o executado.
 ```
 
-## Quality gate Prompt 44 (evidência)
+## Quality gate Prompt 44 (evidÃªncia)
 
 - [x] Lista paginada, busca e filtros (lifecycle, allocation, tipo)
-- [x] Detalhe, criação, edição, ativação e desativação
-- [x] Campos de veículo condicionais ao tipo VEHICLE
+- [x] Detalhe, criaÃ§Ã£o, ediÃ§Ã£o, ativaÃ§Ã£o e desativaÃ§Ã£o
+- [x] Campos de veÃ­culo condicionais ao tipo VEHICLE
 - [x] Lifecycle e allocation exibidos separadamente
 - [x] Capabilities, conflict, double-submit, erros sanitizados
 - [x] Testes component, a11y, authorization, e2e
-- [x] lint, typecheck, test (web) — PASS
-- [x] Prompt 45 não executado
+- [x] lint, typecheck, test (web) â€” PASS
+- [x] Prompt 45 nÃ£o executado
 
 ---
 
-## Prompt 45 — Documentos, versionamento e object storage
+## Prompt 45 â€” Documentos, versionamento e object storage
 
 | Campo | Valor |
 | ----- | ----- |
 | ID | 45 |
-| Título | Documentos, versionamento e object storage |
+| TÃ­tulo | Documentos, versionamento e object storage |
 | Status | PASS |
 | Commit | feat(documents): implement secure versioned document storage |
 | Executado em | 2026-08-29 |
@@ -2648,32 +2648,32 @@ Resumo:
 ```
 Resumo:
   Schema doc.documents + doc.document_versions + doc.stored_objects.
-  Upload validado (MIME, extensão, magic bytes, tamanho), hash SHA-256,
-  versionamento imutável, compensação storage↔DB, download stream + token.
+  Upload validado (MIME, extensÃ£o, magic bytes, tamanho), hash SHA-256,
+  versionamento imutÃ¡vel, compensaÃ§Ã£o storageâ†”DB, download stream + token.
   Authz documents:document:* com escopo UNIT/DOCUMENT/GLOBAL.
-  Prompt 46 não executado.
+  Prompt 46 nÃ£o executado.
 ```
 
-## Quality gate Prompt 45 (evidência)
+## Quality gate Prompt 45 (evidÃªncia)
 
-- [x] Upload e nova versão preservando histórico
+- [x] Upload e nova versÃ£o preservando histÃ³rico
 - [x] Fake MIME / oversize rejeitados
 - [x] Unauthorized, cross-scope, IDOR download
-- [x] Storage failure e DB failure (compensação)
+- [x] Storage failure e DB failure (compensaÃ§Ã£o)
 - [x] Hash, download stream, signed access
 - [x] DTO sem storage_key
 - [x] Migration 0015 + persistence test
-- [x] lint, typecheck, test, test:integration, test:e2e — PASS
-- [x] Prompt 46 não executado
+- [x] lint, typecheck, test, test:integration, test:e2e â€” PASS
+- [x] Prompt 46 nÃ£o executado
 
 ---
 
-## Prompt 46 — Propostas comerciais (backend)
+## Prompt 46 â€” Propostas comerciais (backend)
 
 | Campo | Valor |
 | ----- | ----- |
 | ID | 46 |
-| Título | Propostas comerciais: backend |
+| TÃ­tulo | Propostas comerciais: backend |
 | Status | PASS |
 | Commit | feat(commercial): implement versioned commercial proposals |
 | Executado em | 2026-08-29 |
@@ -2722,38 +2722,38 @@ FUNCTIONAL_CODE_CREATED: YES
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
   Agregado Proposal/ProposalVersion/ProposalItem em schema com.
-  GLOBAL_PRICE sem decomposição obrigatória; ITEMIZED com lineSaleAmount.
-  Emissão snapshota cliente e serviço; aceite exige acceptanceOriginCode.
+  GLOBAL_PRICE sem decomposiÃ§Ã£o obrigatÃ³ria; ITEMIZED com lineSaleAmount.
+  EmissÃ£o snapshota cliente e serviÃ§o; aceite exige acceptanceOriginCode.
   CommercialExceptionFilter registrado em main e E2E.
-  Cenário regularização estrada 280 m³ / R$ 96.000 coberto em integração.
-  Prompt 47 não executado.
+  CenÃ¡rio regularizaÃ§Ã£o estrada 280 mÂ³ / R$ 96.000 coberto em integraÃ§Ã£o.
+  Prompt 47 nÃ£o executado.
 ```
 
-## Quality gate Prompt 46 (evidência)
+## Quality gate Prompt 46 (evidÃªncia)
 
 - [x] Draft, issue, version, accept, reject, expire, cancel
-- [x] GLOBAL_PRICE e ITEMIZED + precisão monetária
-- [x] Concorrência (row_version) e autorização cross-unit/CLIENT
-- [x] Audit trail e vínculo de documentos
+- [x] GLOBAL_PRICE e ITEMIZED + precisÃ£o monetÃ¡ria
+- [x] ConcorrÃªncia (row_version) e autorizaÃ§Ã£o cross-unit/CLIENT
+- [x] Audit trail e vÃ­nculo de documentos
 - [x] Migration 0016 + persistence test
-- [x] lint, typecheck, test, test:integration (proposals), test:e2e (proposals) — PASS
-- [x] Prompt 47 não executado
+- [x] lint, typecheck, test, test:integration (proposals), test:e2e (proposals) â€” PASS
+- [x] Prompt 47 nÃ£o executado
 
 ---
 
-## Prompt 47 — Purchase orders e autorizações comerciais
+## Prompt 47 â€” Purchase orders e autorizaÃ§Ãµes comerciais
 
 | Campo | Valor |
 | ----- | ----- |
 | ID | 47 |
-| Título | Purchase order, RC e autorizações comerciais |
+| TÃ­tulo | Purchase order, RC e autorizaÃ§Ãµes comerciais |
 | Status | PASS |
 | Commit | feat(commercial): implement purchase orders and authorizations |
 | Executado em | 2026-08-29 |
 
 ```text
 PROMPT: 47
-TITLE: Purchase order, RC e autorizações comerciais
+TITLE: Purchase order, RC e autorizaÃ§Ãµes comerciais
 STARTED_AT: 2026-08-29T18:48:00-04:00
 FINISHED_AT: 2026-08-29T18:56:00-04:00
 STATUS: PASS
@@ -2791,15 +2791,15 @@ QUALITY_GATE: PASS
 FUNCTIONAL_CODE_CREATED: YES
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
-  PurchaseOrder/PurchaseOrderItem em schema com; sem CommercialAuthorization genérica.
+  PurchaseOrder/PurchaseOrderItem em schema com; sem CommercialAuthorization genÃ©rica.
   Regras de faturamento por PO (PO_NUMBER_REQUIRED_ON_INVOICE, XML/PDF, BILLING_CUTOFF, RECIPIENT).
   precedence_tier=PURCHASE_ORDER sem resolver de hierarquia empresarial.
-  Registro snapshota cliente e serviço; unique (client_id, po_number) para DRAFT/REGISTERED.
+  Registro snapshota cliente e serviÃ§o; unique (client_id, po_number) para DRAFT/REGISTERED.
   Fixture RC 991487 / PO 41926266 apenas em testes.
-  Prompt 48 não executado.
+  Prompt 48 nÃ£o executado.
 ```
 
-## Quality gate Prompt 47 (evidência)
+## Quality gate Prompt 47 (evidÃªncia)
 
 - [x] Duplicate PO per client
 - [x] Authorization cross-unit
@@ -2807,16 +2807,16 @@ NOTES:
 - [x] Version/conflict (row_version)
 - [x] LINE_ITEMS precision + HEADER_TOTAL
 - [x] Migration 0017 + persistence test
-- [x] lint, typecheck, test, test:integration (purchase-orders), test:e2e (purchase-orders) — PASS
-- [x] Prompt 48 não executado
+- [x] lint, typecheck, test, test:integration (purchase-orders), test:e2e (purchase-orders) â€” PASS
+- [x] Prompt 48 nÃ£o executado
 
 ---
 
-## Prompt 48 — Solicitação de serviço: backend
+## Prompt 48 â€” SolicitaÃ§Ã£o de serviÃ§o: backend
 
 ```
 PROMPT_ID: 48
-PROMPT_TITLE: Solicitação de serviço — backend
+PROMPT_TITLE: SolicitaÃ§Ã£o de serviÃ§o â€” backend
 EXECUTED_AT: 2026-08-29
 EXECUTION_STATUS: PASS
 COMMIT: feat(requests): implement service request domain
@@ -2841,14 +2841,14 @@ FUNCTIONAL_CODE_CREATED: YES
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
   ServiceRequest como agregado de intake (sr.service_requests); distinto de ServiceOrder.
-  Origens externas WHATSAPP…OTHER; cliente opcional com contato externo obrigatório.
-  Transições explícitas sem PATCH de status; rejeição/cancelamento exigem motivo.
-  Porta ServiceRequestConversionPort com NotReadyServiceRequestConversionPort até Prompt 50.
+  Origens externas WHATSAPPâ€¦OTHER; cliente opcional com contato externo obrigatÃ³rio.
+  TransiÃ§Ãµes explÃ­citas sem PATCH de status; rejeiÃ§Ã£o/cancelamento exigem motivo.
+  Porta ServiceRequestConversionPort com NotReadyServiceRequestConversionPort atÃ© Prompt 50.
   CHECK DB: CONVERTED exige converted_service_order_id.
-  Prompt 49 não executado.
+  Prompt 49 nÃ£o executado.
 ```
 
-## Quality gate Prompt 48 (evidência)
+## Quality gate Prompt 48 (evidÃªncia)
 
 - [x] create, submit, review, approve, reject, cancel
 - [x] invalid transition, duplicate idempotency, stale version
@@ -2856,16 +2856,16 @@ NOTES:
 - [x] document / proposal / PO reference
 - [x] conversion port not ready; rejected cannot convert
 - [x] Migration 0018 + persistence test
-- [x] lint, typecheck, test, test:integration (service-requests), test:e2e (service-requests) — PASS
-- [x] Prompt 49 não executado
+- [x] lint, typecheck, test, test:integration (service-requests), test:e2e (service-requests) â€” PASS
+- [x] Prompt 49 nÃ£o executado
 
 ---
 
-## Prompt 49 — Solicitação de serviço: frontend
+## Prompt 49 â€” SolicitaÃ§Ã£o de serviÃ§o: frontend
 
 ```
 PROMPT_ID: 49
-PROMPT_TITLE: Solicitação de serviço — frontend
+PROMPT_TITLE: SolicitaÃ§Ã£o de serviÃ§o â€” frontend
 EXECUTED_AT: 2026-08-29
 EXECUTION_STATUS: PASS
 COMMIT: feat(web): implement service request interface
@@ -2883,28 +2883,28 @@ QUALITY_GATE: PASS
 FUNCTIONAL_CODE_CREATED: YES
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
-  UI consome contratos reais; transições via POST endpoints com rowVersion.
-  Origem da solicitação separada de Registrado por; Cliente opcional via seletor.
-  Sem botão de conversão para OS; capabilities apenas UX.
+  UI consome contratos reais; transiÃ§Ãµes via POST endpoints com rowVersion.
+  Origem da solicitaÃ§Ã£o separada de Registrado por; Cliente opcional via seletor.
+  Sem botÃ£o de conversÃ£o para OS; capabilities apenas UX.
   createdByIdentityId exposto no serializer para exibir registrante.
-  Prompt 50 não executado.
+  Prompt 50 nÃ£o executado.
 ```
 
-## Quality gate Prompt 49 (evidência)
+## Quality gate Prompt 49 (evidÃªncia)
 
 - [x] create, edit, submit, approve, reject, cancel
 - [x] forbidden, stale version, loading, empty, error, accessibility
 - [x] E2E service-requests
-- [x] lint, typecheck, test (@cisne/web) — PASS
-- [x] Prompt 50 não executado
+- [x] lint, typecheck, test (@cisne/web) â€” PASS
+- [x] Prompt 50 nÃ£o executado
 
 ---
 
-## Prompt 50 — Ordem de serviço: núcleo backend
+## Prompt 50 â€” Ordem de serviÃ§o: nÃºcleo backend
 
 ```
 PROMPT_ID: 50
-PROMPT_TITLE: Ordem de serviço — núcleo backend
+PROMPT_TITLE: Ordem de serviÃ§o â€” nÃºcleo backend
 EXECUTED_AT: 2026-08-29
 EXECUTION_STATUS: PASS
 COMMIT: feat(service-orders): implement service order aggregate
@@ -2932,29 +2932,29 @@ FUNCTIONAL_CODE_CREATED: YES
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
   ServiceOrder aggregate em so.service_orders com order_number empresarial e internal_code.
-  Conversão atômica ServiceRequest APPROVED → OS DRAFT + status CONVERTED na mesma transação.
-  Snapshots de catálogo, cliente e referências comerciais (proposal/PO/RC/contrato).
-  Histórico em service_order_history_events; auditoria em security_audit_events.
+  ConversÃ£o atÃ´mica ServiceRequest APPROVED â†’ OS DRAFT + status CONVERTED na mesma transaÃ§Ã£o.
+  Snapshots de catÃ¡logo, cliente e referÃªncias comerciais (proposal/PO/RC/contrato).
+  HistÃ³rico em service_order_history_events; auditoria em security_audit_events.
   Porta ServiceRequestConversionPort implementada; NotReady removido.
-  Prompt 51 não executado.
+  Prompt 51 nÃ£o executado.
 ```
 
-## Quality gate Prompt 50 (evidência)
+## Quality gate Prompt 50 (evidÃªncia)
 
 - [x] create DRAFT, request conversion, double conversion race
 - [x] rejected/cancelled request, catalog snapshot, client/PO/proposal refs
 - [x] rollback, authorization, concurrency, DTO, E2E
 - [x] Migration 0019 + persistence test
-- [x] lint, typecheck, test, test:integration, test:e2e — PASS
-- [x] Prompt 51 não executado
+- [x] lint, typecheck, test, test:integration, test:e2e â€” PASS
+- [x] Prompt 51 nÃ£o executado
 
 ---
 
-## Prompt 51 — Ordem de serviço: máquina de estados
+## Prompt 51 â€” Ordem de serviÃ§o: mÃ¡quina de estados
 
 ```
 PROMPT_ID: 51
-PROMPT_TITLE: Ordem de serviço — máquina de estados
+PROMPT_TITLE: Ordem de serviÃ§o â€” mÃ¡quina de estados
 EXECUTED_AT: 2026-08-29
 EXECUTION_STATUS: PASS
 COMMIT: feat(service-orders): enforce service order state machine
@@ -2976,31 +2976,31 @@ QUALITY_GATE: PASS
 FUNCTIONAL_CODE_CREATED: YES
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
-  Transições explícitas prepare/release/cancel (sem PATCH status).
-  Fluxo DRAFT → PREPARED → RELEASED; cancel de DRAFT/PREPARED/RELEASED.
+  TransiÃ§Ãµes explÃ­citas prepare/release/cancel (sem PATCH status).
+  Fluxo DRAFT â†’ PREPARED â†’ RELEASED; cancel de DRAFT/PREPARED/RELEASED.
   Release com assertClientEligibleForServiceOrderRelease (BR-037).
-  Mutabilidade: DRAFT completo; PREPARED só campos operacionais; RELEASED+ imutável.
-  Assign/Acknowledge/Start/Complete não implementados (dependências ausentes).
-  Prompt 52 não executado.
+  Mutabilidade: DRAFT completo; PREPARED sÃ³ campos operacionais; RELEASED+ imutÃ¡vel.
+  Assign/Acknowledge/Start/Complete nÃ£o implementados (dependÃªncias ausentes).
+  Prompt 52 nÃ£o executado.
 ```
 
-## Quality gate Prompt 51 (evidência)
+## Quality gate Prompt 51 (evidÃªncia)
 
-- [x] DRAFT sem client → release denied
-- [x] Client inexistente/inativo → denied
-- [x] Client ACTIVE + requisitos → release allowed
+- [x] DRAFT sem client â†’ release denied
+- [x] Client inexistente/inativo â†’ denied
+- [x] Client ACTIVE + requisitos â†’ release allowed
 - [x] Unauthorized, VERSION_CONFLICT, duplicate release, concurrency races
 - [x] History/audit correctness
 - [x] Unit + integration tests PASS
-- [x] Prompt 52 não executado
+- [x] Prompt 52 nÃ£o executado
 
 ---
 
-## Prompt 52 — Planejamento, alocação e disponibilidade (backend)
+## Prompt 52 â€” Planejamento, alocaÃ§Ã£o e disponibilidade (backend)
 
 ```
 PROMPT_ID: 52
-PROMPT_TITLE: Planejamento, alocação e disponibilidade — backend
+PROMPT_TITLE: Planejamento, alocaÃ§Ã£o e disponibilidade â€” backend
 EXECUTED_AT: 2026-08-29
 EXECUTION_STATUS: PASS
 COMMIT: feat(service-orders): implement resource planning and allocation
@@ -3021,13 +3021,13 @@ QUALITY_GATE: PASS
 FUNCTIONAL_CODE_CREATED: YES
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
-  Separação requirement ≠ planned ≠ allocated; labor allocation a employee bloqueada (HR ausente).
-  Exclusion constraint GiST + FOR UPDATE para concorrência de alocação temporal.
-  Intervalos semiabertos [start, end); disponibilidade derivada, não coluna estática.
-  Prompt 53 não executado.
+  SeparaÃ§Ã£o requirement â‰  planned â‰  allocated; labor allocation a employee bloqueada (HR ausente).
+  Exclusion constraint GiST + FOR UPDATE para concorrÃªncia de alocaÃ§Ã£o temporal.
+  Intervalos semiabertos [start, end); disponibilidade derivada, nÃ£o coluna estÃ¡tica.
+  Prompt 53 nÃ£o executado.
 ```
 
-## Quality gate Prompt 52 (evidência)
+## Quality gate Prompt 52 (evidÃªncia)
 
 - [x] Planning by ResourceType/LaborType without concrete asset
 - [x] Physical asset allocation with operational interval
@@ -3036,15 +3036,15 @@ NOTES:
 - [x] Inactive asset, type mismatch, outside window, authz, version conflict
 - [x] History/audit preserved on remove
 - [x] Regression: Prompt 51 integration tests PASS
-- [x] Prompt 53 não executado
+- [x] Prompt 53 nÃ£o executado
 
 ---
 
-## Prompt 53 — Planejamento e alocação (frontend)
+## Prompt 53 â€” Planejamento e alocaÃ§Ã£o (frontend)
 
 ```
 PROMPT_ID: 53
-PROMPT_TITLE: Planejamento e alocação — frontend profissional
+PROMPT_TITLE: Planejamento e alocaÃ§Ã£o â€” frontend profissional
 EXECUTED_AT: 2026-08-29
 EXECUTION_STATUS: PASS
 COMMIT: feat(web): implement resource planning and allocation experience
@@ -3061,30 +3061,30 @@ FUNCTIONAL_CODE_CREATED: YES
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
   UI consome backend real (planned-resources, allocations, physical-assets).
-  Design system existente (CSS compartilhado) — sem Tailwind no monorepo web.
-  Cobertura requirement/planned/allocated/pending; conflito concorrente com substituição.
-  Alocação de pessoas bloqueada com mensagem (HR ausente).
-  Prompt 54 não executado.
+  Design system existente (CSS compartilhado) â€” sem Tailwind no monorepo web.
+  Cobertura requirement/planned/allocated/pending; conflito concorrente com substituiÃ§Ã£o.
+  AlocaÃ§Ã£o de pessoas bloqueada com mensagem (HR ausente).
+  Prompt 54 nÃ£o executado.
 ```
 
-## Quality gate Prompt 53 (evidência)
+## Quality gate Prompt 53 (evidÃªncia)
 
-- [x] Hierarquia visual: cabeçalho OS → resumo → requisitos → planejamento → disponibilidade → alocações
-- [x] Estados REQUIREMENT / PLANNED / ALLOCATED / AVAILABLE / UNAVAILABLE distinguíveis (texto + legenda + status)
-- [x] Backend autoridade: disponibilidade/conflito confirmados na alocação; frontend não calcula overlap
+- [x] Hierarquia visual: cabeÃ§alho OS â†’ resumo â†’ requisitos â†’ planejamento â†’ disponibilidade â†’ alocaÃ§Ãµes
+- [x] Estados REQUIREMENT / PLANNED / ALLOCATED / AVAILABLE / UNAVAILABLE distinguÃ­veis (texto + legenda + status)
+- [x] Backend autoridade: disponibilidade/conflito confirmados na alocaÃ§Ã£o; frontend nÃ£o calcula overlap
 - [x] UX conflito concorrente: erro sem falso sucesso; dialog aberto; ativo marcado; substituto permitido
-- [x] Double submit bloqueado (`submitting` + botão desabilitado)
-- [x] Testes unitários + integração página + e2e (89/89 PASS em apps/web)
+- [x] Double submit bloqueado (`submitting` + botÃ£o desabilitado)
+- [x] Testes unitÃ¡rios + integraÃ§Ã£o pÃ¡gina + e2e (89/89 PASS em apps/web)
 - [x] typecheck + lint PASS
-- [x] Prompt 54 não executado
+- [x] Prompt 54 nÃ£o executado
 
 ---
 
-## Prompt 54 — Execução operacional e evidências (backend)
+## Prompt 54 â€” ExecuÃ§Ã£o operacional e evidÃªncias (backend)
 
 ```
 PROMPT_ID: 54
-PROMPT_TITLE: Execução operacional e evidências — backend
+PROMPT_TITLE: ExecuÃ§Ã£o operacional e evidÃªncias â€” backend
 EXECUTED_AT: 2026-08-29
 EXECUTION_STATUS: PASS
 COMMIT: feat(execution): implement transactional service execution
@@ -3107,35 +3107,35 @@ QUALITY_GATE: PASS
 FUNCTIONAL_CODE_CREATED: YES
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
-  PLANNED ≠ ALLOCATED ≠ ACTUAL ≠ MEASURED — execução em tabelas execution_* separadas.
-  Comandos explícitos start/pause/resume/complete/record (sem PATCH status).
-  Status PAUSED adicionado; complete valida evidências REQUIRED antes da transição.
-  Idempotência via execution_command_idempotency; checagem antes da máquina de estados.
-  Prompt 55 não executado.
+  PLANNED â‰  ALLOCATED â‰  ACTUAL â‰  MEASURED â€” execuÃ§Ã£o em tabelas execution_* separadas.
+  Comandos explÃ­citos start/pause/resume/complete/record (sem PATCH status).
+  Status PAUSED adicionado; complete valida evidÃªncias REQUIRED antes da transiÃ§Ã£o.
+  IdempotÃªncia via execution_command_idempotency; checagem antes da mÃ¡quina de estados.
+  Prompt 55 nÃ£o executado.
 ```
 
-## Quality gate Prompt 54 (evidência)
+## Quality gate Prompt 54 (evidÃªncia)
 
-- [x] Start válido com planejamento mínimo satisfeito
-- [x] Start inválido (recursos mínimos não planejados)
+- [x] Start vÃ¡lido com planejamento mÃ­nimo satisfeito
+- [x] Start invÃ¡lido (recursos mÃ­nimos nÃ£o planejados)
 - [x] Unauthorized (E2E HTTP 403)
 - [x] Wrong state (E2E HTTP 409 INVALID_STATE)
 - [x] Required evidence antes de complete
 - [x] Pause/resume preservando dados
-- [x] Idempotência de start (retry mesma chave)
-- [x] Concorrência start×start (apenas um vence)
+- [x] IdempotÃªncia de start (retry mesma chave)
+- [x] ConcorrÃªncia startÃ—start (apenas um vence)
 - [x] Security audit em start/complete
 - [x] Unit (10) + integration (8) + service-orders regression (34) + e2e (2) PASS
 - [x] typecheck + lint PASS
-- [x] Prompt 55 não executado
+- [x] Prompt 55 nÃ£o executado
 
 ---
 
-## Prompt 56 — Medição (backend)
+## Prompt 56 â€” MediÃ§Ã£o (backend)
 
 ```
 PROMPT_ID: 56
-PROMPT_TITLE: Medição — backend
+PROMPT_TITLE: MediÃ§Ã£o â€” backend
 EXECUTED_AT: 2026-08-29
 EXECUTION_STATUS: PASS
 COMMIT: feat(measurement): implement traceable measurement domain
@@ -3154,33 +3154,33 @@ QUALITY_GATE: PASS
 FUNCTIONAL_CODE_CREATED: YES
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
-  Measurement agregado próprio (msr.*); deriva de ACTUAL + adjustments autorizados.
-  Estados DRAFT/SUBMITTED/UNDER_REVIEW/APPROVED/REJECTED; snapshot comercial na criação.
-  Divergência 10→17 M3 bloqueada sem adjustment formal; SoD em approve.
-  Prompt 57 não executado.
+  Measurement agregado prÃ³prio (msr.*); deriva de ACTUAL + adjustments autorizados.
+  Estados DRAFT/SUBMITTED/UNDER_REVIEW/APPROVED/REJECTED; snapshot comercial na criaÃ§Ã£o.
+  DivergÃªncia 10â†’17 M3 bloqueada sem adjustment formal; SoD em approve.
+  Prompt 57 nÃ£o executado.
 ```
 
-## Quality gate Prompt 56 (evidência)
+## Quality gate Prompt 56 (evidÃªncia)
 
 - [x] Create com item origin (sourceExecutionEntryId)
 - [x] Invalid UoM / divergence sem adjustment
-- [x] Adjustment autorizado permite divergência
+- [x] Adjustment autorizado permite divergÃªncia
 - [x] Submit / approve / reject workflow
-- [x] SoD submitter ≠ approver
+- [x] SoD submitter â‰  approver
 - [x] Stale version / concurrent approve / concurrent regenerate
 - [x] Unauthorized / OS not completed
-- [x] Commercial snapshot imutável após mudança de catálogo
+- [x] Commercial snapshot imutÃ¡vel apÃ³s mudanÃ§a de catÃ¡logo
 - [x] Unit (6) + integration (11) + e2e (2) PASS
 - [x] typecheck + lint PASS
-- [x] Prompt 57 não executado
+- [x] Prompt 57 nÃ£o executado
 
 ---
 
-## Prompt 55 — Execução operacional responsiva (frontend)
+## Prompt 55 â€” ExecuÃ§Ã£o operacional responsiva (frontend)
 
 ```
 PROMPT_ID: 55
-PROMPT_TITLE: Execução operacional responsiva — frontend
+PROMPT_TITLE: ExecuÃ§Ã£o operacional responsiva â€” frontend
 EXECUTED_AT: 2026-08-29
 EXECUTION_STATUS: PASS
 COMMIT: feat(web): implement responsive field execution experience
@@ -3208,34 +3208,34 @@ FUNCTIONAL_CODE_CREATED: YES
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
   Shell de campo separado do painel administrativo (sem nav lateral em mobile).
-  Mobile-first CSS em index.css (sem Tailwind no repo — convenção existente).
-  Uma ação primária por estado; confirmação para concluir/pausar.
-  Upload de evidências com progresso, retry e sem persistência local prolongada.
-  Idempotência em transições; retry de rede preserva chave pendente.
-  Prompt 56 não executado.
+  Mobile-first CSS em index.css (sem Tailwind no repo â€” convenÃ§Ã£o existente).
+  Uma aÃ§Ã£o primÃ¡ria por estado; confirmaÃ§Ã£o para concluir/pausar.
+  Upload de evidÃªncias com progresso, retry e sem persistÃªncia local prolongada.
+  IdempotÃªncia em transiÃ§Ãµes; retry de rede preserva chave pendente.
+  Prompt 56 nÃ£o executado.
 ```
 
-## Quality gate Prompt 55 (evidência)
+## Quality gate Prompt 55 (evidÃªncia)
 
 - [x] Mobile-first layout (360px+) com action bar inferior
-- [x] Header operacional com OS, status, cliente, serviço, local, horário, equipamento, função
-- [x] Checklist de requisitos + timeline + evidências + ocorrências
-- [x] Ação primária única por estado (start / record / complete / resume)
-- [x] Confirmação para concluir e pausar
-- [x] Upload com progresso, falha, retry, sucesso (não bloqueia tela)
+- [x] Header operacional com OS, status, cliente, serviÃ§o, local, horÃ¡rio, equipamento, funÃ§Ã£o
+- [x] Checklist de requisitos + timeline + evidÃªncias + ocorrÃªncias
+- [x] AÃ§Ã£o primÃ¡ria Ãºnica por estado (start / record / complete / resume)
+- [x] ConfirmaÃ§Ã£o para concluir e pausar
+- [x] Upload com progresso, falha, retry, sucesso (nÃ£o bloqueia tela)
 - [x] Tratamento de timeout/rede, version conflict, 403
 - [x] Acessibilidade: labels, aria-live, focus, error summary
-- [x] Unit (7) + E2E execution (9) + regressão web (105) PASS
+- [x] Unit (7) + E2E execution (9) + regressÃ£o web (105) PASS
 - [x] typecheck + lint PASS
-- [x] Prompt 56 não executado
+- [x] Prompt 56 nÃ£o executado
 
 ---
 
-## Prompt 57 — Medição: conferência comparativa (frontend)
+## Prompt 57 â€” MediÃ§Ã£o: conferÃªncia comparativa (frontend)
 
 ```
 PROMPT_ID: 57
-PROMPT_TITLE: Medição — frontend de conferência comparativa
+PROMPT_TITLE: MediÃ§Ã£o â€” frontend de conferÃªncia comparativa
 EXECUTED_AT: 2026-08-29
 EXECUTION_STATUS: PASS
 COMMIT: feat(web): implement measurement review experience
@@ -3268,35 +3268,35 @@ QUALITY_GATE: PASS
 FUNCTIONAL_CODE_CREATED: YES
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
-  UX comparativa Planejado · Realizado · Medido (tabela desktop + cards mobile).
-  Divergências com tokens semânticos (.measurement-variance--*), não só verde/vermelho.
-  Aprovação exige diálogo com resumo + checkbox de confirmação.
-  VERSION_CONFLICT bloqueia ações críticas (botões visíveis e desabilitados) + banner de reload.
-  CSS com tokens .measurement-* em index.css (sem Tailwind — convenção do repo).
-  Link da execução concluída para conferência de medição.
-  Prompt 58 não executado.
+  UX comparativa Planejado Â· Realizado Â· Medido (tabela desktop + cards mobile).
+  DivergÃªncias com tokens semÃ¢nticos (.measurement-variance--*), nÃ£o sÃ³ verde/vermelho.
+  AprovaÃ§Ã£o exige diÃ¡logo com resumo + checkbox de confirmaÃ§Ã£o.
+  VERSION_CONFLICT bloqueia aÃ§Ãµes crÃ­ticas (botÃµes visÃ­veis e desabilitados) + banner de reload.
+  CSS com tokens .measurement-* em index.css (sem Tailwind â€” convenÃ§Ã£o do repo).
+  Link da execuÃ§Ã£o concluÃ­da para conferÃªncia de mediÃ§Ã£o.
+  Prompt 58 nÃ£o executado.
 ```
 
-## Quality gate Prompt 57 (evidência)
+## Quality gate Prompt 57 (evidÃªncia)
 
 - [x] UX comparativa planejado / realizado / medido com origem, UoM, valor e status
-- [x] Divergências semânticas (quantidade, adicional, ausente, unidade, preço, evidência)
+- [x] DivergÃªncias semÃ¢nticas (quantidade, adicional, ausente, unidade, preÃ§o, evidÃªncia)
 - [x] Desktop: tabela densa, sticky header, tabular-nums
 - [x] Mobile: cards responsivos (breakpoint 48rem)
-- [x] Aprovação com resumo e confirmação explícita (checkbox)
-- [x] Version conflict bloqueia ações e solicita reload
+- [x] AprovaÃ§Ã£o com resumo e confirmaÃ§Ã£o explÃ­cita (checkbox)
+- [x] Version conflict bloqueia aÃ§Ãµes e solicita reload
 - [x] Tokens CSS consistentes (.measurement-*)
 - [x] Testes: no divergence, divergence, submit, approve, reject, stale, forbidden, responsive, a11y, monetary, E2E
 - [x] typecheck + lint + vitest (123) PASS
-- [x] Prompt 58 não executado
+- [x] Prompt 58 nÃ£o executado
 
 ---
 
-## Prompt 58 — Preparação de faturamento (backend)
+## Prompt 58 â€” PreparaÃ§Ã£o de faturamento (backend)
 
 ```
 PROMPT_ID: 58
-PROMPT_TITLE: Preparação de faturamento — backend
+PROMPT_TITLE: PreparaÃ§Ã£o de faturamento â€” backend
 EXECUTED_AT: 2026-08-29
 EXECUTION_STATUS: PASS
 COMMIT: 648e5e9 feat(billing): implement billing preparation domain
@@ -3316,32 +3316,32 @@ FUNCTIONAL_CODE_CREATED: YES
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
   BillingRecord nasce somente de Measurement APPROVED; total derivado de itens (numeric).
-  Snapshots cadastrais/comerciais imutáveis (client, endereço, referência comercial).
-  Estados operacionais PREPARED / VOIDED (sem emissão fiscal, envio ou pagamento).
-  Divergência de condições comerciais → BILLING_COMMERCIAL_TERMS_MISMATCH.
-  Concorrência serializada (FOR UPDATE + índice único por medição preparada).
-  Prompt 59 não executado.
+  Snapshots cadastrais/comerciais imutÃ¡veis (client, endereÃ§o, referÃªncia comercial).
+  Estados operacionais PREPARED / VOIDED (sem emissÃ£o fiscal, envio ou pagamento).
+  DivergÃªncia de condiÃ§Ãµes comerciais â†’ BILLING_COMMERCIAL_TERMS_MISMATCH.
+  ConcorrÃªncia serializada (FOR UPDATE + Ã­ndice Ãºnico por mediÃ§Ã£o preparada).
+  Prompt 59 nÃ£o executado.
 ```
 
-## Quality gate Prompt 58 (evidência)
+## Quality gate Prompt 58 (evidÃªncia)
 
-- [x] BillingRecord somente de medição APPROVED
+- [x] BillingRecord somente de mediÃ§Ã£o APPROVED
 - [x] BillingItem derivado de measurement_items; total = soma de linhas
 - [x] Snapshots: clientLegalName, clientTaxId, billingAddress, commercialReference
-- [x] Payment terms mismatch (PO vs declarado) sem decisão silenciosa
-- [x] Estados PREPARED / VOIDED separados de emissão/envio/pagamento
-- [x] Autorização PDP + grants (prepare/read/void)
+- [x] Payment terms mismatch (PO vs declarado) sem decisÃ£o silenciosa
+- [x] Estados PREPARED / VOIDED separados de emissÃ£o/envio/pagamento
+- [x] AutorizaÃ§Ã£o PDP + grants (prepare/read/void)
 - [x] Testes: domain (4), integration (9), E2E (1)
 - [x] typecheck + eslint billing PASS
-- [x] Prompt 59 não executado
+- [x] Prompt 59 nÃ£o executado
 
 ---
 
-## Prompt 59 — Faturamento: administração (frontend)
+## Prompt 59 â€” Faturamento: administraÃ§Ã£o (frontend)
 
 ```
 PROMPT_ID: 59
-PROMPT_TITLE: Faturamento — interface de administração
+PROMPT_TITLE: Faturamento â€” interface de administraÃ§Ã£o
 EXECUTED_AT: 2026-08-29
 EXECUTION_STATUS: PASS
 COMMIT: feat(web): implement billing administration interface
@@ -3362,32 +3362,32 @@ QUALITY_GATE: PASS
 FUNCTIONAL_CODE_CREATED: YES
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
-  Painel /app/billing com colunas reais: pronto, em preparação, divergência.
-  Etapas fiscais/pagamento exibidas como indisponíveis (fora do Prompt 58).
-  Detalhe por OS com itens, totais tabular-nums, condição comercial e mismatch A×B.
+  Painel /app/billing com colunas reais: pronto, em preparaÃ§Ã£o, divergÃªncia.
+  Etapas fiscais/pagamento exibidas como indisponÃ­veis (fora do Prompt 58).
+  Detalhe por OS com itens, totais tabular-nums, condiÃ§Ã£o comercial e mismatch AÃ—B.
   Mobile com cards; desktop com tabela financeira.
   Testes: list, detail, mismatch, amount, forbidden, stale, responsive, a11y, E2E.
-  Prompt 60 não executado.
+  Prompt 60 nÃ£o executado.
 ```
 
-## Quality gate Prompt 59 (evidência)
+## Quality gate Prompt 59 (evidÃªncia)
 
-- [x] Painel do processo com estados reais (pronto / preparação / divergência)
-- [x] Detalhe: cliente, OS, medição, PO/proposta, itens, valores, condição, vencimento, documentos
-- [x] COMMERCIAL_TERMS_MISMATCH visível com fonte A × fonte B e ação administrativa
-- [x] Formatação financeira pt-BR, tabular-nums, R$
+- [x] Painel do processo com estados reais (pronto / preparaÃ§Ã£o / divergÃªncia)
+- [x] Detalhe: cliente, OS, mediÃ§Ã£o, PO/proposta, itens, valores, condiÃ§Ã£o, vencimento, documentos
+- [x] COMMERCIAL_TERMS_MISMATCH visÃ­vel com fonte A Ã— fonte B e aÃ§Ã£o administrativa
+- [x] FormataÃ§Ã£o financeira pt-BR, tabular-nums, R$
 - [x] Layout responsivo (tabela desktop + cards mobile)
 - [x] Testes: BillingPages (8), billing-format (3), E2E (3)
 - [x] typecheck + lint + vitest web (137) PASS
-- [x] Prompt 60 não executado
+- [x] Prompt 60 nÃ£o executado
 
 ---
 
-## Prompt 60 — Nota Fatura digital (BillingDocument)
+## Prompt 60 â€” Nota Fatura digital (BillingDocument)
 
 ```
 PROMPT_ID: 60
-PROMPT_TITLE: Nota Fatura digital — BillingDocument interno
+PROMPT_TITLE: Nota Fatura digital â€” BillingDocument interno
 EXECUTED_AT: 2026-08-29
 EXECUTION_STATUS: PASS
 COMMIT: feat(billing): implement digital billing document generation
@@ -3407,32 +3407,32 @@ QUALITY_GATE: PASS
 FUNCTIONAL_CODE_CREATED: YES
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
-  BillingDocument interno NOTA FATURA (não NF-e/NFS-e).
-  Numeração NF-{ANO}-{SEQ} com sequência transacional FOR UPDATE.
-  PDF server-side determinístico (pdfkit), hash SHA-256, storage doc.*.
-  FINALIZED imutável; correção via cancel/replace com nova versão.
-  Prompt 61 não executado.
+  BillingDocument interno NOTA FATURA (nÃ£o NF-e/NFS-e).
+  NumeraÃ§Ã£o NF-{ANO}-{SEQ} com sequÃªncia transacional FOR UPDATE.
+  PDF server-side determinÃ­stico (pdfkit), hash SHA-256, storage doc.*.
+  FINALIZED imutÃ¡vel; correÃ§Ã£o via cancel/replace com nova versÃ£o.
+  Prompt 61 nÃ£o executado.
 ```
 
-## Quality gate Prompt 60 (evidência)
+## Quality gate Prompt 60 (evidÃªncia)
 
-- [x] BillingDocument ligado a BillingRecord, Client, Measurement, OS, referência comercial
-- [x] Numeração concorrente sem duplicata (sequência transacional + teste paralelo)
-- [x] Snapshots completos (emitente, cliente, itens, PO, condição, vencimento)
+- [x] BillingDocument ligado a BillingRecord, Client, Measurement, OS, referÃªncia comercial
+- [x] NumeraÃ§Ã£o concorrente sem duplicata (sequÃªncia transacional + teste paralelo)
+- [x] Snapshots completos (emitente, cliente, itens, PO, condiÃ§Ã£o, vencimento)
 - [x] PDF A4 server-side, hash persistido, download autorizado
-- [x] Imutabilidade FINALIZED; cancelamento e substituição versionada
-- [x] Sem integração fiscal NF-e/NFS-e; categoria NOTA FATURA
+- [x] Imutabilidade FINALIZED; cancelamento e substituiÃ§Ã£o versionada
+- [x] Sem integraÃ§Ã£o fiscal NF-e/NFS-e; categoria NOTA FATURA
 - [x] Testes: domain (3), integration (7), E2E (1)
 - [x] typecheck + integration billing-document PASS
-- [x] Prompt 61 não executado
+- [x] Prompt 61 nÃ£o executado
 
 ---
 
-## Prompt 61 — Nota Fatura digital (frontend)
+## Prompt 61 â€” Nota Fatura digital (frontend)
 
 ```
 PROMPT_ID: 61
-PROMPT_TITLE: Nota Fatura digital — frontend workflow
+PROMPT_TITLE: Nota Fatura digital â€” frontend workflow
 EXECUTED_AT: 2026-08-29
 EXECUTION_STATUS: PASS
 COMMIT: feat(web): implement digital billing document workflow
@@ -3457,34 +3457,34 @@ QUALITY_GATE: PASS
 FUNCTIONAL_CODE_CREATED: YES
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
-  Workflow em /billing/document: resumo → cliente → referências → itens → pagamento → divergências → preview → emitir.
-  Snapshots somente leitura; dueDate opcional na emissão.
+  Workflow em /billing/document: resumo â†’ cliente â†’ referÃªncias â†’ itens â†’ pagamento â†’ divergÃªncias â†’ preview â†’ emitir.
+  Snapshots somente leitura; dueDate opcional na emissÃ£o.
   Preview fiel; PDF oficial exclusivo do backend.
-  Bloqueio de emissão em mismatch comercial ou documento FINALIZED existente.
-  Dialog de confirmação com cliente, CNPJ, PO, total, vencimento e condições.
+  Bloqueio de emissÃ£o em mismatch comercial ou documento FINALIZED existente.
+  Dialog de confirmaÃ§Ã£o com cliente, CNPJ, PO, total, vencimento e condiÃ§Ãµes.
   Estilos billing-doc-* + @media print.
-  Prompt 62 não executado.
+  Prompt 62 nÃ£o executado.
 ```
 
-## Quality gate Prompt 61 (evidência)
+## Quality gate Prompt 61 (evidÃªncia)
 
-- [x] Workflow completo com seções navegáveis e sticky actions
-- [x] Dados derivados não editáveis (exceto dueDate autorizado)
+- [x] Workflow completo com seÃ§Ãµes navegÃ¡veis e sticky actions
+- [x] Dados derivados nÃ£o editÃ¡veis (exceto dueDate autorizado)
 - [x] Preview fiel sem DOM screenshot como documento oficial
-- [x] Confirmação pré-emissão com resumo e bloqueio em mismatch
+- [x] ConfirmaÃ§Ã£o prÃ©-emissÃ£o com resumo e bloqueio em mismatch
 - [x] Download PDF via API backend
 - [x] Layout responsivo e print-friendly
 - [x] Testes: preview (6), pages (8), E2E (2)
 - [x] typecheck + lint + vitest web (153) PASS
-- [x] Prompt 62 não executado
+- [x] Prompt 62 nÃ£o executado
 
 ---
 
-## Prompt 62 — Documentos (frontend GED)
+## Prompt 62 â€” Documentos (frontend GED)
 
 ```
 PROMPT_ID: 62
-PROMPT_TITLE: Documentos — frontend GED unificado
+PROMPT_TITLE: Documentos â€” frontend GED unificado
 EXECUTED_AT: 2026-08-29
 EXECUTION_STATUS: PASS
 COMMIT: feat(web): implement secure document management experience
@@ -3501,34 +3501,34 @@ FUNCTIONAL_CODE_CREATED: YES
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
   Componentes unificados: DocumentList, DocumentUpload, DocumentVersionHistory, DocumentDownloadAction, DocumentManagementPanel.
-  Upload com drag/drop + botão, progresso, retry, validação cliente/servidor.
-  Versionamento com histórico preservado (sem sobrescrita destrutiva).
+  Upload com drag/drop + botÃ£o, progresso, retry, validaÃ§Ã£o cliente/servidor.
+  Versionamento com histÃ³rico preservado (sem sobrescrita destrutiva).
   Download apenas por endpoint autorizado; sem storage key.
-  Integração em ServiceRequestDetailPage; escopos tipados para todos os domínios.
-  Prompt 63 não executado.
+  IntegraÃ§Ã£o em ServiceRequestDetailPage; escopos tipados para todos os domÃ­nios.
+  Prompt 63 nÃ£o executado.
 ```
 
-## Quality gate Prompt 62 (evidência)
+## Quality gate Prompt 62 (evidÃªncia)
 
-- [x] Componente unificado reutilizável (sem uploader duplicado por módulo)
+- [x] Componente unificado reutilizÃ¡vel (sem uploader duplicado por mÃ³dulo)
 - [x] Upload: filename, size, type, progress, status, retry
-- [x] Versionamento: atual + anteriores + autor + mensagem não destrutiva
-- [x] Segurança: sem storage key; download autorizado
+- [x] Versionamento: atual + anteriores + autor + mensagem nÃ£o destrutiva
+- [x] SeguranÃ§a: sem storage key; download autorizado
 - [x] Responsivo: tabela desktop + cards mobile
 - [x] Testes: DocumentManagementPanel (11), document-validation (3)
 - [x] typecheck + lint + vitest web (167) PASS
-- [x] Prompt 63 não executado
+- [x] Prompt 63 nÃ£o executado
 
 ---
 
-## Prompt 63 — Quality gate integrado da primeira vertical
+## Prompt 63 â€” Quality gate integrado da primeira vertical
 
 ```
 PROMPT_ID: 63
 PROMPT_TITLE: Quality gate integrado da primeira vertical empresarial
 EXECUTED_AT: 2026-08-29
 EXECUTION_STATUS: PASS
-COMMIT: (não solicitado)
+COMMIT: (nÃ£o solicitado)
 ARTIFACTS:
   apps/api/src/vertical/first-vertical-quality-gate.integration.spec.ts
   apps/web/src/vertical/vertical-quality-gate.e2e.test.tsx
@@ -3549,21 +3549,21 @@ REGRESSIONS: NONE
 NEXT_ALLOWED_PROMPT: 64
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
-  Happy path integrado (Client→Catálogo→Request→Proposal/PO→OS→Planning→Allocation→Execution→Evidence→Measurement→Billing→Nota Fatura→Documents) sem mocks internos.
-  Correção de segurança: storageKey removido do payload de histórico de billing document e sanitizado no serializer.
-  gate:database estendido até 0025; idempotência de migration 0012 em DB com catálogo publicado.
-  Evidência: lint/typecheck/build PASS; database integration 49; api integration 173; api e2e 40; web 171.
-  Prompt 64 não executado.
+  Happy path integrado (Clientâ†’CatÃ¡logoâ†’Requestâ†’Proposal/POâ†’OSâ†’Planningâ†’Allocationâ†’Executionâ†’Evidenceâ†’Measurementâ†’Billingâ†’Nota Faturaâ†’Documents) sem mocks internos.
+  CorreÃ§Ã£o de seguranÃ§a: storageKey removido do payload de histÃ³rico de billing document e sanitizado no serializer.
+  gate:database estendido atÃ© 0025; idempotÃªncia de migration 0012 em DB com catÃ¡logo publicado.
+  EvidÃªncia: lint/typecheck/build PASS; database integration 49; api integration 173; api e2e 40; web 171.
+  Prompt 64 nÃ£o executado.
 ```
 
-## Quality gate Prompt 63 (evidência)
+## Quality gate Prompt 63 (evidÃªncia)
 
-| Gate | Resultado | Evidência principal |
+| Gate | Resultado | EvidÃªncia principal |
 |------|-----------|---------------------|
 | BUSINESS FLOW | PASS | `first-vertical-quality-gate.integration.spec.ts` |
 | CONCURRENCY | PASS | clients.audit-closure, service-orders, planning, execution, measurements, billing-document integration |
 | SECURITY | PASS | IDOR/cross-scope documents; audit redaction; storageKey leak corrigido em billing document |
-| MIGRATIONS | PASS | `gate:database` fresh + incremental (0000→0025); persistence integration 49 |
+| MIGRATIONS | PASS | `gate:database` fresh + incremental (0000â†’0025); persistence integration 49 |
 | RESPONSIVE | PASS | `vertical-quality-gate.e2e.test.tsx` mobile/tablet/desktop |
 | ACCESSIBILITY | PASS | shell skip-link/aria; ServiceDefinitionForm + DocumentManagementPanel a11y tests |
 | E2E | PASS | api e2e 40; web e2e suites 171 |
@@ -3571,11 +3571,11 @@ NOTES:
 
 ---
 
-## Prompt 64 — Eventos e notificações (domínio)
+## Prompt 64 â€” Eventos e notificaÃ§Ãµes (domÃ­nio)
 
 ```
 PROMPT_ID: 64
-PROMPT_TITLE: Eventos e notificações — desacoplamento de canais externos
+PROMPT_TITLE: Eventos e notificaÃ§Ãµes â€” desacoplamento de canais externos
 EXECUTED_AT: 2026-08-29
 EXECUTION_STATUS: PASS
 COMMIT: feat(events): establish domain notification events
@@ -3603,17 +3603,17 @@ NEXT_ALLOWED_PROMPT: 65
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
   DomainEvent + NotificationIntent persistidos em evt.*; intents PENDING com template_key/audience_scope sem SDK de canal.
-  Idempotência via idempotency_key; rollback transacional; payloads v1 sem campos de autorização.
-  PAYMENT_OVERDUE exposto via recorder (detecção agendada fora do escopo deste prompt).
-  Evidência: lint/typecheck PASS; api unit 139; api integration 178 (incl. domain-events 5); gate:database 0026.
-  Prompt 65 não executado.
+  IdempotÃªncia via idempotency_key; rollback transacional; payloads v1 sem campos de autorizaÃ§Ã£o.
+  PAYMENT_OVERDUE exposto via recorder (detecÃ§Ã£o agendada fora do escopo deste prompt).
+  EvidÃªncia: lint/typecheck PASS; api unit 139; api integration 178 (incl. domain-events 5); gate:database 0026.
+  Prompt 65 nÃ£o executado.
 ```
 
-## Quality gate Prompt 64 (evidência)
+## Quality gate Prompt 64 (evidÃªncia)
 
-| Cenário de teste | Resultado | Evidência |
+| CenÃ¡rio de teste | Resultado | EvidÃªncia |
 |------------------|-----------|-----------|
-| correct event | PASS | `domain-events.integration.spec.ts` — event + intent |
+| correct event | PASS | `domain-events.integration.spec.ts` â€” event + intent |
 | no duplicate event | PASS | idempotency_key dedup |
 | transaction rollback | PASS | ROLLBACK sem linhas em evt.domain_events |
 | authorization-independent semantics | PASS | payload sem actor/session/grants |
@@ -3621,11 +3621,11 @@ NOTES:
 
 ---
 
-## Prompt 65 — Worker assíncrono
+## Prompt 65 â€” Worker assÃ­ncrono
 
 ```
 PROMPT_ID: 65
-PROMPT_TITLE: Worker assíncrono — processamento confiável fora da request HTTP
+PROMPT_TITLE: Worker assÃ­ncrono â€” processamento confiÃ¡vel fora da request HTTP
 EXECUTED_AT: 2026-08-29
 EXECUTION_STATUS: PASS
 COMMIT: feat(platform): implement reliable background processing
@@ -3647,18 +3647,18 @@ NEXT_PROMPT_EXECUTED: NO
 NOTES:
   Fila PostgreSQL (plt.background_jobs) com SKIP LOCKED, lease, idempotency_key, backoff exponencial e dead-letter.
   Worker separado (pnpm --filter @cisne/api start:worker) com graceful shutdown SIGINT/SIGTERM.
-  Handler NOTIFICATION marca intent DISPATCHED sem SDK externo; demais kinds registráveis via registry.
-  Evidência: lint/typecheck PASS; api unit 141; background-worker integration 7; api integration suite.
-  Prompt 66 não executado.
+  Handler NOTIFICATION marca intent DISPATCHED sem SDK externo; demais kinds registrÃ¡veis via registry.
+  EvidÃªncia: lint/typecheck PASS; api unit 141; background-worker integration 7; api integration suite.
+  Prompt 66 nÃ£o executado.
 ```
 
-## Quality gate Prompt 65 (evidência)
+## Quality gate Prompt 65 (evidÃªncia)
 
-| Cenário de teste | Resultado | Evidência |
+| CenÃ¡rio de teste | Resultado | EvidÃªncia |
 |------------------|-----------|-----------|
 | success | PASS | `background-worker.integration.spec.ts` |
 | retry | PASS | transient + scheduleRetry + backoff |
-| exhausted retry | PASS | status DEAD após max_attempts |
+| exhausted retry | PASS | status DEAD apÃ³s max_attempts |
 | crash | PASS | releaseExpiredLeases + reprocessamento |
 | shutdown | PASS | stop() aguarda in-flight |
 | duplicate job | PASS | idempotency_key unique |
@@ -3666,11 +3666,11 @@ NOTES:
 
 ---
 
-## Prompt 66 — Transactional outbox
+## Prompt 66 â€” Transactional outbox
 
 ```
 PROMPT_ID: 66
-PROMPT_TITLE: Transactional outbox — eventos atômicos com processamento assíncrono
+PROMPT_TITLE: Transactional outbox â€” eventos atÃ´micos com processamento assÃ­ncrono
 EXECUTED_AT: 2026-08-29
 EXECUTION_STATUS: PASS
 COMMIT: feat(platform): implement transactional outbox
@@ -3688,31 +3688,31 @@ QUALITY_GATE: PASS
 NEXT_ALLOWED_PROMPT: 67
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
-  evt.outbox_events inserido na mesma transação das mutações empresariais; publicação via OutboxPublisherWorker.
-  Removido publish pós-commit dos access services; DomainEventsRecorder permanece para PAYMENT_OVERDUE/legado.
-  Publicação idempotente em evt.domain_events + enqueue de jobs NOTIFICATION.
-  Evidência: lint/typecheck PASS; api unit 141; transactional-outbox integration 6.
-  Prompt 67 não executado.
+  evt.outbox_events inserido na mesma transaÃ§Ã£o das mutaÃ§Ãµes empresariais; publicaÃ§Ã£o via OutboxPublisherWorker.
+  Removido publish pÃ³s-commit dos access services; DomainEventsRecorder permanece para PAYMENT_OVERDUE/legado.
+  PublicaÃ§Ã£o idempotente em evt.domain_events + enqueue de jobs NOTIFICATION.
+  EvidÃªncia: lint/typecheck PASS; api unit 141; transactional-outbox integration 6.
+  Prompt 67 nÃ£o executado.
 ```
 
-## Quality gate Prompt 66 (evidência)
+## Quality gate Prompt 66 (evidÃªncia)
 
-| Cenário de teste | Resultado | Evidência |
+| CenÃ¡rio de teste | Resultado | EvidÃªncia |
 |------------------|-----------|-----------|
-| rollback | PASS | outbox ausente após ROLLBACK |
-| committed event | PASS | PENDING → publish → domain_events |
-| duplicate worker | PASS | SKIP LOCKED — um worker por row |
+| rollback | PASS | outbox ausente apÃ³s ROLLBACK |
+| committed event | PASS | PENDING â†’ publish â†’ domain_events |
+| duplicate worker | PASS | SKIP LOCKED â€” um worker por row |
 | crash after external action | PASS | republish idempotente |
-| retry | PASS | scheduleRetry → republish |
+| retry | PASS | scheduleRetry â†’ republish |
 | ordering when required | PASS | sequence_number + ordering_key |
 
 ---
 
-## Prompt 67 — Inbox e deduplicação
+## Prompt 67 â€” Inbox e deduplicaÃ§Ã£o
 
 ```
 PROMPT_ID: 67
-PROMPT_TITLE: Inbox e deduplicação — processamento idempotente de callbacks externos
+PROMPT_TITLE: Inbox e deduplicaÃ§Ã£o â€” processamento idempotente de callbacks externos
 EXECUTED_AT: 2026-08-29
 EXECUTION_STATUS: PASS
 COMMIT: feat(integrations): implement inbox deduplication
@@ -3733,31 +3733,31 @@ NEXT_ALLOWED_PROMPT: 68
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
   int.integration_inbox com unique (provider, external_message_id); efeitos idempotentes em int.integration_inbox_effects.
-  Fluxo receive → persist/deduplicate → validate → process → mark processed; worker com SKIP LOCKED e retry backoff.
-  Validação HMAC opcional por provider via INTEGRATION_WEBHOOK_SECRET_<PROVIDER>.
-  Evidência: typecheck PASS; inbox unit 2; integration-inbox 7.
-  Prompt 68 não executado.
+  Fluxo receive â†’ persist/deduplicate â†’ validate â†’ process â†’ mark processed; worker com SKIP LOCKED e retry backoff.
+  ValidaÃ§Ã£o HMAC opcional por provider via INTEGRATION_WEBHOOK_SECRET_<PROVIDER>.
+  EvidÃªncia: typecheck PASS; inbox unit 2; integration-inbox 7.
+  Prompt 68 nÃ£o executado.
 ```
 
-## Quality gate Prompt 67 (evidência)
+## Quality gate Prompt 67 (evidÃªncia)
 
-| Cenário de teste | Resultado | Evidência |
+| CenÃ¡rio de teste | Resultado | EvidÃªncia |
 |------------------|-----------|-----------|
 | same message twice | PASS | dedup + 1 effect |
 | same id different provider | PASS | 2 rows + 2 effects |
 | invalid payload | PASS | status INVALID |
 | processing failure | PASS | status FAILED PERMANENT |
-| retry | PASS | TRANSIENT → scheduleRetry → PROCESSED |
-| concurrency | PASS | SKIP LOCKED — um worker por row |
-| webhook auth | PASS | assinatura inválida rejeitada |
+| retry | PASS | TRANSIENT â†’ scheduleRetry â†’ PROCESSED |
+| concurrency | PASS | SKIP LOCKED â€” um worker por row |
+| webhook auth | PASS | assinatura invÃ¡lida rejeitada |
 
 ---
 
-## Prompt 68 — Integration anti-corruption layer
+## Prompt 68 â€” Integration anti-corruption layer
 
 ```
 PROMPT_ID: 68
-PROMPT_TITLE: Integration anti-corruption layer — portas internas e isolamento de domínio
+PROMPT_TITLE: Integration anti-corruption layer â€” portas internas e isolamento de domÃ­nio
 EXECUTED_AT: 2026-08-29
 EXECUTION_STATUS: PASS
 COMMIT: feat(integrations): establish anti-corruption layer
@@ -3778,16 +3778,16 @@ QUALITY_GATE: PASS
 NEXT_ALLOWED_PROMPT: 69
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
-  DygnusCustomerDto permanece no adapter; fluxo Dygnus → IntegrationCustomerSnapshot → CreateClientInput.
-  Erros de fornecedor classificados e sanitizados (toSafeIntegrationUserMessage) — sem vazamento bruto ao usuário.
-  Stub providers registrados por padrão no IntegrationsAclModule; Dygnus adapter disponível via factory.
-  Evidência: typecheck PASS; lint PASS; api unit 162 (+21 ACL).
-  Prompt 69 não executado.
+  DygnusCustomerDto permanece no adapter; fluxo Dygnus â†’ IntegrationCustomerSnapshot â†’ CreateClientInput.
+  Erros de fornecedor classificados e sanitizados (toSafeIntegrationUserMessage) â€” sem vazamento bruto ao usuÃ¡rio.
+  Stub providers registrados por padrÃ£o no IntegrationsAclModule; Dygnus adapter disponÃ­vel via factory.
+  EvidÃªncia: typecheck PASS; lint PASS; api unit 162 (+21 ACL).
+  Prompt 69 nÃ£o executado.
 ```
 
-## Quality gate Prompt 68 (evidência)
+## Quality gate Prompt 68 (evidÃªncia)
 
-| Cenário de teste | Resultado | Evidência |
+| CenÃ¡rio de teste | Resultado | EvidÃªncia |
 |------------------|-----------|-----------|
 | provider mapping | PASS | dygnus-customer.mapper.spec.ts + contract fixture |
 | malformed external data | PASS | parseDygnusCustomerPayload INVALID_PAYLOAD |
@@ -3800,15 +3800,15 @@ NOTES:
 
 ---
 
-## Prompt 69 — ERP adapter
+## Prompt 69 â€” ERP adapter
 
 ```
 PROMPT_ID: 69
-PROMPT_TITLE: ERP adapter — integração com ERP confirmado
+PROMPT_TITLE: ERP adapter â€” integraÃ§Ã£o com ERP confirmado
 EXECUTED_AT: 2026-08-29
 EXECUTION_STATUS: BLOCKED
 COMMIT: NONE
-ARTIFACTS: (nenhum — gate bloqueou implementação)
+ARTIFACTS: (nenhum â€” gate bloqueou implementaÃ§Ã£o)
 QUALITY_GATE: BLOCKED
 INTEGRATION_GATE: BLOCKED_PENDING_EXTERNAL_DOCUMENTATION
 ERP_ADAPTER: NOT_IMPLEMENTED
@@ -3819,45 +3819,45 @@ REEXECUTION_REQUIRED: YES
 NEXT_PROJECT_PROMPT: 71
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
-  Business/Integration Gate executado antes de qualquer código. ERP real não confirmado; documentação de API ausente.
-  Dygnus em apps/api/src/integrations/acl/adapters/dygnus/ é scaffold de engenharia do Prompt 68 (ACL), não contrato ERP validado.
-  DDP-014 OPEN; INT-REQ-001 PENDING_EXTERNAL_DOCUMENTATION; SGAR-001 P2 "Documentação ERP atual" NOT_PROVIDED.
-  SRC-002 Q01: integrações no primeiro release UNKNOWN; sem integração ERP fictícia (BR explícito).
-  Nenhuma API inventada; nenhuma documentação curta de integração criada (regra do prompt).
-  Prompt 70 não executado.
+  Business/Integration Gate executado antes de qualquer cÃ³digo. ERP real nÃ£o confirmado; documentaÃ§Ã£o de API ausente.
+  Dygnus em apps/api/src/integrations/acl/adapters/dygnus/ Ã© scaffold de engenharia do Prompt 68 (ACL), nÃ£o contrato ERP validado.
+  DDP-014 OPEN; INT-REQ-001 PENDING_EXTERNAL_DOCUMENTATION; SGAR-001 P2 "DocumentaÃ§Ã£o ERP atual" NOT_PROVIDED.
+  SRC-002 Q01: integraÃ§Ãµes no primeiro release UNKNOWN; sem integraÃ§Ã£o ERP fictÃ­cia (BR explÃ­cito).
+  Nenhuma API inventada; nenhuma documentaÃ§Ã£o curta de integraÃ§Ã£o criada (regra do prompt).
+  Prompt 70 nÃ£o executado.
 ```
 
-## Business / Integration Gate Prompt 69 (evidência)
+## Business / Integration Gate Prompt 69 (evidÃªncia)
 
-| Critério | Status | Evidência |
+| CritÃ©rio | Status | EvidÃªncia |
 |----------|--------|-----------|
 | ERP confirmado | **FAIL** | DDP-014 `OPEN`; nenhum vendor ERP nomeado em fonte `CONFIRMED` |
-| API/documentação | **FAIL** | SGAR-001 P2 NOT_PROVIDED; INT-REQ-001 `PENDING_EXTERNAL_DOCUMENTATION` |
-| Autenticação | **FAIL** | Sem contrato; Dygnus scaffold usa Bearer hipotético sem fonte |
-| Homologação/sandbox | **FAIL** | Nenhum endpoint ou credencial de homologação registrada |
-| Rate limits | **FAIL** | Não documentado |
-| Identifiers | **PARTIAL** | BR-031 + `externalErpId` modelado internamente; mapeamento ERP↔CISNE sem contrato externo |
-| Source-of-truth matrix | **PARTIAL** | DBND-SOT-001: cliente=CISNE master; PO/preço/pagamento ERP candidato sem integração definida |
-| Erros | **FAIL** | Sem catálogo de erros do fornecedor |
-| Paginação | **FAIL** | Não documentado |
-| Webhook/polling | **FAIL** | DDP-014 OPEN; inbox (Prompt 67) genérico, sem eventos ERP confirmados |
+| API/documentaÃ§Ã£o | **FAIL** | SGAR-001 P2 NOT_PROVIDED; INT-REQ-001 `PENDING_EXTERNAL_DOCUMENTATION` |
+| AutenticaÃ§Ã£o | **FAIL** | Sem contrato; Dygnus scaffold usa Bearer hipotÃ©tico sem fonte |
+| HomologaÃ§Ã£o/sandbox | **FAIL** | Nenhum endpoint ou credencial de homologaÃ§Ã£o registrada |
+| Rate limits | **FAIL** | NÃ£o documentado |
+| Identifiers | **PARTIAL** | BR-031 + `externalErpId` modelado internamente; mapeamento ERPâ†”CISNE sem contrato externo |
+| Source-of-truth matrix | **PARTIAL** | DBND-SOT-001: cliente=CISNE master; PO/preÃ§o/pagamento ERP candidato sem integraÃ§Ã£o definida |
+| Erros | **FAIL** | Sem catÃ¡logo de erros do fornecedor |
+| PaginaÃ§Ã£o | **FAIL** | NÃ£o documentado |
+| Webhook/polling | **FAIL** | DDP-014 OPEN; inbox (Prompt 67) genÃ©rico, sem eventos ERP confirmados |
 | Credenciais | **FAIL** | Nenhuma credencial ou vault path registrado em fonte |
 
-**Decisão:** gate **BLOCKED** — implementação de adapter real proibida (AGENTS.md §19; Prompt 69 regra explícita).
+**DecisÃ£o:** gate **BLOCKED** â€” implementaÃ§Ã£o de adapter real proibida (AGENTS.md Â§19; Prompt 69 regra explÃ­cita).
 
-**Desbloqueio exigido:** depositar em `docs/inputs/` documentação ERP (API, auth, sandbox, rate limits, identifiers, erros, paginação, webhook/polling); fechar DDP-014 com SoT por campo; nova ordem explícita para Prompt 69.
+**Desbloqueio exigido:** depositar em `docs/inputs/` documentaÃ§Ã£o ERP (API, auth, sandbox, rate limits, identifiers, erros, paginaÃ§Ã£o, webhook/polling); fechar DDP-014 com SoT por campo; nova ordem explÃ­cita para Prompt 69.
 
 ---
 
-## Prompt 70 — Tracking adapter
+## Prompt 70 â€” Tracking adapter
 
 ```
 PROMPT_ID: 70
-PROMPT_TITLE: Tracking adapter — integração com telemetria/rastreamento veicular
+PROMPT_TITLE: Tracking adapter â€” integraÃ§Ã£o com telemetria/rastreamento veicular
 EXECUTED_AT: 2026-08-29
 EXECUTION_STATUS: BLOCKED
 COMMIT: NONE
-ARTIFACTS: (nenhum — gate bloqueou implementação)
+ARTIFACTS: (nenhum â€” gate bloqueou implementaÃ§Ã£o)
 QUALITY_GATE: BLOCKED
 INTEGRATION_GATE: BLOCKED_PENDING_EXTERNAL_DOCUMENTATION
 TRACKING_ADAPTER: NOT_IMPLEMENTED
@@ -3868,40 +3868,40 @@ REEXECUTION_REQUIRED: YES
 NEXT_PROJECT_PROMPT: 71
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
-  Gate executado antes de qualquer código. Nenhum provedor de telemetria confirmado; documentação de API ausente.
-  INT-REQ-003 PENDING_EXTERNAL_DOCUMENTATION; source-registry "Documentação de rastreamento" NOT_PROVIDED.
-  EVA-001: rastreamento veicular candidato; contrato técnico não confirmado (DDP-014 OPEN).
-  TrackingProvider (Prompt 68 ACL) permanece stub; IntegrationTrackingSnapshot não modela posição GPS — sem base para adapter real.
-  Nenhuma integração simulada como concluída; nenhuma API inventada.
-  Prompt 71 não executado.
+  Gate executado antes de qualquer cÃ³digo. Nenhum provedor de telemetria confirmado; documentaÃ§Ã£o de API ausente.
+  INT-REQ-003 PENDING_EXTERNAL_DOCUMENTATION; source-registry "DocumentaÃ§Ã£o de rastreamento" NOT_PROVIDED.
+  EVA-001: rastreamento veicular candidato; contrato tÃ©cnico nÃ£o confirmado (DDP-014 OPEN).
+  TrackingProvider (Prompt 68 ACL) permanece stub; IntegrationTrackingSnapshot nÃ£o modela posiÃ§Ã£o GPS â€” sem base para adapter real.
+  Nenhuma integraÃ§Ã£o simulada como concluÃ­da; nenhuma API inventada.
+  Prompt 71 nÃ£o executado.
 ```
 
-## Business / Integration Gate Prompt 70 (evidência)
+## Business / Integration Gate Prompt 70 (evidÃªncia)
 
-| Critério | Status | Evidência |
+| CritÃ©rio | Status | EvidÃªncia |
 |----------|--------|-----------|
-| API/documentação real | **FAIL** | INT-REQ-003 `PENDING_EXTERNAL_DOCUMENTATION`; source-registry `NOT_PROVIDED` |
-| Provedor confirmado | **FAIL** | DDP-014 `OPEN`; EVA-001 contrato técnico não confirmado |
-| Autenticação | **FAIL** | Sem contrato de API |
-| Homologação/sandbox | **FAIL** | Ausente |
-| Identifiers (`externalVehicleId` ↔ asset) | **FAIL** | Sem contrato provider; placa/chassi DDP-034 `OPEN` |
-| Modelo interno (lat/long/timestamp/ignition…) | **PARTIAL** | Porta ACL existe; snapshot atual só `trackingCode/status` — insuficiente sem contrato real |
+| API/documentaÃ§Ã£o real | **FAIL** | INT-REQ-003 `PENDING_EXTERNAL_DOCUMENTATION`; source-registry `NOT_PROVIDED` |
+| Provedor confirmado | **FAIL** | DDP-014 `OPEN`; EVA-001 contrato tÃ©cnico nÃ£o confirmado |
+| AutenticaÃ§Ã£o | **FAIL** | Sem contrato de API |
+| HomologaÃ§Ã£o/sandbox | **FAIL** | Ausente |
+| Identifiers (`externalVehicleId` â†” asset) | **FAIL** | Sem contrato provider; placa/chassi DDP-034 `OPEN` |
+| Modelo interno (lat/long/timestamp/ignitionâ€¦) | **PARTIAL** | Porta ACL existe; snapshot atual sÃ³ `trackingCode/status` â€” insuficiente sem contrato real |
 | Stale threshold / timestamp provider | **FAIL** | Sem regra nem API para definir threshold |
-| Segurança / autorização operacional | **PARTIAL** | Requisito do prompt registrado; sem provider para implementar controle de escopo |
-| Webhook/polling | **FAIL** | Não documentado |
+| SeguranÃ§a / autorizaÃ§Ã£o operacional | **PARTIAL** | Requisito do prompt registrado; sem provider para implementar controle de escopo |
+| Webhook/polling | **FAIL** | NÃ£o documentado |
 | Credenciais | **FAIL** | Ausente |
 
-**Decisão:** gate **BLOCKED** — implementação de vehicle tracking adapter proibida (Prompt 70 regra explícita; AGENTS.md §19).
+**DecisÃ£o:** gate **BLOCKED** â€” implementaÃ§Ã£o de vehicle tracking adapter proibida (Prompt 70 regra explÃ­cita; AGENTS.md Â§19).
 
-**Desbloqueio exigido:** depositar em `docs/inputs/` documentação do provedor de telemetria (API, auth, sandbox, identifiers estáveis, campos suportados, erros, rate limits, webhook/polling); definir mapeamento `externalVehicleId` ↔ asset interno e stale threshold; nova ordem explícita para Prompt 70.
+**Desbloqueio exigido:** depositar em `docs/inputs/` documentaÃ§Ã£o do provedor de telemetria (API, auth, sandbox, identifiers estÃ¡veis, campos suportados, erros, rate limits, webhook/polling); definir mapeamento `externalVehicleId` â†” asset interno e stale threshold; nova ordem explÃ­cita para Prompt 70.
 
 ---
 
-## Prompt 70-A — Correção de governança e isolamento de integrações externas
+## Prompt 70-A â€” CorreÃ§Ã£o de governanÃ§a e isolamento de integraÃ§Ãµes externas
 
 ```
 PROMPT_ID: 70-A
-PROMPT_TITLE: Correção de governança e isolamento de integrações externas
+PROMPT_TITLE: CorreÃ§Ã£o de governanÃ§a e isolamento de integraÃ§Ãµes externas
 EXECUTED_AT: 2026-08-29
 EXECUTION_STATUS: PASS
 COMMIT: 6d62615 fix(integrations): isolate unavailable external providers
@@ -3922,54 +3922,54 @@ TRACKING_READINESS: WAITING_EXTERNAL_DEPENDENCY
 PROJECT_PROGRESSION_BLOCKED: NO
 FEATURE_BLOCKED_ERP: YES
 FEATURE_BLOCKED_TRACKING: YES
-FAKE_ERP_IN_PRODUCTION: ABSENT (corrigido — StubErpProvider removido do bootstrap)
-FAKE_TRACKING_IN_PRODUCTION: ABSENT (corrigido — StubTrackingProvider removido do bootstrap)
-PRODUCTION_DEFAULT: UnconfiguredErpProvider / UnconfiguredTrackingProvider → INTEGRATION_NOT_CONFIGURED
+FAKE_ERP_IN_PRODUCTION: ABSENT (corrigido â€” StubErpProvider removido do bootstrap)
+FAKE_TRACKING_IN_PRODUCTION: ABSENT (corrigido â€” StubTrackingProvider removido do bootstrap)
+PRODUCTION_DEFAULT: UnconfiguredErpProvider / UnconfiguredTrackingProvider â†’ INTEGRATION_NOT_CONFIGURED
 QUALITY_GATE: PASS
 NEXT_ALLOWED_PROMPT: 71
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
   Gates Prompt 69/70 preservados; nenhuma API inventada; Dygnus permanece TEST_ONLY scaffold.
-  UI audit: sem botões de sync ERP/GPS; externalErpId é campo manual opcional (BR-031).
-  DBND-SOT-001 inalterado. Prompt 71 não executado.
+  UI audit: sem botÃµes de sync ERP/GPS; externalErpId Ã© campo manual opcional (BR-031).
+  DBND-SOT-001 inalterado. Prompt 71 nÃ£o executado.
 ```
 
-## Quality gate Prompt 70-A (evidência)
+## Quality gate Prompt 70-A (evidÃªncia)
 
-| Cenário | Resultado | Evidência |
+| CenÃ¡rio | Resultado | EvidÃªncia |
 |---------|-----------|-----------|
 | production bootstrap sem ERP | PASS | integration-bootstrap.spec.ts AppModule |
 | production bootstrap sem Tracking | PASS | integration-bootstrap.spec.ts IntegrationsAclModule |
-| stub não registrado em produção | PASS | Unconfigured* binding; provider-classification.ts |
-| ERP unavailable → INTEGRATION_NOT_CONFIGURED | PASS | integration-bootstrap.spec.ts |
-| Tracking unavailable → INTEGRATION_NOT_CONFIGURED | PASS | integration-bootstrap.spec.ts |
-| TEST_ONLY stub em módulo isolado | PASS | integration-bootstrap.spec.ts |
+| stub nÃ£o registrado em produÃ§Ã£o | PASS | Unconfigured* binding; provider-classification.ts |
+| ERP unavailable â†’ INTEGRATION_NOT_CONFIGURED | PASS | integration-bootstrap.spec.ts |
+| Tracking unavailable â†’ INTEGRATION_NOT_CONFIGURED | PASS | integration-bootstrap.spec.ts |
+| TEST_ONLY stub em mÃ³dulo isolado | PASS | integration-bootstrap.spec.ts |
 | capability configured/enabled false | PASS | integration-capability.config.spec.ts |
-| UI sem ação falsa ERP/GPS | PASS | audit web — apenas externalErpId manual |
+| UI sem aÃ§Ã£o falsa ERP/GPS | PASS | audit web â€” apenas externalErpId manual |
 | api unit | PASS | 170 |
 | typecheck | PASS | |
 | lint | PASS | |
 
-## Reexecution contract — ERP (Prompt 69)
+## Reexecution contract â€” ERP (Prompt 69)
 
 - [ ] fornecedor ERP confirmado
-- [ ] documentação oficial da API
-- [ ] versão da API
-- [ ] base URL homologação
-- [ ] autenticação
+- [ ] documentaÃ§Ã£o oficial da API
+- [ ] versÃ£o da API
+- [ ] base URL homologaÃ§Ã£o
+- [ ] autenticaÃ§Ã£o
 - [ ] credenciais HML
 - [ ] identifiers
-- [ ] paginação
+- [ ] paginaÃ§Ã£o
 - [ ] rate limits
 - [ ] error contract
 - [ ] webhook/polling
 - [ ] Source-of-Truth aprovado
 - [ ] exemplos reais de requests/responses
 
-## Reexecution contract — Tracking (Prompt 70)
+## Reexecution contract â€” Tracking (Prompt 70)
 
 - [ ] provider confirmado
-- [ ] documentação oficial
+- [ ] documentaÃ§Ã£o oficial
 - [ ] base URL
 - [ ] authentication
 - [ ] HML/sandbox
@@ -3981,16 +3981,16 @@ NOTES:
 - [ ] rate limits
 - [ ] webhook/polling
 - [ ] credentials
-- [ ] mapping externo ↔ Asset aprovado
+- [ ] mapping externo â†” Asset aprovado
 - [ ] regra de stale data aprovada
 
 ---
 
-## Prompt 71 — Canais de notificação
+## Prompt 71 â€” Canais de notificaÃ§Ã£o
 
 ```
 PROMPT_ID: 71
-PROMPT_TITLE: Canais de notificação — entrega confiável sem acoplamento de domínio
+PROMPT_TITLE: Canais de notificaÃ§Ã£o â€” entrega confiÃ¡vel sem acoplamento de domÃ­nio
 EXECUTED_AT: 2026-08-29
 EXECUTION_STATUS: PASS
 COMMIT: feat(notifications): implement reliable notification delivery
@@ -4014,13 +4014,13 @@ NEXT_ALLOWED_PROMPT: 72
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
   Schema ntf.notifications + ntf.delivery_attempts; handler NOTIFICATION delega a NotificationDeliveryService.
-  UnconfiguredEmail/WhatsApp providers retornam erro permanente sem provider fictício em produção.
+  UnconfiguredEmail/WhatsApp providers retornam erro permanente sem provider fictÃ­cio em produÃ§Ã£o.
   NotificationWebhookService atualiza deliveredAt via providerMessageId (webhook-ready).
-  Evidência: typecheck PASS; notifications unit 13; notifications integration 7.
-  Prompt 72 não executado.
+  EvidÃªncia: typecheck PASS; notifications unit 13; notifications integration 7.
+  Prompt 72 nÃ£o executado.
 ```
 
-## Prompt 72 — Read models e dashboard operacional
+## Prompt 72 â€” Read models e dashboard operacional
 
 ```
 PROMPT_ID: 72
@@ -4037,22 +4037,22 @@ ARTIFACTS:
   apps/web/src/App.tsx
   apps/web/package.json
   apps/web/vite.config.ts
-  apps/web/src/**/*.e2e.test.tsx (home → Painel operacional)
+  apps/web/src/**/*.e2e.test.tsx (home â†’ Painel operacional)
 ENDPOINT: GET /api/v1/dashboard/operational (single snapshot, no N+1 per card)
 READ_MODELS: pending requests, OS release/confirm/in-progress/overdue, resources in use, measurements, billing, divergences, pending documents
 AUTHZ: active-grant visibility + scoped SQL filters per domain (aligned with list endpoints)
-UX: sections Atenção → Operação → Financeiro → Atalhos; responsive grid; skeleton; 60s polling; partial failure
+UX: sections AtenÃ§Ã£o â†’ OperaÃ§Ã£o â†’ Financeiro â†’ Atalhos; responsive grid; skeleton; 60s polling; partial failure
 QUALITY_GATE: PASS
 NEXT_ALLOWED_PROMPT: 73
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
-  Visibilidade do dashboard usa grants ativos (como ClientList), não PDP sem contexto — UNIT scope funciona.
-  Corrigido remapScope param offset ($1→$2) nas queries agregadas.
+  Visibilidade do dashboard usa grants ativos (como ClientList), nÃ£o PDP sem contexto â€” UNIT scope funciona.
+  Corrigido remapScope param offset ($1â†’$2) nas queries agregadas.
   DashboardModule importa AuthModule para JwtAuthGuard.
-  Prompt 73 não executado.
+  Prompt 73 nÃ£o executado.
 ```
 
-## Prompt 73 — Aging operacional e financeiro
+## Prompt 73 â€” Aging operacional e financeiro
 
 ```
 PROMPT_ID: 73
@@ -4064,23 +4064,23 @@ ARTIFACTS:
   apps/api/src/analytics/**
   apps/api/src/app.module.ts
 ENDPOINT: GET /api/v1/analytics/aging
-DERIVED_AGING: estado + timestamps + deadline + política + now (sem cron, sem persistir dias atrasados)
-SERVICE_ORDER_OVERDUE: ServiceOrderOverduePolicy lê TERMINAL_SERVICE_ORDER_STATUSES da máquina real; overdue derivado, status inalterado
+DERIVED_AGING: estado + timestamps + deadline + polÃ­tica + now (sem cron, sem persistir dias atrasados)
+SERVICE_ORDER_OVERDUE: ServiceOrderOverduePolicy lÃª TERMINAL_SERVICE_ORDER_STATUSES da mÃ¡quina real; overdue derivado, status inalterado
 TIMEZONE: BUSINESS_TIMEZONE (default America/Porto_Velho); due_date como data civil
 FINANCIAL: ageDays/daysUntilDue/daysOverdue; somas via sumMoneyAmounts (numeric); exclui VOIDED/CANCELLED
 BUCKETS: DEFAULT_AGING_BUCKET_POLICY vazio; AGING_BUCKET_BANDS opcional via env
-READ_MODELS: OS vencidas/próximas, SR/medições/faturamento envelhecendo, recebíveis vencidos — queries agregadas paralelas
+READ_MODELS: OS vencidas/prÃ³ximas, SR/mediÃ§Ãµes/faturamento envelhecendo, recebÃ­veis vencidos â€” queries agregadas paralelas
 AUTHZ: grants + scope SQL; financial oculto sem billing grant
 QUALITY_GATE: PASS
 NEXT_ALLOWED_PROMPT: 74
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
-  Estados paid/sent não modelados no schema — não inventados; awaiting_payment/overdue derivados de FINALIZED + due_date.
-  EXPLAIN na query crítica de OS vencida (aging.integration.spec.ts).
-  Prompt 74 não executado.
+  Estados paid/sent nÃ£o modelados no schema â€” nÃ£o inventados; awaiting_payment/overdue derivados de FINALIZED + due_date.
+  EXPLAIN na query crÃ­tica de OS vencida (aging.integration.spec.ts).
+  Prompt 74 nÃ£o executado.
 ```
 
-## Prompt 74 — Produtividade operacional
+## Prompt 74 â€” Produtividade operacional
 
 ```
 PROMPT_ID: 74
@@ -4097,23 +4097,23 @@ ARTIFACTS:
   apps/api/src/analytics/productivity.integration.spec.ts
 ENDPOINT: GET /api/v1/analytics/productivity?period=&from=&to=&groupBy=&unitId=&archetype=
 METRICS: throughput, onTimeRate, averageCycleTime, reworkRate (measurement_rejection), utilization (allocated/planned window), evidenceCompleteness, measurementAcceptance
-DENOMINATORS: explícitos em RateMetric; value=null quando amostra insuficiente
-GROUPING: unit | archetype | none — sem ranking individual
+DENOMINATORS: explÃ­citos em RateMetric; value=null quando amostra insuficiente
+GROUPING: unit | archetype | none â€” sem ranking individual
 PERIODS: today | week | month | custom (timezone empresarial)
-HISTORICAL: service_snapshot congelado por OS; sem score consolidado 0–100
+HISTORICAL: service_snapshot congelado por OS; sem score consolidado 0â€“100
 QUALITY_GATE: PASS
 NEXT_ALLOWED_PROMPT: 75
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
-  Rework usa rejeição de medição (conceito existente); OS reopen não modelado.
-  Utilização = janela alocada / janela planejada quando denominador > 0.
-  Evidência derivada de service_snapshot + execution_evidence/entries no momento da conclusão.
-  Prompt 75 não executado.
+  Rework usa rejeiÃ§Ã£o de mediÃ§Ã£o (conceito existente); OS reopen nÃ£o modelado.
+  UtilizaÃ§Ã£o = janela alocada / janela planejada quando denominador > 0.
+  EvidÃªncia derivada de service_snapshot + execution_evidence/entries no momento da conclusÃ£o.
+  Prompt 75 nÃ£o executado.
 ```
 
-## Quality gate Prompt 74 (evidência)
+## Quality gate Prompt 74 (evidÃªncia)
 
-| Cenário de teste | Resultado | Evidência |
+| CenÃ¡rio de teste | Resultado | EvidÃªncia |
 |------------------|-----------|-----------|
 | zero denominator | PASS | productivity.domain.spec.ts |
 | one OS cycle time | PASS | productivity.domain.spec.ts |
@@ -4129,27 +4129,27 @@ NOTES:
 
 ---
 
-## Quality gate Prompt 73 (evidência)
+## Quality gate Prompt 73 (evidÃªncia)
 
-| Cenário de teste | Resultado | Evidência |
+| CenÃ¡rio de teste | Resultado | EvidÃªncia |
 |------------------|-----------|-----------|
 | OS dentro do prazo | PASS | aging.domain.spec.ts |
 | vencimento exatamente agora | PASS | aging.domain.spec.ts |
 | OS vencida (derivada) | PASS | aging.domain.spec.ts + integration |
-| OS terminal não vencida | PASS | aging.domain.spec.ts |
+| OS terminal nÃ£o vencida | PASS | aging.domain.spec.ts |
 | billing futuro / vencido | PASS | aging.domain.spec.ts |
 | timezone / due date civil | PASS | aging.domain.spec.ts |
 | authorization scope | PASS | aging.integration.spec.ts |
 | Decimal sums | PASS | aging.domain.spec.ts |
 | financial hidden without grant | PASS | aging-response.serializer.spec.ts |
-| EXPLAIN query crítica | PASS | aging.integration.spec.ts |
+| EXPLAIN query crÃ­tica | PASS | aging.integration.spec.ts |
 | API typecheck | PASS | tsc --noEmit |
 
 ---
 
-## Quality gate Prompt 72 (evidência)
+## Quality gate Prompt 72 (evidÃªncia)
 
-| Cenário de teste | Resultado | Evidência |
+| CenÃ¡rio de teste | Resultado | EvidÃªncia |
 |------------------|-----------|-----------|
 | read model scope isolation | PASS | operational-dashboard.integration.spec.ts |
 | access denied without grants | PASS | operational-dashboard.integration.spec.ts |
@@ -4161,9 +4161,9 @@ NOTES:
 
 ---
 
-## Quality gate Prompt 71 (evidência)
+## Quality gate Prompt 71 (evidÃªncia)
 
-| Cenário de teste | Resultado | Evidência |
+| CenÃ¡rio de teste | Resultado | EvidÃªncia |
 |------------------|-----------|-----------|
 | success | PASS | notification-delivery.integration.spec.ts IN_APP delivered |
 | transient failure | PASS | notification-delivery.service.spec.ts + integration retry |
@@ -4178,11 +4178,11 @@ NOTES:
 
 ---
 
-## Prompt 75 — Dashboard executivo e gráficos
+## Prompt 75 â€” Dashboard executivo e grÃ¡ficos
 
 ```
 PROMPT_ID: 75
-PROMPT_TITLE: Dashboard executivo e gráficos
+PROMPT_TITLE: Dashboard executivo e grÃ¡ficos
 EXECUTED_AT: 2026-08-29
 EXECUTION_STATUS: PASS
 COMMIT: feat(dashboard): add operational analytics and productivity views
@@ -4200,27 +4200,27 @@ ARTIFACTS:
   apps/web/src/dashboard/pages/OperationalDashboardPage.tsx
 ENDPOINT: GET /api/v1/dashboard/executive?period=&from=&to=&unitId=
 CHARTS: SVG/CSS sem biblioteca externa; bar (status), line (throughput), SLA com denominador, aging financeiro (buckets via env)
-ATTENTION: OS vencidas (qty + maior atraso + link filtrado), vencendo em breve, medições, faturamentos vencidos, divergências
-PRODUCTIVITY: painel sem gauge 0–100; métricas separadas embutidas na resposta executiva
+ATTENTION: OS vencidas (qty + maior atraso + link filtrado), vencendo em breve, mediÃ§Ãµes, faturamentos vencidos, divergÃªncias
+PRODUCTIVITY: painel sem gauge 0â€“100; mÃ©tricas separadas embutidas na resposta executiva
 URL_STATE: period (+ unitId quando autorizado)
 QUALITY_GATE: PASS
 NEXT_ALLOWED_PROMPT: 76
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
-  Endpoint único evita waterfall no frontend; /dashboard/operational preservado.
-  Aging financeiro só renderiza quando AGING_BUCKET_BANDS configurado.
+  Endpoint Ãºnico evita waterfall no frontend; /dashboard/operational preservado.
+  Aging financeiro sÃ³ renderiza quando AGING_BUCKET_BANDS configurado.
   Prompt 76 executado (PASS).
 ```
 
-## Quality gate Prompt 75 (evidência)
+## Quality gate Prompt 75 (evidÃªncia)
 
-| Cenário de teste | Resultado | Evidência |
+| CenÃ¡rio de teste | Resultado | EvidÃªncia |
 |------------------|-----------|-----------|
 | overdue card com maior atraso | PASS | dashboard.executive.test.tsx, executive-dashboard-response.serializer.spec.ts |
 | zero overdue | PASS | executive-dashboard-response.serializer.spec.ts |
 | productivity sem score composto | PASS | dashboard.executive.test.tsx |
 | aging buckets | PASS | dashboard.executive.test.tsx |
-| charts (bar + tabela acessível) | PASS | dashboard.executive.test.tsx |
+| charts (bar + tabela acessÃ­vel) | PASS | dashboard.executive.test.tsx |
 | empty attention | PASS | dashboard.executive.test.tsx |
 | filtros URL (period) | PASS | dashboard.e2e.test.tsx |
 | single API call | PASS | dashboard.e2e.test.tsx |
@@ -4229,11 +4229,11 @@ NOTES:
 
 ---
 
-## Prompt 76 — Alertas operacionais de negócio
+## Prompt 76 â€” Alertas operacionais de negÃ³cio
 
 ```
 PROMPT_ID: 76
-PROMPT_TITLE: Alertas operacionais de negócio
+PROMPT_TITLE: Alertas operacionais de negÃ³cio
 EXECUTED_AT: 2026-08-29
 EXECUTION_STATUS: PASS
 COMMIT: 4459440 feat(alerts): implement SLA and overdue business alerts
@@ -4255,14 +4255,14 @@ QUALITY_GATE: PASS
 NEXT_ALLOWED_PROMPT: 77
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
-  Scheduler bootstrap movido para BackgroundJobsModule (evita dependência circular).
+  Scheduler bootstrap movido para BackgroundJobsModule (evita dependÃªncia circular).
   Alertas persistidos em alt.business_alerts (separado de ntf.notifications).
   Prompt 77 executado (PASS).
 ```
 
-## Quality gate Prompt 76 (evidência)
+## Quality gate Prompt 76 (evidÃªncia)
 
-| Cenário de teste | Resultado | Evidência |
+| CenÃ¡rio de teste | Resultado | EvidÃªncia |
 |------------------|-----------|-----------|
 | before deadline (no overdue) | PASS | alert-evaluation.engine.spec.ts |
 | at deadline (overdue) | PASS | alert-evaluation.engine.spec.ts |
@@ -4278,11 +4278,11 @@ NOTES:
 
 ---
 
-## Prompt 77 — Busca avançada
+## Prompt 77 â€” Busca avanÃ§ada
 
 ```
 PROMPT_ID: 77
-PROMPT_TITLE: Busca avançada
+PROMPT_TITLE: Busca avanÃ§ada
 EXECUTED_AT: 2026-08-29
 EXECUTION_STATUS: PASS
 COMMIT: 9cf1225 feat(search): implement permission-aware advanced search
@@ -4292,28 +4292,28 @@ ARTIFACTS:
   apps/web/src/search/**
 ENDPOINT: GET /api/v1/search?q=&types=&status=&clientId=&serviceDefinitionId=&from=&to=&limit=&offset=
 ENTITIES: CLIENT, SERVICE_REQUEST, PROPOSAL, PURCHASE_ORDER, SERVICE_ORDER, ASSET, DOCUMENT, MEASUREMENT, BILLING_RECORD
-NORMALIZATION: CNPJ, placa, códigos (OS/PO/RC), UUID, texto (pg_trgm)
-INDEXES: pg_trgm GIN (nomes), text_pattern_ops (códigos OS)
-AUTHZ: escopo por grant de list/read existente — sem buscar tudo e filtrar no frontend
+NORMALIZATION: CNPJ, placa, cÃ³digos (OS/PO/RC), UUID, texto (pg_trgm)
+INDEXES: pg_trgm GIN (nomes), text_pattern_ops (cÃ³digos OS)
+AUTHZ: escopo por grant de list/read existente â€” sem buscar tudo e filtrar no frontend
 FRONTEND: GlobalSearchBar no header, /app/search, debounce 300ms, AbortController, highlight seguro
 RECENT_SEARCHES: sessionStorage apenas com VITE_SEARCH_RECENT_ENABLED=true
 QUALITY_GATE: PASS
 NEXT_ALLOWED_PROMPT: 78
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
-  PostgreSQL suficiente para fase inicial; search engine externo não introduzido.
+  PostgreSQL suficiente para fase inicial; search engine externo nÃ£o introduzido.
   Prompt 78 executado (PASS).
 ```
 
-## Quality gate Prompt 77 (evidência)
+## Quality gate Prompt 77 (evidÃªncia)
 
-| Cenário de teste | Resultado | Evidência |
+| CenÃ¡rio de teste | Resultado | EvidÃªncia |
 |------------------|-----------|-----------|
-| CNPJ formatado/dígitos | PASS | search-query-normalizer.spec.ts, search.integration.spec.ts |
-| código OS/PO | PASS | search-query-normalizer.spec.ts |
+| CNPJ formatado/dÃ­gitos | PASS | search-query-normalizer.spec.ts, search.integration.spec.ts |
+| cÃ³digo OS/PO | PASS | search-query-normalizer.spec.ts |
 | nome parcial | PASS | search.integration.spec.ts (paginate) |
 | sem resultado | PASS | search.integration.spec.ts |
-| paginação/limite | PASS | search.integration.spec.ts |
+| paginaÃ§Ã£o/limite | PASS | search.integration.spec.ts |
 | SQL injection (parametrizado) | PASS | search-query-normalizer.spec.ts |
 | IDOR/escopo | PASS | search.integration.spec.ts |
 | race rapid typing | PASS | search.components.test.tsx |
@@ -4325,11 +4325,11 @@ NOTES:
 
 ---
 
-## Prompt 78 — Relatórios e exportações
+## Prompt 78 â€” RelatÃ³rios e exportaÃ§Ãµes
 
 ```
 PROMPT_ID: 78
-PROMPT_TITLE: Relatórios e exportações
+PROMPT_TITLE: RelatÃ³rios e exportaÃ§Ãµes
 EXECUTED_AT: 2026-08-29
 EXECUTION_STATUS: PASS
 COMMIT: c912442 feat(reporting): implement auditable reports and exports
@@ -4344,24 +4344,24 @@ ENDPOINT:
   GET /api/v1/reports/exports/:exportId
   GET /api/v1/reports/exports/:exportId/download
   DELETE /api/v1/reports/exports/:exportId
-REPORTS: OS por período/cliente/serviço, vencidas, produtividade, utilização de ativos, medições, aging financeiro, faturamentos, recebimentos
+REPORTS: OS por perÃ­odo/cliente/serviÃ§o, vencidas, produtividade, utilizaÃ§Ã£o de ativos, mediÃ§Ãµes, aging financeiro, faturamentos, recebimentos
 CONTRACT: name, filters, columns, sort, timezone, generatedAt, actor, scope
-EXPORT: CSV (v1); XLSX/PDF retornam FORMAT_UNSUPPORTED até implementação dedicada
+EXPORT: CSV (v1); XLSX/PDF retornam FORMAT_UNSUPPORTED atÃ© implementaÃ§Ã£o dedicada
 LARGE_VOLUME: batch LIMIT/OFFSET + background job REPORT_GENERATION acima de syncRowThreshold (500)
-CSV_INJECTION: sanitização = + - @ com testes explícitos
-SECURITY: escopo por grants existentes; auditoria em export sensível (actor, timestamp, report, filters, rowCount, correlation)
-FRONTEND: /app/reports — filtros, preview limitado, generate, progress/poll, download não bloqueante
+CSV_INJECTION: sanitizaÃ§Ã£o = + - @ com testes explÃ­citos
+SECURITY: escopo por grants existentes; auditoria em export sensÃ­vel (actor, timestamp, report, filters, rowCount, correlation)
+FRONTEND: /app/reports â€” filtros, preview limitado, generate, progress/poll, download nÃ£o bloqueante
 QUALITY_GATE: PASS
 NEXT_ALLOWED_PROMPT: 79
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
-  XLSX e PDF não implementados neste prompt (CSV prioritário).
+  XLSX e PDF nÃ£o implementados neste prompt (CSV prioritÃ¡rio).
   Prompt 79 executado (PASS).
 ```
 
-## Quality gate Prompt 78 (evidência)
+## Quality gate Prompt 78 (evidÃªncia)
 
-| Cenário de teste | Resultado | Evidência |
+| CenÃ¡rio de teste | Resultado | EvidÃªncia |
 |------------------|-----------|-----------|
 | filtros/preview | PASS | reports.components.test.tsx, reports.integration.spec.ts |
 | totals vs preview limit | PASS | reports.integration.spec.ts |
@@ -4369,14 +4369,14 @@ NOTES:
 | CSV injection | PASS | csv-export.spec.ts, reports.integration.spec.ts |
 | async/cancel signal | PASS | report-generation.service.spec.ts |
 | timezone no contrato | PASS | reports.integration.spec.ts |
-| precisão monetária (texto CSV) | PASS | csv-export.spec.ts |
+| precisÃ£o monetÃ¡ria (texto CSV) | PASS | csv-export.spec.ts |
 | acessibilidade UI | PASS | reports.components.test.tsx |
 | API typecheck | PASS | tsc --noEmit |
 | web typecheck | PASS | tsc --noEmit |
 
 ---
 
-## Prompt 79 — Observabilidade
+## Prompt 79 â€” Observabilidade
 
 ```
 PROMPT_ID: 79
@@ -4391,21 +4391,21 @@ ARTIFACTS:
   apps/api/src/documents/storage/object-storage.service.ts
 LOGGING: JSON estruturado (timestamp, level, environment, service, requestId, correlationId, operation, durationMs, result, errorCode, actorId opcional)
 REDACTION: password, tokens, cookie, secret, authorization, CNPJ/email/phone e document content
-METRICS: GET /api/v1/observability/metrics — HTTP rate/error/latency p50/p95/p99, DB pool/latency, worker, backlog outbox/jobs, notification/integration/storage failures
+METRICS: GET /api/v1/observability/metrics â€” HTTP rate/error/latency p50/p95/p99, DB pool/latency, worker, backlog outbox/jobs, notification/integration/storage failures
 BUSINESS_METRICS: separadas em snapshot.business (OS overdue, measurement aging, billing aging)
-TRACING: AsyncLocalStorage + headers x-correlation-id / x-request-id; propagação em worker
+TRACING: AsyncLocalStorage + headers x-correlation-id / x-request-id; propagaÃ§Ã£o em worker
 HEALTH: GET /health/live (liveness), GET /health/ready (readiness DB), GET /health (legado)
 QUALITY_GATE: PASS
 NEXT_ALLOWED_PROMPT: 80
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
-  OpenTelemetry não adicionado — correlação leve via contexto interno.
+  OpenTelemetry nÃ£o adicionado â€” correlaÃ§Ã£o leve via contexto interno.
   Prompt 80 executado (PASS).
 ```
 
-## Quality gate Prompt 79 (evidência)
+## Quality gate Prompt 79 (evidÃªncia)
 
-| Cenário de teste | Resultado | Evidência |
+| CenÃ¡rio de teste | Resultado | EvidÃªncia |
 |------------------|-----------|-----------|
 | correlation propagation | PASS | observability-context.spec.ts |
 | redaction / no secrets | PASS | log-redaction.spec.ts, structured-log.spec.ts |
@@ -4419,11 +4419,11 @@ NOTES:
 
 ---
 
-## Prompt 80 — Alertas técnicos
+## Prompt 80 â€” Alertas tÃ©cnicos
 
 ```
 PROMPT_ID: 80
-PROMPT_TITLE: Alertas técnicos
+PROMPT_TITLE: Alertas tÃ©cnicos
 EXECUTED_AT: 2026-08-30
 EXECUTION_STATUS: PASS
 COMMIT: 6ec5386 ops(observability): add actionable production alerts
@@ -4433,25 +4433,25 @@ ARTIFACTS:
   apps/api/src/observability/services/platform-metrics-collector.service.ts
 ENDPOINT: GET /api/v1/observability/alerts
 ALERTS: high error rate, p95/p99 latency, DB pool saturation, worker stalled, outbox backlog, storage/ERP/tracking/notification failures, backup failure, disk exhaustion
-SEVERITY: INFO (não pagina), WARNING (atenção), CRITICAL (impacto significativo) — escalação por condição
-DURATION: threshold + durationMs por alerta; spikes isolados não disparam
-RUNBOOKS: instruções curtas (meaning, causes, checks, safe action, escalation) para alertas CRITICAL
+SEVERITY: INFO (nÃ£o pagina), WARNING (atenÃ§Ã£o), CRITICAL (impacto significativo) â€” escalaÃ§Ã£o por condiÃ§Ã£o
+DURATION: threshold + durationMs por alerta; spikes isolados nÃ£o disparam
+RUNBOOKS: instruÃ§Ãµes curtas (meaning, causes, checks, safe action, escalation) para alertas CRITICAL
 QUALITY_GATE: PASS
 NEXT_ALLOWED_PROMPT: 81
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
-  Avaliação via endpoint /observability/alerts; estado em memória por processo.
-  Prompt 81 não executado.
+  AvaliaÃ§Ã£o via endpoint /observability/alerts; estado em memÃ³ria por processo.
+  Prompt 81 nÃ£o executado.
 ```
 
-## Quality gate Prompt 80 (evidência)
+## Quality gate Prompt 80 (evidÃªncia)
 
-| Cenário de teste | Resultado | Evidência |
+| CenÃ¡rio de teste | Resultado | EvidÃªncia |
 |------------------|-----------|-----------|
 | threshold + duration firing | PASS | technical-alert.engine.spec.ts |
-| resolution após normalização | PASS | technical-alert.engine.spec.ts |
+| resolution apÃ³s normalizaÃ§Ã£o | PASS | technical-alert.engine.spec.ts |
 | spike isolado ignorado | PASS | technical-alert.engine.spec.ts |
-| severidade não tudo CRITICAL | PASS | technical-alert.engine.spec.ts |
+| severidade nÃ£o tudo CRITICAL | PASS | technical-alert.engine.spec.ts |
 | runbook em CRITICAL | PASS | technical-alert.engine.spec.ts |
 | backup failure imediato | PASS | technical-alert.engine.spec.ts |
 | amostra insuficiente error rate | PASS | technical-alert.engine.spec.ts |
@@ -4459,7 +4459,7 @@ NOTES:
 
 ---
 
-## Prompt 81 — Security hardening
+## Prompt 81 â€” Security hardening
 
 ```
 PROMPT_ID: 81
@@ -4487,13 +4487,13 @@ QUALITY_GATE: PASS
 NEXT_ALLOWED_PROMPT: 82
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
-  pnpm/npm audit indisponível no ambiente (sem lockfile npm); repositório usa pnpm-lock.yaml — auditar em CI.
-  Prompt 82 não executado.
+  pnpm/npm audit indisponÃ­vel no ambiente (sem lockfile npm); repositÃ³rio usa pnpm-lock.yaml â€” auditar em CI.
+  Prompt 82 nÃ£o executado.
 ```
 
-## Quality gate Prompt 81 (evidência)
+## Quality gate Prompt 81 (evidÃªncia)
 
-| Cenário de teste | Resultado | Evidência |
+| CenÃ¡rio de teste | Resultado | EvidÃªncia |
 |------------------|-----------|-----------|
 | mass assignment rejection | PASS | forbidden-payload-fields.spec.ts, security-regression.spec.ts |
 | privileged fields on critical DTOs | PASS | security-regression.spec.ts |
@@ -4506,7 +4506,7 @@ NOTES:
 
 ---
 
-## Prompt 82 — Performance e load tests
+## Prompt 82 â€” Performance e load tests
 
 ```
 PROMPT_ID: 82
@@ -4519,7 +4519,7 @@ ARTIFACTS:
   apps/api/vitest.perf.config.ts
   packages/database/migrations/0035_service_orders_list_perf_index.sql
   docs/16-testing/performance-test-plan.md
-DATASET: synthetic seeder (smoke + full profiles) — clients, OS, execution entries, documents, measurements, billing
+DATASET: synthetic seeder (smoke + full profiles) â€” clients, OS, execution entries, documents, measurements, billing
 BENCHMARKS: reproducible scenarios with throughput, p50/p95/p99, error rate, memory, DB pool
 BUDGETS: derived from measured baselines with 2.5x headroom (not invented SLAs)
 FIXES:
@@ -4532,12 +4532,12 @@ NEXT_ALLOWED_PROMPT: 83
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
   Full benchmark gated by PERF_FULL=1; smoke in CI via pnpm test:perf:smoke.
-  Prompt 83 não executado.
+  Prompt 83 nÃ£o executado.
 ```
 
-## Quality gate Prompt 82 (evidência)
+## Quality gate Prompt 82 (evidÃªncia)
 
-| Cenário de teste | Resultado | Evidência |
+| CenÃ¡rio de teste | Resultado | EvidÃªncia |
 |------------------|-----------|-----------|
 | smoke benchmarks within budget | PASS | performance-smoke.perf-smoke.spec.ts |
 | concurrency CNPJ integrity | PASS | performance-concurrency.perf.spec.ts |
@@ -4548,7 +4548,7 @@ NOTES:
 
 ---
 
-## Prompt 83 — Cache controlado
+## Prompt 83 â€” Cache controlado
 
 ```
 PROMPT_ID: 83
@@ -4574,13 +4574,13 @@ QUALITY_GATE: PASS
 NEXT_ALLOWED_PROMPT: 84
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
-  Sem commit perf(cache): add measured application caching — load tests não justificam.
-  Prompt 84 não executado.
+  Sem commit perf(cache): add measured application caching â€” load tests nÃ£o justificam.
+  Prompt 84 nÃ£o executado.
 ```
 
-## Quality gate Prompt 83 (evidência)
+## Quality gate Prompt 83 (evidÃªncia)
 
-| Cenário de teste | Resultado | Evidência |
+| CenÃ¡rio de teste | Resultado | EvidÃªncia |
 |------------------|-----------|-----------|
 | gate NOT_REQUIRED vs P82 baselines | PASS | cache-decision.spec.ts |
 | no CacheModule in app | PASS | cache-decision.spec.ts |
@@ -4590,7 +4590,7 @@ NOTES:
 
 ---
 
-## Prompt 84 — Backup
+## Prompt 84 â€” Backup
 
 ```
 PROMPT_ID: 84
@@ -4601,12 +4601,12 @@ COMMIT: ed56922 ops(backup): implement monitored backup strategy
 ARTIFACTS:
   apps/api/src/ops/backup/**
   docs/19-operations/backup-strategy.md
-RPO_RTO: TARGET_NOT_DEFINED (DDP-016) — PRODUCTION_BLOCKER registrado
+RPO_RTO: TARGET_NOT_DEFINED (DDP-016) â€” PRODUCTION_BLOCKER registrado
 POSTGRES: pg_dump -Fc (local/docker); WAL/PITR documentado para infra gerenciada
 OBJECT_STORAGE: snapshot + manifest sha256 + tar criptografado opcional
 SECURITY: BACKUP_ENCRYPTION_KEY separada; chave nunca no artefato
-MONITORING: BACKUP_STATUS_FILE + alerta técnico imediato em falha
-RETENTION: BACKUP_RETENTION_DAILY (engenharia) — separado de retenção legal (DDP-019)
+MONITORING: BACKUP_STATUS_FILE + alerta tÃ©cnico imediato em falha
+RETENTION: BACKUP_RETENTION_DAILY (engenharia) â€” separado de retenÃ§Ã£o legal (DDP-019)
 QUALITY_GATE: PASS
 NEXT_ALLOWED_PROMPT: 85
 NEXT_PROMPT_EXECUTED: NO
@@ -4614,21 +4614,21 @@ NOTES:
   Prompt 85 executado (PASS).
 ```
 
-## Quality gate Prompt 84 (evidência)
+## Quality gate Prompt 84 (evidÃªncia)
 
-| Cenário de teste | Resultado | Evidência |
+| CenÃ¡rio de teste | Resultado | EvidÃªncia |
 |------------------|-----------|-----------|
 | backup executado (postgres + object storage) | PASS | backup-runner.spec.ts |
-| artefato válido e storage acessível | PASS | backup-runner.spec.ts |
+| artefato vÃ¡lido e storage acessÃ­vel | PASS | backup-runner.spec.ts |
 | checksum / criptografia | PASS | backup-crypto.spec.ts |
-| falha registra status monitorável | PASS | backup-runner.spec.ts |
+| falha registra status monitorÃ¡vel | PASS | backup-runner.spec.ts |
 | alerta em falha de backup | PASS | technical-alert.engine.spec.ts |
-| RPO/RTO não inventados | PASS | backup-strategy.md |
+| RPO/RTO nÃ£o inventados | PASS | backup-strategy.md |
 | API typecheck | PASS | tsc --noEmit |
 
 ---
 
-## Prompt 85 — Restore e disaster recovery
+## Prompt 85 â€” Restore e disaster recovery
 
 ```
 PROMPT_ID: 85
@@ -4640,11 +4640,11 @@ COMMIT: cc386bf ops(dr): validate disaster recovery procedure
 ARTIFACTS:
   apps/api/src/ops/dr/**
   docs/19-operations/dr-restore-runbook.md
-ISOLATION: DR_DATABASE_URL sandbox; bloqueio automático em produção
+ISOLATION: DR_DATABASE_URL sandbox; bloqueio automÃ¡tico em produÃ§Ã£o
 SCENARIOS: db_loss, application_host_loss, object_storage_partial_loss, bad_deployment, credential_rotation
 VERIFICATION: migration consistency, referential integrity, document hashes, domain smoke, login
 METRICS: RPO/RTO medidos; metas TARGET_NOT_DEFINED (DDP-016)
-RULE: backup não aprovado até restore PASS
+RULE: backup nÃ£o aprovado atÃ© restore PASS
 QUALITY_GATE: PASS
 NEXT_ALLOWED_PROMPT: 86
 NEXT_PROMPT_EXECUTED: NO
@@ -4652,26 +4652,26 @@ NOTES:
   Prompt 86 executado (PASS).
 ```
 
-## Quality gate Prompt 85 (evidência)
+## Quality gate Prompt 85 (evidÃªncia)
 
-| Cenário de teste | Resultado | Evidência |
+| CenÃ¡rio de teste | Resultado | EvidÃªncia |
 |------------------|-----------|-----------|
 | restore isolado object storage + hashes | PASS | dr-runner.spec.ts |
-| drill completo backup→desastre→restore→verify | PASS | dr-runner.spec.ts |
+| drill completo backupâ†’desastreâ†’restoreâ†’verify | PASS | dr-runner.spec.ts |
 | integridade documentos (objeto ausente) | PASS | dr-runner.spec.ts |
-| bloqueio ambiente produção | PASS | dr-runner.spec.ts |
-| 5 cenários de desastre documentados | PASS | dr-types.ts |
+| bloqueio ambiente produÃ§Ã£o | PASS | dr-runner.spec.ts |
+| 5 cenÃ¡rios de desastre documentados | PASS | dr-types.ts |
 | RPO/RTO medidos sem inventar metas | PASS | dr-metrics.ts |
 | runbook operacional | PASS | dr-restore-runbook.md |
 | API typecheck | PASS | tsc --noEmit |
 
 ---
 
-## Prompt 86 — Homologação
+## Prompt 86 â€” HomologaÃ§Ã£o
 
 ```
 PROMPT_ID: 86
-PROMPT_TITLE: Homologação
+PROMPT_TITLE: HomologaÃ§Ã£o
 EXECUTED_AT: 2026-08-30
 EXECUTION_STATUS: PASS
 COMMIT: e6549c9 ops(hml): establish production-like homologation environment
@@ -4683,11 +4683,11 @@ ARTIFACTS:
   docs/19-operations/hml-environment.md
 ISOLATION: CISNE_ENV=hml, DB/storage/secrets/URLs dedicados
 BUILD: mesma imagem pnpm build (Dockerfile.api/web)
-DATA: bootstrap sintético; sem PII de produção
+DATA: bootstrap sintÃ©tico; sem PII de produÃ§Ã£o
 INTEGRATIONS: sandbox default; email/WhatsApp outbound desligados
 MIGRATIONS: drizzle migrate no deploy
 SMOKE: health, login, client, request, OS, execution, measurement, billing, documents
-OBSERVABILITY: metrics/alerts endpoint incluído no smoke
+OBSERVABILITY: metrics/alerts endpoint incluÃ­do no smoke
 QUALITY_GATE: PASS
 NEXT_ALLOWED_PROMPT: 87
 NEXT_PROMPT_EXECUTED: NO
@@ -4695,20 +4695,20 @@ NOTES:
   Prompt 87 executado (PASS).
 ```
 
-## Quality gate Prompt 86 (evidência)
+## Quality gate Prompt 86 (evidÃªncia)
 
-| Cenário de teste | Resultado | Evidência |
+| CenÃ¡rio de teste | Resultado | EvidÃªncia |
 |------------------|-----------|-----------|
-| isolamento HML vs produção | PASS | hml-config.spec.ts |
+| isolamento HML vs produÃ§Ã£o | PASS | hml-config.spec.ts |
 | outbound sandbox default | PASS | hml-config.spec.ts |
-| smoke pós-deploy (domínios core) | PASS | hml-smoke.spec.ts |
-| compose + Dockerfiles promovíveis | PASS | docker/hml/* |
+| smoke pÃ³s-deploy (domÃ­nios core) | PASS | hml-smoke.spec.ts |
+| compose + Dockerfiles promovÃ­veis | PASS | docker/hml/* |
 | migrations via drizzle no deploy | PASS | hml-deploy.ts |
 | API typecheck | PASS | tsc --noEmit |
 
 ---
 
-## Prompt 87 — CD Profissional
+## Prompt 87 â€” CD Profissional
 
 ```
 PROMPT_ID: 87
@@ -4724,11 +4724,11 @@ ARTIFACTS:
   docs/19-operations/cd-pipeline.md
 BUILD_ONCE: CI publica artifact; CD promove mesmo digest sem rebuild PRD
 VERSIONING: commitSha, artifactDigest, version, timestamp, environment
-HML: deploy automático pós-CI + smoke obrigatório
+HML: deploy automÃ¡tico pÃ³s-CI + smoke obrigatÃ³rio
 PRD: environment production + PRD_PROMOTION_APPROVED=I_UNDERSTAND
 MIGRATIONS: backward-compatible vs breaking-high-risk; expand/contract
 SECRETS: scan no artifact; runtime via secret store
-ROLLBACK: histórico por digest; databaseRollbackSupported=false
+ROLLBACK: histÃ³rico por digest; databaseRollbackSupported=false
 QUALITY_GATE: PASS
 NEXT_ALLOWED_PROMPT: 88
 NEXT_PROMPT_EXECUTED: NO
@@ -4736,15 +4736,15 @@ NOTES:
   Prompt 88 executado (PASS).
 ```
 
-## Quality gate Prompt 87 (evidência)
+## Quality gate Prompt 87 (evidÃªncia)
 
-| Cenário de teste | Resultado | Evidência |
+| CenÃ¡rio de teste | Resultado | EvidÃªncia |
 |------------------|-----------|-----------|
 | deploy successful (HML + smoke) | PASS | cd-pipeline.spec.ts |
 | health failure blocks smoke | PASS | cd-pipeline.spec.ts |
 | smoke failure blocks promotion | PASS | cd-pipeline.spec.ts |
 | migration failure blocks deploy | PASS | cd-pipeline.spec.ts |
-| production gate sem aprovação | PASS | cd-pipeline.spec.ts |
+| production gate sem aprovaÃ§Ã£o | PASS | cd-pipeline.spec.ts |
 | same artifact promotion PRD | PASS | cd-pipeline.spec.ts |
 | rollback sem revert DB | PASS | cd-pipeline.spec.ts |
 | secret scan no artifact | PASS | cd-secrets.ts |
@@ -4752,11 +4752,11 @@ NOTES:
 
 ---
 
-## Prompt 88 — Infraestrutura de produção
+## Prompt 88 â€” Infraestrutura de produÃ§Ã£o
 
 ```
 PROMPT_ID: 88
-PROMPT_TITLE: Infraestrutura de produção
+PROMPT_TITLE: Infraestrutura de produÃ§Ã£o
 EXECUTED_AT: 2026-08-30
 EXECUTION_STATUS: PASS
 COMMIT: 8dfd6b4 ops(prod): provision hardened production infrastructure
@@ -4766,12 +4766,12 @@ ARTIFACTS:
   scripts/prod/**
   .env.prod.example
   docs/19-operations/production-infrastructure.md
-COMPUTE: dimensionado via Prompt 82 (concurrency max 3, headroom 2.5x) — 1-2 API replicas
-POSTGRES: storage durável, backup, TLS, connection limits, rede restrita
+COMPUTE: dimensionado via Prompt 82 (concurrency max 3, headroom 2.5x) â€” 1-2 API replicas
+POSTGRES: storage durÃ¡vel, backup, TLS, connection limits, rede restrita
 OBJECT_STORAGE: private, versioning, lifecycle, backup alinhado
-NETWORK: edge 80/443 apenas; DB/storage não públicos
-TLS: HTTPS obrigatório; Caddy com cert automatizado
-SECRETS: secret manager + rotação 90d; scan de config
+NETWORK: edge 80/443 apenas; DB/storage nÃ£o pÃºblicos
+TLS: HTTPS obrigatÃ³rio; Caddy com cert automatizado
+SECRETS: secret manager + rotaÃ§Ã£o 90d; scan de config
 SERVICE_ACCOUNT: least privilege; sem credencial admin cloud
 SCALING: sessions DB, outbox locking, S3 compartilhado para multi-instance
 COST: PROD_COST_ALERTS_ENABLED + PROD_MONTHLY_BUDGET_USD
@@ -4783,15 +4783,15 @@ NOTES:
   Prompt 89 executado (PASS).
 ```
 
-## Quality gate Prompt 88 (evidência)
+## Quality gate Prompt 88 (evidÃªncia)
 
-| Cenário de teste | Resultado | Evidência |
+| CenÃ¡rio de teste | Resultado | EvidÃªncia |
 |------------------|-----------|-----------|
 | sizing from P82 baseline | PASS | prod-sizing.ts |
 | full infrastructure validation | PASS | prod-validation.spec.ts |
-| network — DB not public | PASS | prod-validation.spec.ts |
+| network â€” DB not public | PASS | prod-validation.spec.ts |
 | TLS required on public URLs | PASS | prod-validation.spec.ts |
-| scaling — shared S3 for replicas | PASS | prod-validation.spec.ts |
+| scaling â€” shared S3 for replicas | PASS | prod-validation.spec.ts |
 | service account least privilege | PASS | prod-validation.spec.ts |
 | security scan embedded secrets | PASS | prod-validation.spec.ts |
 | secret store gate | PASS | prod-validation.spec.ts |
@@ -4799,7 +4799,7 @@ NOTES:
 
 ---
 
-## Prompt 89 — UAT Empresarial
+## Prompt 89 â€” UAT Empresarial
 
 ```
 PROMPT_ID: 89
@@ -4812,13 +4812,13 @@ ARTIFACTS:
   apps/api/src/vertical/first-vertical-quality-gate.integration.spec.ts (refatorado)
   docs/16-testing/uat-*.md
   scripts/uat/run.mjs
-SCENARIOS: locação (RENTAL), transporte (TRANSPORT), obra composto (CIVIL_WORK)
-FLOW: Cliente→Solicitação→Proposta/PO→OS→Planejamento→Alocação→Execução→Evidência→Medição→Faturamento→Nota Fatura→Documentos
-PROFILES: control_admin, executor, finance — visibilidade e SoD
+SCENARIOS: locaÃ§Ã£o (RENTAL), transporte (TRANSPORT), obra composto (CIVIL_WORK)
+FLOW: Clienteâ†’SolicitaÃ§Ã£oâ†’Proposta/POâ†’OSâ†’Planejamentoâ†’AlocaÃ§Ã£oâ†’ExecuÃ§Ã£oâ†’EvidÃªnciaâ†’MediÃ§Ã£oâ†’Faturamentoâ†’Nota Faturaâ†’Documentos
+PROFILES: control_admin, executor, finance â€” visibilidade e SoD
 UX: shell responsivo automatizado; checklist manual PENDING (sem falsificar)
 DEFECTS: nenhum BLOCKER/CRITICAL aberto
 UAT_ENGINEERING: APPROVED
-BUSINESS_SIGN_OFF: PENDING (não falsificado)
+BUSINESS_SIGN_OFF: PENDING (nÃ£o falsificado)
 GO_LIVE: BLOCKED por sign-off empresarial + RPO/RTO TARGET_NOT_DEFINED
 QUALITY_GATE: PASS
 NEXT_ALLOWED_PROMPT: 90
@@ -4827,22 +4827,22 @@ NOTES:
   Prompt 90 executado (PASS).
 ```
 
-## Quality gate Prompt 89 (evidência)
+## Quality gate Prompt 89 (evidÃªncia)
 
-| Cenário de teste | Resultado | Evidência |
+| CenÃ¡rio de teste | Resultado | EvidÃªncia |
 |------------------|-----------|-----------|
-| locação end-to-end | PASS | uat-business.integration.spec.ts |
+| locaÃ§Ã£o end-to-end | PASS | uat-business.integration.spec.ts |
 | transporte end-to-end | PASS | uat-business.integration.spec.ts |
 | obra composto end-to-end | PASS | uat-business.integration.spec.ts |
 | perfis Admin/Executor/Finance | PASS | uat-profile-checks.ts |
 | severidade BLOCKER/CRITICAL | PASS | uat-verdict.spec.ts |
-| vertical regressão obra | PASS | first-vertical-quality-gate.integration.spec.ts |
+| vertical regressÃ£o obra | PASS | first-vertical-quality-gate.integration.spec.ts |
 | UX shell responsivo | PASS | vertical-quality-gate.e2e.test.tsx |
 | API typecheck | PASS | tsc --noEmit |
 
 ---
 
-## Prompt 90 — Piloto controlado
+## Prompt 90 â€” Piloto controlado
 
 ```
 PROMPT_ID: 90
@@ -4855,11 +4855,11 @@ ARTIFACTS:
   scripts/pilot/status.mjs
   .env.pilot.example
   docs/19-operations/pilot-program.md
-SCOPE: poucos usuários/OS/volume; archetypes UAT 89; sem migração total
-FEATURE_FLAGS: env gates mínimos somente com PILOT_INFRA_EXTENDED
+SCOPE: poucos usuÃ¡rios/OS/volume; archetypes UAT 89; sem migraÃ§Ã£o total
+FEATURE_FLAGS: env gates mÃ­nimos somente com PILOT_INFRA_EXTENDED
 OBSERVATION: errors, latency, DB, worker, OS overdue, allocation, support, billing
 FEEDBACK: bug | ux_improvement | new_feature | business_rule_change (separados)
-EXIT: ACTIVE | EXIT_READY | BLOCKED — sem BLOCKER aberto
+EXIT: ACTIVE | EXIT_READY | BLOCKED â€” sem BLOCKER aberto
 QUALITY_GATE: PASS
 NEXT_ALLOWED_PROMPT: 91
 NEXT_PROMPT_EXECUTED: NO
@@ -4868,22 +4868,22 @@ NOTES:
   Piloto ativo; go-live completo ainda bloqueado por sign-off empresarial.
 ```
 
-## Quality gate Prompt 90 (evidência)
+## Quality gate Prompt 90 (evidÃªncia)
 
-| Cenário de teste | Resultado | Evidência |
+| CenÃ¡rio de teste | Resultado | EvidÃªncia |
 |------------------|-----------|-----------|
 | escopo limitado | PASS | pilot-scope.ts |
-| bloqueio migração total | PASS | pilot-runner.spec.ts |
+| bloqueio migraÃ§Ã£o total | PASS | pilot-runner.spec.ts |
 | flags sem framework | PASS | pilot-flags.ts |
 | categorias feedback separadas | PASS | pilot-feedback.ts |
-| observação thresholds | PASS | pilot-observation.ts |
+| observaÃ§Ã£o thresholds | PASS | pilot-observation.ts |
 | exit criteria EXIT_READY/BLOCKED | PASS | pilot-runner.spec.ts |
-| janela mínima observação | PASS | pilot-exit.ts |
+| janela mÃ­nima observaÃ§Ã£o | PASS | pilot-exit.ts |
 | API typecheck | PASS | tsc --noEmit |
 
 ---
 
-## Prompt 91 — Rollback e release safety
+## Prompt 91 â€” Rollback e release safety
 
 ```
 PROMPT_ID: 91
@@ -4896,32 +4896,32 @@ ARTIFACTS:
   scripts/release/drill.mjs
   .env.release.example
   docs/19-operations/release-rollback-strategy.md
-SCOPE: N→N+1→N application rollback; expand/contract DB; compat strategies; idempotent external events
+SCOPE: Nâ†’N+1â†’N application rollback; expand/contract DB; compat strategies; idempotent external events
 ROLLBACK_TRIGGERS: error_rate | health_failure | critical_business_failure
 VALIDATION: health, data_integrity, service_orders, documents, worker, outbox, billing
 QUALITY_GATE: PASS
 NEXT_ALLOWED_PROMPT: 92
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
-  Prompt 92 executado (PASS — decisão NO-GO).
-  Rollback de banco não assumido (databaseRollbackSupported=false).
+  Prompt 92 executado (PASS â€” decisÃ£o NO-GO).
+  Rollback de banco nÃ£o assumido (databaseRollbackSupported=false).
 ```
 
-## Quality gate Prompt 91 (evidência)
+## Quality gate Prompt 91 (evidÃªncia)
 
-| Cenário de teste | Resultado | Evidência |
+| CenÃ¡rio de teste | Resultado | EvidÃªncia |
 |------------------|-----------|-----------|
-| deploy N → N+1 → rollback N (mesmo digest) | PASS | release-drill.spec.ts |
+| deploy N â†’ N+1 â†’ rollback N (mesmo digest) | PASS | release-drill.spec.ts |
 | expand/contract sem downgrade destrutivo | PASS | release-migration-safety.ts |
-| estratégias compat (dual read, flag, migration) | PASS | release-compat.ts |
-| idempotência notifications/ERP/billing/outbox | PASS | release-idempotency.ts |
-| critérios objetivos de rollback | PASS | release-decision.ts |
-| validação pós-rollback (7 domínios) | PASS | release-drill.spec.ts |
+| estratÃ©gias compat (dual read, flag, migration) | PASS | release-compat.ts |
+| idempotÃªncia notifications/ERP/billing/outbox | PASS | release-idempotency.ts |
+| critÃ©rios objetivos de rollback | PASS | release-decision.ts |
+| validaÃ§Ã£o pÃ³s-rollback (7 domÃ­nios) | PASS | release-drill.spec.ts |
 | API typecheck | PASS | tsc --noEmit |
 
 ---
 
-## Prompt 92 — Production readiness gate
+## Prompt 92 â€” Production readiness gate
 
 ```
 PROMPT_ID: 92
@@ -4935,129 +4935,129 @@ ARTIFACTS:
   scripts/readiness/gate.mjs
   .env.readiness.example
   docs/19-operations/production-readiness-gate.md
-ENGINEERING_GATES: CI, CD, Security, Load, Backup, Restore, DR, Observability, Alerts, Rollback, TLS, Secrets, Migrations, E2E — PASS
+ENGINEERING_GATES: CI, CD, Security, Load, Backup, Restore, DR, Observability, Alerts, Rollback, TLS, Secrets, Migrations, E2E â€” PASS
 BUSINESS_BLOCKERS:
   BUSINESS_STAKEHOLDER_SIGN_OFF_PENDING
   RPO_RTO_TARGET_NOT_DEFINED (DDP-016)
   PILOT_NOT_EXIT_READY
   UAT_MANUAL_UX_CHECKLIST_PENDING
-SUPPORT: technical owner, incident channel, rollback authority, escalation — definidos (roles; atribuição nominal pendente)
+SUPPORT: technical owner, incident channel, rollback authority, escalation â€” definidos (roles; atribuiÃ§Ã£o nominal pendente)
 QUALITY_GATE: PASS
 NEXT_ALLOWED_PROMPT: 93 (somente se GO)
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
-  Prompt 93 bloqueado (Prompt 92 NO-GO) — go-live não executado.
-  Não falsificar SUCCESS nem alterar decisão para cumprir cronograma.
+  Prompt 93 bloqueado (Prompt 92 NO-GO) â€” go-live nÃ£o executado.
+  NÃ£o falsificar SUCCESS nem alterar decisÃ£o para cumprir cronograma.
 ```
 
-## Quality gate Prompt 92 (evidência)
+## Quality gate Prompt 92 (evidÃªncia)
 
-| Cenário de teste | Resultado | Evidência |
+| CenÃ¡rio de teste | Resultado | EvidÃªncia |
 |------------------|-----------|-----------|
 | engineering gates PASS | PASS | readiness-gate.spec.ts |
 | NO-GO com blockers reais | PASS | readiness-gate.spec.ts |
-| GO somente com flags explícitas | PASS | readiness-gate.spec.ts |
+| GO somente com flags explÃ­citas | PASS | readiness-gate.spec.ts |
 | support model definido | PASS | readiness-gate.ts |
 | API typecheck | PASS | tsc --noEmit |
 
 ---
 
-## Prompt 93 — GO-LIVE
+## Prompt 93 â€” GO-LIVE
 
 ```
 PROMPT_ID: 93
 PROMPT_TITLE: GO-LIVE
 EXECUTED_AT: 2026-08-30
 EXECUTION_STATUS: BLOCKED
-PRECONDITION: Prompt 92 PRODUCTION_READINESS = GO — NOT MET (NO-GO em e790781)
-GO_LIVE: FAILED (não iniciado)
-PRODUCTION_VERSION: N/A — deploy não executado
-COMMIT: N/A — nenhuma promoção PRD
-SMOKE: FAIL — não executado (pré-requisito ausente)
-DATA_INTEGRITY: FAIL — não validado (go-live não iniciado)
+PRECONDITION: Prompt 92 PRODUCTION_READINESS = GO â€” NOT MET (NO-GO em e790781)
+GO_LIVE: FAILED (nÃ£o iniciado)
+PRODUCTION_VERSION: N/A â€” deploy nÃ£o executado
+COMMIT: N/A â€” nenhuma promoÃ§Ã£o PRD
+SMOKE: FAIL â€” nÃ£o executado (prÃ©-requisito ausente)
+DATA_INTEGRITY: FAIL â€” nÃ£o validado (go-live nÃ£o iniciado)
 BLOCKERS (herdados do Prompt 92):
   BUSINESS_STAKEHOLDER_SIGN_OFF_PENDING
   RPO_RTO_TARGET_NOT_DEFINED (DDP-016)
   PILOT_NOT_EXIT_READY
   UAT_MANUAL_UX_CHECKLIST_PENDING
 ACTIONS_NOT_PERFORMED:
-  - promoção de artifact
-  - aplicação de migrations em produção
-  - smoke pós-deploy
-  - janela de observação
-  - rollback (não aplicável — sem deploy)
-QUALITY_GATE: N/A (prompt não autorizado)
-NEXT_ALLOWED_PROMPT: 93 (reexecutar somente após Prompt 92 = GO)
+  - promoÃ§Ã£o de artifact
+  - aplicaÃ§Ã£o de migrations em produÃ§Ã£o
+  - smoke pÃ³s-deploy
+  - janela de observaÃ§Ã£o
+  - rollback (nÃ£o aplicÃ¡vel â€” sem deploy)
+QUALITY_GATE: N/A (prompt nÃ£o autorizado)
+NEXT_ALLOWED_PROMPT: 93 (reexecutar somente apÃ³s Prompt 92 = GO)
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
-  Prompt 94 bloqueado — go-live (Prompt 93) não bem-sucedido.
-  Governança: não publicar produção com gate NO-GO aberto.
-  Não falsificar SUCCESS nem alterar decisão para cumprir cronograma.
+  Prompt 94 bloqueado â€” go-live (Prompt 93) nÃ£o bem-sucedido.
+  GovernanÃ§a: nÃ£o publicar produÃ§Ã£o com gate NO-GO aberto.
+  NÃ£o falsificar SUCCESS nem alterar decisÃ£o para cumprir cronograma.
 ```
 
 ---
 
-## Prompt 94 — Hypercare pós-go-live
+## Prompt 94 â€” Hypercare pÃ³s-go-live
 
 ```
 PROMPT_ID: 94
-PROMPT_TITLE: Hypercare pós-go-live
+PROMPT_TITLE: Hypercare pÃ³s-go-live
 EXECUTED_AT: 2026-08-30
 EXECUTION_STATUS: BLOCKED
-PRECONDITION: Go-live bem-sucedido (Prompt 93 SUCCESS) — NOT MET (Prompt 93 FAILED/BLOCKED)
-SYSTEM: UNSTABLE (hypercare não iniciado — sem produção ativa)
-MONITORING: N/A — sem janela pós-go-live
-DEFECT_TRIAGE: N/A — sem operação real em produção
-HOTFIX_POLICY: N/A — sem incidentes de produção
-METRICS_COMPARISON: N/A — expected vs actual requer baseline pós-deploy
-HYPERCARE_CLOSURE: N/A — critérios de fechamento não avaliáveis
+PRECONDITION: Go-live bem-sucedido (Prompt 93 SUCCESS) â€” NOT MET (Prompt 93 FAILED/BLOCKED)
+SYSTEM: UNSTABLE (hypercare nÃ£o iniciado â€” sem produÃ§Ã£o ativa)
+MONITORING: N/A â€” sem janela pÃ³s-go-live
+DEFECT_TRIAGE: N/A â€” sem operaÃ§Ã£o real em produÃ§Ã£o
+HOTFIX_POLICY: N/A â€” sem incidentes de produÃ§Ã£o
+METRICS_COMPARISON: N/A â€” expected vs actual requer baseline pÃ³s-deploy
+HYPERCARE_CLOSURE: N/A â€” critÃ©rios de fechamento nÃ£o avaliÃ¡veis
 BLOCKERS (cadeia):
   Prompt 92 NO-GO (e790781)
-  Prompt 93 BLOCKED (ea21f99) — GO_LIVE FAILED
-QUALITY_GATE: N/A (prompt não autorizado)
-NEXT_ALLOWED_PROMPT: 94 (reexecutar somente após Prompt 93 SUCCESS)
+  Prompt 93 BLOCKED (ea21f99) â€” GO_LIVE FAILED
+QUALITY_GATE: N/A (prompt nÃ£o autorizado)
+NEXT_ALLOWED_PROMPT: 94 (reexecutar somente apÃ³s Prompt 93 SUCCESS)
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
-  Hypercare pressupõe primeira operação real em produção.
-  Não transformar pré-go-live em hypercare fictício.
+  Hypercare pressupÃµe primeira operaÃ§Ã£o real em produÃ§Ã£o.
+  NÃ£o transformar prÃ©-go-live em hypercare fictÃ­cio.
 ```
 
 ---
 
-## Prompt 95 — Certificação de estabilidade para fundação visual
+## Prompt 95 â€” CertificaÃ§Ã£o de estabilidade para fundaÃ§Ã£o visual
 
 ```
 PROMPT_ID: 95
-PROMPT_TITLE: Certificação de estabilidade (engineering baseline)
+PROMPT_TITLE: CertificaÃ§Ã£o de estabilidade (engineering baseline)
 EXECUTED_AT: 2026-08-30
 EXECUTION_STATUS: PASS
-PRODUCTION_STABILITY: CERTIFIED (baseline de engenharia — suíte web estável antes do Prompt 96)
+PRODUCTION_STABILITY: CERTIFIED (baseline de engenharia â€” suÃ­te web estÃ¡vel antes do Prompt 96)
 EVIDENCE:
-  - vitest apps/web: 188/188 PASS (pré-implementação)
-  - working tree com alterações pré-existentes identificadas e preservadas
-  - cadeia go-live 92–94 permanece BLOCKED (sem deploy PRD)
+  - vitest apps/web: 188/188 PASS (prÃ©-implementaÃ§Ã£o)
+  - working tree com alteraÃ§Ãµes prÃ©-existentes identificadas e preservadas
+  - cadeia go-live 92â€“94 permanece BLOCKED (sem deploy PRD)
 NEXT_ALLOWED_PROMPT: 96
 NEXT_PROMPT_EXECUTED: YES
 NOTES:
-  Certificação limitada à estabilidade do código/testes para trabalho de frontend.
-  Não substitui GO de produção (Prompt 92 NO-GO).
+  CertificaÃ§Ã£o limitada Ã  estabilidade do cÃ³digo/testes para trabalho de frontend.
+  NÃ£o substitui GO de produÃ§Ã£o (Prompt 92 NO-GO).
 ```
 
 ---
 
-## Prompt 96 — Fundação visual corporativa e design system
+## Prompt 96 â€” FundaÃ§Ã£o visual corporativa e design system
 
 ```
 PROMPT_ID: 96
-PROMPT_TITLE: Fundação visual corporativa e design system da Cisne
+PROMPT_TITLE: FundaÃ§Ã£o visual corporativa e design system da Cisne
 EXECUTED_AT: 2026-08-30
 EXECUTION_STATUS: PASS
-PRECONDITION: Prompt 95 = PASS — MET
+PRECONDITION: Prompt 95 = PASS â€” MET
 PRODUCTION_STABILITY: CERTIFIED (Prompt 95)
 TAILWIND_VERSION: 4 (@tailwindcss/vite)
 TAILWIND_PLUS: NOT_AVAILABLE
 FILES_CREATED (apps/web/src/ui/):
-  theme.css — tokens @theme (marca, superfícies, semântica, tipografia, radius, z-index, motion)
+  theme.css â€” tokens @theme (marca, superfÃ­cies, semÃ¢ntica, tipografia, radius, z-index, motion)
   Button, IconButton, Input, Textarea, Select, Checkbox, Radio, Switch
   Field, FieldError, FormSection
   Badge, StatusBadge, Alert, Toast
@@ -5067,46 +5067,46 @@ FILES_CREATED (apps/web/src/ui/):
   ui.components.test.tsx, ui.robustness.test.tsx
   index.ts (barrel exports)
 FILES_MODIFIED:
-  apps/web/src/main.tsx — import ./ui/theme.css
+  apps/web/src/main.tsx â€” import ./ui/theme.css
   docs/00-governance/prompt-execution-log.md
-UI_INVENTORY: PASS (registrado — módulos reais mapeados; propostas/PO/config global ausentes no router)
-DESIGN_TOKENS: PASS (@theme consolidado; tipografia utilitária cisne-type-*)
+UI_INVENTORY: PASS (registrado â€” mÃ³dulos reais mapeados; propostas/PO/config global ausentes no router)
+DESIGN_TOKENS: PASS (@theme consolidado; tipografia utilitÃ¡ria cisne-type-*)
 FOUNDATION_COMPONENTS: PASS (29 componentes exportados em src/ui)
-RESPONSIVE: PASS (smoke 320–1440px em ui.components.test.tsx; legado CSS preservado)
+RESPONSIVE: PASS (smoke 320â€“1440px em ui.components.test.tsx; legado CSS preservado)
 ACCESSIBILITY: PASS (focus ring, roles alert/status, labels, dialog nativo, reduced-motion)
-FAILURE_STATES: PASS (ui.robustness.test.tsx — HTTP 4xx/5xx, timeout, network)
+FAILURE_STATES: PASS (ui.robustness.test.tsx â€” HTTP 4xx/5xx, timeout, network)
 VERSION_CONFLICT_UI: PASS (VersionConflictBanner com reload, sem sucesso falso)
 DOUBLE_SUBMIT: PASS (Button loading disabled + aria-busy)
-NEGATIVE_AUTHORIZATION_UI: PASS (ErrorState kind=denied sem retry implícito)
+NEGATIVE_AUTHORIZATION_UI: PASS (ErrorState kind=denied sem retry implÃ­cito)
 INCREMENTAL_MIGRATIONS: NOT_APPLICABLE
-VISUAL_REGRESSION: NOT_REQUIRED (sem infra de visual regression no repositório)
-COMPONENT_TESTS: PASS (ui.*.test.tsx — 33 testes)
-E2E: PASS (suíte web completa 221/221 após implementação; e2e legados intactos)
-LINT: FAIL (projeto — erros pré-existentes fora de src/ui; eslint src/ui PASS)
-TYPECHECK: FAIL (pré-existente: AlertCenterPage, dashboard.e2e.test.tsx, dashboard-fetch-mock.ts)
-BUILD: FAIL (bloqueado por typecheck pré-existente)
-BUNDLE_REGRESSION: NONE (build não concluído por typecheck legado; sem novas dependências npm)
+VISUAL_REGRESSION: NOT_REQUIRED (sem infra de visual regression no repositÃ³rio)
+COMPONENT_TESTS: PASS (ui.*.test.tsx â€” 33 testes)
+E2E: PASS (suÃ­te web completa 221/221 apÃ³s implementaÃ§Ã£o; e2e legados intactos)
+LINT: FAIL (projeto â€” erros prÃ©-existentes fora de src/ui; eslint src/ui PASS)
+TYPECHECK: FAIL (prÃ©-existente: AlertCenterPage, dashboard.e2e.test.tsx, dashboard-fetch-mock.ts)
+BUILD: FAIL (bloqueado por typecheck prÃ©-existente)
+BUNDLE_REGRESSION: NONE (build nÃ£o concluÃ­do por typecheck legado; sem novas dependÃªncias npm)
 BACKEND_CHANGES: NONE
 REGRESSIONS: NONE (221 testes web PASS)
 COMMIT: NOT_REQUIRED
 WORKING_TREE: DIRTY
 NEXT_ALLOWED_PROMPT: 97
 NOTES:
-  Migração gradual: CSS legado (~3000 linhas index.css) preservado; design system aditivo.
-  Tailwind Plus não disponível — componentes implementados com Tailwind CSS v4.
-  Próximo passo (97): adoção incremental nos módulos existentes.
+  MigraÃ§Ã£o gradual: CSS legado (~3000 linhas index.css) preservado; design system aditivo.
+  Tailwind Plus nÃ£o disponÃ­vel â€” componentes implementados com Tailwind CSS v4.
+  PrÃ³ximo passo (97): adoÃ§Ã£o incremental nos mÃ³dulos existentes.
 ```
 
 ---
 
-## Prompt 97 — Application shell, navegação e estrutura responsiva
+## Prompt 97 â€” Application shell, navegaÃ§Ã£o e estrutura responsiva
 
 ```
 PROMPT_ID: 97
-PROMPT_TITLE: Application shell, navegação e estrutura responsiva
+PROMPT_TITLE: Application shell, navegaÃ§Ã£o e estrutura responsiva
 EXECUTED_AT: 2026-08-30
 EXECUTION_STATUS: PASS
-PRECONDITION: Prompt 96 = PASS — MET (NEXT_ALLOWED_PROMPT: 97)
+PRECONDITION: Prompt 96 = PASS â€” MET (NEXT_ALLOWED_PROMPT: 97)
 FILES_CREATED:
   apps/web/src/shell/shell.css
   apps/web/src/shell/ShellNavList.tsx
@@ -5120,52 +5120,52 @@ FILES_CREATED:
   apps/web/src/shell/shell.robustness.test.tsx
   apps/web/src/pages/ShellNotFoundPage.tsx
 FILES_MODIFIED:
-  apps/web/src/shell/AppShellLayout.tsx — shell definitivo (sidebar desktop + drawer mobile)
-  apps/web/src/shell/nav-config.ts — grupos por domínio + breadcrumbs
-  apps/web/src/shell/types.ts — ShellNavGroup
-  apps/web/src/shell/ShellErrorBoundary.tsx — ErrorState ui
-  apps/web/src/pages/ShellAccessDeniedPage.tsx — PT + ErrorState
-  apps/web/src/App.tsx — rotas 404 autenticadas
-  apps/web/src/test/setup.ts — polyfill matchMedia
-  apps/web/src/ui/Alert.tsx — título semântico h2
-  apps/web/src/shell/shell.e2e.test.tsx — cobertura ampliada
-  apps/web/src/auth/auth-flow.e2e.test.tsx — menu usuário
-  apps/web/src/vertical/vertical-quality-gate.e2e.test.tsx — labels PT
+  apps/web/src/shell/AppShellLayout.tsx â€” shell definitivo (sidebar desktop + drawer mobile)
+  apps/web/src/shell/nav-config.ts â€” grupos por domÃ­nio + breadcrumbs
+  apps/web/src/shell/types.ts â€” ShellNavGroup
+  apps/web/src/shell/ShellErrorBoundary.tsx â€” ErrorState ui
+  apps/web/src/pages/ShellAccessDeniedPage.tsx â€” PT + ErrorState
+  apps/web/src/App.tsx â€” rotas 404 autenticadas
+  apps/web/src/test/setup.ts â€” polyfill matchMedia
+  apps/web/src/ui/Alert.tsx â€” tÃ­tulo semÃ¢ntico h2
+  apps/web/src/shell/shell.e2e.test.tsx â€” cobertura ampliada
+  apps/web/src/auth/auth-flow.e2e.test.tsx â€” menu usuÃ¡rio
+  apps/web/src/vertical/vertical-quality-gate.e2e.test.tsx â€” labels PT
   docs/00-governance/prompt-execution-log.md
 FILES_REMOVED:
   apps/web/src/shell/AppNav.tsx
   apps/web/src/shell/AppHeader.tsx
-APPLICATION_SHELL: PASS — único shell AppShellLayout + ExecutionShellLayout (campo)
-DESKTOP_NAVIGATION: PASS — sidebar 15.5rem, grupos, item ativo
-TABLET_NAVIGATION: PASS — drawer + topbar (quality gate tablet)
-MOBILE_NAVIGATION: PASS — drawer, Escape, scroll lock, foco
-AUTHORIZATION-AWARE_NAVIGATION: PASS — probes existentes; itens ocultos sem permissão
-SESSION_EXPIRATION: PASS — ProtectedRoute + CapabilityRoute preservados
-GLOBAL_FAILURE_STATES: PASS — 404, acesso negado, erro boundary, indisponível
-KEYBOARD_NAVIGATION: PASS — skip link, drawer Escape, busca Ctrl+K preservada
-FOCUS_MANAGEMENT: PASS — useRouteFocus no #main-content
-RESPONSIVE: PASS — smoke 320–1440px (vertical gate + shell tests)
-ACCESSIBILITY: PASS — landmarks banner/nav/main, dialog drawer, roles alert
-VISUAL_REGRESSION: PASS — Playwright @cisne/web (`pnpm --filter @cisne/web test:visual`) — 9 snapshots (login, dashboard, billing × mobile/tablet/desktop)
+APPLICATION_SHELL: PASS â€” Ãºnico shell AppShellLayout + ExecutionShellLayout (campo)
+DESKTOP_NAVIGATION: PASS â€” sidebar 15.5rem, grupos, item ativo
+TABLET_NAVIGATION: PASS â€” drawer + topbar (quality gate tablet)
+MOBILE_NAVIGATION: PASS â€” drawer, Escape, scroll lock, foco
+AUTHORIZATION-AWARE_NAVIGATION: PASS â€” probes existentes; itens ocultos sem permissÃ£o
+SESSION_EXPIRATION: PASS â€” ProtectedRoute + CapabilityRoute preservados
+GLOBAL_FAILURE_STATES: PASS â€” 404, acesso negado, erro boundary, indisponÃ­vel
+KEYBOARD_NAVIGATION: PASS â€” skip link, drawer Escape, busca Ctrl+K preservada
+FOCUS_MANAGEMENT: PASS â€” useRouteFocus no #main-content
+RESPONSIVE: PASS â€” smoke 320â€“1440px (vertical gate + shell tests)
+ACCESSIBILITY: PASS â€” landmarks banner/nav/main, dialog drawer, roles alert
+VISUAL_REGRESSION: PASS â€” Playwright @cisne/web (`pnpm --filter @cisne/web test:visual`) â€” 9 snapshots (login, dashboard, billing Ã— mobile/tablet/desktop)
 UNIT/COMPONENT: PASS (shell.components + shell.robustness + 228 testes web)
 E2E: PASS (login, nav, denied, session, mobile drawer, 404, alerts 500)
-LINT: FAIL (projeto — erros pré-existentes fora do escopo shell; eslint src/shell PASS)
-TYPECHECK: FAIL (pré-existente: AlertCenterPage, dashboard-fetch-mock, dashboard.e2e)
+LINT: FAIL (projeto â€” erros prÃ©-existentes fora do escopo shell; eslint src/shell PASS)
+TYPECHECK: FAIL (prÃ©-existente: AlertCenterPage, dashboard-fetch-mock, dashboard.e2e)
 BUILD: FAIL (bloqueado por typecheck legado)
 BACKEND_CHANGES: NONE
 REGRESSIONS: NONE (228/228 testes web PASS)
 COMMIT: NOT_REQUIRED
 WORKING_TREE: DIRTY
-NEXT_ALLOWED_PROMPT: dashboard executivo (certificação registrada em 2026-08-30)
+NEXT_ALLOWED_PROMPT: dashboard executivo (certificaÃ§Ã£o registrada em 2026-08-30)
 NOTES:
-  Navegação agrupada sem rotas fictícias (propostas/PO/config global ausentes).
+  NavegaÃ§Ã£o agrupada sem rotas fictÃ­cias (propostas/PO/config global ausentes).
   Badge de alertas usa contagem real (useAlertBadge).
   Ambiente exibido quando import.meta.env.MODE !== production.
 ```
 
 ---
 
-## Remediação — quality gates web (pré Prompt 98)
+## RemediaÃ§Ã£o â€” quality gates web (prÃ© Prompt 98)
 
 ```
 REMEDIATION_ID: web-gates-pre-98
@@ -5173,18 +5173,18 @@ EXECUTED_AT: 2026-08-30
 SCOPE: Corrigir LINT, TYPECHECK, BUILD e flakiness de testes e2e antes do Prompt 98
 EXECUTION_STATUS: PASS
 FILES_MODIFIED:
-  apps/web/src/test/request-url.ts — aceita RequestInfo | URL
-  apps/web/src/test/shell-fetch-mock.ts — assinatura fetch alinhada
-  apps/web/src/test/service-orders-fetch-mock.ts — assinatura fetch alinhada
-  apps/web/src/test/assets-fetch-mock.ts — assinatura fetch alinhada
-  apps/web/src/test/catalog-fetch-mock.ts — assinatura fetch alinhada
-  apps/web/src/test/clients-fetch-mock.ts — assinatura fetch alinhada
-  apps/web/src/test/requests-fetch-mock.ts — assinatura fetch alinhada
-  apps/web/src/test/documents-fetch-mock.ts — assinatura fetch + wrapFetchWithDocumentsMock
-  apps/web/src/reports/reports.components.test.tsx — vi.hoisted + mocks tipados
-  apps/web/src/search/search.components.test.tsx — vi.hoisted + SearchResponse tipado
-  apps/web/vite.config.ts — fileParallelism: false (e2e com fetch global)
-  apps/web/src/test/setup.ts — afterEach vi.unstubAllGlobals()
+  apps/web/src/test/request-url.ts â€” aceita RequestInfo | URL
+  apps/web/src/test/shell-fetch-mock.ts â€” assinatura fetch alinhada
+  apps/web/src/test/service-orders-fetch-mock.ts â€” assinatura fetch alinhada
+  apps/web/src/test/assets-fetch-mock.ts â€” assinatura fetch alinhada
+  apps/web/src/test/catalog-fetch-mock.ts â€” assinatura fetch alinhada
+  apps/web/src/test/clients-fetch-mock.ts â€” assinatura fetch alinhada
+  apps/web/src/test/requests-fetch-mock.ts â€” assinatura fetch alinhada
+  apps/web/src/test/documents-fetch-mock.ts â€” assinatura fetch + wrapFetchWithDocumentsMock
+  apps/web/src/reports/reports.components.test.tsx â€” vi.hoisted + mocks tipados
+  apps/web/src/search/search.components.test.tsx â€” vi.hoisted + SearchResponse tipado
+  apps/web/vite.config.ts â€” fileParallelism: false (e2e com fetch global)
+  apps/web/src/test/setup.ts â€” afterEach vi.unstubAllGlobals()
 LINT: PASS (eslint src/**/*.{ts,tsx})
 TYPECHECK: PASS (tsc -b)
 BUILD: PASS (tsc -b && vite build)
@@ -5192,7 +5192,7 @@ UNIT/COMPONENT/E2E: PASS (228/228 vitest)
 REGRESSIONS: NONE
 COMMIT: NOT_REQUIRED
 WORKING_TREE: DIRTY
-NEXT_ALLOWED_PROMPT: dashboard executivo (certificação pendente na época)
+NEXT_ALLOWED_PROMPT: dashboard executivo (certificaÃ§Ã£o pendente na Ã©poca)
 NOTES:
   Flakiness e2e causada por stubs globais de fetch em paralelo entre arquivos de teste.
   Prompts 96 e 97 permanecem PASS; gates de engenharia web agora verdes para iniciar 98.
@@ -5200,7 +5200,7 @@ NOTES:
 
 ---
 
-## Remediação — quality gates web (pré Prompt 99)
+## RemediaÃ§Ã£o â€” quality gates web (prÃ© Prompt 99)
 
 ```
 REMEDIATION_ID: web-gates-pre-99
@@ -5208,10 +5208,10 @@ EXECUTED_AT: 2026-08-30
 SCOPE: Verificar e confirmar gates de engenharia web antes do Prompt 99
 EXECUTION_STATUS: PASS
 VERIFICATION:
-  corepack pnpm --filter @cisne/web lint — PASS
-  corepack pnpm --filter @cisne/web typecheck — PASS
-  corepack pnpm --filter @cisne/web build — PASS
-  corepack pnpm --filter @cisne/web test — PASS (228/228)
+  corepack pnpm --filter @cisne/web lint â€” PASS
+  corepack pnpm --filter @cisne/web typecheck â€” PASS
+  corepack pnpm --filter @cisne/web build â€” PASS
+  corepack pnpm --filter @cisne/web test â€” PASS (228/228)
 LINT: PASS
 TYPECHECK: PASS
 BUILD: PASS
@@ -5219,48 +5219,48 @@ UNIT/COMPONENT/E2E: PASS
 REGRESSIONS: NONE
 COMMIT: NOT_REQUIRED
 WORKING TREE: DIRTY
-NEXT_ALLOWED_PROMPT: padronização de fluxos operacionais (frontend)
+NEXT_ALLOWED_PROMPT: padronizaÃ§Ã£o de fluxos operacionais (frontend)
 NOTES:
   Nenhum erro pendente no escopo @cisne/web.
-  Remediação pré-98 (requestUrl, vi.hoisted, fileParallelism, unstubAllGlobals) permanece efetiva.
-  @cisne/api lint reporta 9 erros pré-existentes fora do escopo frontend (ops/backup, ops/dr, uat).
-  Padronização de fluxos operacionais registrada em 2026-08-30 (EXECUTION_ID operational-flows-frontend).
+  RemediaÃ§Ã£o prÃ©-98 (requestUrl, vi.hoisted, fileParallelism, unstubAllGlobals) permanece efetiva.
+  @cisne/api lint reporta 9 erros prÃ©-existentes fora do escopo frontend (ops/backup, ops/dr, uat).
+  PadronizaÃ§Ã£o de fluxos operacionais registrada em 2026-08-30 (EXECUTION_ID operational-flows-frontend).
 ```
 
 ---
 
-## Padronização de fluxos operacionais — certificação frontend
+## PadronizaÃ§Ã£o de fluxos operacionais â€” certificaÃ§Ã£o frontend
 
 ```
 EXECUTION_ID: operational-flows-frontend
-EXECUTION_TITLE: Padronização de fluxos operacionais, tabelas, formulários e detalhes (frontend)
+EXECUTION_TITLE: PadronizaÃ§Ã£o de fluxos operacionais, tabelas, formulÃ¡rios e detalhes (frontend)
 EXECUTED_AT: 2026-08-30
 EXECUTION_STATUS: PASS
-PRECONDITION: Design system (Prompt 96), shell (Prompt 97) e dashboard executivo = PASS — MET
-SCOPE: Fluxos existentes em apps/web — sem novas funções, sem alteração de domínio/backend
-CLIENTS UI: PASS — listagem, filtros status, paginação, create/edit, version conflict (clients.e2e + page tests)
-REQUESTS UI: PASS — list/create/detail/edit, workflow submit/approve/reject/cancel (service-requests.e2e)
-PROPOSALS UI: NOT_PRESENT — sem rota /app/propostas no nav-config
-PURCHASE ORDERS UI: NOT_PRESENT — sem rota /app/pedidos-compra no nav-config
-ASSETS UI: PASS — list/detail/lifecycle (assets.e2e + PhysicalAssetsListPage)
-SERVICE ORDERS UI: PASS — planning, execution, measurement (e2e + component tests)
-PLANNING UI: PASS — alocação, conflito, double-submit bloqueado (ServiceOrderPlanningPage.test)
-EXECUTION UI: PASS — evidências, ocorrências, estados (service-order-execution.e2e)
-DOCUMENTS UI: PASS — upload, validação, retry (DocumentManagementPanel.test — 11 testes)
-DATA TABLES: PASS — cabeçalhos semânticos, estados loading/error/denied/empty nos módulos listados
-FORMS: PASS — validação cliente/solicitação/ativo; preservação em erro recuperável
-SEARCH/FILTERS: PASS — busca global + SearchResultsPage; debounce/cancelamento (search.components.test)
-CONCURRENCY UI: PASS — AbortController nas listagens; probes com cancelamento
-VERSION CONFLICT: PASS — ClientEdit, ServiceRequestEdit, billing void, measurement, planning
-DOUBLE SUBMIT: PASS — ServiceOrderPlanningPage blocks duplicate submit in flight
-NEGATIVE AUTHORIZATION: PASS — *Route guards, denied states, authorization *.test.ts
-FAILURE INJECTION: PASS — error/retry/denied cobertos em testes de página e e2e com fetch mock
-TIMEOUT: PASS — network kind mapeado para mensagens seguras nos APIs modules
-RECOVERY: PASS — retry em listagens e dashboards; VersionConflictBanner onde aplicável
-RESPONSIVE: PASS — vertical-quality-gate.e2e (320–1440 smoke no shell)
-ACCESSIBILITY: PASS — landmarks main, role=alert, dialogs, labels em formulários críticos
-VISUAL REGRESSION: PASS — Playwright @cisne/web (`pnpm --filter @cisne/web test:visual`) — 9 snapshots (login, dashboard, billing × mobile/tablet/desktop)
-UNIT/COMPONENT: PASS (módulos operacionais cobertos na suíte 228/228)
+PRECONDITION: Design system (Prompt 96), shell (Prompt 97) e dashboard executivo = PASS â€” MET
+SCOPE: Fluxos existentes em apps/web â€” sem novas funÃ§Ãµes, sem alteraÃ§Ã£o de domÃ­nio/backend
+CLIENTS UI: PASS â€” listagem, filtros status, paginaÃ§Ã£o, create/edit, version conflict (clients.e2e + page tests)
+REQUESTS UI: PASS â€” list/create/detail/edit, workflow submit/approve/reject/cancel (service-requests.e2e)
+PROPOSALS UI: NOT_PRESENT â€” sem rota /app/propostas no nav-config
+PURCHASE ORDERS UI: NOT_PRESENT â€” sem rota /app/pedidos-compra no nav-config
+ASSETS UI: PASS â€” list/detail/lifecycle (assets.e2e + PhysicalAssetsListPage)
+SERVICE ORDERS UI: PASS â€” planning, execution, measurement (e2e + component tests)
+PLANNING UI: PASS â€” alocaÃ§Ã£o, conflito, double-submit bloqueado (ServiceOrderPlanningPage.test)
+EXECUTION UI: PASS â€” evidÃªncias, ocorrÃªncias, estados (service-order-execution.e2e)
+DOCUMENTS UI: PASS â€” upload, validaÃ§Ã£o, retry (DocumentManagementPanel.test â€” 11 testes)
+DATA TABLES: PASS â€” cabeÃ§alhos semÃ¢nticos, estados loading/error/denied/empty nos mÃ³dulos listados
+FORMS: PASS â€” validaÃ§Ã£o cliente/solicitaÃ§Ã£o/ativo; preservaÃ§Ã£o em erro recuperÃ¡vel
+SEARCH/FILTERS: PASS â€” busca global + SearchResultsPage; debounce/cancelamento (search.components.test)
+CONCURRENCY UI: PASS â€” AbortController nas listagens; probes com cancelamento
+VERSION CONFLICT: PASS â€” ClientEdit, ServiceRequestEdit, billing void, measurement, planning
+DOUBLE SUBMIT: PASS â€” ServiceOrderPlanningPage blocks duplicate submit in flight
+NEGATIVE AUTHORIZATION: PASS â€” *Route guards, denied states, authorization *.test.ts
+FAILURE INJECTION: PASS â€” error/retry/denied cobertos em testes de pÃ¡gina e e2e com fetch mock
+TIMEOUT: PASS â€” network kind mapeado para mensagens seguras nos APIs modules
+RECOVERY: PASS â€” retry em listagens e dashboards; VersionConflictBanner onde aplicÃ¡vel
+RESPONSIVE: PASS â€” vertical-quality-gate.e2e (320â€“1440 smoke no shell)
+ACCESSIBILITY: PASS â€” landmarks main, role=alert, dialogs, labels em formulÃ¡rios crÃ­ticos
+VISUAL REGRESSION: PASS â€” Playwright @cisne/web (`pnpm --filter @cisne/web test:visual`) â€” 9 snapshots (login, dashboard, billing Ã— mobile/tablet/desktop)
+UNIT/COMPONENT: PASS (mÃ³dulos operacionais cobertos na suÃ­te 228/228)
 E2E: PASS (clients, requests, catalog, assets, service-orders, execution, measurement)
 LINT: PASS
 TYPECHECK: PASS
@@ -5269,117 +5269,117 @@ BACKEND_CHANGES: NONE
 REGRESSIONS: NONE
 COMMIT: NOT_REQUIRED
 WORKING_TREE: DIRTY
-NEXT_ALLOWED_PROMPT: experiência financeira premium e certificação global (frontend)
+NEXT_ALLOWED_PROMPT: experiÃªncia financeira premium e certificaÃ§Ã£o global (frontend)
 NOTES:
-  Propostas e PO existem apenas como snapshots/referências em OS e faturamento — sem CRUD frontend dedicado.
-  Padrão comum: shell-page, fases loading/denied/error/ready, capabilities via probe hooks.
+  Propostas e PO existem apenas como snapshots/referÃªncias em OS e faturamento â€” sem CRUD frontend dedicado.
+  PadrÃ£o comum: shell-page, fases loading/denied/error/ready, capabilities via probe hooks.
 ```
 
 ---
 
-## Experiência financeira premium e certificação global — frontend
+## ExperiÃªncia financeira premium e certificaÃ§Ã£o global â€” frontend
 
 ```
 EXECUTION_ID: financial-experience-frontend
-EXECUTION_TITLE: Experiência financeira premium e certificação visual global do frontend
+EXECUTION_TITLE: ExperiÃªncia financeira premium e certificaÃ§Ã£o visual global do frontend
 EXECUTED_AT: 2026-08-30
 EXECUTION_STATUS: PASS
-PRECONDITION: operational-flows-frontend = PASS — MET; dashboard-executive-frontend = PASS — MET
+PRECONDITION: operational-flows-frontend = PASS â€” MET; dashboard-executive-frontend = PASS â€” MET
 FRONTEND_QUALITY: CERTIFIED
-FINANCIAL INFORMATION ARCHITECTURE: PASS — faturamento, medição, documentos e relatórios separados; fila de trabalho billing
-MEASUREMENT UI: PASS — revisão/aprovação/rejeição, divergência, version conflict (9 component + 4 e2e)
-BILLING UI: PASS — preparação, termos comerciais, void, dashboard fila (BillingPages + billing.e2e)
-FINANCIAL AGING UI: PASS — DashboardAgingChart no painel executivo quando charts.financialAging.available
-FINANCIAL TABLES: PASS — BillingItemsTable/Cards, preview relatórios, alinhamento monetário via formatMoneyBrl
-FINANCIAL FILTERS: PASS — período dashboard; relatórios com contrato/filtros backend; billing por fila autorizada
-EXPORT EXPERIENCE: PASS — ReportsPage preview + export backend, sem CSV client-side paginado (reports.components.test)
-DECIMAL/MONEY PRESENTATION: PASS — formatMoneyBrl retorna "—" se vazio; ui/Money; sem float em totais autoritativos
-FABRICATED FINANCIAL DATA: ABSENT — totais e taxas somente do backend; BILLING_FUTURE_PROCESS_STEPS explícito
-NEGATIVE AUTHORIZATION: PASS — BillingRoute, probes, denied states
-FAILURE INJECTION: PASS — erros 403/409/validação em billing e document tests
-CONCURRENCY UI: PASS — AbortController em hooks de billing/reports
-IDEMPOTENCY UI: PASS — finalize duplicado tratado (BillingDocumentPages.test)
-VERSION CONFLICT: PASS — BillingVersionConflictBanner, measurement stale banner
-DEPENDENCY UNAVAILABLE: NOT_APPLICABLE — integração fiscal/ERP não simulada como sucesso
-TIMEOUT: PASS — network → mensagem segura nos APIs
-DOUBLE SUBMIT: PASS — confirmação em dialogs de prepare/void/issue
-RECOVERY: PASS — retry em dashboard billing e export
+FINANCIAL INFORMATION ARCHITECTURE: PASS â€” faturamento, mediÃ§Ã£o, documentos e relatÃ³rios separados; fila de trabalho billing
+MEASUREMENT UI: PASS â€” revisÃ£o/aprovaÃ§Ã£o/rejeiÃ§Ã£o, divergÃªncia, version conflict (9 component + 4 e2e)
+BILLING UI: PASS â€” preparaÃ§Ã£o, termos comerciais, void, dashboard fila (BillingPages + billing.e2e)
+FINANCIAL AGING UI: PASS â€” DashboardAgingChart no painel executivo quando charts.financialAging.available
+FINANCIAL TABLES: PASS â€” BillingItemsTable/Cards, preview relatÃ³rios, alinhamento monetÃ¡rio via formatMoneyBrl
+FINANCIAL FILTERS: PASS â€” perÃ­odo dashboard; relatÃ³rios com contrato/filtros backend; billing por fila autorizada
+EXPORT EXPERIENCE: PASS â€” ReportsPage preview + export backend, sem CSV client-side paginado (reports.components.test)
+DECIMAL/MONEY PRESENTATION: PASS â€” formatMoneyBrl retorna "â€”" se vazio; ui/Money; sem float em totais autoritativos
+FABRICATED FINANCIAL DATA: ABSENT â€” totais e taxas somente do backend; BILLING_FUTURE_PROCESS_STEPS explÃ­cito
+NEGATIVE AUTHORIZATION: PASS â€” BillingRoute, probes, denied states
+FAILURE INJECTION: PASS â€” erros 403/409/validaÃ§Ã£o em billing e document tests
+CONCURRENCY UI: PASS â€” AbortController em hooks de billing/reports
+IDEMPOTENCY UI: PASS â€” finalize duplicado tratado (BillingDocumentPages.test)
+VERSION CONFLICT: PASS â€” BillingVersionConflictBanner, measurement stale banner
+DEPENDENCY UNAVAILABLE: NOT_APPLICABLE â€” integraÃ§Ã£o fiscal/ERP nÃ£o simulada como sucesso
+TIMEOUT: PASS â€” network â†’ mensagem segura nos APIs
+DOUBLE SUBMIT: PASS â€” confirmaÃ§Ã£o em dialogs de prepare/void/issue
+RECOVERY: PASS â€” retry em dashboard billing e export
 TRANSACTION ROLLBACK: BACKEND_RESPONSIBILITY
 INCREMENTAL MIGRATIONS: NOT_APPLICABLE
-GLOBAL RESPONSIVE: PASS — vertical-quality-gate + shell mobile drawer
-GLOBAL ACCESSIBILITY: PASS — ui.components + fluxos financeiros com roles/labels/dialogs
-GLOBAL VISUAL CONSISTENCY: PASS — theme.css tokens, shell.css, ui/* adotados nos módulos certificados
-VISUAL REGRESSION: PASS — Playwright @cisne/web (`pnpm --filter @cisne/web test:visual`) — 9 snapshots (login, dashboard, billing × mobile/tablet/desktop)
-PERFORMANCE REGRESSION: NONE — bundle estável; aviso Vite chunk >500kB pré-existente
+GLOBAL RESPONSIVE: PASS â€” vertical-quality-gate + shell mobile drawer
+GLOBAL ACCESSIBILITY: PASS â€” ui.components + fluxos financeiros com roles/labels/dialogs
+GLOBAL VISUAL CONSISTENCY: PASS â€” theme.css tokens, shell.css, ui/* adotados nos mÃ³dulos certificados
+VISUAL REGRESSION: PASS â€” Playwright @cisne/web (`pnpm --filter @cisne/web test:visual`) â€” 9 snapshots (login, dashboard, billing Ã— mobile/tablet/desktop)
+PERFORMANCE REGRESSION: NONE â€” bundle estÃ¡vel; aviso Vite chunk >500kB prÃ©-existente
 UNIT/COMPONENT: PASS (billing 16 + reports 3 + dashboard financeiro 5)
-E2E: PASS (billing, billing-document, dashboard, reports integrados na suíte 228/228)
+E2E: PASS (billing, billing-document, dashboard, reports integrados na suÃ­te 228/228)
 LINT: PASS
 TYPECHECK: PASS
 BUILD: PASS
 CRITICAL UI DEFECTS: 0
 HIGH UI DEFECTS: 0
 BACKEND_CHANGES: NONE
-REGRESSIONS: NONE (228/228 testes web — evidência 2026-08-30)
+REGRESSIONS: NONE (228/228 testes web â€” evidÃªncia 2026-08-30)
 COMMIT: NOT_REQUIRED
 WORKING_TREE: DIRTY
-NEXT_ALLOWED_PROMPT: NONE (fase visual frontend certificada; aguardar próximo marco de governança)
+NEXT_ALLOWED_PROMPT: NONE (fase visual frontend certificada; aguardar prÃ³ximo marco de governanÃ§a)
 NOTES:
-  Custos e contas em aberto dedicados: NOT_PRESENT — aging apenas no dashboard executivo.
-  Certificação global reexecutou jornadas: auth, shell, dashboard, clientes, solicitações, catálogo, ativos, OS (planejamento/execução/medição), faturamento, documentos, pesquisa, relatórios.
+  Custos e contas em aberto dedicados: NOT_PRESENT â€” aging apenas no dashboard executivo.
+  CertificaÃ§Ã£o global reexecutou jornadas: auth, shell, dashboard, clientes, solicitaÃ§Ãµes, catÃ¡logo, ativos, OS (planejamento/execuÃ§Ã£o/mediÃ§Ã£o), faturamento, documentos, pesquisa, relatÃ³rios.
   Matriz HAPPY/NEGATIVE/FAILURE/CONCURRENCY/VERSION/DOUBLE-SUBMIT coberta por testes existentes; VISUAL REGRESSION via Playwright com baselines versionadas em apps/web/e2e/visual.
 ```
 
 ---
 
-## Dashboard executivo operacional e financeiro — certificação frontend
+## Dashboard executivo operacional e financeiro â€” certificaÃ§Ã£o frontend
 
 ```
 EXECUTION_ID: dashboard-executive-frontend
 EXECUTION_TITLE: Dashboard executivo, operacional e financeiro premium (frontend)
 EXECUTED_AT: 2026-08-30
 EXECUTION_STATUS: PASS
-PRECONDITION: Prompts 96 e 97 = PASS — MET; gates web verdes (remediação pré-dashboard)
-SCOPE: Painel em /app — fonte única GET /api/v1/dashboard/executive; sem alteração de backend
+PRECONDITION: Prompts 96 e 97 = PASS â€” MET; gates web verdes (remediaÃ§Ã£o prÃ©-dashboard)
+SCOPE: Painel em /app â€” fonte Ãºnica GET /api/v1/dashboard/executive; sem alteraÃ§Ã£o de backend
 REAL_DATA_MAPPING: PASS
   Endpoint: GET /api/v1/dashboard/executive?period&unitId&from&to
   Campos: generatedAt, businessTimezone, period, visibility, attention[], charts.*, productivity, shortcuts[]
-  Autorização: 403 → estado denied; Bearer via tokenStore
-  Estados: loading, denied, error (parcial preservado), ready, vazio por seção via visibility/available
-KPI_ACCURACY: PASS — contagens e taxas exibidas somente do snapshot; formatPercent retorna "—" se !available
-CARD/CHART/TABLE_RECONCILIATION: PASS — summaries textuais nos gráficos; attention reconcilia com links filtrados
-FILTERS: PASS — período em URL (useSearchParams); select acessível; debounce N/A (select)
-PARTIAL_FAILURE: PASS — erro localizado com retry; partial snapshot em fase error
-NEGATIVE_AUTHORIZATION: PASS — denied sem métricas; e2e shell preservado
-OUT-OF-ORDER_RESPONSES: PASS — AbortController em useExecutiveDashboard
-TIMEZONE: PASS — period.from/to e generatedAt do backend; rótulo de período exibido
-RESPONSIVE: PASS — dashboard.css grid; smoke via shell/vertical e2e
-ACCESSIBILITY: PASS — landmarks, aria-labelledby, alternativa textual em gráficos, teclado em barras
-PERFORMANCE: PASS — uma requisição por filtro; poll 60s; sem biblioteca gráfica extra
-VISUAL_REGRESSION: PASS — Playwright @cisne/web (`pnpm --filter @cisne/web test:visual`) — 9 snapshots (login, dashboard, billing × mobile/tablet/desktop)
-UNIT/COMPONENT: PASS (dashboard.components + dashboard.executive — 7 testes)
-E2E: PASS (dashboard.e2e — 2 testes; login → painel → filtros URL)
+  AutorizaÃ§Ã£o: 403 â†’ estado denied; Bearer via tokenStore
+  Estados: loading, denied, error (parcial preservado), ready, vazio por seÃ§Ã£o via visibility/available
+KPI_ACCURACY: PASS â€” contagens e taxas exibidas somente do snapshot; formatPercent retorna "â€”" se !available
+CARD/CHART/TABLE_RECONCILIATION: PASS â€” summaries textuais nos grÃ¡ficos; attention reconcilia com links filtrados
+FILTERS: PASS â€” perÃ­odo em URL (useSearchParams); select acessÃ­vel; debounce N/A (select)
+PARTIAL_FAILURE: PASS â€” erro localizado com retry; partial snapshot em fase error
+NEGATIVE_AUTHORIZATION: PASS â€” denied sem mÃ©tricas; e2e shell preservado
+OUT-OF-ORDER_RESPONSES: PASS â€” AbortController em useExecutiveDashboard
+TIMEZONE: PASS â€” period.from/to e generatedAt do backend; rÃ³tulo de perÃ­odo exibido
+RESPONSIVE: PASS â€” dashboard.css grid; smoke via shell/vertical e2e
+ACCESSIBILITY: PASS â€” landmarks, aria-labelledby, alternativa textual em grÃ¡ficos, teclado em barras
+PERFORMANCE: PASS â€” uma requisiÃ§Ã£o por filtro; poll 60s; sem biblioteca grÃ¡fica extra
+VISUAL_REGRESSION: PASS â€” Playwright @cisne/web (`pnpm --filter @cisne/web test:visual`) â€” 9 snapshots (login, dashboard, billing Ã— mobile/tablet/desktop)
+UNIT/COMPONENT: PASS (dashboard.components + dashboard.executive â€” 7 testes)
+E2E: PASS (dashboard.e2e â€” 2 testes; login â†’ painel â†’ filtros URL)
 LINT: PASS
 TYPECHECK: PASS
 BUILD: PASS
-FABRICATED_METRICS: ABSENT — sem receita/lucro/tendência inventados; produtividade sem índice composto
+FABRICATED_METRICS: ABSENT â€” sem receita/lucro/tendÃªncia inventados; produtividade sem Ã­ndice composto
 BACKEND_CHANGES: NONE
-REGRESSIONS: NONE (228/228 testes web na certificação)
+REGRESSIONS: NONE (228/228 testes web na certificaÃ§Ã£o)
 COMMIT: NOT_REQUIRED
 WORKING_TREE: DIRTY
-NEXT_ALLOWED_PROMPT: padronização de fluxos operacionais (frontend) — certificado em 2026-08-30
+NEXT_ALLOWED_PROMPT: padronizaÃ§Ã£o de fluxos operacionais (frontend) â€” certificado em 2026-08-30
 NOTES:
-  Hierarquia: atenção → análise operacional → produtividade → aging financeiro → atalhos.
-  useOperationalDashboard permanece legado (endpoint /operational); página usa useExecutiveDashboard.
-  Filtros unitId/from/to expostos no contrato API; UI atual expõe apenas período preset.
+  Hierarquia: atenÃ§Ã£o â†’ anÃ¡lise operacional â†’ produtividade â†’ aging financeiro â†’ atalhos.
+  useOperationalDashboard permanece legado (endpoint /operational); pÃ¡gina usa useExecutiveDashboard.
+  Filtros unitId/from/to expostos no contrato API; UI atual expÃµe apenas perÃ­odo preset.
 ```
 
 ---
 
-## Prompt 92 — Production readiness gate (reexecução — evidência autorizada)
+## Prompt 92 â€” Production readiness gate (reexecuÃ§Ã£o â€” evidÃªncia autorizada)
 
 ```
 PROMPT_ID: 92
-PROMPT_TITLE: Production readiness gate — evidência autorizada + fail-closed
+PROMPT_TITLE: Production readiness gate â€” evidÃªncia autorizada + fail-closed
 EXECUTED_AT: 2026-08-30
 EXECUTION_STATUS: PASS (engenharia)
 PRODUCTION_READINESS: NO-GO
@@ -5391,12 +5391,12 @@ ARTIFACTS:
   apps/api/src/ops/readiness/readiness-gate.ts (refatorado)
   apps/api/src/ops/readiness/readiness-gate.spec.ts (16 testes)
   apps/api/src/ops/readiness/cli/run-readiness-gate.ts (dotenv no @cisne/api)
-  scripts/readiness/gate.mjs (delega via corepack → @cisne/api; sem dotenv no root)
-  docs/19-operations/readiness-evidence.json (fonte autorizada — todos PENDING)
+  scripts/readiness/gate.mjs (delega via corepack â†’ @cisne/api; sem dotenv no root)
+  docs/19-operations/readiness-evidence.json (fonte autorizada â€” todos PENDING)
   docs/19-operations/production-readiness-gate.md (atualizado)
   .env.readiness.example (atualizado)
 TECHNICAL_DEFECTS_RESOLVED:
-  pnpm readiness:gate — dotenv ausente no root (script delegava import incorreto)
+  pnpm readiness:gate â€” dotenv ausente no root (script delegava import incorreto)
 GOVERNANCE_BLOCKERS (fonte: readiness-evidence.json):
   BUSINESS_SIGN_OFF_MISSING
   RPO_RTO_NOT_DEFINED (DDP-016)
@@ -5404,51 +5404,51 @@ GOVERNANCE_BLOCKERS (fonte: readiness-evidence.json):
   MANUAL_UAT_NOT_COMPLETED
 HUMAN_DECISIONS_STILL_REQUIRED:
   Sign-off empresarial do patrocinador
-  DDP-016 — definir e aprovar RPO/RTO
-  Piloto — iniciar, observar >=14d, autorizar EXIT_READY
-  Sessão manual UAT/UX com operador
-QUALITY_GATE: PASS (readiness 16/16; gate CLI executa; decisão NO-GO legítima)
-NEXT_ALLOWED_PROMPT: 93 (somente após GO legítimo)
+  DDP-016 â€” definir e aprovar RPO/RTO
+  Piloto â€” iniciar, observar >=14d, autorizar EXIT_READY
+  SessÃ£o manual UAT/UX com operador
+QUALITY_GATE: PASS (readiness 16/16; gate CLI executa; decisÃ£o NO-GO legÃ­tima)
+NEXT_ALLOWED_PROMPT: 93 (somente apÃ³s GO legÃ­timo)
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
-  Cadeia implementada: fonte autorizada → evidência → validação → gate → env derivada.
-  Env var sem registro autorizado → READINESS_EVIDENCE_MISMATCH.
-  Release binding → READINESS_RELEASE_EVIDENCE_MISMATCH quando RC diverge.
+  Cadeia implementada: fonte autorizada â†’ evidÃªncia â†’ validaÃ§Ã£o â†’ gate â†’ env derivada.
+  Env var sem registro autorizado â†’ READINESS_EVIDENCE_MISMATCH.
+  Release binding â†’ READINESS_RELEASE_EVIDENCE_MISMATCH quando RC diverge.
   Prompt 93 e 94 permanecem BLOCKED.
 ```
 
-## Quality gate Prompt 92 reexecução (evidência)
+## Quality gate Prompt 92 reexecuÃ§Ã£o (evidÃªncia)
 
-| Cenário | Resultado | Evidência |
+| CenÃ¡rio | Resultado | EvidÃªncia |
 |---------|-----------|-----------|
 | engineering gates PASS | PASS | readiness-gate.spec.ts |
-| evidência pending → NO-GO | PASS | readiness-gate.spec.ts |
-| GO somente com evidência completa | PASS | readiness-gate.spec.ts |
-| env sem fonte → MISMATCH | PASS | readiness-gate.spec.ts |
-| piloto <14d → NO-GO | PASS | readiness-gate.spec.ts |
+| evidÃªncia pending â†’ NO-GO | PASS | readiness-gate.spec.ts |
+| GO somente com evidÃªncia completa | PASS | readiness-gate.spec.ts |
+| env sem fonte â†’ MISMATCH | PASS | readiness-gate.spec.ts |
+| piloto <14d â†’ NO-GO | PASS | readiness-gate.spec.ts |
 | release binding mismatch | PASS | readiness-gate.spec.ts |
 | sign-off revogado | PASS | readiness-gate.spec.ts |
-| fonte indisponível → fail-closed | PASS | readiness-gate.spec.ts |
+| fonte indisponÃ­vel â†’ fail-closed | PASS | readiness-gate.spec.ts |
 | root gate.mjs sem dotenv | PASS | readiness-gate.spec.ts |
 | pnpm readiness:gate executa | PASS | exit 1 (NO-GO correto) |
 | API typecheck | PASS | tsc --noEmit |
 
 ---
 
-## Prompt 98 — Master business E2E & invariant testing
+## Prompt 98 â€” Master business E2E & invariant testing
 
 ```
 PROMPT_ID: 98
 PROMPT_TITLE: Master business E2E & invariant testing
 EXECUTED_AT: 2026-08-30
 EXECUTION_STATUS: PASS
-FULL_BUSINESS_E2E: PASS (3 cenários: locação, transporte, obra composto)
+FULL_BUSINESS_E2E: PASS (3 cenÃ¡rios: locaÃ§Ã£o, transporte, obra composto)
 DOMAIN_INVARIANTS: PASS
 DIRECT_API_BYPASS: PROTECTED (5/5 HTTP bypass E2E)
-HISTORICAL_CONSISTENCY: PASS (catálogo, PO, proposta, nota fatura)
+HISTORICAL_CONSISTENCY: PASS (catÃ¡logo, PO, proposta, nota fatura)
 FINANCIAL_RECONCILIATION: PASS (Decimal/Numeric bigint)
-NEGATIVE_JOURNEYS: PASS (6 fluxos inválidos sem estado parcial)
-REPETITION_ISOLATION: PASS (3 execuções independentes)
+NEGATIVE_JOURNEYS: PASS (6 fluxos invÃ¡lidos sem estado parcial)
+REPETITION_ISOLATION: PASS (3 execuÃ§Ãµes independentes)
 ARTIFACTS:
   apps/api/src/master-business/synthetic-test-data.ts
   apps/api/src/master-business/master-business-harness.ts
@@ -5458,23 +5458,23 @@ ARTIFACTS:
   apps/api/src/master-business/master-business-timeline.ts
   apps/api/src/master-business/master-business.integration.spec.ts (9 testes)
   apps/api/src/master-business/master-business-bypass.e2e.spec.ts (5 testes)
-  apps/api/src/uat/uat-scenarios.ts (clientes sintéticos em runtime)
+  apps/api/src/uat/uat-scenarios.ts (clientes sintÃ©ticos em runtime)
   apps/api/src/uat/uat-vertical-runner.ts (stopAfter estendido + artifacts)
   apps/api/src/uat/uat-profiles.ts (grants ampliados para invariantes)
   apps/api/package.json (test:master-business, test:master-business:bypass)
 EVIDENCE:
-  pnpm test:master-business — 9/9 PASS
-  pnpm test:master-business:bypass — 5/5 PASS
-  pnpm test:uat — 5/5 PASS (regressão)
+  pnpm test:master-business â€” 9/9 PASS
+  pnpm test:master-business:bypass â€” 5/5 PASS
+  pnpm test:uat â€” 5/5 PASS (regressÃ£o)
 REGRESSIONS: NONE
 CRITICAL_DEFECTS: 0
 COMMIT: NOT_REQUIRED
 WORKING_TREE: DIRTY
-NEXT_ALLOWED_PROMPT: (conforme roadmap vigente pós-98)
+NEXT_ALLOWED_PROMPT: (conforme roadmap vigente pÃ³s-98)
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
-  Dados de teste 100% sintéticos (CNPJ gerado, sem clientes reais hardcoded).
-  Jornada completa: Client → Catálogo → Request → Proposta/PO → OS → Planning → Allocation → Execution → Measurement → Billing → Nota Fatura → Documents.
+  Dados de teste 100% sintÃ©ticos (CNPJ gerado, sem clientes reais hardcoded).
+  Jornada completa: Client â†’ CatÃ¡logo â†’ Request â†’ Proposta/PO â†’ OS â†’ Planning â†’ Allocation â†’ Execution â†’ Measurement â†’ Billing â†’ Nota Fatura â†’ Documents.
 ```
 
 ---
@@ -5490,21 +5490,21 @@ CONCURRENCY_TEST: PASS
 CLIENT_DUPLICATION_RACE: PASS (20 workers, CLIENT_COUNT=1, sem SQL bruto)
 REQUEST_CONVERSION_RACE: PASS (SERVICE_ORDER_COUNT=1)
 OS_RELEASE_RACE: PASS (1 RELEASED, audit/outbox consistentes)
-RELEASE_CANCEL_RACE: PASS (latch, 3 repetições, estado terminal válido)
+RELEASE_CANCEL_RACE: PASS (latch, 3 repetiÃ§Ãµes, estado terminal vÃ¡lido)
 VERSION_CONFLICT: PASS (Client, ServiceRequest, ServiceOrder, Asset, Measurement, Billing)
 ASSET_ALLOCATION: PASS
 ASSET_OVERBOOKING: 0
 EXECUTION_RACE: PASS
 MEASUREMENT_RACE: PASS
 BILLING_RACE: PASS (BILLING_COUNT=1)
-NUMBER_COLLISIONS: 0 (8 emissões concorrentes; sequência transacional, não MAX+1)
+NUMBER_COLLISIONS: 0 (8 emissÃµes concorrentes; sequÃªncia transacional, nÃ£o MAX+1)
 IDEMPOTENCY_RACE: PASS
 DEADLOCK_DEFECTS: 0
 PARTIAL_STATES: 0
 FLAKY_CRITICAL_TESTS: 0
-REGRESSIONS: NONE (baseline master-business 9/9, bypass 5/5 após ajuste 409 esperado)
+REGRESSIONS: NONE (baseline master-business 9/9, bypass 5/5 apÃ³s ajuste 409 esperado)
 BUGFIX:
-  billing.repository voidBillingRecord — FOR UPDATE + UPDATE com row_version (evita duplo VOID/history)
+  billing.repository voidBillingRecord â€” FOR UPDATE + UPDATE com row_version (evita duplo VOID/history)
 ARTIFACTS:
   apps/api/src/concurrency/concurrency-latch.ts
   apps/api/src/concurrency/concurrency-seeds.ts
@@ -5516,11 +5516,11 @@ ARTIFACTS:
   apps/api/src/billing/repositories/billing.repository.ts (void otimista)
   apps/api/src/master-business/master-business-bypass.e2e.spec.ts (409 aceito em PATCH forged clientId)
 EVIDENCE:
-  pnpm test:concurrency — 24/24 PASS
-  pnpm test:master-business — 9/9 PASS
-  pnpm test:master-business:bypass — 5/5 PASS
-WORKING_TREE: DIRTY (pré-requisito baseline CLEAN não atendido no início)
-NEXT_TEST: NONE (FAILURE_INJECTION concluído)
+  pnpm test:concurrency â€” 24/24 PASS
+  pnpm test:master-business â€” 9/9 PASS
+  pnpm test:master-business:bypass â€” 5/5 PASS
+WORKING_TREE: DIRTY (prÃ©-requisito baseline CLEAN nÃ£o atendido no inÃ­cio)
+NEXT_TEST: NONE (FAILURE_INJECTION concluÃ­do)
 NEXT_PROMPT_EXECUTED: NO
 ```
 
@@ -5535,46 +5535,46 @@ EXECUTED_AT: 2026-08-30
 EXECUTION_STATUS: PASS
 FAILURE_INJECTION: PASS
 TRANSACTION_ATOMICITY: PASS
-CLIENT_ROLLBACK: PASS (client + contacts = 0 após falha pós-insert)
-REQUEST_CONVERSION_ROLLBACK: PASS (SERVICE_ORDER órfã = 0; SR permanece APPROVED)
+CLIENT_ROLLBACK: PASS (client + contacts = 0 apÃ³s falha pÃ³s-insert)
+REQUEST_CONVERSION_ROLLBACK: PASS (SERVICE_ORDER Ã³rfÃ£ = 0; SR permanece APPROVED)
 OS_RELEASE_ROLLBACK: PASS (3 hooks in-txn: after_mutation/before_history, after_history/before_audit, before_outbox)
-OS_RELEASE_POST_COMMIT_AUDIT: PASS (RELEASED commitado; audit não-transacional documentado)
+OS_RELEASE_POST_COMMIT_AUDIT: PASS (RELEASED commitado; audit nÃ£o-transacional documentado)
 ALLOCATION_ROLLBACK: PASS (reservation fantasma = 0)
 EXECUTION_ROLLBACK: PASS (3 hooks: after_validation/before_mutation, after_mutation/before_history, before_outbox)
 MEASUREMENT_ROLLBACK: PASS (status UNDER_REVIEW; history APPROVED = 0)
 BILLING_ROLLBACK: PASS (header-before-items e items-before-history)
 STORAGE_COMPENSATION: PASS (DB-fail-after-PDF, upload-fail, timeout, hash-mismatch)
-DB_FAILURE: PASS (connection refused, pool unavailable — sem sucesso falso)
-PROCESS_CRASH_RECOVERY: PASS (lease expirado → PENDING; RUNNING órfão = 0)
-OUTBOX_ATOMICITY: PASS (rollback → 0 eventos; commit → 1 ServiceOrderReleased PENDING)
+DB_FAILURE: PASS (connection refused, pool unavailable â€” sem sucesso falso)
+PROCESS_CRASH_RECOVERY: PASS (lease expirado â†’ PENDING; RUNNING Ã³rfÃ£o = 0)
+OUTBOX_ATOMICITY: PASS (rollback â†’ 0 eventos; commit â†’ 1 ServiceOrderReleased PENDING)
 PARTIAL_STATES: 0
 ORPHANS: 0
 DATA_CORRUPTION: 0
 INFRASTRUCTURE:
-  DI port FAULT_INJECTION_PORT + NoopFaultInjectionPort (produção)
+  DI port FAULT_INJECTION_PORT + NoopFaultInjectionPort (produÃ§Ã£o)
   ConfigurableFaultInjectionPort + faulting adapters (teste isolado)
-  maybeInjectFault() nos repositórios — sem if (NODE_ENV === 'test')
+  maybeInjectFault() nos repositÃ³rios â€” sem if (NODE_ENV === 'test')
 BUGFIX:
-  billing-document-access.service — validação sha256 do buffer vs hash declarado (BILLING_DOCUMENT_ARTIFACT_HASH_MISMATCH)
-  vitest.e2e.config.ts — hookTimeout/testTimeout 120s/300s (AppModule + FaultInjectionModule)
+  billing-document-access.service â€” validaÃ§Ã£o sha256 do buffer vs hash declarado (BILLING_DOCUMENT_ARTIFACT_HASH_MISMATCH)
+  vitest.e2e.config.ts â€” hookTimeout/testTimeout 120s/300s (AppModule + FaultInjectionModule)
 ARTIFACTS:
   apps/api/src/platform/fault-injection/* (port, module, hooks, noop)
   apps/api/src/failure-injection/* (harness, configurable port, faulting DB/storage, 20 testes)
   apps/api/package.json (test:failure-injection)
   apps/api/src/app.module.ts (FaultInjectionModule)
   apps/api/src/master-business/master-business-harness.ts (FaultInjectionModule)
-  Repositórios/serviços com hooks: clients, service-orders, resource-planning, execution, measurements, billing, billing-document
+  RepositÃ³rios/serviÃ§os com hooks: clients, service-orders, resource-planning, execution, measurements, billing, billing-document
 EVIDENCE:
-  pnpm test:failure-injection — 20/20 PASS
-  pnpm test:concurrency — 24/24 PASS (regressão)
-  pnpm test:master-business — 9/9 PASS (regressão)
-  pnpm test:master-business:bypass — 5/5 PASS (regressão)
+  pnpm test:failure-injection â€” 20/20 PASS
+  pnpm test:concurrency â€” 24/24 PASS (regressÃ£o)
+  pnpm test:master-business â€” 9/9 PASS (regressÃ£o)
+  pnpm test:master-business:bypass â€” 5/5 PASS (regressÃ£o)
 WORKING_TREE: DIRTY
-NEXT_TEST: NONE (IDEMPOTENCY_RETRY concluído)
+NEXT_TEST: NONE (IDEMPOTENCY_RETRY concluÃ­do)
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
-  Verificação direta PostgreSQL após cada cenário (entity, history, audit, outbox, version, relationships).
-  Post-commit audit fault em release: estado empresarial RELEASED permanece válido; audit é compensável fora da transação.
+  VerificaÃ§Ã£o direta PostgreSQL apÃ³s cada cenÃ¡rio (entity, history, audit, outbox, version, relationships).
+  Post-commit audit fault em release: estado empresarial RELEASED permanece vÃ¡lido; audit Ã© compensÃ¡vel fora da transaÃ§Ã£o.
 ```
 
 ---
@@ -5587,12 +5587,12 @@ PROMPT_TITLE: Idempotency, timeout, retry & double-submit test
 EXECUTED_AT: 2026-08-30
 EXECUTION_STATUS: PASS
 IDEMPOTENCY: PASS
-LOST_RESPONSE: PASS (convert, release pós-commit, complete, approve, billing prepare, billing document)
-CONCURRENT_IDEMPOTENCY: PASS (billing prepare latch; SR divergent payload → DUPLICATE_IDEMPOTENCY)
+LOST_RESPONSE: PASS (convert, release pÃ³s-commit, complete, approve, billing prepare, billing document)
+CONCURRENT_IDEMPOTENCY: PASS (billing prepare latch; SR divergent payload â†’ DUPLICATE_IDEMPOTENCY)
 DOUBLE_CLICK: PASS (Button loading + billing document dialog)
 DOUBLE_ENTER: PASS (form submit guard)
 DOUBLE_TAP: PASS (execution start mobile viewport)
-TIMEOUT: PASS (before/during/after commit — reconciliável)
+TIMEOUT: PASS (before/during/after commit â€” reconciliÃ¡vel)
 RETRY_SAFETY: PASS (integration ACL, jobs, inbox, provider executor cap)
 OUTBOX_IDEMPOTENCY: PASS
 INBOX_DEDUPLICATION: PASS
@@ -5606,15 +5606,15 @@ ARTIFACTS:
   apps/web/src/billing/pages/ServiceOrderBillingDocumentPage.tsx (pendingIssueRef + issueIdempotencyRef)
   apps/web/src/test/service-orders-fetch-mock.ts (billingDocumentDelayedIssueMs + idempotency cache)
 EVIDENCE:
-  pnpm test:idempotency-retry — 16/16 + 4/4 PASS
-  pnpm --filter @cisne/web test -- src/idempotency-retry/idempotency-retry.ui.test.tsx — 4/4 PASS
-  RE-VERIFIED 2026-08-30: npx vitest integration 16/16 + retry-classification 4/4 após correção do harness
+  pnpm test:idempotency-retry â€” 16/16 + 4/4 PASS
+  pnpm --filter @cisne/web test -- src/idempotency-retry/idempotency-retry.ui.test.tsx â€” 4/4 PASS
+  RE-VERIFIED 2026-08-30: npx vitest integration 16/16 + retry-classification 4/4 apÃ³s correÃ§Ã£o do harness
 WORKING_TREE: DIRTY
 NEXT_TEST: SECURITY_ADVERSARIAL
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
-  Release lost-response: retry com rowVersion obsoleto → INVALID_STATE; reconciliação via GET (RELEASED).
-  Convert retry: already_converted mapeado para INVALID_STATE na API; efeito único comprovado via SQL.
+  Release lost-response: retry com rowVersion obsoleto â†’ INVALID_STATE; reconciliaÃ§Ã£o via GET (RELEASED).
+  Convert retry: already_converted mapeado para INVALID_STATE na API; efeito Ãºnico comprovado via SQL.
   Harness: reset alinhado ao master-business-harness (truncate direto + outbox/domain); tentativas com pool compartilhado/advisory lock/drain degradaram estabilidade.
 ```
 
@@ -5644,23 +5644,23 @@ ARTIFACTS:
   apps/web/src/security/adversarial-security.ui.test.tsx (1 teste XSS UI)
   apps/api/src/security/security-regression.spec.ts (+ domain specs, download-token)
 EVIDENCE:
-  cd apps/api && pnpm test:adversarial-security — 12/12 E2E + 22/22 unit PASS
-  cd apps/web && pnpm test -- src/security/adversarial-security.ui.test.tsx — 1/1 PASS
+  cd apps/api && pnpm test:adversarial-security â€” 12/12 E2E + 22/22 unit PASS
+  cd apps/web && pnpm test -- src/security/adversarial-security.ui.test.tsx â€” 1/1 PASS
 ENVIRONMENT:
   TEST_DATABASE_URL (cisne_local_test); PostgreSQL via docker compose
   Migration 0034 (rpt.report_exports) aplicada on-demand no beforeAll quando ausente
 FIXES_THIS_RUN:
-  withDeadlockRetry<T> genérico — seeds UAT retornavam undefined
-  ensureReportExportsSchema — tabela rpt.report_exports ausente em DB local desatualizado
+  withDeadlockRetry<T> genÃ©rico â€” seeds UAT retornavam undefined
+  ensureReportExportsSchema â€” tabela rpt.report_exports ausente em DB local desatualizado
   Export IDOR: createExport via service + GET download negado; grant ServiceOrdersServiceOrderList ad-hoc
-  Upload: path traversal .pdf, extensão .exe, oversize Fastify (≠201 + sem leak)
+  Upload: path traversal .pdf, extensÃ£o .exe, oversize Fastify (â‰ 201 + sem leak)
 WORKING_TREE: DIRTY
 NEXT_TEST: DATABASE_MIGRATIONS
 NEXT_PROMPT_EXECUTED: NO
 NOTES:
-  Ambiente isolado; nenhum ataque em produção.
-  Oversize upload rejeitado no boundary Fastify (500 FST_REQ_FILE_TOO_LARGE) antes da validação de domínio — comportamento aceito; sem vazamento sensível.
-  control_admin ainda não inclui ServiceOrdersServiceOrderList em uat-profiles — grant ad-hoc no teste de export IDOR.
+  Ambiente isolado; nenhum ataque em produÃ§Ã£o.
+  Oversize upload rejeitado no boundary Fastify (500 FST_REQ_FILE_TOO_LARGE) antes da validaÃ§Ã£o de domÃ­nio â€” comportamento aceito; sem vazamento sensÃ­vel.
+  control_admin ainda nÃ£o inclui ServiceOrdersServiceOrderList em uat-profiles â€” grant ad-hoc no teste de export IDOR.
 ```
 
 ---
@@ -5674,13 +5674,13 @@ EXECUTED_AT: 2026-08-30
 EXECUTION_STATUS: PASS
 DATABASE: PASS
 ZERO_TO_LATEST: PASS
-INCREMENTAL_MIGRATIONS: PASS (N-3 → N-2 → N-1 → N com fixture completa)
+INCREMENTAL_MIGRATIONS: PASS (N-3 â†’ N-2 â†’ N-1 â†’ N com fixture completa)
 DATA_PRESERVATION: PASS (clients, catalog, assets, requests, proposals, PO, OS, execution, measurement, billing, documents, history)
 CONSTRAINTS: PASS (unique 23505, FK 23503, check 23514, not null 23502)
-DELETE_SAFETY: PASS (DELETE negado 23001/23503 — RESTRICT em OS, client, measurement referenciada)
+DELETE_SAFETY: PASS (DELETE negado 23001/23503 â€” RESTRICT em OS, client, measurement referenciada)
 DECIMAL: PASS (numeric(18,4) fronteira 99999999999999.9999; zero colunas float/real financeiras)
-MIGRATION_FAILURE: PASS (transação inválida → ROLLBACK; schema parcial não persiste)
-OLD_APP_NEW_SCHEMA: PASS (SELECT legado pós índices/enum expand-only)
+MIGRATION_FAILURE: PASS (transaÃ§Ã£o invÃ¡lida â†’ ROLLBACK; schema parcial nÃ£o persiste)
+OLD_APP_NEW_SCHEMA: PASS (SELECT legado pÃ³s Ã­ndices/enum expand-only)
 ORPHANS: 0
 DATA_CORRUPTION: 0
 ARTIFACTS:
@@ -5690,13 +5690,13 @@ ARTIFACTS:
   packages/database/package.json (test:migration-torture)
   package.json (test:migration-torture)
 EVIDENCE:
-  pnpm test:migration-torture — 7/7 PASS (~11s)
+  pnpm test:migration-torture â€” 7/7 PASS (~11s)
 ENVIRONMENT:
-  DATABASE_URL (PostgreSQL local); DBs efêmeros cisne_migration_torture_{zero,incremental,failure}
-  36 migrations SQL (0000–0035) descobertas via readdir
+  DATABASE_URL (PostgreSQL local); DBs efÃªmeros cisne_migration_torture_{zero,incremental,failure}
+  36 migrations SQL (0000â€“0035) descobertas via readdir
 NOTES:
-  ci-database-gate.mjs ainda lista migrations até 0030 — gap conhecido vs torture (0031–0035).
-  DELETE RESTRICT emite 23001 (não 23503) — ambos tratados como negação válida.
+  ci-database-gate.mjs ainda lista migrations atÃ© 0030 â€” gap conhecido vs torture (0031â€“0035).
+  DELETE RESTRICT emite 23001 (nÃ£o 23503) â€” ambos tratados como negaÃ§Ã£o vÃ¡lida.
 WORKING_TREE: DIRTY
 NEXT_TEST: CHAOS_RECOVERY
 NEXT_PROMPT_EXECUTED: NO
@@ -5727,21 +5727,21 @@ ARTIFACTS:
   apps/api/package.json (test:chaos-recovery)
   package.json (test:chaos-recovery)
 EVIDENCE:
-  pnpm test:chaos-recovery — 14/14 PASS (~18s)
+  pnpm test:chaos-recovery â€” 14/14 PASS (~18s)
 ENVIRONMENT:
-  TEST_DATABASE_URL (PostgreSQL local); ambiente controlado — sem produção
+  TEST_DATABASE_URL (PostgreSQL local); ambiente controlado â€” sem produÃ§Ã£o
 COVERAGE:
   Dependencies: PG connection refused / pool unavailable; object storage fail+timeout; provider timeout/429/500/503; malformed inbox payload
   Worker: before claim (lease expiry), during (graceful shutdown), after side effect (outbox idempotent publish)
-  Outbox: backlog 8 eventos com worker parado → drain completo
+  Outbox: backlog 8 eventos com worker parado â†’ drain completo
   Multi-worker: outbox claim SKIP LOCKED + inbox processBatch concorrente
-  Inbox: 10 receives + processamento concorrente → 1 efeito
-  Poison: inbox FAILED permanente + job FAILED permanente não bloqueiam fila
+  Inbox: 10 receives + processamento concorrente â†’ 1 efeito
+  Poison: inbox FAILED permanente + job FAILED permanente nÃ£o bloqueiam fila
   Backpressure: 6 jobs slow, fila cresce e drena sem jobs eternos RUNNING
-  Recovery: lease expirado → PENDING → Completed; outbox publicado pós-restart
+  Recovery: lease expirado â†’ PENDING â†’ Completed; outbox publicado pÃ³s-restart
 NOTES:
-  Job poison permanente → status FAILED (não DEAD); DEAD reservado a retries esgotados (transient).
-  Monitoramento backpressure via contadores de fila (plt.background_jobs), não CPU/memória de host.
+  Job poison permanente â†’ status FAILED (nÃ£o DEAD); DEAD reservado a retries esgotados (transient).
+  Monitoramento backpressure via contadores de fila (plt.background_jobs), nÃ£o CPU/memÃ³ria de host.
 WORKING_TREE: DIRTY
 NEXT_TEST: FRONTEND_RESILIENCE
 NEXT_PROMPT_EXECUTED: NO
@@ -5769,29 +5769,29 @@ PRODUCTIVITY: PASS
 FALSE_SUCCESS_STATES: 0
 ARTIFACTS:
   apps/web/src/frontend-resilience/frontend-resilience.ui.test.tsx (20 testes)
-  apps/web/src/test/request-url.ts (parseRequestPath — URLs relativas em Vitest)
+  apps/web/src/test/request-url.ts (parseRequestPath â€” URLs relativas em Vitest)
   apps/web/package.json (test:frontend-resilience)
   package.json (test:frontend-resilience)
 EVIDENCE:
-  pnpm test:frontend-resilience — 99/99 PASS (~43s)
+  pnpm test:frontend-resilience â€” 99/99 PASS (~43s)
 ENVIRONMENT:
-  Vitest + jsdom; fetch mocks; ambiente controlado — sem produção
+  Vitest + jsdom; fetch mocks; ambiente controlado â€” sem produÃ§Ã£o
 COVERAGE:
-  Viewports 320/360/390/768/1024/1440 — overflow horizontal smoke
-  Conteúdo extremo — razão social longa, 50+ linhas, valores financeiros grandes
-  Network failure UX — ErrorState sem falso sucesso (create/release/billing/upload)
-  Version conflict — VersionConflictBanner + ClientEditPage + e2e execution/measurement
-  Double submit — idempotency-retry.ui, LoginPage, ui.robustness
-  Accessibility — teclado em filtros/gráficos; labels e dialogs em suites existentes
-  Charts — empty/error, reconciliação card+bar+table; dashboard executive + e2e
-  OS vencida — AttentionBlock com aria-label, detail e link filtrado
-  Produtividade sem amostra — formatPercent → em dash (—), nunca 0% falso
-  Tailwind hygiene — auditoria estática em ui/ (sem hex arbitrário / z-index runaway)
+  Viewports 320/360/390/768/1024/1440 â€” overflow horizontal smoke
+  ConteÃºdo extremo â€” razÃ£o social longa, 50+ linhas, valores financeiros grandes
+  Network failure UX â€” ErrorState sem falso sucesso (create/release/billing/upload)
+  Version conflict â€” VersionConflictBanner + ClientEditPage + e2e execution/measurement
+  Double submit â€” idempotency-retry.ui, LoginPage, ui.robustness
+  Accessibility â€” teclado em filtros/grÃ¡ficos; labels e dialogs em suites existentes
+  Charts â€” empty/error, reconciliaÃ§Ã£o card+bar+table; dashboard executive + e2e
+  OS vencida â€” AttentionBlock com aria-label, detail e link filtrado
+  Produtividade sem amostra â€” formatPercent â†’ em dash (â€”), nunca 0% falso
+  Tailwind hygiene â€” auditoria estÃ¡tica em ui/ (sem hex arbitrÃ¡rio / z-index runaway)
 FIXES:
   parseRequestPath corrige mocks fetch com URLs relativas (VITE_API_BASE_URL vazio em Vitest)
   proposals/purchase-orders e2e composeFetch migrado para parseRequestPath
 NOTES:
-  Produtividade exibe em dash (—) em vez do literal NO_DATA; sem amostra não renderiza 0%.
+  Produtividade exibe em dash (â€”) em vez do literal NO_DATA; sem amostra nÃ£o renderiza 0%.
 WORKING_TREE: DIRTY
 NEXT_TEST: PERFORMANCE_STRESS
 NEXT_PROMPT_EXECUTED: NO
@@ -5828,22 +5828,22 @@ ARTIFACTS:
   apps/api/package.json (test:performance-stress)
   package.json (test:performance-stress)
 EVIDENCE:
-  pnpm test:performance-stress — 3/3 PASS (~84–103s)
+  pnpm test:performance-stress â€” 3/3 PASS (~84â€“103s)
   PERF_STRESS_REPORT p95=1248 p99=1248 bottleneck=auth.login spikeError=0
 ENVIRONMENT:
-  TEST_DATABASE_URL (PostgreSQL local); PERF_SOAK_SECONDS=20; ambiente controlado — sem produção
+  TEST_DATABASE_URL (PostgreSQL local); PERF_SOAK_SECONDS=20; ambiente controlado â€” sem produÃ§Ã£o
 COVERAGE:
   Baseline/normal: login, search, dashboard, OS, resources, measurements, billing, reports
-  Stress ramp: concorrência 2→16; gargalo medido em auth.login
-  Spike: concurrency 24; error rate 0 (degradação latência, sem falso sucesso)
+  Stress ramp: concorrÃªncia 2â†’16; gargalo medido em auth.login
+  Spike: concurrency 24; error rate 0 (degradaÃ§Ã£o latÃªncia, sem falso sucesso)
   Soak: 20s amostras de heap/RSS/connections/outbox
-  Leak: estabilização pós-carga (heap Δ≤32MB, connections Δ≤4 vs snapshot pós-load)
-  Read isolation: search/dashboard/reports sob pressão; service-orders.list mantém error 0
-  Post-stress integrity: duplicate clients/OS, overbooking, billing/doc collisions, orphans — zero
+  Leak: estabilizaÃ§Ã£o pÃ³s-carga (heap Î”â‰¤32MB, connections Î”â‰¤4 vs snapshot pÃ³s-load)
+  Read isolation: search/dashboard/reports sob pressÃ£o; service-orders.list mantÃ©m error 0
+  Post-stress integrity: duplicate clients/OS, overbooking, billing/doc collisions, orphans â€” zero
 FIXES:
   injectTimed passa a tratar envelope JSON `{ error }` como falha (anti falso sucesso HTTP 200)
-  Seeder expõe sampleMeasurementServiceOrderId / sampleBillingServiceOrderId
-  parseRequestPath (perf web) já aplicado em prompt anterior — sem regressão aqui
+  Seeder expÃµe sampleMeasurementServiceOrderId / sampleBillingServiceOrderId
+  parseRequestPath (perf web) jÃ¡ aplicado em prompt anterior â€” sem regressÃ£o aqui
 NOTES:
   P95/P99 agregados incluem pico de spike em auth.login (~1,2s neste hardware).
   Seq scan em OS list aceito no perfil smoke (tabela pequena); gate de index no perfil full.
@@ -5854,12 +5854,12 @@ NEXT_PROMPT_EXECUTED: NO
 
 ---
 
-## DDP-016 — Proposta técnica RPO/RTO (READY_FOR_APPROVAL)
+## DDP-016 â€” Proposta tÃ©cnica RPO/RTO (READY_FOR_APPROVAL)
 
 ```
 DECISION_ID: DDP-016
 EXECUTED_AT: 2026-08-30
-STATUS: READY_FOR_APPROVAL (não APPROVED)
+STATUS: READY_FOR_APPROVAL (nÃ£o APPROVED)
 PRODUCTION_READINESS: NO-GO (rpoRto.decision = PENDING_APPROVAL)
 ARTIFACTS:
   docs/19-operations/ddp-016-rpo-rto-proposal.json
@@ -5869,13 +5869,13 @@ ARTIFACTS:
   apps/api/src/ops/continuity/cli/emit-ddp-016-proposal.ts
   apps/api/src/ops/dr/dr-verify.ts (queries alinhadas ao schema)
 CAPACITY_AS_BUILT:
-  RPO suportado agora: 24h (pg_dump diário; sem WAL/PITR)
+  RPO suportado agora: 24h (pg_dump diÃ¡rio; sem WAL/PITR)
   RTO suportado agora: ~4h manual (runbook)
   Tier recomendada: RPO 6h / RTO 2h (REQUIRES_OPERATIONAL_CHANGE)
 DR_VALIDATION:
-  pnpm dr:drill em cisne_local_test — backup+restore executados
+  pnpm dr:drill em cisne_local_test â€” backup+restore executados
   9/10 checks PASS; document_object_integrity FAIL (seed fora do storage isolado)
-  RTO medido drill: 4269ms (não representa RTO operacional de produção)
+  RTO medido drill: 4269ms (nÃ£o representa RTO operacional de produÃ§Ã£o)
 TESTS:
   test:continuity 9/9 | test:backup 8/8 | test:dr 7/7 | test:readiness 22/22
 HUMAN_DECISION_REQUIRED:
@@ -5886,14 +5886,14 @@ COMMIT: NOT_REQUIRED
 
 ---
 
-## Infraestrutura de regressão visual — frontend
+## Infraestrutura de regressÃ£o visual â€” frontend
 
 ```
 EXECUTION_ID: frontend-visual-regression-infra
 EXECUTION_TITLE: Playwright visual regression para @cisne/web
 EXECUTED_AT: 2026-08-30
 EXECUTION_STATUS: PASS
-STACK: @playwright/test ^1.55 — Chromium only (consistência CI/local)
+STACK: @playwright/test ^1.55 â€” Chromium only (consistÃªncia CI/local)
 SCRIPTS:
   pnpm --filter @cisne/web test:visual
   pnpm --filter @cisne/web test:visual:update
@@ -5906,28 +5906,28 @@ ARTIFACTS:
   apps/web/e2e/visual/*-snapshots/*.png (9 baselines)
 COVERAGE:
   login (/login)
-  dashboard executivo (/app) — mask .dashboard-page__meta
+  dashboard executivo (/app) â€” mask .dashboard-page__meta
   faturamento vazio (/app/billing)
-VIEWPORTS: mobile 390×844, tablet 768×1024, desktop 1280×720
+VIEWPORTS: mobile 390Ã—844, tablet 768Ã—1024, desktop 1280Ã—720
 LOCALE/TZ: pt-BR / America/Porto_Velho
 MOCKING: page.route **/api/v1/** (sem backend real)
-CI: .github/workflows/ci.yml — playwright install chromium + test:visual no job build
+CI: .github/workflows/ci.yml â€” playwright install chromium + test:visual no job build
 VISUAL_REGRESSION: PASS (9/9)
-UNIT/COMPONENT: PASS (228/228 — sem regressão)
+UNIT/COMPONENT: PASS (228/228 â€” sem regressÃ£o)
 LINT: NOT_REEXECUTED
 TYPECHECK: PASS (tsc -b apps/web)
 BUILD: PASS
 COMMIT: NOT_REQUIRED
 WORKING_TREE: DIRTY
-NEXT_ALLOWED_PROMPT: NONE (infra visual entregue; aguardar próximo marco)
+NEXT_ALLOWED_PROMPT: NONE (infra visual entregue; aguardar prÃ³ximo marco)
 NOTES:
-  Baselines versionadas no repositório; atualizar com test:visual:update após mudanças visuais intencionais.
+  Baselines versionadas no repositÃ³rio; atualizar com test:visual:update apÃ³s mudanÃ§as visuais intencionais.
   webServer usa corepack pnpm + preview:visual em 127.0.0.1:4173.
 ```
 
 ---
 
-## PROMPT CORRETIVO — FRONTEND DE PROPOSTAS E PEDIDOS DE COMPRA
+## PROMPT CORRETIVO â€” FRONTEND DE PROPOSTAS E PEDIDOS DE COMPRA
 
 ```
 EXECUTION_ID: corrective-frontend-proposals-purchase-orders
@@ -5953,17 +5953,17 @@ PURCHASE ORDER DETAILS: PASS
 PURCHASE ORDER FORM: PASS
 PURCHASE ORDER ACTIONS: PASS (register, cancel)
 
-REQUEST → PROPOSAL NAVIGATION: PASS (links em ServiceRequestDetailPage quando proposalId)
-PROPOSAL → PURCHASE ORDER NAVIGATION: PASS (via solicitação com purchaseOrderId; sem FK direta no backend)
-PURCHASE ORDER → SERVICE ORDER NAVIGATION: NOT_SUPPORTED_BY_BACKEND (sem endpoint de listagem OS por PO; link via solicitação/OS convertida)
+REQUEST â†’ PROPOSAL NAVIGATION: PASS (links em ServiceRequestDetailPage quando proposalId)
+PROPOSAL â†’ PURCHASE ORDER NAVIGATION: PASS (via solicitaÃ§Ã£o com purchaseOrderId; sem FK direta no backend)
+PURCHASE ORDER â†’ SERVICE ORDER NAVIGATION: NOT_SUPPORTED_BY_BACKEND (sem endpoint de listagem OS por PO; link via solicitaÃ§Ã£o/OS convertida)
 
-REAL API INTEGRATION: PASS (fetch nativo, sem mocks em produção)
+REAL API INTEGRATION: PASS (fetch nativo, sem mocks em produÃ§Ã£o)
 FAKE PRODUCTION DATA: ABSENT
 
 NEGATIVE AUTHORIZATION: PASS
 FAILURE INJECTION: PASS (testes e2e com denied, version conflict)
 CONCURRENCY: PASS (version conflict UI + reload)
-IDEMPOTENCY: PASS (double-submit bloqueado nos formulários/ações)
+IDEMPOTENCY: PASS (double-submit bloqueado nos formulÃ¡rios/aÃ§Ãµes)
 VERSION CONFLICT: PASS
 DOUBLE SUBMIT: PASS
 TIMEOUT: PASS (retry seguro em listagens)
@@ -5971,13 +5971,13 @@ DEPENDENCY UNAVAILABLE: NOT_APPLICABLE
 TRANSACTION ROLLBACK: BACKEND_RESPONSIBILITY
 INCREMENTAL MIGRATIONS: NOT_APPLICABLE
 RECOVERY: PASS
-RESPONSIVE: PASS (padrão shell/requests-page existente)
+RESPONSIVE: PASS (padrÃ£o shell/requests-page existente)
 ACCESSIBILITY: PASS (labels, roles, aria-live, confirm dialogs)
 VISUAL REGRESSION: NOT_REEXECUTED
-UNIT/COMPONENT: PASS (18 testes módulo comercial)
+UNIT/COMPONENT: PASS (18 testes mÃ³dulo comercial)
 INTEGRATION: PASS (e2e vitest com mocks API)
 E2E: PASS (fluxos proposta e PO)
-LINT: PASS (módulos comercial)
+LINT: PASS (mÃ³dulos comercial)
 TYPECHECK: PASS (tsc -b apps/web)
 BUILD: PASS (vite build)
 
@@ -5998,77 +5998,77 @@ ARTEFATOS:
   apps/web/src/test/commercial-fetch-mock.ts
   apps/web/src/App.tsx (rotas)
   apps/web/src/shell/nav-config.ts, useNavAccess.ts, types.ts
-  apps/web/src/requests/pages/ServiceRequestDetailPage.tsx (navegação cruzada)
+  apps/web/src/requests/pages/ServiceRequestDetailPage.tsx (navegaÃ§Ã£o cruzada)
 ```
 
 ---
 
-## CORRETIVO — ERP ACL + DR document_object_integrity
+## CORRETIVO â€” ERP ACL + DR document_object_integrity
 
 ```
 EXECUTED_AT: 2026-08-30
-STATUS: PASS (código + testes unitários)
+STATUS: PASS (cÃ³digo + testes unitÃ¡rios)
 ISSUES:
-  1. Integração ERP tratada como operação ao vivo (alertas/readiness)
+  1. IntegraÃ§Ã£o ERP tratada como operaÃ§Ã£o ao vivo (alertas/readiness)
   2. DR drill FAIL em document_object_integrity (seed fora do storage isolado)
 FIXES:
   ERP ACL:
-    evaluateExternalIntegrationsCheck() — integração é adapter ACL, não operação ao vivo
-    technical-alert.engine — ERP/tracking alerts suprimidos quando *_INTEGRATION_CONFIGURED=false
-    readiness-established-baseline — fato registrado sobre ACL adapter
-    pilot-program.md — flag EXTERNAL_INTEGRATIONS clarificada
+    evaluateExternalIntegrationsCheck() â€” integraÃ§Ã£o Ã© adapter ACL, nÃ£o operaÃ§Ã£o ao vivo
+    technical-alert.engine â€” ERP/tracking alerts suprimidos quando *_INTEGRATION_CONFIGURED=false
+    readiness-established-baseline â€” fato registrado sobre ACL adapter
+    pilot-program.md â€” flag EXTERNAL_INTEGRATIONS clarificada
   DR:
-    object-storage-hydrate.ts — copia objetos DB-referenciados do storage canônico antes do backup
-    dr-runner.ts — check object_storage_hydration + falha antecipada se objetos ausentes
-    dr-config.ts — DR_OBJECT_STORAGE_SOURCE
-    dr-restore-runbook.md — pré-requisito de hidratação documentado
+    object-storage-hydrate.ts â€” copia objetos DB-referenciados do storage canÃ´nico antes do backup
+    dr-runner.ts â€” check object_storage_hydration + falha antecipada se objetos ausentes
+    dr-config.ts â€” DR_OBJECT_STORAGE_SOURCE
+    dr-restore-runbook.md â€” prÃ©-requisito de hidrataÃ§Ã£o documentado
 TESTS:
   object-storage-hydrate.spec.ts 2/2
   dr-runner.spec.ts 7/7
   readiness-gate.spec.ts 21/21 (incl. ERP ACL adapter)
   technical-alert.engine.spec.ts 8/8
 DR_REVALIDATION:
-  pnpm dr:drill local — bloqueado por pg_dump ENOENT neste host; hidratação PASS
-  Reexecutar com pg_dump + cisne_local_test populado para evidência PASS completa
+  pnpm dr:drill local â€” bloqueado por pg_dump ENOENT neste host; hidrataÃ§Ã£o PASS
+  Reexecutar com pg_dump + cisne_local_test populado para evidÃªncia PASS completa
 COMMIT: NOT_REQUIRED
 WORKING_TREE: DIRTY
 ```
 
 ---
 
-## CORRETIVO — REGRESSÃO VISUAL DE PROPOSTAS E PEDIDOS DE COMPRA
+## CORRETIVO â€” REGRESSÃƒO VISUAL DE PROPOSTAS E PEDIDOS DE COMPRA
 
 ```text
 EXECUTION_ID: corrective-visual-proposals-purchase-orders
-TITLE: Cobertura Playwright determinística para módulos comerciais
+TITLE: Cobertura Playwright determinÃ­stica para mÃ³dulos comerciais
 STARTED_AT: 2026-08-30T04:12-04:00
 FINISHED_AT: 2026-08-30T04:53:20.6030563-04:00
 STATUS: PASS
 QUALITY_GATE: PASS
-FUNCTIONAL_CODE_CREATED: YES (correção de data civil do PO)
+FUNCTIONAL_CODE_CREATED: YES (correÃ§Ã£o de data civil do PO)
 NEXT_PROMPT_EXECUTED: NO
 
 ANALYSIS:
   A infraestrutura visual cobria login, dashboard e faturamento vazio (9 baselines).
-  Propostas e pedidos de compra não possuíam spec nem baseline Playwright.
-  O webServer do Playwright inicialmente não iniciava por TS1484 preexistente em
+  Propostas e pedidos de compra nÃ£o possuÃ­am spec nem baseline Playwright.
+  O webServer do Playwright inicialmente nÃ£o iniciava por TS1484 preexistente em
   idempotency-retry.ui.test.tsx; import de FormEvent corrigido para type-only.
-  Um preview obsoleto em :4173 foi detectado e encerrado antes da validação final,
+  Um preview obsoleto em :4173 foi detectado e encerrado antes da validaÃ§Ã£o final,
   evitando falso positivo por reuseExistingServer.
 
 COVERAGE_ADDED:
-  Propostas: lista populada, detalhe ISSUED e formulário de criação.
-  Pedidos de compra: lista populada, detalhe REGISTERED e formulário de criação.
+  Propostas: lista populada, detalhe ISSUED e formulÃ¡rio de criaÃ§Ã£o.
+  Pedidos de compra: lista populada, detalhe REGISTERED e formulÃ¡rio de criaÃ§Ã£o.
   Viewports: mobile 390x844, tablet 768x1024, desktop 1280x720.
-  Novos baselines: 18 PNG; total da suíte visual: 27.
-  Dados: fixtures sintéticas, tipadas, fixas e sem backend/dados reais.
-  Autorização visual: probes mockados com semântica 400/404 (capacidade existe)
+  Novos baselines: 18 PNG; total da suÃ­te visual: 27.
+  Dados: fixtures sintÃ©ticas, tipadas, fixas e sem backend/dados reais.
+  AutorizaÃ§Ã£o visual: probes mockados com semÃ¢ntica 400/404 (capacidade existe)
   e 401 quando ausente token Bearer.
 
 DEFECT_FOUND_AND_FIXED:
   PurchaseOrder issueDate YYYY-MM-DD sofria deslocamento UTC e exibia o dia anterior
-  em America/Porto_Velho. formatDate() agora preserva data civil; teste unitário e
-  asserção Playwright comprovam 2026-08-21 -> 21/08/2026.
+  em America/Porto_Velho. formatDate() agora preserva data civil; teste unitÃ¡rio e
+  asserÃ§Ã£o Playwright comprovam 2026-08-21 -> 21/08/2026.
 
 FILES_CREATED:
   apps/web/e2e/fixtures/commercial-api-routes.ts
@@ -6095,65 +6095,65 @@ VALIDATION:
   testes focados commercial + idempotency-retry: PASS (23/23)
   lint web + e2e + playwright.config: PASS
   typecheck app + e2e: PASS
-  build: PASS (warning não bloqueante de chunk >500 kB já existente)
+  build: PASS (warning nÃ£o bloqueante de chunk >500 kB jÃ¡ existente)
   Vitest web completo: PASS (73 arquivos, 257/257)
-  Observação de honestidade: primeira execução completa teve 1 timeout transitório
-  em service-order-measurement (256/257); arquivo isolado passou 4/4 e a repetição
-  integral passou 257/257 sem alteração nesse módulo.
+  ObservaÃ§Ã£o de honestidade: primeira execuÃ§Ã£o completa teve 1 timeout transitÃ³rio
+  em service-order-measurement (256/257); arquivo isolado passou 4/4 e a repetiÃ§Ã£o
+  integral passou 257/257 sem alteraÃ§Ã£o nesse mÃ³dulo.
   IDE lints nos arquivos alterados: 0.
   CI Linux: NOT_EXECUTED neste host; job existente descobre os novos specs
   automaticamente por testDir e executa test:visual.
 
 TRACEABILITY:
-  docs/16-testing/requirement-test-traceability.md atualizado com evidência técnica
+  docs/16-testing/requirement-test-traceability.md atualizado com evidÃªncia tÃ©cnica
   para BR-002/FR-029/CAP-004 e BR-008/FR-029/FR-033/CAP-006.
-  Nenhuma regra empresarial promovida a CONFIRMED; aceite humano não inferido.
+  Nenhuma regra empresarial promovida a CONFIRMED; aceite humano nÃ£o inferido.
 
-COMMIT: NOT_CREATED (não solicitado)
-WORKING_TREE: DIRTY (alterações anteriores preservadas)
-PRODUCTION_READINESS: permanece NO-GO; esta correção não altera readiness.
-NEXT_ALLOWED_ACTION: revisão humana/CI da correção; nenhum prompt seguinte iniciado.
+COMMIT: NOT_CREATED (nÃ£o solicitado)
+WORKING_TREE: DIRTY (alteraÃ§Ãµes anteriores preservadas)
+PRODUCTION_READINESS: permanece NO-GO; esta correÃ§Ã£o nÃ£o altera readiness.
+NEXT_ALLOWED_ACTION: revisÃ£o humana/CI da correÃ§Ã£o; nenhum prompt seguinte iniciado.
 ```
 
 ---
 
-## Login premium CISNE Rondônia (frontend)
+## Login premium CISNE RondÃ´nia (frontend)
 
 ```
 PROMPT_ID: LOGIN-PREMIUM-CISNE
-PROMPT_TITLE: Login premium CISNE Rondônia com Tailwind CSS
+PROMPT_TITLE: Login premium CISNE RondÃ´nia com Tailwind CSS
 EXECUTED_AT: 2026-08-30
 EXECUTION_STATUS: PASS
 
 LOGIN PREMIUM: PASS
 TAILWIND VERSION: 4 (@tailwindcss/vite + tailwindcss@4)
 TAILWIND PLUS: NOT_AVAILABLE
-AUTH CONTRACT PRESERVED: PASS — POST /api/v1/auth/login { login, password }; sem alteração de backend/sessão/redirect policy
-CISNE RONDÔNIA WORDMARK: PASS — assinatura tipográfica CISNE + RONDÔNIA (CisneWordmark.tsx)
-CORPORATE VISUAL: PASS — painel institucional escuro + formulário claro, copy PT-BR aprovada
-PREMIUM FINISH: PASS — microdetalhes CSS, toggle senha, loading Entrando…, rodapé restrito
+AUTH CONTRACT PRESERVED: PASS â€” POST /api/v1/auth/login { login, password }; sem alteraÃ§Ã£o de backend/sessÃ£o/redirect policy
+CISNE RONDÃ”NIA WORDMARK: PASS â€” assinatura tipogrÃ¡fica CISNE + RONDÃ”NIA (CisneWordmark.tsx)
+CORPORATE VISUAL: PASS â€” painel institucional escuro + formulÃ¡rio claro, copy PT-BR aprovada
+PREMIUM FINISH: PASS â€” microdetalhes CSS, toggle senha, loading Entrandoâ€¦, rodapÃ© restrito
 GENERIC TEMPLATE APPEARANCE: ABSENT
 
 DESKTOP: PASS
 TABLET: PASS
 MOBILE: PASS
-KEYBOARD: PASS — Enter submete; foco preservado no toggle senha
-ACCESSIBILITY: PASS — labels permanentes, autocomplete username/current-password, aria-busy, alert roles
-PASSWORD MANAGER: PASS — sem bloqueio de colagem; autocomplete correto
-ERROR SANITIZATION: PASS — mensagens PT sanitizadas (401/429/rede)
+KEYBOARD: PASS â€” Enter submete; foco preservado no toggle senha
+ACCESSIBILITY: PASS â€” labels permanentes, autocomplete username/current-password, aria-busy, alert roles
+PASSWORD MANAGER: PASS â€” sem bloqueio de colagem; autocomplete correto
+ERROR SANITIZATION: PASS â€” mensagens PT sanitizadas (401/429/rede)
 ACCOUNT ENUMERATION: PROTECTED
-OPEN REDIRECT: PROTECTED — sanitizeRedirectPath inalterado
+OPEN REDIRECT: PROTECTED â€” sanitizeRedirectPath inalterado
 
-FAILURE INJECTION: PASS — 401, 429, TypeError rede, sessão expirada (UI)
-TIMEOUT: PASS — loading bloqueia double-submit (submitGenerationRef)
+FAILURE INJECTION: PASS â€” 401, 429, TypeError rede, sessÃ£o expirada (UI)
+TIMEOUT: PASS â€” loading bloqueia double-submit (submitGenerationRef)
 RATE LIMIT UI: PASS
 DOUBLE SUBMIT: PASS
-OUT-OF-ORDER RESPONSE: PASS — generation guard no LoginPage
-SESSION EXPIRATION: PASS — notice via location.state.reason
+OUT-OF-ORDER RESPONSE: PASS â€” generation guard no LoginPage
+SESSION EXPIRATION: PASS â€” notice via location.state.reason
 
-VISUAL REGRESSION: PASS — Playwright login 3/3 (mobile/tablet/desktop); suite completa 27/27 após stabilizePage load
-COMPONENT TESTS: PASS — LoginPage.test.tsx 8/8
-E2E: PASS — auth-flow.e2e + shell.e2e com loginAndReachApp (contrato mock real)
+VISUAL REGRESSION: PASS â€” Playwright login 3/3 (mobile/tablet/desktop); suite completa 27/27 apÃ³s stabilizePage load
+COMPONENT TESTS: PASS â€” LoginPage.test.tsx 8/8
+E2E: PASS â€” auth-flow.e2e + shell.e2e com loginAndReachApp (contrato mock real)
 LINT: PASS
 TYPECHECK: PASS
 BUILD: PASS
@@ -6176,91 +6176,91 @@ ARTIFACTS:
   E2E migrados para seletores PT (shell, auth-flow, dashboard, clients, assets, catalog, requests, vertical)
 
 EVIDENCE:
-  pnpm --filter @cisne/web test — 257/257 PASS
-  pnpm --filter @cisne/web lint — PASS
-  pnpm --filter @cisne/web typecheck — PASS
-  pnpm --filter @cisne/web build — PASS
-  pnpm --filter @cisne/web test:visual — 27/27 PASS
+  pnpm --filter @cisne/web test â€” 257/257 PASS
+  pnpm --filter @cisne/web lint â€” PASS
+  pnpm --filter @cisne/web typecheck â€” PASS
+  pnpm --filter @cisne/web build â€” PASS
+  pnpm --filter @cisne/web test:visual â€” 27/27 PASS
 
 LOGIN QUALITY: CERTIFIED
 COMMIT: 8618004
-WORKING_TREE: DIRTY (alterações anteriores preservadas fora do escopo login)
+WORKING_TREE: DIRTY (alteraÃ§Ãµes anteriores preservadas fora do escopo login)
 NEXT_ACTION: CONTINUE FRONTEND WORK
 ```
 
 ---
 
-## CORRETIVO — Higiene engenharia (README, app.module, idempotency harness)
+## CORRETIVO â€” Higiene engenharia (README, app.module, idempotency harness)
 
 ```
 EXECUTED_AT: 2026-08-30
-STATUS: PASS (correções aplicadas e testes reexecutados)
+STATUS: PASS (correÃ§Ãµes aplicadas e testes reexecutados)
 
 ISSUES:
   1. README.md ainda afirmava FUNCTIONAL CODE: NOT STARTED
   2. app.module.ts importava AppModule de si mesmo (residual fault-injection)
-  3. test:idempotency-retry planejado mas não estável (harness com pool compartilhado/locks/drain)
+  3. test:idempotency-retry planejado mas nÃ£o estÃ¡vel (harness com pool compartilhado/locks/drain)
   4. Working tree suja; HEAD divergente do marco Prompt 94
 
 FIXES:
   README.md + docs/README.md:
     FUNCTIONAL CODE: STARTED; PRODUCTION READINESS: NO-GO; aviso honesto sobre hypercare
   app.module.ts:
-    auto-import removido; FaultInjectionModule permanece como import legítimo
+    auto-import removido; FaultInjectionModule permanece como import legÃ­timo
   failure-injection-harness.ts:
-    reset simplificado — mesmo padrão do master-business-harness + truncate outbox/domain
+    reset simplificado â€” mesmo padrÃ£o do master-business-harness + truncate outbox/domain
     removidos advisory lock, drain de pool e pool compartilhado (causavam flakiness)
   faulting-database.service.ts:
-    rollback em conexões com falha DbTransactionAbort/DbConnectionLost (mantido)
+    rollback em conexÃµes com falha DbTransactionAbort/DbConnectionLost (mantido)
   failure-injection / idempotency specs:
     afterAll usa context.close() (encerra pools do harness e do Nest)
 
 TESTS REEXECUTED:
-  idempotency-retry.integration.spec.ts — 16/16 PASS
-  retry-classification.spec.ts — 4/4 PASS
-  failure-injection.integration.spec.ts — 20/20 PASS
+  idempotency-retry.integration.spec.ts â€” 16/16 PASS
+  retry-classification.spec.ts â€” 4/4 PASS
+  failure-injection.integration.spec.ts â€” 20/20 PASS
 
 GIT:
   HEAD: 8618004 (login premium; posterior ao Prompt 94 BLOCKED)
-  WORKING_TREE: DIRTY — commit não solicitado
-  Prompt 94 permanece BLOCKED em histórico; alterações corretivas não equivalem a go-live
+  WORKING_TREE: DIRTY â€” commit nÃ£o solicitado
+  Prompt 94 permanece BLOCKED em histÃ³rico; alteraÃ§Ãµes corretivas nÃ£o equivalem a go-live
 
 COMMIT: NOT_REQUIRED
 ```
 
 ---
 
-## CORRETIVO — Resiliência de conexão local/LAN (login)
+## CORRETIVO â€” ResiliÃªncia de conexÃ£o local/LAN (login)
 
 ```text
 EXECUTED_AT: 2026-08-30
-STATUS: PASS (correção aplicada + validação ponta a ponta)
+STATUS: PASS (correÃ§Ã£o aplicada + validaÃ§Ã£o ponta a ponta)
 
 ISSUE:
-  Frontend apresentava "Não foi possível conectar ao servidor" de forma intermitente em execução local/LAN.
+  Frontend apresentava "NÃ£o foi possÃ­vel conectar ao servidor" de forma intermitente em execuÃ§Ã£o local/LAN.
   Causa raiz composta:
-    1) Múltiplos processos Vite/API concorrentes com portas divergentes.
+    1) MÃºltiplos processos Vite/API concorrentes com portas divergentes.
     2) CORS restrito a origem fixa (quebrava quando Vite subia em porta alternativa).
-    3) Base URL da API frágil em dev/LAN (loopback/local host sem fallback automático).
+    3) Base URL da API frÃ¡gil em dev/LAN (loopback/local host sem fallback automÃ¡tico).
 
 FIXES:
   Backend:
     apps/api/src/auth/config/auth.config.ts
-      - CORS_ORIGIN agora aceita lista separada por vírgula + normalização.
+      - CORS_ORIGIN agora aceita lista separada por vÃ­rgula + normalizaÃ§Ã£o.
       - defaults locais mantidos para 5173/5174.
     apps/api/src/infrastructure/http/cors-origin-policy.ts (novo)
-      - política de CORS permite, em development, origens loopback/LAN privadas
-        no range de portas do Vite (5173-5199), preservando restrição em production.
+      - polÃ­tica de CORS permite, em development, origens loopback/LAN privadas
+        no range de portas do Vite (5173-5199), preservando restriÃ§Ã£o em production.
     apps/api/src/main.ts
-      - enableCors usa política dinâmica por request.
+      - enableCors usa polÃ­tica dinÃ¢mica por request.
   Frontend:
     apps/web/src/auth/api/auth-api.ts
-      - resolução robusta de candidatos de API para dev/LAN.
-      - adaptação automática de host loopback para host LAN quando necessário.
-      - fallback de endpoint em falha de rede e cache do endpoint saudável.
-  Operação local:
-    - limpeza de processos órfãos API/Vite.
-    - API estabilizada em 3000 (sem watch) e web única em 5173 com proxy para API.
+      - resoluÃ§Ã£o robusta de candidatos de API para dev/LAN.
+      - adaptaÃ§Ã£o automÃ¡tica de host loopback para host LAN quando necessÃ¡rio.
+      - fallback de endpoint em falha de rede e cache do endpoint saudÃ¡vel.
+  OperaÃ§Ã£o local:
+    - limpeza de processos Ã³rfÃ£os API/Vite.
+    - API estabilizada em 3000 (sem watch) e web Ãºnica em 5173 com proxy para API.
 
 TESTS:
   API:
@@ -6271,7 +6271,7 @@ TESTS:
     RESULT: PASS (4/4)
     pnpm --filter @cisne/web typecheck
     RESULT: PASS
-  Observação honesta:
+  ObservaÃ§Ã£o honesta:
     pnpm --filter @cisne/api typecheck segue com erros preexistentes fora do escopo
     (performance-benchmark/performance-concurrency).
 
@@ -6279,7 +6279,7 @@ RUNTIME VALIDATION:
   API health: GET /api/v1/health => 200 (database up)
   Login API direto: POST /api/v1/auth/login => 200
   Login via web proxy (5173): POST /api/v1/auth/login => 200
-  CORS dinâmico dev: Origin http://192.168.1.89:5177 => allow-origin refletido
+  CORS dinÃ¢mico dev: Origin http://192.168.1.89:5177 => allow-origin refletido
 
 FILES_CHANGED:
   .env.example
@@ -6294,13 +6294,13 @@ FILES_CHANGED:
   apps/web/src/auth/api/auth-api.ts
 
 COMMIT: NOT_REQUIRED
-WORKING_TREE: DIRTY (alterações anteriores preservadas)
-NEXT_ACTION: manter execução local em http://192.168.1.89:5173 com API em :3000
+WORKING_TREE: DIRTY (alteraÃ§Ãµes anteriores preservadas)
+NEXT_ACTION: manter execuÃ§Ã£o local em http://192.168.1.89:5173 com API em :3000
 ```
 
 ---
 
-## DIAGNÓSTICO + RECUPERAÇÃO RUNTIME — banco vazio e seed controlado
+## DIAGNÃ“STICO + RECUPERAÃ‡ÃƒO RUNTIME â€” banco vazio e seed controlado
 
 ```text
 PROMPT: EMPTY-DATABASE-DIAGNOSIS
@@ -6311,28 +6311,28 @@ STATUS: PASS
 
 RECOVERY COMMANDS:
   Docker Desktop iniciado (daemon estava parado)
-  npx pnpm@9.15.9 db:up — PASS (cisne_local_postgres Healthy)
-  npx pnpm@9.15.9 db:migrate — journal dev backfill (3→19); test OK; db:migrate:dev revalidado PASS
-  npx pnpm@9.15.9 auth:repair:dev-login — PASS (cisne_local_dev + cisne_runtime updated)
+  npx pnpm@9.15.9 db:up â€” PASS (cisne_local_postgres Healthy)
+  npx pnpm@9.15.9 db:migrate â€” journal dev backfill (3â†’19); test OK; db:migrate:dev revalidado PASS
+  npx pnpm@9.15.9 auth:repair:dev-login â€” PASS (cisne_local_dev + cisne_runtime updated)
 
-CONEXÃO REAL DATABASE_URL:
+CONEXÃƒO REAL DATABASE_URL:
   NODE_ENV=development host=127.0.0.1 port=5432 database=cisne_local_dev user=cisne_local_dev
-  Probe pg Pool — OK; server_addr=172.18.0.2 (container local)
+  Probe pg Pool â€” OK; server_addr=172.18.0.2 (container local)
 
-PRÉ-SEED (somente leitura):
+PRÃ‰-SEED (somente leitura):
   pty.clients=0 sr.service_requests=0 com.proposals=0 so.service_orders=0
-  bil.billing_records=0 cat.service_definitions=49 — operacional vazio
+  bil.billing_records=0 cat.service_definitions=49 â€” operacional vazio
 
-SEED AUTHORIZED: YES → db:seed:demo-ui executado
-  scripts/seed-dev-demo-data.mjs — 2 cenários UAT PASS (locacao, transporte)
-  pós-seed: clients=2 serviceOrders=2 billingDocuments=2 documents=4 grants=232
+SEED AUTHORIZED: YES â†’ db:seed:demo-ui executado
+  scripts/seed-dev-demo-data.mjs â€” 2 cenÃ¡rios UAT PASS (locacao, transporte)
+  pÃ³s-seed: clients=2 serviceOrders=2 billingDocuments=2 documents=4 grants=232
 
 API SMOKE:
-  POST /api/v1/auth/login — 200
-  GET /api/v1/clients — 200 items=2 (alinhado com banco)
+  POST /api/v1/auth/login â€” 200
+  GET /api/v1/clients â€” 200 items=2 (alinhado com banco)
 
 FIXES APPLIED:
-  scripts/seed-dev-demo-data.mjs — reflect-metadata via requireFromApi
+  scripts/seed-dev-demo-data.mjs â€” reflect-metadata via requireFromApi
 
 EMPTY DATABASE DIAGNOSIS: PASS
 ENVIRONMENT: DEVELOPMENT
@@ -6342,28 +6342,28 @@ DATABASE DATA: PRESENT
 API DATA: PRESENT
 FRONTEND DATA: NOT_RUN
 TENANT/SCOPE: CORRECT
-ROOT CAUSE: infra parada + db:seed:dev não popula módulos operacionais
+ROOT CAUSE: infra parada + db:seed:dev nÃ£o popula mÃ³dulos operacionais
 SEED AUTHORIZED: YES
 PRODUCTION SYNTHETIC DATA: PROHIBITED
 REGRESSION TEST: NOT_REQUIRED
 COMMIT: NOT_REQUIRED
 WORKING TREE: DIRTY
-NEXT_ACTION: definir JWT_SECRET no .env local para API dev estável
+NEXT_ACTION: definir JWT_SECRET no .env local para API dev estÃ¡vel
 NEXT_PROMPT_EXECUTED: NO
 ```
 
 ---
 
-## CORRETIVO — Serialização DB testes integração/E2E (pós MASTER-CERTIFICATION)
+## CORRETIVO â€” SerializaÃ§Ã£o DB testes integraÃ§Ã£o/E2E (pÃ³s MASTER-CERTIFICATION)
 
 ```text
 EXECUTED_AT: 2026-08-30
-STATUS: PASS (correção aplicada + validação)
+STATUS: PASS (correÃ§Ã£o aplicada + validaÃ§Ã£o)
 
 ISSUE:
-  Falhas intermitentes em adversarial-security e chaos-recovery durante regressão MASTER:
+  Falhas intermitentes em adversarial-security e chaos-recovery durante regressÃ£o MASTER:
   FK 23503 (grants/decision_audits), CatalogHttpException no seed UAT, login HTTP 500.
-  Causa raiz: múltiplos processos Vitest/pnpm compartilhando TEST_DATABASE_URL sem mutex
+  Causa raiz: mÃºltiplos processos Vitest/pnpm compartilhando TEST_DATABASE_URL sem mutex
   (ex.: test:adversarial-security e test:chaos-recovery disparados em paralelo).
 
 FIXES:
@@ -6382,23 +6382,23 @@ FIXES:
     - formatUatScenarioError (HttpException response serializado)
 
 VALIDATION:
-  adversarial-security 12/12 + unit 22/22 — PASS isolado
-  chaos-recovery 14/14 — PASS isolado
-  adversarial-security ∥ chaos-recovery (2 processos) — PASS / PASS
-  master-business 9/9 — PASS
-  concurrency 24/24 — PASS
-  @cisne/database build + integration-test-db-lock.spec 2/2 — PASS
+  adversarial-security 12/12 + unit 22/22 â€” PASS isolado
+  chaos-recovery 14/14 â€” PASS isolado
+  adversarial-security âˆ¥ chaos-recovery (2 processos) â€” PASS / PASS
+  master-business 9/9 â€” PASS
+  concurrency 24/24 â€” PASS
+  @cisne/database build + integration-test-db-lock.spec 2/2 â€” PASS
 
 COMMIT: NOT_REQUIRED
 WORKING_TREE: DIRTY
-NEXT_ACTION: reexecutar MASTER CERTIFICATION gate com suites em série (ou confiar no serializer)
+NEXT_ACTION: reexecutar MASTER CERTIFICATION gate com suites em sÃ©rie (ou confiar no serializer)
 ```
 
-## PROMPT — Massa sintética determinística (development / homologation)
+## PROMPT â€” Massa sintÃ©tica determinÃ­stica (development / homologation)
 
 ```text
 EXECUTED_AT: 2026-08-30
-PROMPT: MASSA SINTÉTICA DETERMINÍSTICA PARA DESENVOLVIMENTO E HOMOLOGAÇÃO
+PROMPT: MASSA SINTÃ‰TICA DETERMINÃSTICA PARA DESENVOLVIMENTO E HOMOLOGAÃ‡ÃƒO
 STATUS: PASS
 
 PRECONDITIONS:
@@ -6412,24 +6412,24 @@ IMPLEMENTATION:
   packages/database/src/seed/synthetic-seed-lock.ts
   packages/database/src/seed/deterministic-synthetic-identifiers.ts
   apps/api/src/synthetic-seed/ (scenarios, runner, harness, CLI, integration spec)
-  pnpm db:seed:synthetic → nest build + node dist CLI
-  Namespace cisne-synthetic-dev-v1 + prefixo TESTE — + external_erp_id
+  pnpm db:seed:synthetic â†’ nest build + node dist CLI
+  Namespace cisne-synthetic-dev-v1 + prefixo TESTE â€” + external_erp_id
 
 VALIDATION:
-  test:synthetic-seed 3/3 — PASS (idempotency, production block, concurrency)
-  synthetic-seed-safety.spec 6/6 — PASS
-  db:seed:synthetic dev — PASS (15 cenários, reexecução idempotente)
-  nest build — PASS
+  test:synthetic-seed 3/3 â€” PASS (idempotency, production block, concurrency)
+  synthetic-seed-safety.spec 6/6 â€” PASS
+  db:seed:synthetic dev â€” PASS (15 cenÃ¡rios, reexecuÃ§Ã£o idempotente)
+  nest build â€” PASS
 
 GATES:
   INTEGRATION (synthetic-seed): PASS
   UNIT (safety): PASS
   BUILD: PASS
-  LINT (api full): FAIL (pré-existente fora do escopo seed)
-  TYPECHECK (api full): FAIL (pré-existente performance specs)
-  TRANSACTION ROLLBACK: PARTIAL — cenários usam commits de domínio; falha intercena aborta lock mas não reverte cenários já gravados
+  LINT (api full): FAIL (prÃ©-existente fora do escopo seed)
+  TYPECHECK (api full): FAIL (prÃ©-existente performance specs)
+  TRANSACTION ROLLBACK: PARTIAL â€” cenÃ¡rios usam commits de domÃ­nio; falha intercena aborta lock mas nÃ£o reverte cenÃ¡rios jÃ¡ gravados
 
-SEED COUNTS (namespace + TESTE —):
+SEED COUNTS (namespace + TESTE â€”):
   CLIENTS: 15 | CATALOG (SYN-* defs): 7 | ALLOCATIONS: 8 | REQUESTS: 11
   PROPOSALS: 16 | PO: 12 | OS: 11 | EXECUTIONS: 12 | MEASUREMENTS: 6
   BILLINGS: 5 | DOCUMENTS: 14 | NOTIFICATIONS: 0
@@ -6439,11 +6439,11 @@ WORKING_TREE: DIRTY
 NEXT_ACTION: VALIDATE FULL STACK
 ```
 
-## PROMPT — Validação full stack (dados, tabelas, gráficos)
+## PROMPT â€” ValidaÃ§Ã£o full stack (dados, tabelas, grÃ¡ficos)
 
 ```text
 EXECUTED_AT: 2026-08-30
-PROMPT: VALIDAÇÃO FULL STACK DOS DADOS, TABELAS E GRÁFICOS
+PROMPT: VALIDAÃ‡ÃƒO FULL STACK DOS DADOS, TABELAS E GRÃFICOS
 STATUS: PASS
 
 PRECONDITION:
@@ -6459,47 +6459,47 @@ RECONCILIATION (cisne_local_dev, dev-operator GLOBAL grants):
   purchase_orders: DB 12 = API 12
   service_orders: DB 11 = API 11
   documents: DB 14 = API 14
-  dashboard OS-by-status chart: 10 (exclui CANCELLED; 11 total − 1 cancelada)
-  productivity sampleSize: 6 (medições elegíveis)
+  dashboard OS-by-status chart: 10 (exclui CANCELLED; 11 total âˆ’ 1 cancelada)
+  productivity sampleSize: 6 (mediÃ§Ãµes elegÃ­veis)
 
 FRONTEND:
-  Propostas/Pedidos: list pages usam API real (sem mock em src de produção)
-  Vitest e2e: proposals 4/4, purchase-orders 4/4, dashboard 2/2 — PASS
-  test:frontend-resilience 99/99 — PASS
-  web test 279/279 — PASS
+  Propostas/Pedidos: list pages usam API real (sem mock em src de produÃ§Ã£o)
+  Vitest e2e: proposals 4/4, purchase-orders 4/4, dashboard 2/2 â€” PASS
+  test:frontend-resilience 99/99 â€” PASS
+  web test 279/279 â€” PASS
   FAKE FRONTEND DATA: ABSENT (mocks restritos a src/test)
 
 AUTHORIZATION:
   proposals sem token: 401 | login senha errada: 401
 
 GATES EXECUTADOS:
-  test:synthetic-seed 3/3 — PASS
-  web build — PASS
-  api build — PASS
-  LINT api full — FAIL (pré-existente)
-  TYPECHECK api full — FAIL (pré-existente performance specs)
-  Playwright visual — NOT_RUN (login snapshots dirty no working tree)
+  test:synthetic-seed 3/3 â€” PASS
+  web build â€” PASS
+  api build â€” PASS
+  LINT api full â€” FAIL (prÃ©-existente)
+  TYPECHECK api full â€” FAIL (prÃ©-existente performance specs)
+  Playwright visual â€” NOT_RUN (login snapshots dirty no working tree)
 
-SEED REEXECUTION: PASS (15 cenários already_present)
+SEED REEXECUTION: PASS (15 cenÃ¡rios already_present)
 
 LIMITATIONS:
-  SEED RECOVERY transacional global — PARTIAL (falha intercena não reverte cenários anteriores)
-  Playwright contra stack live — não executado nesta sessão
-  Medições/faturamento sem listagem global — validados via fluxo OS (e2e)
+  SEED RECOVERY transacional global â€” PARTIAL (falha intercena nÃ£o reverte cenÃ¡rios anteriores)
+  Playwright contra stack live â€” nÃ£o executado nesta sessÃ£o
+  MediÃ§Ãµes/faturamento sem listagem global â€” validados via fluxo OS (e2e)
 
 NON-PRODUCTION DATA READINESS: CERTIFIED
 
 COMMIT: NOT_REQUIRED
-WORKING TREE: DIRTY (login visual + scripts de validação locais)
+WORKING TREE: DIRTY (login visual + scripts de validaÃ§Ã£o locais)
 NEXT_ACTION: CONTINUE FRONTEND VALIDATION | ONBOARD REAL PRODUCTION DATA
 ```
 
-## PROMPT — Correção recovery seed, quality gates e validação visual
+## PROMPT â€” CorreÃ§Ã£o recovery seed, quality gates e validaÃ§Ã£o visual
 
 ```text
 EXECUTED_AT: 2026-08-30
-PROMPT: CORRETIVO — RECOVERY DO SEED, QUALITY GATES E VALIDAÇÃO VISUAL
-STATUS: FAIL (gates globais de integração/performance e Playwright full visual pendentes)
+PROMPT: CORRETIVO â€” RECOVERY DO SEED, QUALITY GATES E VALIDAÃ‡ÃƒO VISUAL
+STATUS: FAIL (gates globais de integraÃ§Ã£o/performance e Playwright full visual pendentes)
 
 SEED RECOVERY: PASS
 SEED ATOMICITY: COMPENSATED
@@ -6512,20 +6512,20 @@ LINT GLOBAL: PASS
 TYPECHECK GLOBAL: PASS
 BUILD: PASS
 
-UNIT api: 425/425 — PASS
-UNIT web: 279/279 — PASS
-E2E api: 57/57 — PASS
-test:synthetic-seed: 6/6 — PASS
-test:failure-injection (isolado): 20/20 — PASS
-INTEGRATION (suite completa): FAIL — 319/320 na 1ª execução isolada; reexecuções falham por timeout de advisory lock com processos concorrentes
-PERFORMANCE SPECS: FAIL — globalSetup duplicate constraint (42710) em execução concorrente
+UNIT api: 425/425 â€” PASS
+UNIT web: 279/279 â€” PASS
+E2E api: 57/57 â€” PASS
+test:synthetic-seed: 6/6 â€” PASS
+test:failure-injection (isolado): 20/20 â€” PASS
+INTEGRATION (suite completa): FAIL â€” 319/320 na 1Âª execuÃ§Ã£o isolada; reexecuÃ§Ãµes falham por timeout de advisory lock com processos concorrentes
+PERFORMANCE SPECS: FAIL â€” globalSetup duplicate constraint (42710) em execuÃ§Ã£o concorrente
 
-PLAYWRIGHT VISUAL login: 4 passed, 2 skipped (reference mobile/tablet) — PASS
+PLAYWRIGHT VISUAL login: 4 passed, 2 skipped (reference mobile/tablet) â€” PASS
 PLAYWRIGHT VISUAL (suite completa): NOT_RUN
 LOGIN AUTHENTICATION: PASS (auth-flow e2e frontend)
-SNAPSHOTS: REVIEWED (login baselines conferidos sem update automático)
+SNAPSHOTS: REVIEWED (login baselines conferidos sem update automÃ¡tico)
 
-VALIDATION SCRIPT: VERSIONED — scripts/fullstack-data-validation.mjs + pnpm validate:fullstack
+VALIDATION SCRIPT: VERSIONED â€” scripts/fullstack-data-validation.mjs + pnpm validate:fullstack
 
 MEASUREMENT/BILLING GLOBAL LIST: NOT_REQUIRED_BY_CURRENT_SCOPE
 MEASUREMENT VIA OS / BILLING VIA OS: PASS (frontend e2e)
@@ -6533,8 +6533,8 @@ NOTIFICATIONS EMPTY STATE: PASS
 NOTIFICATIONS NON-EMPTY: NOT_APPLICABLE
 
 FIXES APPLIED:
-  compensação determinística synthetic-seed-compensation.ts
-  detecção incompleta + compensateSyntheticScenario no runner
+  compensaÃ§Ã£o determinÃ­stica synthetic-seed-compensation.ts
+  detecÃ§Ã£o incompleta + compensateSyntheticScenario no runner
   ensureCatalogBaselineActor antes do portfolio baseline
   ObservabilityModule importa AuthModule/AuthorizationModule (bootstrap)
   lint global api/web/database
@@ -6542,16 +6542,16 @@ FIXES APPLIED:
   validate:fullstack script versionado
 
 WORKING_TREE: DIRTY
-COMMITS: NOT_REQUIRED (aguardando separação seed / lint / login visual)
-NEXT_ACTION: CORRECT REMAINING DEFECTS — reexecutar integration+perf sem concorrência; Playwright visual completo
+COMMITS: NOT_REQUIRED (aguardando separaÃ§Ã£o seed / lint / login visual)
+NEXT_ACTION: CORRECT REMAINING DEFECTS â€” reexecutar integration+perf sem concorrÃªncia; Playwright visual completo
 ```
 
-## PROMPT — Dashboard corporativo premium e robusto da Cisne Rondônia
+## PROMPT â€” Dashboard corporativo premium e robusto da Cisne RondÃ´nia
 
 ```text
 EXECUTED_AT: 2026-08-30T16:05:00-04:00
-PROMPT: DASHBOARD CORPORATIVO PREMIUM E ROBUSTO DA CISNE RONDÔNIA
-STATUS: PASS (frontend dashboard; gates globais de backend live E2E não executados nesta sessão)
+PROMPT: DASHBOARD CORPORATIVO PREMIUM E ROBUSTO DA CISNE RONDÃ”NIA
+STATUS: PASS (frontend dashboard; gates globais de backend live E2E nÃ£o executados nesta sessÃ£o)
 
 DASHBOARD: PASS
 EXISTING COMPONENTS: REUSED (AttentionBlock, charts, DashboardFilters, ProductivityPanel, DashboardMetricCard, DashboardSection, OperationalDashboardSkeleton, useExecutiveDashboard, dashboard-api)
@@ -6569,101 +6569,101 @@ REAL DATA: PASS (somente /api/v1/dashboard/executive)
 FAKE DATA: ABSENT
 
 OPERATIONAL OVERVIEW: PASS
-COMMERCIAL OVERVIEW: NOT_SUPPORTED (contrato executive não expõe propostas/PO)
+COMMERCIAL OVERVIEW: NOT_SUPPORTED (contrato executive nÃ£o expÃµe propostas/PO)
 FINANCIAL OVERVIEW: PASS (aging + KPI derivado de buckets autorizados)
 ALERTS: PASS
-FILTERS: PASS (período + URL; unitId/from/to quando presentes na URL)
+FILTERS: PASS (perÃ­odo + URL; unitId/from/to quando presentes na URL)
 CARDS: PASS
 CHARTS: PASS
 CARD/TABLE/CHART RECONCILIATION: PASS
 EMPTY STATES: PASS
-PARTIAL FAILURE: PASS (degradação por seção + retry localizado)
+PARTIAL FAILURE: PASS (degradaÃ§Ã£o por seÃ§Ã£o + retry localizado)
 NEGATIVE AUTHORIZATION: PASS (estado denied preservado)
 CROSS-SCOPE DATA LEAK: ABSENT
 OUT-OF-ORDER RESPONSES: PASS (requestSequence no hook)
 TIMEOUT/RECOVERY: PASS (retry manual + polling 60s)
 
 DESKTOP/TABLET/MOBILE: PASS (vertical-quality-gate + layout CSS)
-ACCESSIBILITY: PASS (landmarks únicos; header interno como div; gráficos com alternativa textual)
+ACCESSIBILITY: PASS (landmarks Ãºnicos; header interno como div; grÃ¡ficos com alternativa textual)
 PERFORMANCE: PASS (single executive fetch; lazy charts existentes preservados)
 
-VISUAL REGRESSION: PASS (dashboard snapshots INTENTIONAL — redesign premium)
+VISUAL REGRESSION: PASS (dashboard snapshots INTENTIONAL â€” redesign premium)
 COMPONENT TESTS: PASS (dashboard.* + premium + e2e frontend)
 INTEGRATION: NOT_RUN (backend inalterado)
-E2E: PASS (dashboard.e2e.test.tsx + Playwright visual dashboard; jornada live backend não executada)
+E2E: PASS (dashboard.e2e.test.tsx + Playwright visual dashboard; jornada live backend nÃ£o executada)
 
 LINT web: PASS
 TYPECHECK web: PASS
 BUILD web: PASS
 
 FILES OUTSIDE DASHBOARD:
-  apps/web/src/test/login-ui-helpers.ts — expectativa pós-login h1 Visão geral
-  apps/web/e2e/fixtures/visual-helpers.ts — helper visual autenticado
-  apps/web/src/vertical/vertical-quality-gate.e2e.test.tsx — heading dashboard
-  LOGIN: UNCHANGED (LoginPage, login.css, snapshots login não alterados neste prompt)
+  apps/web/src/test/login-ui-helpers.ts â€” expectativa pÃ³s-login h1 VisÃ£o geral
+  apps/web/e2e/fixtures/visual-helpers.ts â€” helper visual autenticado
+  apps/web/src/vertical/vertical-quality-gate.e2e.test.tsx â€” heading dashboard
+  LOGIN: UNCHANGED (LoginPage, login.css, snapshots login nÃ£o alterados neste prompt)
 
 REGRESSIONS: NONE (login preservado)
 
 COMMIT: NOT_REQUIRED
 WORKING TREE: DIRTY
-DASHBOARD QUALITY: REJECTED (E2E live backend + suite integration global não executados nesta sessão)
+DASHBOARD QUALITY: REJECTED (E2E live backend + suite integration global nÃ£o executados nesta sessÃ£o)
 NEXT_ACTION: CONTINUE
 ```
 
-## PROMPT CORRETIVO — Refinamento visual premium do dashboard
+## PROMPT CORRETIVO â€” Refinamento visual premium do dashboard
 
 ```text
 EXECUTED_AT: 2026-08-30T16:20:00-04:00
-PROMPT: REFINAMENTO VISUAL PREMIUM DO DASHBOARD CISNE RONDÔNIA
-STATUS: PASS (refinamento visual; snapshots Playwright pendentes de revisão manual)
+PROMPT: REFINAMENTO VISUAL PREMIUM DO DASHBOARD CISNE RONDÃ”NIA
+STATUS: PASS (refinamento visual; snapshots Playwright pendentes de revisÃ£o manual)
 
 DASHBOARD VISUAL REFINEMENT: PASS
 EXISTING BEHAVIOR: PRESERVED
 BACKEND: UNCHANGED
 API CONTRACTS: PRESERVED
 CONTENT WIDTH: PASS (shell-page-frame full width; dashboard max-width 96rem)
-TOPBAR: PASS (altura reduzida; busca integrada com ícone)
-USER ID EXPOSURE: REMOVED (Minha conta + avatar genérico)
-SIDEBAR: PASS (CISNE RONDÔNIA; hierarquia e item ativo refinados)
-PAGE HEADER: PASS (breadcrumb + título + período + filtro + atualizar integrados)
+TOPBAR: PASS (altura reduzida; busca integrada com Ã­cone)
+USER ID EXPOSURE: REMOVED (Minha conta + avatar genÃ©rico)
+SIDEBAR: PASS (CISNE RONDÃ”NIA; hierarquia e item ativo refinados)
+PAGE HEADER: PASS (breadcrumb + tÃ­tulo + perÃ­odo + filtro + atualizar integrados)
 PERIOD DUPLICATION: REMOVED
 ALERT EMPTY STATE: PASS (estado positivo compacto)
 KPI CARDS: PASS (grid 4 col; acento lateral; valores ampliados)
 ABOVE-THE-FOLD DENSITY: PASS
 DESKTOP/ULTRAWIDE/TABLET/MOBILE: PASS (vertical-quality-gate)
 ACCESSIBILITY: PASS
-VISUAL REGRESSION: FAIL (snapshots desatualizados — diferença INTENTIONAL; não auto-atualizados)
+VISUAL REGRESSION: FAIL (snapshots desatualizados â€” diferenÃ§a INTENTIONAL; nÃ£o auto-atualizados)
 COMPONENT TESTS: PASS
-E2E: PASS (dashboard e2e; 2 falhas flaky em billing/measurement não relacionadas)
+E2E: PASS (dashboard e2e; 2 falhas flaky em billing/measurement nÃ£o relacionadas)
 LINT: PASS
 TYPECHECK: PASS
 BUILD: PASS
-REGRESSIONS: NONE nos módulos alterados
+REGRESSIONS: NONE nos mÃ³dulos alterados
 COMMIT: NOT_REQUIRED
 WORKING TREE: DIRTY
 VISUAL QUALITY: REJECTED (snapshots Playwright pendentes de aceite manual)
 NEXT_ACTION: CONTINUE
 ```
 
-## CORRETIVO — Layout produtividade e gráficos (largura completa)
+## CORRETIVO â€” Layout produtividade e grÃ¡ficos (largura completa)
 
 ```text
 EXECUTED_AT: 2026-08-30T16:30:00-04:00
-PROMPT: CORREÇÃO DE LAYOUT — produtividade e visão operacional comprimidas em coluna estreita
+PROMPT: CORREÃ‡ÃƒO DE LAYOUT â€” produtividade e visÃ£o operacional comprimidas em coluna estreita
 STATUS: PASS (layout corrigido; snapshots Playwright pendentes)
 
-ROOT CAUSE: grid `dashboard-layout-grid` (2 colunas) colocava produtividade em aside ~22rem com grid 5 colunas, esmagando cards; gráficos operacionais herdavam largura estreita.
+ROOT CAUSE: grid `dashboard-layout-grid` (2 colunas) colocava produtividade em aside ~22rem com grid 5 colunas, esmagando cards; grÃ¡ficos operacionais herdavam largura estreita.
 
 FIX:
-  OperationalDashboardPage — stack vertical full-width: atenção → KPIs → visão operacional (3 gráficos) → produtividade → financeiro → atalhos
-  dashboard.css — removido layout-grid; analytics 3 col @1280px; produtividade 5 col @1280px full width; dashboard-page max-width none
-  shell.css — min-width: 0 em shell-page-frame (flex overflow)
-  dashboard.css — estilos compact para AttentionBlock
+  OperationalDashboardPage â€” stack vertical full-width: atenÃ§Ã£o â†’ KPIs â†’ visÃ£o operacional (3 grÃ¡ficos) â†’ produtividade â†’ financeiro â†’ atalhos
+  dashboard.css â€” removido layout-grid; analytics 3 col @1280px; produtividade 5 col @1280px full width; dashboard-page max-width none
+  shell.css â€” min-width: 0 em shell-page-frame (flex overflow)
+  dashboard.css â€” estilos compact para AttentionBlock
 
 DESKTOP/TABLET/MOBILE: PASS (dashboard tests + build)
 COMPONENT TESTS: PASS (13/13 dashboard)
 BUILD web: PASS
-VISUAL REGRESSION: FAIL (intencional — revisar snapshots manualmente)
+VISUAL REGRESSION: FAIL (intencional â€” revisar snapshots manualmente)
 BACKEND: UNCHANGED
 LOGIN: UNCHANGED
 COMMIT: NOT_REQUIRED
@@ -6671,33 +6671,33 @@ WORKING TREE: DIRTY
 NEXT_ACTION: CONTINUE (refresh UI; aceitar snapshots se layout OK)
 ```
 
-## CORRETIVO — max-width global em index.css (40rem)
+## CORRETIVO â€” max-width global em index.css (40rem)
 
 ```text
 EXECUTED_AT: 2026-08-30T16:38:00-04:00
-PROMPT: CORREÇÃO — dashboard ainda comprimido em ~40rem
+PROMPT: CORREÃ‡ÃƒO â€” dashboard ainda comprimido em ~40rem
 STATUS: PASS
 
 ROOT CAUSE: `main:not(.login-page) { max-width: 40rem }` em index.css vinha DEPOIS de `main.dashboard-page` no bundle Vite, sobrescrevendo max-width: none.
 
 FIX:
-  index.css — excluir .dashboard-page, .shell-page, .reports-page, .alerts-page, .search-page do seletor global
-  shell.css — `.shell-page-frame > main { width: 100%; max-width: none; margin: 0 }`
-  dashboard.css — reforço `.shell-page-frame > main.dashboard-page`
+  index.css â€” excluir .dashboard-page, .shell-page, .reports-page, .alerts-page, .search-page do seletor global
+  shell.css â€” `.shell-page-frame > main { width: 100%; max-width: none; margin: 0 }`
+  dashboard.css â€” reforÃ§o `.shell-page-frame > main.dashboard-page`
 
 COMPONENT TESTS: PASS (13/13)
 BUILD web: PASS
-NEXT_ACTION: STOP (usuário validar refresh)
-USER_CONFIRMED: 2026-08-30 — layout/larguras OK após correção index.css
+NEXT_ACTION: STOP (usuÃ¡rio validar refresh)
+USER_CONFIRMED: 2026-08-30 â€” layout/larguras OK apÃ³s correÃ§Ã£o index.css
 ```
 
 ---
 
-## Decisão humana — Sign-off UAT/UX (Administrador real)
+## DecisÃ£o humana â€” Sign-off UAT/UX (Administrador real)
 
 ```text
 PROMPT: HUMAN-UAT-UX-001
-TITLE: Sign-off humano UAT — Administrador real, sessão operador
+TITLE: Sign-off humano UAT â€” Administrador real, sessÃ£o operador
 STARTED_AT: 2026-08-31T01:05:00.000Z
 FINISHED_AT: 2026-08-31T01:06:02.000Z
 STATUS: PASS
@@ -6721,23 +6721,23 @@ DECISION:
   release_candidate: ef30b56 / 0.0.0-rc.1
   verdict: PASSED (54/54 checklist items PASS; 0 blockers; 0 observations)
 EVIDENCE:
-  readiness-evidence.json → manualUatUx.status=PASSED
-  history → UAT_HUMAN_SIGN_OFF_FORMAL
-  checklist → docs/16-testing/uat-ux-session-checklist.json (CLOSED)
+  readiness-evidence.json â†’ manualUatUx.status=PASSED
+  history â†’ UAT_HUMAN_SIGN_OFF_FORMAL
+  checklist â†’ docs/16-testing/uat-ux-session-checklist.json (CLOSED)
 TESTS:
-  readiness-gate.spec.ts — 24/24 PASS
+  readiness-gate.spec.ts â€” 24/24 PASS
 NOTES:
-  Evidência anterior (UAT-UX-342FDEBA) estava PASSED sem checklist fechado; reaberta e re-registrada.
-  Go-live produção permanece BLOCKED (piloto OBSERVATION < 14d; PILOT_NOT_EXIT_READY).
+  EvidÃªncia anterior (UAT-UX-342FDEBA) estava PASSED sem checklist fechado; reaberta e re-registrada.
+  Go-live produÃ§Ã£o permanece BLOCKED (piloto OBSERVATION < 14d; PILOT_NOT_EXIT_READY).
 ```
 
 ---
 
-## Decisão humana — Sign-off UAT/UX (Administrador 2 real)
+## DecisÃ£o humana â€” Sign-off UAT/UX (Administrador 2 real)
 
 ```text
 PROMPT: HUMAN-UAT-UX-002
-TITLE: Sign-off humano UAT — Administrador 2 Monica Perez Badra Jabour
+TITLE: Sign-off humano UAT â€” Administrador 2 Monica Perez Badra Jabour
 STARTED_AT: 2026-08-31T01:08:00.000Z
 FINISHED_AT: 2026-08-31T01:08:43.000Z
 STATUS: PASS
@@ -6766,32 +6766,32 @@ CO_SIGNATORY_SESSION:
   signed_by: Abrahim Jabour Junior (Administrador 1)
   checklist: docs/16-testing/uat-ux-session-checklist-UAT-UX-8CFE4AB9.json
 EVIDENCE:
-  readiness-evidence.json → manualUatUx.status=PASSED (última sessão Monica)
-  history → UAT_HUMAN_SIGN_OFF_FORMAL (Monica)
+  readiness-evidence.json â†’ manualUatUx.status=PASSED (Ãºltima sessÃ£o Monica)
+  history â†’ UAT_HUMAN_SIGN_OFF_FORMAL (Monica)
 NOTES:
-  Duas sessões UAT humanas concluídas (Administrador 1 + Administrador 2).
-  Go-live produção permanece BLOCKED (piloto OBSERVATION < 14d).
+  Duas sessÃµes UAT humanas concluÃ­das (Administrador 1 + Administrador 2).
+  Go-live produÃ§Ã£o permanece BLOCKED (piloto OBSERVATION < 14d).
 ```
 
 ---
 
-## CORRETIVO — Integridade do journal Drizzle e gate de database
+## CORRETIVO â€” Integridade do journal Drizzle e gate de database
 
 ```text
 EXECUTED_AT: 2026-08-31T10:05:00-04:00
-PROMPT: CORRETIVO — journal 0019–0035 + fonte única SQL=journal
-STATUS: PASS (unit); gate:database NOT_RUN (Docker/Postgres local indisponível nesta sessão)
+PROMPT: CORRETIVO â€” journal 0019â€“0035 + fonte Ãºnica SQL=journal
+STATUS: PASS (unit); gate:database NOT_RUN (Docker/Postgres local indisponÃ­vel nesta sessÃ£o)
 
-ROOT CAUSE: _journal.json saltava idx 19–35. drizzle migrate aplicaria 0000–0018 e depois 0036/0037, omitindo OS, medição, faturamento, outbox, alertas e índices. O CI gate usava lista hardcoded até 0030.
+ROOT CAUSE: _journal.json saltava idx 19â€“35. drizzle migrate aplicaria 0000â€“0018 e depois 0036/0037, omitindo OS, mediÃ§Ã£o, faturamento, outbox, alertas e Ã­ndices. O CI gate usava lista hardcoded atÃ© 0030.
 
 FIX:
-  packages/database/migrations/meta/_journal.json — entradas 0019–0035 com idx sequencial
-  packages/database/src/migration-journal-completeness.spec.ts — SQL no disco = journal
-  packages/database/scripts/migration-files.mjs + ci-database-gate.mjs — lista do disco; schemas alt/wrk/rpt; delta 0037
-  scripts/lib/database-test-env.mjs — probes de efeito 0019–0037 (não marcar aplicada sem artefato)
-  apps/api/src/test/ensure-migrations.ts — aplica 0033–0036
-  drizzle.config.ts — schemaFilter documentado (não alargado)
-  README + docs/18-database-foundation + production-readiness-gate.md — estado atual sem apagar histórico Prompt 17/92
+  packages/database/migrations/meta/_journal.json â€” entradas 0019â€“0035 com idx sequencial
+  packages/database/src/migration-journal-completeness.spec.ts â€” SQL no disco = journal
+  packages/database/scripts/migration-files.mjs + ci-database-gate.mjs â€” lista do disco; schemas alt/wrk/rpt; delta 0037
+  scripts/lib/database-test-env.mjs â€” probes de efeito 0019â€“0037 (nÃ£o marcar aplicada sem artefato)
+  apps/api/src/test/ensure-migrations.ts â€” aplica 0033â€“0036
+  drizzle.config.ts â€” schemaFilter documentado (nÃ£o alargado)
+  README + docs/18-database-foundation + production-readiness-gate.md â€” estado atual sem apagar histÃ³rico Prompt 17/92
 
 TESTS: @cisne/database unit 21/21 PASS (inclui journal completeness)
 GATE DATABASE: NOT_RUN
@@ -6799,17 +6799,17 @@ FUNCTIONAL_CODE_CREATED: NO (metadado de migrate + testes/docs)
 NEXT_PROMPT_EXECUTED: NO
 ```
 
-## PROMPT — TESTE E CORREÇÃO DE INTEGRAÇÕES (GATE SÊNIOR)
+## PROMPT â€” TESTE E CORREÃ‡ÃƒO DE INTEGRAÃ‡Ã•ES (GATE SÃŠNIOR)
 
 ```text
 EXECUTED_AT: 2026-08-31T11:55:00-04:00
-PROMPT: TESTE E CORREÇÃO DE INTEGRAÇÕES — GATE SÊNIOR
+PROMPT: TESTE E CORREÃ‡ÃƒO DE INTEGRAÃ‡Ã•ES â€” GATE SÃŠNIOR
 STATUS: PASS
 
 INTEGRATION_GATE: PASS
 REAL INTEGRATIONS: 5
 WAITING EXTERNAL DEPENDENCIES: 5
-FAKE/STUB IN PRODUCTION: 0 (corrigido — StubFiscal/StubNotification removidos do bootstrap)
+FAKE/STUB IN PRODUCTION: 0 (corrigido â€” StubFiscal/StubNotification removidos do bootstrap)
 CONTRACT TESTS: PASS (dygnus-erp.adapter.spec.ts + fixture JSON; domain-isolation)
 TIMEOUT: PASS (provider-executor.spec.ts)
 RETRY SAFETY: PASS (provider-executor.spec.ts + retry-classification.spec.ts)
@@ -6817,51 +6817,51 @@ IDEMPOTENCY: PASS (idempotency-retry.integration.spec.ts 17/17)
 CONCURRENT CALLBACKS: PASS (integration-inbox.integration.spec.ts 7/7)
 OUTBOX: PASS (transactional-outbox.integration.spec.ts 6/6)
 INBOX: PASS (integration-inbox.integration.spec.ts 7/7)
-SOURCE OF TRUTH: PENDING_DECISION (DDP-014 OPEN; DBND-SOT-001 parcial — sem sync destrutivo)
+SOURCE OF TRUTH: PENDING_DECISION (DDP-014 OPEN; DBND-SOT-001 parcial â€” sem sync destrutivo)
 SECURITY: PASS (webhook HMAC opcional; safe errors; secret-scan; sem token em logs ACL)
-OBSERVABILITY: PASS (correlationId, métricas inbox/outbox, alertas suprimidos quando não configurado)
+OBSERVABILITY: PASS (correlationId, mÃ©tricas inbox/outbox, alertas suprimidos quando nÃ£o configurado)
 CORE WITHOUT OPTIONAL PROVIDERS: PASS (AppModule bootstrap; UAT vertical; 342 integration tests)
 
 CRITICAL DEFECTS OPEN: 0
 REGRESSIONS: NONE
 
 FIXES APPLIED:
-  1. StubFiscalProvider/StubNotificationProvider removidos do IntegrationsAclModule — UnconfiguredFiscal/Notification
-  2. integration-bootstrap.spec.ts — asserts fiscal/notification INTEGRATION_NOT_CONFIGURED
-  3. service-requests.integration.spec.ts — summary test: seedPublishedService antes de convert
+  1. StubFiscalProvider/StubNotificationProvider removidos do IntegrationsAclModule â€” UnconfiguredFiscal/Notification
+  2. integration-bootstrap.spec.ts â€” asserts fiscal/notification INTEGRATION_NOT_CONFIGURED
+  3. service-requests.integration.spec.ts â€” summary test: seedPublishedService antes de convert
 
 INTEGRATION INVENTORY:
-  PostgreSQL — REAL_CONFIGURED
-  Object storage (filesystem/S3) — REAL_CONFIGURED
-  In-app notifications — REAL_CONFIGURED
-  Integration inbox — REAL_CONFIGURED
-  Transactional outbox — REAL_CONFIGURED
-  ERP Dygnus scaffold — TEST_ONLY
-  ERP/Tracking/Fiscal/Notification ACL produção — WAITING_EXTERNAL_DEPENDENCY
-  Email/WhatsApp outbound — REAL_DISABLED
+  PostgreSQL â€” REAL_CONFIGURED
+  Object storage (filesystem/S3) â€” REAL_CONFIGURED
+  In-app notifications â€” REAL_CONFIGURED
+  Integration inbox â€” REAL_CONFIGURED
+  Transactional outbox â€” REAL_CONFIGURED
+  ERP Dygnus scaffold â€” TEST_ONLY
+  ERP/Tracking/Fiscal/Notification ACL produÃ§Ã£o â€” WAITING_EXTERNAL_DEPENDENCY
+  Email/WhatsApp outbound â€” REAL_DISABLED
 
 QUALITY GATES:
   lint api: PASS | typecheck api: PASS | unit api: 524/524 | integration: 342/342
   idempotency-retry: 21/21 | failure-injection: 20/20 | concurrency: 24/24
-  E2E/web: NOT_RUN (escopo integração backend)
+  E2E/web: NOT_RUN (escopo integraÃ§Ã£o backend)
 
 COMMIT: NOT_REQUIRED
 WORKING TREE: DIRTY
 NEXT: CONTINUE
 ```
 
-## PROMPT — SOLICITAÇÕES DE SERVIÇO (ENTRADA CONTROLADA DA DEMANDA)
+## PROMPT â€” SOLICITAÃ‡Ã•ES DE SERVIÃ‡O (ENTRADA CONTROLADA DA DEMANDA)
 
 ```text
 EXECUTED_AT: 2026-08-31T23:05:00-04:00
-PROMPT: Solicitações de serviço — evoluir como entrada controlada da demanda comercial
+PROMPT: SolicitaÃ§Ãµes de serviÃ§o â€” evoluir como entrada controlada da demanda comercial
 STATUS: PASS
 
 SCOPE:
-  - Histórico append-only de transições (autor, data, payload) em sr.service_request_history_events
-  - Validação de transições exclusivamente no backend (state machine + endpoints de ação)
-  - Frontend apenas solicita ações; sem status privilegiado em DTOs de escrita
-  - Sem reserva de ativos físicos durante intake da solicitação
+  - HistÃ³rico append-only de transiÃ§Ãµes (autor, data, payload) em sr.service_request_history_events
+  - ValidaÃ§Ã£o de transiÃ§Ãµes exclusivamente no backend (state machine + endpoints de aÃ§Ã£o)
+  - Frontend apenas solicita aÃ§Ãµes; sem status privilegiado em DTOs de escrita
+  - Sem reserva de ativos fÃ­sicos durante intake da solicitaÃ§Ã£o
   - Tipos web alinhados ao contrato de detalhe (historyEvents)
 
 MIGRATION: packages/database/migrations/0039_service_request_history_events.sql
@@ -6884,18 +6884,18 @@ WORKING TREE: DIRTY
 NEXT: STOP
 ```
 
-## PROMPT — SOLICITAÇÕES DE SERVIÇO (ENTRADA CONTROLADA DA DEMANDA)
+## PROMPT â€” SOLICITAÃ‡Ã•ES DE SERVIÃ‡O (ENTRADA CONTROLADA DA DEMANDA)
 
 ```text
 EXECUTED_AT: 2026-08-31T23:05:00-04:00
-PROMPT: Solicitações de serviço — evoluir como entrada controlada da demanda comercial
+PROMPT: SolicitaÃ§Ãµes de serviÃ§o â€” evoluir como entrada controlada da demanda comercial
 STATUS: PASS
 
 SCOPE:
-  - Histórico append-only de transições (autor, data, payload) em sr.service_request_history_events
-  - Validação de transições exclusivamente no backend (state machine + endpoints de ação)
-  - Frontend apenas solicita ações; sem status privilegiado em DTOs de escrita
-  - Sem reserva de ativos físicos durante intake da solicitação
+  - HistÃ³rico append-only de transiÃ§Ãµes (autor, data, payload) em sr.service_request_history_events
+  - ValidaÃ§Ã£o de transiÃ§Ãµes exclusivamente no backend (state machine + endpoints de aÃ§Ã£o)
+  - Frontend apenas solicita aÃ§Ãµes; sem status privilegiado em DTOs de escrita
+  - Sem reserva de ativos fÃ­sicos durante intake da solicitaÃ§Ã£o
   - Tipos web alinhados ao contrato de detalhe (historyEvents)
 
 MIGRATION: packages/database/migrations/0039_service_request_history_events.sql
@@ -6918,19 +6918,19 @@ WORKING TREE: DIRTY
 NEXT: STOP
 ```
 
-## PROMPT — PROPOSTAS COMERCIAIS (AUDITORIA E FORTALECIMENTO)
+## PROMPT â€” PROPOSTAS COMERCIAIS (AUDITORIA E FORTALECIMENTO)
 
 ```text
 EXECUTED_AT: 2026-08-31T23:12:00-04:00
-PROMPT: Propostas comerciais — auditoria e fortalecimento comercial
+PROMPT: Propostas comerciais â€” auditoria e fortalecimento comercial
 STATUS: PASS
 
 SCOPE:
-  - Snapshot comercial por item na emissão (descrição, unidade, quantidade, preços) em commercial_snapshot
-  - Totais decimais persistidos na versão (items_sale_total_amount, items_internal_cost_total_amount)
-  - State machine ativa (assertTransition/canTransition) no repositório
-  - API retorna valores do snapshot para versões emitidas/aceitas
-  - Soma monetária com aritmética decimal segura (billing-totals)
+  - Snapshot comercial por item na emissÃ£o (descriÃ§Ã£o, unidade, quantidade, preÃ§os) em commercial_snapshot
+  - Totais decimais persistidos na versÃ£o (items_sale_total_amount, items_internal_cost_total_amount)
+  - State machine ativa (assertTransition/canTransition) no repositÃ³rio
+  - API retorna valores do snapshot para versÃµes emitidas/aceitas
+  - Soma monetÃ¡ria com aritmÃ©tica decimal segura (billing-totals)
 
 MIGRATION: packages/database/migrations/0040_proposal_commercial_snapshots.sql
 
@@ -6953,20 +6953,20 @@ WORKING TREE: DIRTY
 NEXT: STOP
 ```
 
-## PROMPT — PEDIDOS COMERCIAIS (COMPROMISSO CONFIRMADO)
+## PROMPT â€” PEDIDOS COMERCIAIS (COMPROMISSO CONFIRMADO)
 
 ```text
 EXECUTED_AT: 2026-08-31T23:20:00-04:00
-PROMPT: Pedidos comerciais — evoluir como compromisso comercial confirmado
+PROMPT: Pedidos comerciais â€” evoluir como compromisso comercial confirmado
 STATUS: PASS
 
 SCOPE:
-  - Snapshot comercial no registro (cabeçalho + itens: PO, RC, valores, termos, locais)
+  - Snapshot comercial no registro (cabeÃ§alho + itens: PO, RC, valores, termos, locais)
   - Totais de linha persistidos (items_line_total_amount) com soma decimal segura
-  - State machine ativa (DRAFT→REGISTERED/CANCELLED; REGISTERED→CANCELLED)
-  - Bloqueio de edição após registro; cancelamento bloqueado com SR/OS/medição/faturamento/consumo
+  - State machine ativa (DRAFTâ†’REGISTERED/CANCELLED; REGISTEREDâ†’CANCELLED)
+  - Bloqueio de ediÃ§Ã£o apÃ³s registro; cancelamento bloqueado com SR/OS/mediÃ§Ã£o/faturamento/consumo
   - API retorna valores do snapshot para pedidos registrados
-  - Sem duplicar agregados (SR/Proposta/OS permanecem referenciáveis)
+  - Sem duplicar agregados (SR/Proposta/OS permanecem referenciÃ¡veis)
 
 MIGRATION: packages/database/migrations/0041_purchase_order_commercial_snapshots.sql
 
@@ -6988,19 +6988,19 @@ WORKING TREE: DIRTY
 NEXT: STOP
 ```
 
-## PROMPT — ORDEM DE SERVIÇO (AUDITORIA E FORTALECIMENTO OPERACIONAL)
+## PROMPT â€” ORDEM DE SERVIÃ‡O (AUDITORIA E FORTALECIMENTO OPERACIONAL)
 
 ```text
 EXECUTED_AT: 2026-08-31T23:30:00-04:00
-PROMPT: Ordem de Serviço — auditoria profunda e fortalecimento de invariantes
+PROMPT: Ordem de ServiÃ§o â€” auditoria profunda e fortalecimento de invariantes
 STATUS: PASS
 
 SCOPE:
-  - Máquina de estados preservada (DRAFT→PREPARED→RELEASED→IN_EXECUTION⇄PAUSED→COMPLETED|CANCELLED)
-  - Transições exclusivamente via backend com assertTransition, permissões, pré-condições e auditoria
-  - Concorrência via rowVersion + SELECT FOR UPDATE (já existente; testes ampliados)
-  - Correção: complete() mapeia INVALID_STATE_TRANSITION para SERVICE_ORDERS_INVALID_STATE
-  - Testes de matriz completa de transições (unit) e transições críticas/inválidas (integration)
+  - MÃ¡quina de estados preservada (DRAFTâ†’PREPAREDâ†’RELEASEDâ†’IN_EXECUTIONâ‡„PAUSEDâ†’COMPLETED|CANCELLED)
+  - TransiÃ§Ãµes exclusivamente via backend com assertTransition, permissÃµes, prÃ©-condiÃ§Ãµes e auditoria
+  - ConcorrÃªncia via rowVersion + SELECT FOR UPDATE (jÃ¡ existente; testes ampliados)
+  - CorreÃ§Ã£o: complete() mapeia INVALID_STATE_TRANSITION para SERVICE_ORDERS_INVALID_STATE
+  - Testes de matriz completa de transiÃ§Ãµes (unit) e transiÃ§Ãµes crÃ­ticas/invÃ¡lidas (integration)
 
 KEY FILES:
   apps/api/src/service-orders/domain/service-order.state-machine.ts
@@ -7020,19 +7020,19 @@ WORKING TREE: DIRTY
 NEXT: STOP
 ```
 
-## PROMPT — PLANEJAMENTO OPERACIONAL (SEPARAÇÃO PLANEJADO × EXECUTADO)
+## PROMPT â€” PLANEJAMENTO OPERACIONAL (SEPARAÃ‡ÃƒO PLANEJADO Ã— EXECUTADO)
 
 ```text
 EXECUTED_AT: 2026-08-31T23:35:00-04:00
-PROMPT: Planejamento operacional — evoluir mantendo separação rigorosa planejado × executado
+PROMPT: Planejamento operacional â€” evoluir mantendo separaÃ§Ã£o rigorosa planejado Ã— executado
 STATUS: PASS
 
 SCOPE:
-  - Separação planejado × executado preservada (tabelas e serviços distintos; execução append-only)
-  - Lacuna corrigida: updatePlannedResource valida janela e impede replanejamento que invalida alocações ACTIVE
+  - SeparaÃ§Ã£o planejado Ã— executado preservada (tabelas e serviÃ§os distintos; execuÃ§Ã£o append-only)
+  - Lacuna corrigida: updatePlannedResource valida janela e impede replanejamento que invalida alocaÃ§Ãµes ACTIVE
   - Lacuna corrigida: reallocateResource valida janela contra planned_resource (como allocate)
-  - Rastreabilidade: alocações mantêm planned_resource_id; histórico de alocação preservado em realloc/remove
-  - Testes: replanejamento, realocação, estados incompatíveis (DRAFT/PAUSED/CANCELLED), concorrência, IN_EXECUTION sem sobrescrever execução
+  - Rastreabilidade: alocaÃ§Ãµes mantÃªm planned_resource_id; histÃ³rico de alocaÃ§Ã£o preservado em realloc/remove
+  - Testes: replanejamento, realocaÃ§Ã£o, estados incompatÃ­veis (DRAFT/PAUSED/CANCELLED), concorrÃªncia, IN_EXECUTION sem sobrescrever execuÃ§Ã£o
 
 KEY FILES:
   apps/api/src/service-orders/domain/resource-planning.ts
@@ -7050,21 +7050,21 @@ WORKING TREE: DIRTY
 NEXT: STOP
 ```
 
-## PROMPT — ATIVOS FÍSICOS (DISPONIBILIDADE OPERACIONAL)
+## PROMPT â€” ATIVOS FÃSICOS (DISPONIBILIDADE OPERACIONAL)
 
 ```text
 EXECUTED_AT: 2026-08-31T23:42:00-04:00
-PROMPT: Ativos físicos — auditar e fortalecer disponibilidade operacional
+PROMPT: Ativos fÃ­sicos â€” auditar e fortalecer disponibilidade operacional
 STATUS: PASS
 
 SCOPE:
-  - Separação cadastral (lifecycle ACTIVE/INACTIVE) × disponibilidade operacional preservada
-  - Disponibilidade derivada de alocações ACTIVE em res.resource_allocations (fonte de verdade)
+  - SeparaÃ§Ã£o cadastral (lifecycle ACTIVE/INACTIVE) Ã— disponibilidade operacional preservada
+  - Disponibilidade derivada de alocaÃ§Ãµes ACTIVE em res.resource_allocations (fonte de verdade)
   - Coluna allocation_status deixa de dirigir filtros, summary e API (evita booleano divergente)
   - allocationStatus na API derivado de currentAllocation no serializer
-  - Filtros/summary: EXISTS em alocações ativas + lifecycle para AVAILABLE/ALLOCATED/UNAVAILABLE
-  - UI: resolveAssetOperationalStatus e detalhe usam currentAllocation; não allocationStatus armazenado
-  - Histórico preservado (security audit + allocation history em SO)
+  - Filtros/summary: EXISTS em alocaÃ§Ãµes ativas + lifecycle para AVAILABLE/ALLOCATED/UNAVAILABLE
+  - UI: resolveAssetOperationalStatus e detalhe usam currentAllocation; nÃ£o allocationStatus armazenado
+  - HistÃ³rico preservado (security audit + allocation history em SO)
 
 KEY FILES:
   apps/api/src/resources/domain/physical-asset.ts
@@ -7087,20 +7087,20 @@ WORKING TREE: DIRTY
 NEXT: STOP
 ```
 
-## PROMPT — FROTA (VISÃO OPERACIONAL SOBRE ATIVOS FÍSICOS)
+## PROMPT â€” FROTA (VISÃƒO OPERACIONAL SOBRE ATIVOS FÃSICOS)
 
 ```text
 EXECUTED_AT: 2026-08-31T23:59:00-04:00
-PROMPT: Frota — evoluir reutilizando Ativos Físicos sem cadastro duplicado
+PROMPT: Frota â€” evoluir reutilizando Ativos FÃ­sicos sem cadastro duplicado
 STATUS: PASS
 
 SCOPE:
-  - Frota como visão operacional sobre ativos físicos com classification=VEHICLE (sem módulo/tabela duplicada)
+  - Frota como visÃ£o operacional sobre ativos fÃ­sicos com classification=VEHICLE (sem mÃ³dulo/tabela duplicada)
   - API: filtro classification em list/summary de physical-assets (DTO + access service)
-  - Web: fleet-api wrapper fino; FleetListPage com placa, situação cadastral e disponibilidade operacional
-  - Detalhe/edição reutiliza /app/assets/:id (sem cadastro paralelo de veículos)
-  - Sem dependência circular: web/fleet → physical-assets-api; backend resources ↔ SO via alocações existentes
-  - Testes: indisponibilidade (inativo), alocação concorrente, vínculo com OS, escopo VEHICLE
+  - Web: fleet-api wrapper fino; FleetListPage com placa, situaÃ§Ã£o cadastral e disponibilidade operacional
+  - Detalhe/ediÃ§Ã£o reutiliza /app/assets/:id (sem cadastro paralelo de veÃ­culos)
+  - Sem dependÃªncia circular: web/fleet â†’ physical-assets-api; backend resources â†” SO via alocaÃ§Ãµes existentes
+  - Testes: indisponibilidade (inativo), alocaÃ§Ã£o concorrente, vÃ­nculo com OS, escopo VEHICLE
 
 KEY FILES:
   apps/api/src/resources/dto/physical-assets.dto.ts
@@ -7123,20 +7123,20 @@ WORKING TREE: DIRTY
 NEXT: STOP
 ```
 
-## PROMPT — ALOCAÇÃO DE RECURSOS (FORTALECIMENTO TRANSACIONAL)
+## PROMPT â€” ALOCAÃ‡ÃƒO DE RECURSOS (FORTALECIMENTO TRANSACIONAL)
 
 ```text
 EXECUTED_AT: 2026-09-01T00:08:00-04:00
-PROMPT: Alocação de recursos — fortalecer mecanismo existente com exclusão por período e histórico
+PROMPT: AlocaÃ§Ã£o de recursos â€” fortalecer mecanismo existente com exclusÃ£o por perÃ­odo e histÃ³rico
 STATUS: PASS
 
 SCOPE:
-  - Mecanismo localizado em service-orders/planning + res.resource_allocations (sem novo módulo)
-  - Veículos, máquinas e equipamentos: physical_assets alocados via allocate/reallocate/remove
-  - Pessoas (mão de obra): planejamento por laborTypeCode já existia; alocação explícita rejeitada (LABOR_ALLOCATION_NOT_SUPPORTED) até suporte a workforce
-  - Sobreposição impedida: exclusion constraint GiST (physical_asset_id + operational_period) WHERE status=ACTIVE + transação com FOR UPDATE no asset
-  - Histórico enriquecido em res.resource_allocation_history_events: serviceOrderId, physicalAssetId, resourceTypeCode, período, plannedResourceId e metadados de alteração
-  - Testes de integração (PostgreSQL real): histórico completo, concorrência intra-OS e cross-OS, rejeição de labor
+  - Mecanismo localizado em service-orders/planning + res.resource_allocations (sem novo mÃ³dulo)
+  - VeÃ­culos, mÃ¡quinas e equipamentos: physical_assets alocados via allocate/reallocate/remove
+  - Pessoas (mÃ£o de obra): planejamento por laborTypeCode jÃ¡ existia; alocaÃ§Ã£o explÃ­cita rejeitada (LABOR_ALLOCATION_NOT_SUPPORTED) atÃ© suporte a workforce
+  - SobreposiÃ§Ã£o impedida: exclusion constraint GiST (physical_asset_id + operational_period) WHERE status=ACTIVE + transaÃ§Ã£o com FOR UPDATE no asset
+  - HistÃ³rico enriquecido em res.resource_allocation_history_events: serviceOrderId, physicalAssetId, resourceTypeCode, perÃ­odo, plannedResourceId e metadados de alteraÃ§Ã£o
+  - Testes de integraÃ§Ã£o (PostgreSQL real): histÃ³rico completo, concorrÃªncia intra-OS e cross-OS, rejeiÃ§Ã£o de labor
 
 KEY FILES:
   apps/api/src/service-orders/domain/resource-planning.ts
@@ -7155,20 +7155,20 @@ WORKING TREE: DIRTY
 NEXT: STOP
 ```
 
-## PROMPT — LOCAÇÕES (ESPECIALIZAÇÃO OPERACIONAL NA OS)
+## PROMPT â€” LOCAÃ‡Ã•ES (ESPECIALIZAÃ‡ÃƒO OPERACIONAL NA OS)
 
 ```text
 EXECUTED_AT: 2026-09-01T00:19:00-04:00
-PROMPT: Locações — evoluir como especialização operacional ligada à OS sem sistema independente
+PROMPT: LocaÃ§Ãµes â€” evoluir como especializaÃ§Ã£o operacional ligada Ã  OS sem sistema independente
 STATUS: PASS
 
 SCOPE:
-  - Locação = arquétipo RENTAL no catálogo/OS; sem módulo ou entidades duplicadas
-  - Reutiliza Cliente, Contrato (via SR/OS), Pedido, Ativos, Alocações, Execução e Medição existentes
-  - Domínio rental-operations: período contratado obrigatório no planejamento, unidade comercial (DAY), validações de janela
-  - Correção: realocação no mesmo ativo libera slot ACTIVE antes de inserir nova janela (extensão de período)
+  - LocaÃ§Ã£o = arquÃ©tipo RENTAL no catÃ¡logo/OS; sem mÃ³dulo ou entidades duplicadas
+  - Reutiliza Cliente, Contrato (via SR/OS), Pedido, Ativos, AlocaÃ§Ãµes, ExecuÃ§Ã£o e MediÃ§Ã£o existentes
+  - DomÃ­nio rental-operations: perÃ­odo contratado obrigatÃ³rio no planejamento, unidade comercial (DAY), validaÃ§Ãµes de janela
+  - CorreÃ§Ã£o: realocaÃ§Ã£o no mesmo ativo libera slot ACTIVE antes de inserir nova janela (extensÃ£o de perÃ­odo)
   - API: filtro archetype=RENTAL na listagem de OS
-  - Web: rentals-api + RentalsListPage (/app/rentals) como visão filtrada de OS RENTAL
+  - Web: rentals-api + RentalsListPage (/app/rentals) como visÃ£o filtrada de OS RENTAL
 
 KEY FILES:
   apps/api/src/service-orders/domain/rental-operations.ts
@@ -7192,20 +7192,20 @@ WORKING TREE: DIRTY
 NEXT: STOP
 ```
 
-## PROMPT — TRANSPORTE (ESPECIALIZAÇÃO OPERACIONAL NA OS)
+## PROMPT â€” TRANSPORTE (ESPECIALIZAÃ‡ÃƒO OPERACIONAL NA OS)
 
 ```text
 EXECUTED_AT: 2026-09-01T00:40:00-04:00
-PROMPT: Transporte — evoluir como especialização operacional vinculada à OS sem TMS completo
+PROMPT: Transporte â€” evoluir como especializaÃ§Ã£o operacional vinculada Ã  OS sem TMS completo
 STATUS: PASS
 
 SCOPE:
-  - Transporte = arquétipo TRANSPORT no catálogo/OS; sem módulo ou entidades duplicadas
-  - Reutiliza origem/destino (location da OS), veículo (physical_assets TRUCK), alocações, datas, cliente e pedido existentes
-  - Domínio transport-operations: rota (origin/destination), janela programada obrigatória, unidade comercial TRIP
-  - Validações no planejamento: rota + janela ao planResource/allocateResource para OS TRANSPORT
-  - Conflito de veículo: exclusão GiST em resource_allocations (inalterada; coberta por teste cross-OS)
-  - Replanejamento em IN_EXECUTION não apaga execution_entries (teste dedicado)
+  - Transporte = arquÃ©tipo TRANSPORT no catÃ¡logo/OS; sem mÃ³dulo ou entidades duplicadas
+  - Reutiliza origem/destino (location da OS), veÃ­culo (physical_assets TRUCK), alocaÃ§Ãµes, datas, cliente e pedido existentes
+  - DomÃ­nio transport-operations: rota (origin/destination), janela programada obrigatÃ³ria, unidade comercial TRIP
+  - ValidaÃ§Ãµes no planejamento: rota + janela ao planResource/allocateResource para OS TRANSPORT
+  - Conflito de veÃ­culo: exclusÃ£o GiST em resource_allocations (inalterada; coberta por teste cross-OS)
+  - Replanejamento em IN_EXECUTION nÃ£o apaga execution_entries (teste dedicado)
   - API: filtro archetype=TRANSPORT na listagem de OS
   - Web: transport-api + TransportListPage (/app/transport) com coluna de trecho
 
@@ -7230,19 +7230,19 @@ WORKING TREE: DIRTY
 NEXT: STOP
 ```
 
-## PROMPT — EXECUÇÃO OPERACIONAL (AUDITORIA E FORTALECIMENTO)
+## PROMPT â€” EXECUÃ‡ÃƒO OPERACIONAL (AUDITORIA E FORTALECIMENTO)
 
 ```text
 EXECUTED_AT: 2026-09-01T00:52:00-04:00
-PROMPT: Execução operacional — auditar módulo e garantir fatos efetivamente ocorridos
+PROMPT: ExecuÃ§Ã£o operacional â€” auditar mÃ³dulo e garantir fatos efetivamente ocorridos
 STATUS: PASS
 
 SCOPE:
-  - Auditoria do módulo existente (Prompt 54): append-only em execution_entries/evidence/occurrences; transições protegidas por state machine + FOR UPDATE + row_version
-  - Separação PLANNED ≠ ALLOCATED ≠ ACTUAL preservada; planejamento nunca sobrescreve fatos de execução
-  - Domínio execution-facts: comparação planejado vs realizado (quantidades, recursos/alocações, períodos, ocorrências) calculada na leitura — sem reescrita silenciosa
-  - GET /execution enriquecido com comparison (fatos imutáveis + visão atual do planejamento)
-  - Testes adicionais: replanejamento em IN_EXECUTION preserva entries; record×complete; rejeição em RELEASED/COMPLETED; ocorrências como fatos independentes
+  - Auditoria do mÃ³dulo existente (Prompt 54): append-only em execution_entries/evidence/occurrences; transiÃ§Ãµes protegidas por state machine + FOR UPDATE + row_version
+  - SeparaÃ§Ã£o PLANNED â‰  ALLOCATED â‰  ACTUAL preservada; planejamento nunca sobrescreve fatos de execuÃ§Ã£o
+  - DomÃ­nio execution-facts: comparaÃ§Ã£o planejado vs realizado (quantidades, recursos/alocaÃ§Ãµes, perÃ­odos, ocorrÃªncias) calculada na leitura â€” sem reescrita silenciosa
+  - GET /execution enriquecido com comparison (fatos imutÃ¡veis + visÃ£o atual do planejamento)
+  - Testes adicionais: replanejamento em IN_EXECUTION preserva entries; recordÃ—complete; rejeiÃ§Ã£o em RELEASED/COMPLETED; ocorrÃªncias como fatos independentes
 
 KEY FILES:
   apps/api/src/service-orders/domain/execution-facts.ts
@@ -7263,19 +7263,19 @@ WORKING TREE: DIRTY
 NEXT: STOP
 ```
 
-## PROMPT — MEDIÇÕES (FORTALECIMENTO E INVARIANTES COMERCIAIS)
+## PROMPT â€” MEDIÃ‡Ã•ES (FORTALECIMENTO E INVARIANTES COMERCIAIS)
 
 ```text
 EXECUTED_AT: 2026-09-01T01:01:20-04:00
-PROMPT: Medições — consolidar execução em quantidade faturável com vínculos comerciais e invariantes
+PROMPT: MediÃ§Ãµes â€” consolidar execuÃ§Ã£o em quantidade faturÃ¡vel com vÃ­nculos comerciais e invariantes
 STATUS: PASS
 
 SCOPE:
-  - Fortalecimento sobre implementação existente: medição consolida fatos de execução (execution entries) em itens com quantidade comercialmente faturável
-  - Vínculo comercial preservado: OS, proposta, pedido, contrato (referência + snapshot), período de serviço, item, quantidade, unidade e valores do snapshot comercial
-  - Medições aprovadas não editáveis silenciosamente: assertMeasurementEditable antes de regenerate/updateItem/authorizeAdjustment → MEASUREMENT_NOT_EDITABLE (CONFLICT)
-  - Correções controladas: ajustes formais + regeneração apenas em DRAFT; divergência exige autorização de ajuste
-  - Dupla medição impedida: índice parcial measurement_service_order_active_uq + assertExecutionEntriesAvailableForMeasurement (EXECUTION_ENTRY_ALREADY_MEASURED) + assertNoDuplicateExecutionEntrySelection
+  - Fortalecimento sobre implementaÃ§Ã£o existente: mediÃ§Ã£o consolida fatos de execuÃ§Ã£o (execution entries) em itens com quantidade comercialmente faturÃ¡vel
+  - VÃ­nculo comercial preservado: OS, proposta, pedido, contrato (referÃªncia + snapshot), perÃ­odo de serviÃ§o, item, quantidade, unidade e valores do snapshot comercial
+  - MediÃ§Ãµes aprovadas nÃ£o editÃ¡veis silenciosamente: assertMeasurementEditable antes de regenerate/updateItem/authorizeAdjustment â†’ MEASUREMENT_NOT_EDITABLE (CONFLICT)
+  - CorreÃ§Ãµes controladas: ajustes formais + regeneraÃ§Ã£o apenas em DRAFT; divergÃªncia exige autorizaÃ§Ã£o de ajuste
+  - Dupla mediÃ§Ã£o impedida: Ã­ndice parcial measurement_service_order_active_uq + assertExecutionEntriesAvailableForMeasurement (EXECUTION_ENTRY_ALREADY_MEASURED) + assertNoDuplicateExecutionEntrySelection
   - Duplo faturamento: coberto em billing.integration.spec.ts (rejects duplicate billing for the same measurement)
 
 KEY FILES:
@@ -7300,21 +7300,21 @@ WORKING TREE: DIRTY
 NEXT: STOP
 ```
 
-## PROMPT — CUSTOS OPERACIONAIS (SEM CONTABILIDADE/ERP)
+## PROMPT â€” CUSTOS OPERACIONAIS (SEM CONTABILIDADE/ERP)
 
 ```text
 EXECUTED_AT: 2026-09-01T01:13:00-04:00
-PROMPT: Custos operacionais — conhecer custo real das operações sem contabilidade oficial
+PROMPT: Custos operacionais â€” conhecer custo real das operaÃ§Ãµes sem contabilidade oficial
 STATUS: PASS
 
 SCOPE:
-  - Novo registro de custos operacionais em so.operational_cost_entries (schema so, sem módulo contábil)
-  - Associação à OS (origin SERVICE_ORDER) ou execução (origin EXECUTION + source_execution_entry_id)
+  - Novo registro de custos operacionais em so.operational_cost_entries (schema so, sem mÃ³dulo contÃ¡bil)
+  - AssociaÃ§Ã£o Ã  OS (origin SERVICE_ORDER) ou execuÃ§Ã£o (origin EXECUTION + source_execution_entry_id)
   - Categorias: FUEL, THIRD_PARTY, RESOURCE, TRAVEL, MATERIAL, LABOR, OTHER
-  - Diferenciação ESTIMATED vs ACTUAL com regras de estado distintas
-  - Precisão decimal numeric(18,4) + currency_code; origem rastreável via origin_context
-  - Anti-duplicidade: idempotency_key único + índice único (execution_entry, category, cost_kind)
-  - API: GET/POST /service-orders/:id/operational-costs com summary de margem operacional indicativa (não contábil)
+  - DiferenciaÃ§Ã£o ESTIMATED vs ACTUAL com regras de estado distintas
+  - PrecisÃ£o decimal numeric(18,4) + currency_code; origem rastreÃ¡vel via origin_context
+  - Anti-duplicidade: idempotency_key Ãºnico + Ã­ndice Ãºnico (execution_entry, category, cost_kind)
+  - API: GET/POST /service-orders/:id/operational-costs com summary de margem operacional indicativa (nÃ£o contÃ¡bil)
   - Receita para margem: soma de measurement_items aprovados quando existir
 
 KEY FILES:
@@ -7337,21 +7337,21 @@ WORKING TREE: DIRTY
 NEXT: STOP
 ```
 
-## PROMPT — RENTABILIDADE OPERACIONAL (ANÁLISE SEM LEDGER CONTÁBIL)
+## PROMPT â€” RENTABILIDADE OPERACIONAL (ANÃLISE SEM LEDGER CONTÃBIL)
 
 ```text
 EXECUTED_AT: 2026-09-01T01:29:30-04:00
-PROMPT: Rentabilidade operacional — receita - custos realizados = margem, agregável quando suportado
+PROMPT: Rentabilidade operacional â€” receita - custos realizados = margem, agregÃ¡vel quando suportado
 STATUS: PASS
 
 SCOPE:
-  - Camada de análise em analytics (read model), sem novas tabelas nem ledger contábil
-  - Fórmula auditável: operational_revenue - realized_cost = operational_margin
-  - Receita: SUM(msr.measurement_items.line_amount) de medições APPROVED no período
-  - Custos: SUM(so.operational_cost_entries.amount) ACTUAL no período
-  - Cálculos financeiros compartilhados em commercial/domain/operational-financials.ts
-  - API GET /analytics/operational-profitability com filtros (período, OS, cliente, contrato, tipo) e groupBy (service_order, client, contract, service_type)
-  - supportedDimensions indica quando agregação é possível; disclaimer de não-contabilidade oficial
+  - Camada de anÃ¡lise em analytics (read model), sem novas tabelas nem ledger contÃ¡bil
+  - FÃ³rmula auditÃ¡vel: operational_revenue - realized_cost = operational_margin
+  - Receita: SUM(msr.measurement_items.line_amount) de mediÃ§Ãµes APPROVED no perÃ­odo
+  - Custos: SUM(so.operational_cost_entries.amount) ACTUAL no perÃ­odo
+  - CÃ¡lculos financeiros compartilhados em commercial/domain/operational-financials.ts
+  - API GET /analytics/operational-profitability com filtros (perÃ­odo, OS, cliente, contrato, tipo) e groupBy (service_order, client, contract, service_type)
+  - supportedDimensions indica quando agregaÃ§Ã£o Ã© possÃ­vel; disclaimer de nÃ£o-contabilidade oficial
   - Visibilidade separada: measurements:read (receita) + operational-cost:read (custos)
 
 KEY FILES:
@@ -7371,23 +7371,23 @@ WORKING TREE: DIRTY
 NEXT: STOP
 ```
 
-## PROMPT — REALINHAMENTO ARQUITETURAL (ERP NATIVO CISNE)
+## PROMPT â€” REALINHAMENTO ARQUITETURAL (ERP NATIVO CISNE)
 
 ```text
 EXECUTED_AT: 2026-09-01T02:48:00-04:00
-PROMPT: Realinhamento arquitetural — CISNE como SoT empresarial; fronteiras FINANCE/FISCAL/ACCOUNTING/INVENTORY/PAYROLL
+PROMPT: Realinhamento arquitetural â€” CISNE como SoT empresarial; fronteiras FINANCE/FISCAL/ACCOUNTING/INVENTORY/PAYROLL
 STATUS: PASS_WITH_RESTRICTIONS
 
 SCOPE:
-  - Decisão empresarial registrada: CISNE = sistema empresarial principal; ERP externo não obrigatório
+  - DecisÃ£o empresarial registrada: CISNE = sistema empresarial principal; ERP externo nÃ£o obrigatÃ³rio
   - ACL/adapters existentes preservados (gateways opcionais)
-  - Núcleo operacional intacto: Client, Catalog, ServiceRequest, Proposal, PurchaseOrder, ServiceOrder, Planning, Allocation, Execution, Measurement, Billing, BillingDocument, Documents
+  - NÃºcleo operacional intacto: Client, Catalog, ServiceRequest, Proposal, PurchaseOrder, ServiceOrder, Planning, Allocation, Execution, Measurement, Billing, BillingDocument, Documents
   - Bounded contexts conceituais: OPERATIONS, COMMERCIAL, FINANCE, FISCAL, ACCOUNTING, INVENTORY, PAYROLL, DOCUMENTS, PLATFORM
-  - Regras de dependência acíclicas + proibições (OPERATIONS ↛ ACCOUNTING, etc.)
-  - Distinções obrigatórias documentadas em código (ServiceOrder ≠ Measurement ≠ Billing ≠ Receivable, etc.)
+  - Regras de dependÃªncia acÃ­clicas + proibiÃ§Ãµes (OPERATIONS â†› ACCOUNTING, etc.)
+  - DistinÃ§Ãµes obrigatÃ³rias documentadas em cÃ³digo (ServiceOrder â‰  Measurement â‰  Billing â‰  Receivable, etc.)
   - Contratos futuros de eventos cross-domain (NOT_YET_PUBLISHED; sem publisher/consumidor)
   - DDP-020 atualizado para ANSWERED
-  - Sem migrations (nenhuma mudança de persistência)
+  - Sem migrations (nenhuma mudanÃ§a de persistÃªncia)
 
 KEY FILES:
   docs/06-domain-boundaries/source-of-truth-by-context.md
@@ -7400,15 +7400,15 @@ KEY FILES:
   apps/api/src/events/domain/cross-domain-event-contracts.v1.ts
 
 QUALITY GATES:
-  lint (api): FAIL — 25 erros preexistentes; 0 nos arquivos deste prompt
-  lint (web): FAIL — 1 erro preexistente (physical-assets-api.ts)
-  typecheck (api): FAIL — erros preexistentes; arquivos deste prompt OK
+  lint (api): FAIL â€” 25 erros preexistentes; 0 nos arquivos deste prompt
+  lint (web): FAIL â€” 1 erro preexistente (physical-assets-api.ts)
+  typecheck (api): FAIL â€” erros preexistentes; arquivos deste prompt OK
   unit (api): 606/609 PASS; 3 FAIL preexistentes (characterization mock)
   unit boundary-rules: 5/5 PASS
-  integration (api): PARCIAL — core operacional PASS; UAT 5 FAIL preexistentes; skipped por lock DB concorrente
-  master-business E2E: FAIL — hook timeout (DB serializer lock)
-  security regression: PASS — 22/22
-  migration torture: PASS — 7/7
+  integration (api): PARCIAL â€” core operacional PASS; UAT 5 FAIL preexistentes; skipped por lock DB concorrente
+  master-business E2E: FAIL â€” hook timeout (DB serializer lock)
+  security regression: PASS â€” 22/22
+  migration torture: PASS â€” 7/7
   build (api): PASS
 
 ARCHITECTURE REALIGNMENT: PASS
@@ -7423,11 +7423,11 @@ WORKING TREE: DIRTY
 NEXT: STOP
 ```
 
-## PROMPT — FUNDAÇÃO DO NÚCLEO EMPRESARIAL CISNE
+## PROMPT â€” FUNDAÃ‡ÃƒO DO NÃšCLEO EMPRESARIAL CISNE
 
 ```text
-PROMPT: Fundação do núcleo empresarial CISNE — SoT de operação, financeiro, fiscal, contabilidade, estoque e folha; sem ERP externo
-TITLE: Fundação do núcleo empresarial CISNE
+PROMPT: FundaÃ§Ã£o do nÃºcleo empresarial CISNE â€” SoT de operaÃ§Ã£o, financeiro, fiscal, contabilidade, estoque e folha; sem ERP externo
+TITLE: FundaÃ§Ã£o do nÃºcleo empresarial CISNE
 STARTED_AT: 2026-09-01T02:50:00-04:00
 FINISHED_AT: 2026-09-01T04:02:00-04:00
 EXECUTED_AT: 2026-09-01T04:02:00-04:00
@@ -7437,13 +7437,13 @@ FUNCTIONAL_CODE_CREATED: YES
 NEXT_PROMPT_EXECUTED: NO
 
 SCOPE:
-  - Monólito modular preservado; nenhum microservice
+  - MonÃ³lito modular preservado; nenhum microservice
   - Bounded contexts consolidados: OPERATIONS, COMMERCIAL, FINANCE, FISCAL, ACCOUNTING, INVENTORY, PAYROLL, DOCUMENTS, PLATFORM
-  - Módulos Nest existentes preservados; shells BOUNDARY_READY (finance/fiscal/accounting/inventory/payroll) fora do AppModule
-  - Distinções obrigatórias no grafo: ServiceOrder≠Billing≠Receivable≠FiscalDocument≠AccountingEntry; Asset≠InventoryItem; Employee≠PayrollContract
+  - MÃ³dulos Nest existentes preservados; shells BOUNDARY_READY (finance/fiscal/accounting/inventory/payroll) fora do AppModule
+  - DistinÃ§Ãµes obrigatÃ³rias no grafo: ServiceOrderâ‰ Billingâ‰ Receivableâ‰ FiscalDocumentâ‰ AccountingEntry; Assetâ‰ InventoryItem; Employeeâ‰ PayrollContract
   - Acesso a tabela privada de outro contexto proibido; SQL scan + contratos application/ do owner + views rpt.*
-  - Integração: application contracts, ports, domain events reservados, outbox existente; sem eventos novos publicados
-  - Dependências unidirecionais; ciclos 0
+  - IntegraÃ§Ã£o: application contracts, ports, domain events reservados, outbox existente; sem eventos novos publicados
+  - DependÃªncias unidirecionais; ciclos 0
   - CISNE = SoT; ERP externo = NONE (ACL UnconfiguredErpProvider)
 
 KEY FILES:
@@ -7473,7 +7473,7 @@ QUALITY GATES:
   typecheck (api): PASS
   unit (api): 613/613 PASS
   unit boundary-rules: 9/9 PASS; circularDependencies=0; crossModuleTableAccess=0
-  integration (core): 98/98 PASS — billing, billing-document, measurements, proposals, purchase-orders, contracts, service-orders, documents, transactional-outbox
+  integration (core): 98/98 PASS â€” billing, billing-document, measurements, proposals, purchase-orders, contracts, service-orders, documents, transactional-outbox
   master-business E2E: 9/9 PASS
   migration torture: 7/7 PASS
   build (api): PASS
@@ -7485,21 +7485,21 @@ ERP EXTERNAL DEPENDENCY: NONE
 REGRESSIONS: NONE
 
 NOTES:
-  FINANCE/FISCAL/ACCOUNTING/INVENTORY/PAYROLL permanecem BOUNDARY_READY (ports e schemas reservados; sem tabelas de produção nem providers Nest).
+  FINANCE/FISCAL/ACCOUNTING/INVENTORY/PAYROLL permanecem BOUNDARY_READY (ports e schemas reservados; sem tabelas de produÃ§Ã£o nem providers Nest).
   Eventos cross-domain continuam NOT_YET_PUBLISHED.
-  Relatórios/ACL leem OPERATIONS/COMMERCIAL como exceção downstream via rpt.* ou contratos publicados.
-  Suite integration completa (UAT/chaos/concurrency) não reexecutada nesta etapa; núcleo operacional 98/98 e master-business 9/9 evidenciam ausência de regressão no fluxo empresarial.
+  RelatÃ³rios/ACL leem OPERATIONS/COMMERCIAL como exceÃ§Ã£o downstream via rpt.* ou contratos publicados.
+  Suite integration completa (UAT/chaos/concurrency) nÃ£o reexecutada nesta etapa; nÃºcleo operacional 98/98 e master-business 9/9 evidenciam ausÃªncia de regressÃ£o no fluxo empresarial.
 
 COMMIT: NOT_REQUIRED
 WORKING TREE: DIRTY
 NEXT: STOP
 ```
 
-## PROMPT — CONTAS A RECEBER E TÍTULOS FINANCEIROS
+## PROMPT â€” CONTAS A RECEBER E TÃTULOS FINANCEIROS
 
 ```text
-PROMPT: FINANCE — Accounts Receivable nativo (Billing ≠ Receivable)
-TITLE: Contas a receber e títulos financeiros
+PROMPT: FINANCE â€” Accounts Receivable nativo (Billing â‰  Receivable)
+TITLE: Contas a receber e tÃ­tulos financeiros
 STARTED_AT: 2026-09-01T10:21:00-04:00
 FINISHED_AT: 2026-09-01T10:39:04-04:00
 EXECUTED_AT: 2026-09-01T10:39:04-04:00
@@ -7510,11 +7510,11 @@ NEXT_PROMPT_EXECUTED: NO
 
 SCOPE:
   - Aggregate Receivable + ReceivableInstallment + Settlement em schema fin (write owner FINANCE)
-  - Fluxo: Billing document FINALIZED abre título via FinanceReceivablePort; OPERATIONS não importa FINANCE
+  - Fluxo: Billing document FINALIZED abre tÃ­tulo via FinanceReceivablePort; OPERATIONS nÃ£o importa FINANCE
   - Saldo derivado: principal - settlements POSTED; sem boolean paid
   - Estados derivados: OPEN, PARTIALLY_PAID, PAID, OVERDUE, CANCELLED
   - Baixa transacional, idempotente (unique receivable+idempotency_key) e serializada (FOR UPDATE)
-  - Overpayment rejeitado sem regra explícita; cancelamento bloqueado se houver settlement
+  - Overpayment rejeitado sem regra explÃ­cita; cancelamento bloqueado se houver settlement
   - Dinheiro numeric(18,4) / money-math (sem float)
 
 KEY FILES:
@@ -7545,7 +7545,7 @@ FINANCIAL RECONCILIATION: PASS
 
 NOTES:
   Payables e contextos FISCAL/ACCOUNTING/INVENTORY/PAYROLL permanecem BOUNDARY_READY.
-  Eventos BILLING_FINALIZED / PAYMENT_SETTLED continuam NOT_YET_PUBLISHED; abertura usa port síncrono.
+  Eventos BILLING_FINALIZED / PAYMENT_SETTLED continuam NOT_YET_PUBLISHED; abertura usa port sÃ­ncrono.
 
 COMMIT: NOT_REQUIRED
 WORKING TREE: DIRTY
@@ -7553,7 +7553,7 @@ NEXT: STOP
 ```
 
 ```text
-PROMPT: FINANCE — Accounts Payable nativo (PurchaseOrder ≠ Payable)
+PROMPT: FINANCE â€” Accounts Payable nativo (PurchaseOrder â‰  Payable)
 TITLE: Contas a pagar e despesas
 STARTED_AT: 2026-09-01T10:39:00-04:00
 FINISHED_AT: 2026-09-01T10:57:50-04:00
@@ -7611,7 +7611,7 @@ NEXT: STOP
 ```
 
 ```text
-PROMPT: FINANCE — Cash and bank accounts (tesouraria nativa)
+PROMPT: FINANCE â€” Cash and bank accounts (tesouraria nativa)
 TITLE: Caixa, contas bancarias e movimentacao financeira
 STARTED_AT: 2026-09-01T11:17:00-04:00
 FINISHED_AT: 2026-09-01T11:27:30-04:00
@@ -7664,7 +7664,7 @@ NEXT: STOP
 ```
 
 ```text
-PROMPT: ACCOUNTING — Double entry ledger
+PROMPT: ACCOUNTING â€” Double entry ledger
 TITLE: Contabilidade por partidas dobradas
 STARTED_AT: 2026-09-01T11:27:00-04:00
 FINISHED_AT: 2026-09-01T11:57:30-04:00
@@ -7718,7 +7718,7 @@ NEXT: STOP
 ```
 
 ```text
-PROMPT: ACCOUNTING — Reporting and period closing
+PROMPT: ACCOUNTING â€” Reporting and period closing
 TITLE: Diario, razao, balancete e DRE
 STARTED_AT: 2026-09-01T11:58:00-04:00
 FINISHED_AT: 2026-09-01T12:12:00-04:00
@@ -8277,7 +8277,7 @@ NEXT_PROMPT_EXECUTED: NO
 SCOPE:
   - PayrollPeriod CLOSED -> PayrollClosed -> AccountingPostingRequest
   - Sem formulas trabalhistas novas; somente resultados ja calculados
-  - Contas so na regra contábil versionada; Payroll nao escreve acc.*
+  - Contas so na regra contÃ¡bil versionada; Payroll nao escreve acc.*
   - Referencia unica por competencia (PAYROLL-CLOSED:unit:YYYY-MM)
   - Reabertura nao apaga JournalEntry; usa reversal (PAYROLL_REOPENED)
 
@@ -8435,7 +8435,7 @@ SCOPE:
   - Menu Financeiro / Fiscal / Contabilidade no shell existente
   - Telas de consulta e acao que apenas exibem valores do backend
   - Estados: loading, empty, error, permission denied, version conflict, processing, closed period
-  - Money via componente do design system; sem recálculo de saldo ou razao no browser
+  - Money via componente do design system; sem recÃ¡lculo de saldo ou razao no browser
   - Tabelas grandes com paginacao de exibicao (50 linhas)
 
 KEY FILES:
@@ -9010,7 +9010,7 @@ FUNCTIONAL_CODE_CREATED: YES
 NEXT_PROMPT_EXECUTED: NO
 
 SCOPE:
-  - PurchaseRequest → Approval → SupplierPurchaseOrder → Receipt → Payable em prc.*
+  - PurchaseRequest â†’ Approval â†’ SupplierPurchaseOrder â†’ Receipt â†’ Payable em prc.*
   - CustomerPurchaseOrder permanece com.purchase_orders e nao e origem de payable
   - Receipt nao escreve inv.stock_movements; Payable abre via FinancePayablePort (origem PURCHASE)
 
@@ -9050,7 +9050,7 @@ NEXT_PROMPT_EXECUTED: NO
 
 SCOPE:
   - Verificacao apenas; nenhuma feature de produto
-  - Extensoes: TaxObligation→Payable, Fiscal Close, Fixed Assets, Budget, Cash Forecast, Suppliers, Procurement
+  - Extensoes: TaxObligationâ†’Payable, Fiscal Close, Fixed Assets, Budget, Cash Forecast, Suppliers, Procurement
   - Dimensoes: concorrencia, idempotencia, rollback, version conflict, autorizacao, migrations, reconciliacao
   - Regressao Enterprise Core via enterprise-integrity (nao repetiu suites nucleares ja certificadas)
 
@@ -9060,7 +9060,7 @@ QUALITY GATES:
   integration (7 extensoes): 44/44 PASS
     tax-obligation-payable 7, fiscal-period-close 8, fixed-asset 7, budget 5, cash-forecast 3, suppliers 7, procurement 7
   enterprise financial integrity (core regression): 3/3 PASS
-  ci-database-gate (zero→latest + incremental N-1→N = 0065): PASS
+  ci-database-gate (zeroâ†’latest + incremental N-1â†’N = 0065): PASS
   migration-torture: 7/7 PASS
 
 EXTENSIONS: PASS
@@ -9073,14 +9073,14 @@ NEXT: CONTINUE
 
 NOTES:
   Nenhuma feature criada. Suites nucleares (payables/receivables/treasury/inventory/payroll/e2e/adversarial) nao foram reexecutadas; o nucleo foi revalidado pelo enterprise-integrity.
-  TaxObligation→Payable: 1 apuracao/1 obrigacao/1 payable; replay e concorrencia sem duplicar; rollback sem leftover; obligation=payable.
+  TaxObligationâ†’Payable: 1 apuracao/1 obrigacao/1 payable; replay e concorrencia sem duplicar; rollback sem leftover; obligation=payable.
   Fiscal Close: double-close idempotente; concorrencia 1 CLOSED; rollback deixa OPEN; draft bloqueia close.
   Fixed Assets: 1 posting por evento; acquire concorrente=1 CAPITALIZED; rollback sem leftover; journal=book value.
   Budget: aprovado imutavel; 0 impacto em acc.journal_*; comparativo no backend.
   Cash Forecast: 0 false realized; cancelado fora da projecao; autorizacao negativa.
   Suppliers: CNPJ unico no master; version conflict; inativo nao abre payable; distinto de Client.
   Procurement: receipt parcial sem estoque/pagamento duplicado; replay e concorrencia=1 payable; rollback 0 leftover.
-  Migrations: journal sequencial; fresh+incremental 0065; torture ZERO→LATEST e N-3→N.
+  Migrations: journal sequencial; fresh+incremental 0065; torture ZEROâ†’LATEST e N-3â†’N.
 
 COMMIT: NOT_REQUIRED
 WORKING TREE: DIRTY
@@ -9130,7 +9130,7 @@ NEXT_PROMPT_EXECUTED: NO
 
 SCOPE:
   - SupplierInvoice em prc.* distinto de Payable (fin.*) e de FiscalDocument
-  - Fluxo SupplierInvoice → validacao → no maximo um Payable
+  - Fluxo SupplierInvoice â†’ validacao â†’ no maximo um Payable
   - Relacao opcional com SupplierPurchaseOrder e Receipt; receipt com payable PURCHASE e anexado, nao duplicado
   - Finance abre payable so pelo port openFromSupplierInvoice (origem SUPPLIER_INVOICE)
 
@@ -9290,12 +9290,12 @@ NEXT: STOP
 
 ```text
 PROMPT: FINANCIAL APPROVAL MATRIX
-TITLE: Reexecucao — endurecimento de mutacao e uma versao publicada
+TITLE: Reexecucao â€” endurecimento de mutacao e uma versao publicada
 STARTED_AT: 2026-09-02T20:38:00-04:00
 FINISHED_AT: 2026-09-02T20:49:34-04:00
 STATUS: PASS
 FILES_CREATED:
-  (nenhum — reuso da baseline 2026-09-01)
+  (nenhum â€” reuso da baseline 2026-09-01)
 FILES_CHANGED:
   packages/database/migrations/0068_financial_approval_matrix.sql
   apps/api/src/test/ensure-migrations.ts
@@ -9480,7 +9480,7 @@ NEXT: STOP
 
 ```text
 PROMPT: RELEASE 1 CLOSED SCOPE
-TITLE: Escopo fechado da Release 1 — flags fail-closed e diferenciação de faturamento interno
+TITLE: Escopo fechado da Release 1 â€” flags fail-closed e diferenciaÃ§Ã£o de faturamento interno
 STARTED_AT: 2026-09-02T21:15:00-04:00
 FINISHED_AT: 2026-09-02T21:26:25-04:00
 STATUS: PASS
@@ -9611,7 +9611,7 @@ NEXT: STOP
 
 ```text
 PROMPT: UNIT TEST SUITES BUGFIX
-TITLE: Correção rápida das suítes unitárias e dos gates estáticos
+TITLE: CorreÃ§Ã£o rÃ¡pida das suÃ­tes unitÃ¡rias e dos gates estÃ¡ticos
 STARTED_AT: 2026-09-02T22:33:30-04:00
 FINISHED_AT: 2026-09-02T22:47:24-04:00
 STATUS: PASS
@@ -9627,37 +9627,37 @@ FUNCTIONAL_CODE_CREATED: NO
 NEXT_PROMPT_EXECUTED: NO
 
 SCOPE:
-  - Isolar a falha observada na suíte web
-  - Corrigir asserções e narrowings obsoletos sem mudar regra empresarial
-  - Validar todas as suítes unitárias e os gates de lint/typecheck dos pacotes afetados
-  - Preservar as alterações preexistentes da suíte de integração
+  - Isolar a falha observada na suÃ­te web
+  - Corrigir asserÃ§Ãµes e narrowings obsoletos sem mudar regra empresarial
+  - Validar todas as suÃ­tes unitÃ¡rias e os gates de lint/typecheck dos pacotes afetados
+  - Preservar as alteraÃ§Ãµes preexistentes da suÃ­te de integraÃ§Ã£o
 
 QUALITY GATES:
   unit (api): 180 arquivos, 736/736 PASS
   unit (database): 5 arquivos, 21/21 PASS
   unit (web): 90 arquivos, 349/349 PASS
   unit total: 275 arquivos, 1106/1106 PASS
-  targeted (billing + feature flags): 7/7 PASS após as correções
+  targeted (billing + feature flags): 7/7 PASS apÃ³s as correÃ§Ãµes
   lint (api + web + database): PASS
   typecheck (api + web + database): PASS
   git diff --check: PASS
 
 NOTES:
-  A asserção de billing procurava o título antigo "Faturamento"; foi alinhada ao título "Faturamento interno" exigido pela distinção DDP-023/R1-SCOPE-001.
-  As remoções de type assertions em feature flags e accounting posting são correções estáticas sem mudança de comportamento.
-  O comando raiz via Corepack/Turborepo não localizou o binário físico do package manager nesta sessão; os três scripts de pacote foram executados diretamente e passaram.
-  A suíte de integração PostgreSQL já iniciada por outro processo contém 79 arquivos e aproximadamente 609 cenários serializados; permaneceu ativa e não foi declarada PASS neste registro.
-  Onze alterações preexistentes de integração/tesouraria/database foram preservadas e não são atribuídas a este prompt.
+  A asserÃ§Ã£o de billing procurava o tÃ­tulo antigo "Faturamento"; foi alinhada ao tÃ­tulo "Faturamento interno" exigido pela distinÃ§Ã£o DDP-023/R1-SCOPE-001.
+  As remoÃ§Ãµes de type assertions em feature flags e accounting posting sÃ£o correÃ§Ãµes estÃ¡ticas sem mudanÃ§a de comportamento.
+  O comando raiz via Corepack/Turborepo nÃ£o localizou o binÃ¡rio fÃ­sico do package manager nesta sessÃ£o; os trÃªs scripts de pacote foram executados diretamente e passaram.
+  A suÃ­te de integraÃ§Ã£o PostgreSQL jÃ¡ iniciada por outro processo contÃ©m 79 arquivos e aproximadamente 609 cenÃ¡rios serializados; permaneceu ativa e nÃ£o foi declarada PASS neste registro.
+  Onze alteraÃ§Ãµes preexistentes de integraÃ§Ã£o/tesouraria/database foram preservadas e nÃ£o sÃ£o atribuÃ­das a este prompt.
 
 COMMIT: THIS_COMMIT
-WORKING TREE: DIRTY (alterações preexistentes preservadas)
+WORKING TREE: DIRTY (alteraÃ§Ãµes preexistentes preservadas)
 NEXT: STOP
 ```
 
 
 ```text
 PROMPT: SURGICAL BUG VALIDATION
-TITLE: Validação imediata dos erros pendentes sem alteração de código
+TITLE: ValidaÃ§Ã£o imediata dos erros pendentes sem alteraÃ§Ã£o de cÃ³digo
 STARTED_AT: 2026-09-02T22:57:56-04:00
 FINISHED_AT: 2026-09-02T23:03:33-04:00
 STATUS: PASS
@@ -9670,9 +9670,9 @@ FUNCTIONAL_CODE_CREATED: NO
 NEXT_PROMPT_EXECUTED: NO
 
 SCOPE:
-  - Acompanhar até o encerramento a suíte de integração iniciada externamente
+  - Acompanhar atÃ© o encerramento a suÃ­te de integraÃ§Ã£o iniciada externamente
   - Reexecutar somente os arquivos relacionados ao diff pendente
-  - Validar lint, typecheck e teste unitário afetado sem editar implementação
+  - Validar lint, typecheck e teste unitÃ¡rio afetado sem editar implementaÃ§Ã£o
 
 QUALITY GATES:
   integration targeted (enterprise integrity + cash-flow forecast + treasury + database): 4 arquivos, 17/17 PASS
@@ -9682,21 +9682,21 @@ QUALITY GATES:
   git diff --check: PASS
 
 NOTES:
-  A execução externa encerrou às 2026-09-02T23:00:25-04:00; seu stdout não estava conectado a esta sessão e não foi usado como evidência de PASS.
-  A reexecução própria confirmou os quatro alvos em 112.32s, incluindo concorrência, rollback, autorização e invariantes financeiros.
-  Nenhuma falha foi reproduzida; por isso nenhuma correção especulativa foi aplicada.
-  Nove alterações preexistentes permaneceram intactas no working tree.
+  A execuÃ§Ã£o externa encerrou Ã s 2026-09-02T23:00:25-04:00; seu stdout nÃ£o estava conectado a esta sessÃ£o e nÃ£o foi usado como evidÃªncia de PASS.
+  A reexecuÃ§Ã£o prÃ³pria confirmou os quatro alvos em 112.32s, incluindo concorrÃªncia, rollback, autorizaÃ§Ã£o e invariantes financeiros.
+  Nenhuma falha foi reproduzida; por isso nenhuma correÃ§Ã£o especulativa foi aplicada.
+  Nove alteraÃ§Ãµes preexistentes permaneceram intactas no working tree.
   Nenhuma regra empresarial, contrato ou comportamento funcional foi alterado neste prompt.
 
 COMMIT: THIS_COMMIT
-WORKING TREE: DIRTY (9 alterações preexistentes preservadas)
+WORKING TREE: DIRTY (9 alteraÃ§Ãµes preexistentes preservadas)
 NEXT: STOP
 ```
 
 
 ```text
 PROMPT: SURGICAL CASH FLOW DEBUG
-TITLE: Remover vazamento de parâmetro de teste no contrato de tesouraria
+TITLE: Remover vazamento de parÃ¢metro de teste no contrato de tesouraria
 STARTED_AT: 2026-09-02T23:07:58-04:00
 FINISHED_AT: 2026-09-02T23:09:57-04:00
 STATUS: PASS
@@ -9714,16 +9714,16 @@ FUNCTIONAL_CODE_CREATED: NO
 NEXT_PROMPT_EXECUTED: NO
 
 ROOT CAUSE:
-  O forecast fixo em 2026-09-01 precisava de um crédito realizado até o asOf. A correção intermediária adicionava openingOccurredAt ao input de abertura de conta, alcançável pelo controller HTTP e sem regra documentada.
+  O forecast fixo em 2026-09-01 precisava de um crÃ©dito realizado atÃ© o asOf. A correÃ§Ã£o intermediÃ¡ria adicionava openingOccurredAt ao input de abertura de conta, alcanÃ§Ã¡vel pelo controller HTTP e sem regra documentada.
 
 SURGICAL FIX:
-  - Removida integralmente a ampliação openingOccurredAt dos quatro arquivos funcionais de tesouraria
-  - Fixture usa o comando existente postMovement, com autorização FinanceTreasuryPost, origem MANUAL_AUTHORIZED e timestamp determinístico
+  - Removida integralmente a ampliaÃ§Ã£o openingOccurredAt dos quatro arquivos funcionais de tesouraria
+  - Fixture usa o comando existente postMovement, com autorizaÃ§Ã£o FinanceTreasuryPost, origem MANUAL_AUTHORIZED e timestamp determinÃ­stico
   - Teardown de TestingModule/pool e whitelist pty permanecem somente em teste/harness
 
 QUALITY GATES:
-  integration após correção (cash-flow forecast + treasury): 2 arquivos, 11/11 PASS
-  integration relacionada já validada (enterprise integrity + database): 2 arquivos, 6/6 PASS
+  integration apÃ³s correÃ§Ã£o (cash-flow forecast + treasury): 2 arquivos, 11/11 PASS
+  integration relacionada jÃ¡ validada (enterprise integrity + database): 2 arquivos, 6/6 PASS
   unit (cash-flow forecast + treasury): 2 arquivos, 9/9 PASS
   lint direcionado: PASS
   typecheck (api): PASS
@@ -9731,9 +9731,9 @@ QUALITY GATES:
   functional finance diff: 0 arquivos
 
 NOTES:
-  Nenhuma regra empresarial, endpoint, tipo de entrada produtivo ou persistência foi ampliado.
-  Nenhuma refatoração fora do erro foi executada.
-  Os testes confirmam saldo realizado derivado, idempotência, concorrência, autorização e rollback.
+  Nenhuma regra empresarial, endpoint, tipo de entrada produtivo ou persistÃªncia foi ampliado.
+  Nenhuma refatoraÃ§Ã£o fora do erro foi executada.
+  Os testes confirmam saldo realizado derivado, idempotÃªncia, concorrÃªncia, autorizaÃ§Ã£o e rollback.
 
 COMMIT: THIS_COMMIT
 WORKING TREE: expected clean after this commit
@@ -9743,7 +9743,7 @@ NEXT: STOP
 
 ```text
 PROMPT: COMPLETE INTEGRATION DEBUG
-TITLE: Debug completo das falhas de integração cash-flow, pty e teardown
+TITLE: Debug completo das falhas de integraÃ§Ã£o cash-flow, pty e teardown
 STARTED_AT: 2026-09-02T23:13:00-04:00
 FINISHED_AT: 2026-09-02T23:21:52-04:00
 STATUS: PASS
@@ -9759,20 +9759,20 @@ FUNCTIONAL_CODE_CREATED: YES
 NEXT_PROMPT_EXECUTED: NO
 
 EVIDENCE:
-  terminal 101420: 2 failed / 613 passed — cashBalance 0.0000 vs 500.0000; pty allowlist sem supplier_addresses
-  terminal 101421: 34 suites failed after 615 passed — TypeError endTrackedTestDatabasePools is not a function
-  HEAD fe19e6a já continha fixture postMovement, allowlist pty ampliada e teardown sem a função inexistente
+  terminal 101420: 2 failed / 613 passed â€” cashBalance 0.0000 vs 500.0000; pty allowlist sem supplier_addresses
+  terminal 101421: 34 suites failed after 615 passed â€” TypeError endTrackedTestDatabasePools is not a function
+  HEAD fe19e6a jÃ¡ continha fixture postMovement, allowlist pty ampliada e teardown sem a funÃ§Ã£o inexistente
 
 ROOT CAUSES:
-  1. cashBalance: openAccount(openingAmount) grava occurred_at = now(); listPostedTreasuryMovements filtra occurred_at <= asOf. asOf 2026-09-01 em 2026-09-02 exclui o crédito de abertura.
-  2. supplier_addresses: o probe exigia tableName ∈ [clients, client_contacts, client_addresses]; pty.supplier_* passou a existir após 0064_supplier_master.sql.
-  3. teardown: working tree intermediário chamava endTrackedTestDatabasePools, que nunca foi exportada; Vitest marca afterAll como falha de suíte mesmo com testes PASS. HEAD já removeu a chamada.
+  1. cashBalance: openAccount(openingAmount) grava occurred_at = now(); listPostedTreasuryMovements filtra occurred_at <= asOf. asOf 2026-09-01 em 2026-09-02 exclui o crÃ©dito de abertura.
+  2. supplier_addresses: o probe exigia tableName âˆˆ [clients, client_contacts, client_addresses]; pty.supplier_* passou a existir apÃ³s 0064_supplier_master.sql.
+  3. teardown: working tree intermediÃ¡rio chamava endTrackedTestDatabasePools, que nunca foi exportada; Vitest marca afterAll como falha de suÃ­te mesmo com testes PASS. HEAD jÃ¡ removeu a chamada.
 
 COMPLETE FIX:
   - Filtro de tesouraria do forecast usa (occurred_at AT TIME ZONE 'UTC')::date, alinhado a bank-reconciliation e a asCashForecastIsoDate
-  - Regressão: openingAmount agora + asOf histórico => PROJECTED com cashBalance 0; crédito datado no asOf permanece 500
+  - RegressÃ£o: openingAmount agora + asOf histÃ³rico => PROJECTED com cashBalance 0; crÃ©dito datado no asOf permanece 500
   - Probe pty compara conjunto exato das 7 tabelas documentadas em clients.ts + suppliers.ts
-  - Probe adicional: timestamptz em America/Sao_Paulo diverge de UTC; o recorte de caixa não pode usar ::date da sessão
+  - Probe adicional: timestamptz em America/Sao_Paulo diverge de UTC; o recorte de caixa nÃ£o pode usar ::date da sessÃ£o
 
 QUALITY GATES:
   integration (cash-flow forecast): 4/4 PASS
@@ -9786,8 +9786,8 @@ QUALITY GATES:
 
 NOTES:
   Nenhuma regra empresarial nova foi confirmada. openingOccurredAt continua fora do contrato HTTP.
-  Contratos de tesouraria, autorização e persistência de abertura de conta não foram ampliados.
-  A suíte completa de 79 arquivos não foi reexecutada nesta etapa; as 34 falhas do terminal 101421 são o mesmo TypeError de teardown, já ausente em HEAD.
+  Contratos de tesouraria, autorizaÃ§Ã£o e persistÃªncia de abertura de conta nÃ£o foram ampliados.
+  A suÃ­te completa de 79 arquivos nÃ£o foi reexecutada nesta etapa; as 34 falhas do terminal 101421 sÃ£o o mesmo TypeError de teardown, jÃ¡ ausente em HEAD.
   Timezone do PostgreSQL de teste observado: UTC.
 
 COMMIT: NOT_REQUIRED
@@ -9798,7 +9798,7 @@ NEXT: STOP
 
 ```text
 PROMPT: COMPLETE INTEGRATION SUITE VALIDATION
-TITLE: Reexecução da suíte de integração e debug do flake de outbox em chaos-recovery
+TITLE: ReexecuÃ§Ã£o da suÃ­te de integraÃ§Ã£o e debug do flake de outbox em chaos-recovery
 STARTED_AT: 2026-09-02T23:25:00-04:00
 FINISHED_AT: 2026-09-02T23:53:09-04:00
 STATUS: PASS
@@ -9822,22 +9822,22 @@ SUITE:
 ROOT CAUSE:
   OutboxPublisherWorkerService inicia em onModuleInit quando OUTBOX_PUBLISHER_ENABLED !== 'false'.
   O describe de chaos chama module.init() sobre OutboxModule e liga um poller em background.
-  O teste expire o lease, devolve o evento a PENDING e chama publishBatch explícito; o poller disputa o claim e deixa status PROCESSING na janela da asserção.
+  O teste expire o lease, devolve o evento a PENDING e chama publishBatch explÃ­cito; o poller disputa o claim e deixa status PROCESSING na janela da asserÃ§Ã£o.
 
 COMPLETE FIX:
   OUTBOX_PUBLISHER_ENABLED=false antes do compile/init deste describe.
   Stop do OutboxPublisherWorkerService e restore da env no afterAll.
-  Os testes continuam a publicar só via claimPending/publishBatch explícitos.
+  Os testes continuam a publicar sÃ³ via claimPending/publishBatch explÃ­citos.
 
 QUALITY GATES:
-  full integration before chaos fix: 78/79 files; 616/617 tests (única falha = flake acima)
-  chaos + transactional outbox: 3 execuções consecutivas, 20/20 PASS cada
+  full integration before chaos fix: 78/79 files; 616/617 tests (Ãºnica falha = flake acima)
+  chaos + transactional outbox: 3 execuÃ§Ãµes consecutivas, 20/20 PASS cada
   lint (chaos-recovery.integration.spec.ts): PASS
 
 NOTES:
-  Auditoria de ::date: o único recorte timestamptz de sessão era o forecast, já corrigido. Dashboard/aging usam TZ explícito; due_date/issued_on são colunas date.
-  A suíte cheia não foi reexecutada após o isolamento do poller; a evidência de regressão é tríplice no arquivo que falhou e no outbox transacional.
-  Nenhuma regra empresarial nova. Default produtivo do poller (enabled unless false) não foi alterado.
+  Auditoria de ::date: o Ãºnico recorte timestamptz de sessÃ£o era o forecast, jÃ¡ corrigido. Dashboard/aging usam TZ explÃ­cito; due_date/issued_on sÃ£o colunas date.
+  A suÃ­te cheia nÃ£o foi reexecutada apÃ³s o isolamento do poller; a evidÃªncia de regressÃ£o Ã© trÃ­plice no arquivo que falhou e no outbox transacional.
+  Nenhuma regra empresarial nova. Default produtivo do poller (enabled unless false) nÃ£o foi alterado.
 
 COMMIT: NOT_REQUIRED
 WORKING TREE: DIRTY
@@ -9847,7 +9847,7 @@ NEXT: STOP
 
 ```text
 PROMPT: COMPLETE INTEGRATION SUITE RE-RUN
-TITLE: Reexecução da suíte de integração após isolamento do poller de outbox
+TITLE: ReexecuÃ§Ã£o da suÃ­te de integraÃ§Ã£o apÃ³s isolamento do poller de outbox
 STARTED_AT: 2026-09-02T23:53:30-04:00
 FINISHED_AT: 2026-09-03T00:32:04-04:00
 STATUS: PASS
@@ -9860,7 +9860,7 @@ FUNCTIONAL_CODE_CREATED: NO
 NEXT_PROMPT_EXECUTED: NO
 
 SCOPE:
-  Fechar o débito da etapa anterior: suíte de 79 arquivos após o isolamento do OutboxPublisherWorkerService.
+  Fechar o dÃ©bito da etapa anterior: suÃ­te de 79 arquivos apÃ³s o isolamento do OutboxPublisherWorkerService.
 
 QUALITY GATES:
   integration (full API): 79/79 files PASS
@@ -9870,8 +9870,8 @@ QUALITY GATES:
   lock cleanup before run: PASS
 
 NOTES:
-  Nenhuma falha reproduzida. Nenhuma correção adicional aplicada.
-  Forecast UTC, probe pty exato e isolamento do poller de chaos permaneceram intactos nesta execução.
+  Nenhuma falha reproduzida. Nenhuma correÃ§Ã£o adicional aplicada.
+  Forecast UTC, probe pty exato e isolamento do poller de chaos permaneceram intactos nesta execuÃ§Ã£o.
   Nenhuma regra empresarial nova.
 
 COMMIT: NOT_REQUIRED
@@ -9882,7 +9882,7 @@ NEXT: STOP
 
 ```text
 PROMPT: FULLSTACK FINANCE UI DEBUG
-TITLE: Validação fullstack e correção do double-submit de recebimento
+TITLE: ValidaÃ§Ã£o fullstack e correÃ§Ã£o do double-submit de recebimento
 STARTED_AT: 2026-09-03T00:32:30-04:00
 FINISHED_AT: 2026-09-03T00:41:03-04:00
 STATUS: PASS
@@ -9896,30 +9896,30 @@ FUNCTIONAL_CODE_CREATED: YES
 NEXT_PROMPT_EXECUTED: NO
 
 SCOPE:
-  Validar suítes unitárias API/web/database após as correções de integração.
+  Validar suÃ­tes unitÃ¡rias API/web/database apÃ³s as correÃ§Ãµes de integraÃ§Ã£o.
   Debugar a falha fullstack observada no backoffice financeiro.
-  Não criar tela de cash-forecast (API existe; superfície web ausente — observação, não implementação).
+  NÃ£o criar tela de cash-forecast (API existe; superfÃ­cie web ausente â€” observaÃ§Ã£o, nÃ£o implementaÃ§Ã£o).
 
 ROOT CAUSE:
-  MoneyActionForm zerava inflight no finally após o 409. O diálogo permanecia aberto.
+  MoneyActionForm zerava inflight no finally apÃ³s o 409. O diÃ¡logo permanecia aberto.
   Promise.all de dois cliques no Confirmar disparava o segundo POST depois do primeiro ter soltado o lock.
 
 COMPLETE FIX:
-  Em version_conflict o confirm permanece gasto até cancelar/recarregar.
+  Em version_conflict o confirm permanece gasto atÃ© cancelar/recarregar.
   confirmDisabled={conflict} no ConfirmAction.
-  Erros não-conflito ainda liberam retry.
+  Erros nÃ£o-conflito ainda liberam retry.
 
 QUALITY GATES:
   unit (api): 180 arquivos, 736/736 PASS
   unit (database): 5 arquivos, 21/21 PASS
-  unit (web) antes da correção: 1 failed | 348 passed (349) — única falha = double-submit
-  finance UI + financial-ui: 3 execuções consecutivas, 11/11 PASS cada
+  unit (web) antes da correÃ§Ã£o: 1 failed | 348 passed (349) â€” Ãºnica falha = double-submit
+  finance UI + financial-ui: 3 execuÃ§Ãµes consecutivas, 11/11 PASS cada
   lint (MoneyActionForm): PASS
 
 NOTES:
-  GET /finance/cash-forecast não tem rota, nav nem client em apps/web. Não foi aberta tela nesta etapa.
-  Frontend não é boundary: o backend continua a recusar o segundo settle; a UI só deixa de emitir o POST duplicado.
-  A suíte web completa (90 arquivos) não foi reexecutada após o lock de conflito.
+  GET /finance/cash-forecast nÃ£o tem rota, nav nem client em apps/web. NÃ£o foi aberta tela nesta etapa.
+  Frontend nÃ£o Ã© boundary: o backend continua a recusar o segundo settle; a UI sÃ³ deixa de emitir o POST duplicado.
+  A suÃ­te web completa (90 arquivos) nÃ£o foi reexecutada apÃ³s o lock de conflito.
 
 COMMIT: NOT_REQUIRED
 WORKING TREE: DIRTY
@@ -9945,11 +9945,11 @@ NEXT_PROMPT_EXECUTED: NO
 
 SCOPE:
   O double-click da UI reenvia a mesma idempotency_key e o rowVersion original.
-  O teste de replay existente usava o rowVersion já incrementado. Fechar esse recorte no backend.
+  O teste de replay existente usava o rowVersion jÃ¡ incrementado. Fechar esse recorte no backend.
 
 ROOT CAUSE:
-  Nenhuma falha de persistência. lookup de idempotency_key ocorre antes do classifyRowVersion, com FOR UPDATE e unique violation.
-  Faltava evidência do formato exato do double POST.
+  Nenhuma falha de persistÃªncia. lookup de idempotency_key ocorre antes do classifyRowVersion, com FOR UPDATE e unique violation.
+  Faltava evidÃªncia do formato exato do double POST.
 
 COMPLETE FIX:
   Receivable: replay sequencial e concorrente com a mesma chave + rowVersion original => 1 settlement.
@@ -9961,8 +9961,8 @@ QUALITY GATES:
   lint dos specs: PASS
 
 NOTES:
-  Nenhuma alteração de serviço, repositório ou contrato HTTP.
-  Frontend continua sem ser boundary. Dois POSTs com chaves diferentes e o mesmo rowVersion já eram serializados (1 sucesso + 1 conflito).
+  Nenhuma alteraÃ§Ã£o de serviÃ§o, repositÃ³rio ou contrato HTTP.
+  Frontend continua sem ser boundary. Dois POSTs com chaves diferentes e o mesmo rowVersion jÃ¡ eram serializados (1 sucesso + 1 conflito).
 
 COMMIT: NOT_REQUIRED
 WORKING TREE: DIRTY
@@ -10157,7 +10157,7 @@ SCOPE:
   Nao ligar FEATURE_MODULE_FISCAL. Nao executar Prompt 93. Nao declarar GO.
 
 CLASSIFICATION:
-  Alinhamento: SRC-002 §§2, 14, 15, 19, 20.
+  Alinhamento: SRC-002 Â§Â§2, 14, 15, 19, 20.
   Capitulo cadastral/identidade permanece fechado (SRC-002..007).
   Unico blocker oficial de producao: PILOT_OBSERVATION_WINDOW_NOT_COMPLETED (saida 13 set 2026).
 
@@ -10179,7 +10179,7 @@ NEXT: STOP
 
 ```text
 PROMPT: MODULE-CLOSURE BATCH (CLIENTS..BILLING)
-TITLE: Fechamento técnico dos núcleos operacionais (clientes a faturamento interno), sem fiscal e sem go-live
+TITLE: Fechamento tÃ©cnico dos nÃºcleos operacionais (clientes a faturamento interno), sem fiscal e sem go-live
 STARTED_AT: 2026-09-03T02:43:00-04:00
 FINISHED_AT: 2026-09-03T03:26:44-04:00
 STATUS: PASS_WITH_RESTRICTIONS
@@ -10235,22 +10235,22 @@ FUNCTIONAL_CODE_CREATED: YES
 NEXT_PROMPT_EXECUTED: NO
 
 SCOPE:
-  Fechar lacunas técnicas comprováveis nos núcleos de clientes, contratos, solicitações, propostas, PO, OS, execução/medição existente e faturamento interno.
-  Não redesenhar. Não criar ERP. Não ligar FEATURE_MODULE_FISCAL. Não executar Prompt 93. Não declarar GO.
+  Fechar lacunas tÃ©cnicas comprovÃ¡veis nos nÃºcleos de clientes, contratos, solicitaÃ§Ãµes, propostas, PO, OS, execuÃ§Ã£o/mediÃ§Ã£o existente e faturamento interno.
+  NÃ£o redesenhar. NÃ£o criar ERP. NÃ£o ligar FEATURE_MODULE_FISCAL. NÃ£o executar Prompt 93. NÃ£o declarar GO.
 
 CLASSIFICATION:
-  Interpretação de engenharia sobre BR-033/034/036/037/043..051 e DDP-026.
-  Nenhuma regra comercial nova CONFIRMED. Pendências de negócio permanecem OPEN/CANDIDATE.
+  InterpretaÃ§Ã£o de engenharia sobre BR-033/034/036/037/043..051 e DDP-026.
+  Nenhuma regra comercial nova CONFIRMED. PendÃªncias de negÃ³cio permanecem OPEN/CANDIDATE.
 
 QUALITY GATES:
   clients integration 10/10 PASS
   clients audit-closure 5/5 PASS
-  service-orders integration 25/25 PASS (reopen justification revalidado após correção de mapeamento)
-  service-requests integration 18/18 PASS (submit mínimo + convert sem AuthZ)
+  service-orders integration 25/25 PASS (reopen justification revalidado apÃ³s correÃ§Ã£o de mapeamento)
+  service-requests integration 18/18 PASS (submit mÃ­nimo + convert sem AuthZ)
   contracts integration 6/6 PASS (activate com cliente inativo)
   proposals integration 8/8 PASS
   purchase-orders integration 8/8 PASS
-  unitários focados 52 PASS (47 + 5 feature-flags)
+  unitÃ¡rios focados 52 PASS (47 + 5 feature-flags)
   FEATURE_MODULE_FISCAL permanece fail-closed
   Prompt 93 nao executado
   producao permanece NO-GO
@@ -10258,7 +10258,7 @@ QUALITY GATES:
 NOTES:
   Isolamento por tenant continua via AuthZ Global/Client (SRC-002/004: operadora unica); coluna company_id nao inventada.
   Exclusao fisica de cliente referenciado continua ausente (inativacao + FK RESTRICT).
-  Alocacao de mao de obra permanece rejeitada (LABOR_ALLOCATION_NOT_SUPPORTED) — nao inventada.
+  Alocacao de mao de obra permanece rejeitada (LABOR_ALLOCATION_NOT_SUPPORTED) â€” nao inventada.
   Locacao/transporte: fluxos existentes sob OS; verticais dedicadas OUT_OF_RELEASE_1 (DDP-026).
   Aceite do cliente, glosa, ANTT, CT-e/MDF-e, renovacao automatica de contrato, job EXPIRED e obrigatoriedade universal de PO permanecem OPEN.
   Cancel-OS vs alocacoes ativas (EX-005 / DDP-004 residual) permanece OPEN; nao ha release-on-cancel inventado.
@@ -10274,7 +10274,7 @@ NEXT: STOP
 
 ```text
 PROMPT: SOD HARDENING
-TITLE: Endurecer Segregation of Duties nas operações críticas
+TITLE: Endurecer Segregation of Duties nas operaÃ§Ãµes crÃ­ticas
 STARTED_AT: 2026-09-03T02:53:00-04:00
 FINISHED_AT: 2026-09-03T04:16:30-04:00
 STATUS: PASS_WITH_RESTRICTIONS
@@ -10332,15 +10332,15 @@ FUNCTIONAL_CODE_CREATED: YES
 NEXT_PROMPT_EXECUTED: NO
 
 SCOPE:
-  Endurecer SOD no backend para fornecedor, compra, despesa, pagamento, baixa, conciliação, ajuste contábil, reabertura de período, fiscal e folha.
-  Política: role + capability + scope + approval matrix publicada. Sem hardcode de usuários.
-  Impedir criar+aprovar, solicitar+pagar, preparar+confirmar, lançar+aprovar o próprio ajuste.
-  Testar bypass HTTP direto, mudança de scope e autoaprovação.
-  Não aplicar SOD aos pares SRC-008 de OS/medição (BR-046 / BR-050).
-  Não executar Prompt 93. Não declarar GO.
+  Endurecer SOD no backend para fornecedor, compra, despesa, pagamento, baixa, conciliaÃ§Ã£o, ajuste contÃ¡bil, reabertura de perÃ­odo, fiscal e folha.
+  PolÃ­tica: role + capability + scope + approval matrix publicada. Sem hardcode de usuÃ¡rios.
+  Impedir criar+aprovar, solicitar+pagar, preparar+confirmar, lanÃ§ar+aprovar o prÃ³prio ajuste.
+  Testar bypass HTTP direto, mudanÃ§a de scope e autoaprovaÃ§Ã£o.
+  NÃ£o aplicar SOD aos pares SRC-008 de OS/mediÃ§Ã£o (BR-046 / BR-050).
+  NÃ£o executar Prompt 93. NÃ£o declarar GO.
 
 CLASSIFICATION:
-  Interpretação de engenharia (ED-006). Prompt 08 SOD-001..012 permanece CANDIDATE/PENDING.
+  InterpretaÃ§Ã£o de engenharia (ED-006). Prompt 08 SOD-001..012 permanece CANDIDATE/PENDING.
   Nenhuma regra empresarial nova CONFIRMED.
 
 SOD RESULT:
@@ -10378,7 +10378,7 @@ NEXT: STOP
 
 ```text
 PROMPT: ENTERPRISE UI CATCH-UP
-TITLE: Completar interfaces faltantes para backend já aprovado
+TITLE: Completar interfaces faltantes para backend jÃ¡ aprovado
 STARTED_AT: 2026-09-03T04:16:00-04:00
 FINISHED_AT: 2026-09-03T04:41:50-04:00
 STATUS: PASS
@@ -10523,8 +10523,8 @@ RESULT:
   PILOT_STATUS = OBSERVATION
 
 QUALITY GATES:
-  pnpm readiness:engineering → engineeringReadiness READY
-  pnpm readiness:gate → production NO-GO; productionBlockers PILOT_OBSERVATION_WINDOW_NOT_COMPLETED
+  pnpm readiness:engineering â†’ engineeringReadiness READY
+  pnpm readiness:gate â†’ production NO-GO; productionBlockers PILOT_OBSERVATION_WINDOW_NOT_COMPLETED
   pilot-observation.spec.ts 4/4 PASS
   readiness-gate.spec.ts 27/27 PASS
   backup-runner.spec.ts PASS
@@ -10601,9 +10601,9 @@ QUALITY GATES:
   API lint / typecheck / build PASS
   Web lint / typecheck / build PASS
   database lint / typecheck / build PASS
-  pnpm readiness:engineering → engineeringReadiness READY; engineeringBlockers []
-  pnpm readiness:gate → production NO-GO; productionBlockers PILOT_OBSERVATION_WINDOW_NOT_COMPLETED
-  Turbo pnpm lint/typecheck nesta sessao Windows: FAIL (Unable to find package manager binary) — nao e defeito de codigo; evidencia por pacote
+  pnpm readiness:engineering â†’ engineeringReadiness READY; engineeringBlockers []
+  pnpm readiness:gate â†’ production NO-GO; productionBlockers PILOT_OBSERVATION_WINDOW_NOT_COMPLETED
+  Turbo pnpm lint/typecheck nesta sessao Windows: FAIL (Unable to find package manager binary) â€” nao e defeito de codigo; evidencia por pacote
   Prompt 93 nao executado
   waiver nao aplicado
   datas startedAt/observationEndsAt inalteradas
@@ -10612,7 +10612,7 @@ NOTES:
   people.e2e falhava 401/400 vs 403 porque ReleaseScopeGuard fecha FEATURE_MODULE_PEOPLE ausente; o teste liga a flag so no beforeAll e restaura no afterAll.
   FEATURE_MODULE_PEOPLE nao foi ligado globalmente (.env.example permanece comentado).
   Correcoes restantes: fecha describe de billing.integration; unused checker em accounting.integration; tipos no harness/e2e SOD; submit de request com descricao; skip measurementItemId nulo em FIXED_PRICE; fixtures de medicao com billingEntitlementPolicy; commitSha ?? null no CLI de milestones.
-  Janela do piloto 2026-08-30T22:28:40.517Z → 2026-09-13T22:28:40.517Z permanece OBSERVATION.
+  Janela do piloto 2026-08-30T22:28:40.517Z â†’ 2026-09-13T22:28:40.517Z permanece OBSERVATION.
 
 COMMIT: NOT_REQUIRED
 WORKING TREE: DIRTY
@@ -10734,7 +10734,7 @@ NEXT: STOP
 
 ```text
 PROMPT: SRC-008 OPERATIONAL AUTHORITY
-TITLE: Autoridade operacional máxima, OS, medição, PO e faturamento interno
+TITLE: Autoridade operacional mÃ¡xima, OS, mediÃ§Ã£o, PO e faturamento interno
 STARTED_AT: 2026-09-03T02:22:00-04:00
 FINISHED_AT: 2026-09-03T12:39:40-04:00
 STATUS: PASS_WITH_RESTRICTIONS
@@ -10766,29 +10766,29 @@ FUNCTIONAL_CODE_CREATED: YES
 NEXT_PROMPT_EXECUTED: NO
 
 SCOPE:
-  Registrar SRC-008 e implementar no backend as regras de autoridade máxima, solicitação≠OS, máquina de estados/reabertura, PO configurável, medição real e desacoplamento de faturamento.
-  Não hardcodar nomes no PDP. Não ligar FEATURE_MODULE_FISCAL. Não executar Prompt 93. Não declarar GO.
+  Registrar SRC-008 e implementar no backend as regras de autoridade mÃ¡xima, solicitaÃ§Ã£oâ‰ OS, mÃ¡quina de estados/reabertura, PO configurÃ¡vel, mediÃ§Ã£o real e desacoplamento de faturamento.
+  NÃ£o hardcodar nomes no PDP. NÃ£o ligar FEATURE_MODULE_FISCAL. NÃ£o executar Prompt 93. NÃ£o declarar GO.
 
 CLASSIFICATION:
-  Fato empresarial / decisão: BR-046..BR-051 CONFIRMED (SRC-008).
+  Fato empresarial / decisÃ£o: BR-046..BR-051 CONFIRMED (SRC-008).
   DDP-022 ANSWERED. DDP-002/003/004/005/009/010/011/015/021 PARTIALLY_ANSWERED.
-  DDP-001 e residual tributário DDP-023 permanecem OPEN.
+  DDP-001 e residual tributÃ¡rio DDP-023 permanecem OPEN.
 
 QUALITY GATES:
-  unitários SRC-008 25/25 PASS (2026-09-03T12:39:41-04:00)
+  unitÃ¡rios SRC-008 25/25 PASS (2026-09-03T12:39:41-04:00)
   API integration 80/80 arquivos, 636/636 testes PASS (2026-09-03T11:16:43-04:00; 1007.57s)
   FEATURE_MODULE_FISCAL permanece fail-closed
   Prompt 93 nao executado
   producao permanece NO-GO
 
 NOTES:
-  Capabilities em OPERATIONAL_AUTHORITY_ACTIONS; UAT control_admin e o mapeamento de engenharia da autoridade máxima.
+  Capabilities em OPERATIONAL_AUTHORITY_ACTIONS; UAT control_admin e o mapeamento de engenharia da autoridade mÃ¡xima.
   Finance UAT perdeu billing:prepare (DENY).
-  Unique 1 request → 1 OS removido; 2ª conversão exige rowVersion atual; retry com versão velha = VERSION_CONFLICT (1 OS).
-  Saldo PO persistido: total, consumido/faturado, excedente autorizado, disponível. Comprometido/medido/aprovado não foram inventados como ledger separado.
-  Frontend não ganhou botões de reopen/resubmit/overrun; o boundary é o backend.
-  WhatsApp permanece origem da solicitação; sem integração API.
-  Janela do piloto permanece OBSERVATION até 13 set 2026.
+  Unique 1 request â†’ 1 OS removido; 2Âª conversÃ£o exige rowVersion atual; retry com versÃ£o velha = VERSION_CONFLICT (1 OS).
+  Saldo PO persistido: total, consumido/faturado, excedente autorizado, disponÃ­vel. Comprometido/medido/aprovado nÃ£o foram inventados como ledger separado.
+  Frontend nÃ£o ganhou botÃµes de reopen/resubmit/overrun; o boundary Ã© o backend.
+  WhatsApp permanece origem da solicitaÃ§Ã£o; sem integraÃ§Ã£o API.
+  Janela do piloto permanece OBSERVATION atÃ© 13 set 2026.
 
 COMMIT: NOT_REQUIRED
 WORKING TREE: DIRTY
@@ -10854,7 +10854,7 @@ NEXT: STOP
 
 ```text
 PROMPT: HML SYNTHETIC SEED
-TITLE: Semear massa operacional sintética no HML e recolher snapshot
+TITLE: Semear massa operacional sintÃ©tica no HML e recolher snapshot
 STARTED_AT: 2026-09-03T14:50:00-04:00
 FINISHED_AT: 2026-09-03T15:08:28-04:00
 STATUS: PASS_WITH_RESTRICTIONS
@@ -10872,7 +10872,7 @@ FUNCTIONAL_CODE_CREATED: YES
 NEXT_PROMPT_EXECUTED: NO
 
 SCOPE:
-  Semear cliente → OS → medição → faturamento no HML. Re-smoke. Recolher snapshot.
+  Semear cliente â†’ OS â†’ mediÃ§Ã£o â†’ faturamento no HML. Re-smoke. Recolher snapshot.
   Nao ligar FEATURE_MODULE_*. Nao executar Prompt 93. Nao autorizar exit. Nao alterar datas.
 
 CLASSIFICATION:
@@ -10893,7 +10893,7 @@ QUALITY GATES:
   Prompt 93 nao executado
 
 NOTES:
-  planResource de locacao no fluxo parcial passou a enviar janela contratada (2026-07-01 08:00–18:00Z); sem isso o seed falhava com SERVICE_ORDERS_VALIDATION_FAILED.
+  planResource de locacao no fluxo parcial passou a enviar janela contratada (2026-07-01 08:00â€“18:00Z); sem isso o seed falhava com SERVICE_ORDERS_VALIDATION_FAILED.
   HTTP errorRate 0.239 e amostra acumulada do processo (inclui 4xx anteriores); nao substitui 14 dias.
   worker_pending=47 sao NOTIFICATION PENDING no HML; worker nao esta consumindo a fila. FAILED/DEAD=0. Nao e incidente de producao.
   FEATURE_MODULE_FISCAL permanece desabilitada. ERP nao foi ligado.
@@ -11017,7 +11017,7 @@ NEXT: STOP
 
 ```text
 PROMPT: CUSTOMER CONTRACTS
-TITLE: CustomerContract separado de Proposal/PurchaseOrder — vigencia, expiracao efetiva, versionamento imutavel (HISTORY LOSS 0), cancelamento, autorizacao, reajuste/limites e OS referenciando contrato valido
+TITLE: CustomerContract separado de Proposal/PurchaseOrder â€” vigencia, expiracao efetiva, versionamento imutavel (HISTORY LOSS 0), cancelamento, autorizacao, reajuste/limites e OS referenciando contrato valido
 STARTED_AT: 2026-09-02T22:30:00-04:00
 FINISHED_AT: 2026-09-02T23:05:00-04:00
 STATUS: PASS_WITH_RESTRICTIONS
@@ -11053,10 +11053,10 @@ TITLE: Ciclo de locacao (RentalRequest/Reservation/CheckOut/ActiveRental/CheckIn
 STARTED_AT: 2026-09-02T23:10:00-04:00
 FINISHED_AT: 2026-09-02T23:40:00-04:00
 STATUS: PASS_WITH_RESTRICTIONS
-CLASSIFICATION: Interpretacao de engenharia. Locacao permanece arquétipo RENTAL de OS (estado existente) com alocacao reutilizada; nenhuma nova tabela de asset/billing; nenhuma regra empresarial nova CONFIRMED sem fonte.
+CLASSIFICATION: Interpretacao de engenharia. Locacao permanece arquÃ©tipo RENTAL de OS (estado existente) com alocacao reutilizada; nenhuma nova tabela de asset/billing; nenhuma regra empresarial nova CONFIRMED sem fonte.
 SCOPE:
   Dominio puro rental-cycle.ts + rental-cycle-errors.ts em service-orders/domain: fases do ciclo mapeadas ao estado existente (OS/alocacao/execucao/measurement/billing).
-  Guards: sobreposicao por asset (janela [start,end)) — pre-cheque transacional; exclusion constraint resource_allocations_no_overlap_active_excl garante ASSET OVERBOOKING 0; devolucao (CheckIn) exige medidor final>=inicial, condicao e evidencia; atraso; janela bloqueada; estado terminal.
+  Guards: sobreposicao por asset (janela [start,end)) â€” pre-cheque transacional; exclusion constraint resource_allocations_no_overlap_active_excl garante ASSET OVERBOOKING 0; devolucao (CheckIn) exige medidor final>=inicial, condicao e evidencia; atraso; janela bloqueada; estado terminal.
   Medidores/condicao/evidencias registrados nos fluxos existentes (execution entries/evidence); Measurement/Billing reutilizam msr./bil. (nao duplicados).
 RESULT:
   RENTAL: PASS (unit rental-cycle 6/6 + rental-operations 4/4 pre-existente; typecheck api limpo exceto erro pre-existente pilot-observation.spec.ts WIP)
@@ -11066,9 +11066,9 @@ QUALITY GATES:
   typecheck apps/api: apenas erro pre-existente em src/ops/pilot/pilot-observation.spec.ts (WIP anterior)
   Gate: INSERT em res.resource_allocations somente no repository; nenhum bypass da exclusion constraint
 NOTES:
-  Ciclo integrado ao pipeline existente (service-order RENTAL + resource allocation + execution + measurement + billing) — sem novo master de asset nem novas tabelas de faturamento.
+  Ciclo integrado ao pipeline existente (service-order RENTAL + resource allocation + execution + measurement + billing) â€” sem novo master de asset nem novas tabelas de faturamento.
   Concorencia/rollback: serializacao por FOR UPDATE + transacao com rollback explicito (repositorios existentes); domain fornece guardas puras.
-  Proximo passo operacional (fora deste prompt): expor endpoints do ciclo (reservation/checkout/checkin) sobre as OS de arqué tipo RENTAL quando o fluxo for autorizado.
+  Proximo passo operacional (fora deste prompt): expor endpoints do ciclo (reservation/checkout/checkin) sobre as OS de arquÃ© tipo RENTAL quando o fluxo for autorizado.
   Commit: nao realizado (protocolo COMMIT: NOT_REQUIRED); working tree DIRTY com WIP previo.
 COMMIT: NOT_REQUIRED
 WORKING TREE: DIRTY
@@ -11077,13 +11077,13 @@ NEXT: STOP
 
 ```text
 PROMPT: RECURRING RENTAL BILLING
-TITLE: BillingSchedule para contratos/locacoes recorrentes — competencia elegivel gera Billing; mesmo periodo nunca fatura 2x; alteracao de contrato nao toca historico
+TITLE: BillingSchedule para contratos/locacoes recorrentes â€” competencia elegivel gera Billing; mesmo periodo nunca fatura 2x; alteracao de contrato nao toca historico
 STARTED_AT: 2026-09-02T23:20:00-04:00
 FINISHED_AT: 2026-09-02T23:45:00-04:00
 STATUS: PASS_WITH_RESTRICTIONS
 CLASSIFICATION: Interpretacao de engenharia. Engine puro sem valores/regras inventados; pro-rata apenas quando regra fornecida; snapshot de contrato imutavel por competencia.
 SCOPE:
-  Domínio puro billing/domain/recurring-billing.ts + recurring-billing-errors.ts: elegibilidade (agenda ACTIVE, sujeito elegivel, janela, cancelamento), mensalidade fixa, pro-rata sob regra (dias), ledger de periodo unico, replay, cancelamento futuro, avancos mensais.
+  DomÃ­nio puro billing/domain/recurring-billing.ts + recurring-billing-errors.ts: elegibilidade (agenda ACTIVE, sujeito elegivel, janela, cancelamento), mensalidade fixa, pro-rata sob regra (dias), ledger de periodo unico, replay, cancelamento futuro, avancos mensais.
   DDL 0073_recurring_billing_schedule.sql (bil.recurring_billing_schedules + bil.recurring_billing_periods com UNIQUE (schedule, competence_on) e (schedule, period_key)) registrada no journal idx 73.
   Snapshot do contrato capturado por competencia; nenhuma API de mutacao de historico.
 RESULT:
@@ -11178,13 +11178,13 @@ NEXT: STOP
 
 ```text
 PROMPT: MAINTENANCE COST INTEGRATION
-TITLE: Integrar MaintenanceOrder com Inventory/Payables/Expenses/Accounting — peca gera movimento de estoque; servico externo mantem origem rastreavel; sem duplicar custo (DUPLICATE COSTS 0); reversal compensatorio e reconciliacao
+TITLE: Integrar MaintenanceOrder com Inventory/Payables/Expenses/Accounting â€” peca gera movimento de estoque; servico externo mantem origem rastreavel; sem duplicar custo (DUPLICATE COSTS 0); reversal compensatorio e reconciliacao
 STARTED_AT: 2026-09-03T00:00:00-04:00
 FINISHED_AT: 2026-09-03T00:15:00-04:00
 STATUS: PASS_WITH_RESTRICTIONS
 CLASSIFICATION: Interpretacao de engenharia. Nao existe aggregate MaintenanceOrder proprio ainda; entregue o contrato de integracao (engine puro) sobre os fluxos existentes, sem novo cadastro de Inventory/Payable/Expense/Accounting.
 SCOPE:
-  Dominio puro maintenance/domain/maintenance-cost-integration.ts + maintenance-cost-errors.ts: instructions (STOCK_MOVEMENT para peca; PAYABLE com originKind MAINTENANCE_ORDER para servico externo), ledger (order,line) unico, reversal idempotente compensatorio, reconciliacao por soma vs. lançamentos.
+  Dominio puro maintenance/domain/maintenance-cost-integration.ts + maintenance-cost-errors.ts: instructions (STOCK_MOVEMENT para peca; PAYABLE com originKind MAINTENANCE_ORDER para servico externo), ledger (order,line) unico, reversal idempotente compensatorio, reconciliacao por soma vs. lanÃ§amentos.
 RESULT:
   MAINTENANCE COST: PASS (unit 5/5; typecheck api limpo exceto erro pre-existente pilot-observation.spec.ts WIP)
   DUPLICATE COSTS: 0 (ledger por maintenanceOrderId+lineNumber; reversal tambem deduplicado)
@@ -11335,7 +11335,7 @@ TITLE: UI administrativa de acesso (roles, capabilities, scopes, SoD conflicts) 
 STARTED_AT: 2026-09-04T00:30:00-04:00
 FINISHED_AT: 2026-09-04T09:52:00-04:00
 STATUS: PASS
-CLASSIFICATION: Interpretacao de engenharia (artefato de seguranca). Role/capability/scopes de ACESSO TECNICO administrados com catalogo servidor (AUTHZ_ACTIONS + SOD duties + meta); papéis empresariais (ROLE-CAND docs/09-authorization) NAO sao definidos aqui. Guard SOD-007 (ACESSO ADMIN x aprovacao financeira) aplicado em codigo como protecao de engenharia da propria camada (status documental CANDIDATE; SOD-012 ADVISORY enquanto DDP-015 aberto). Grants e decisões PDP nao alteradas: registro configura a camada administravel; ligacao ao enforcement efetivo permanece pendente (mesmo padrao dos prompts recentes).
+CLASSIFICATION: Interpretacao de engenharia (artefato de seguranca). Role/capability/scopes de ACESSO TECNICO administrados com catalogo servidor (AUTHZ_ACTIONS + SOD duties + meta); papÃ©is empresariais (ROLE-CAND docs/09-authorization) NAO sao definidos aqui. Guard SOD-007 (ACESSO ADMIN x aprovacao financeira) aplicado em codigo como protecao de engenharia da propria camada (status documental CANDIDATE; SOD-012 ADVISORY enquanto DDP-015 aberto). Grants e decisÃµes PDP nao alteradas: registro configura a camada administravel; ligacao ao enforcement efetivo permanece pendente (mesmo padrao dos prompts recentes).
 SCOPE:
   Backend (apps/api authorization): tabelas authorization.access_roles/access_role_capabilities/access_role_assignments (migration 0074); dominio puro access-admin-rules (catalogo capabilities/scopes, classes SOD, coverage de escopo, expectedVersion); repository/DTO allowlist/serializer; service com guards (PDP deny-by-default por endpoint; escopo fora do catalogo ou sem scope_ref -> 400; auto-atribuicao -> 403 ACCESS_ADMIN_SELF_ESCALATION; versao obsoleta -> 409 ACCESS_ADMIN_VERSION_CONFLICT; acumulo classe A+B no mesmo escopo efetivo -> 403 ACCESS_ADMIN_SOD_CONFLICT); controller /authz/access-admin (catalog, roles CRUD+update versionado, assignments assign/revoke, sod-conflicts); novas actions/resources authz:access-admin:read/manage + AccessAdmin; eventos de auditoria Critical para toda mutacao.
   Frontend (apps/web/access-admin): rota /app/access-admin com tabs Roles/Capabilities/Scopes/Assignments/Conflitos SoD; catalogo sempre do servidor; forms apenas enviam codigos escolhidos; banner de conflito de versao; textos em pt indicando que o servidor decide autoridade.
@@ -11361,7 +11361,7 @@ WORKING TREE: DIRTY (WIP pre-existente mantido) | NEXT: STOP
 ```
 
 ```text
-PROMPT: ACCESS ADMIN CONSOLE — REFLECT FULL AUTHORIZATION MODEL (V2)
+PROMPT: ACCESS ADMIN CONSOLE â€” REFLECT FULL AUTHORIZATION MODEL (V2)
 TITLE: Front senior reflete o restante do modelo de autorizacao do backend/banco: authorization.grants, approval matrices / approval_role_assignments, catalogo de identities; roles administradas passam a ser ENFORCED pelo PDP (enforcement efetivo)
 STARTED_AT: 2026-09-04T09:55:00-04:00
 FINISHED_AT: 2026-09-04T10:35:00-04:00
@@ -11369,7 +11369,7 @@ STATUS: PASS
 CLASSIFICATION: Interpretacao de engenharia. Autorizacao por roles (antes apenas configuracao persistida) foi ligada ao PolicyDecisionPoint: capability de role == action pedida + assignment ativo (role ACTIVE) concede acesso nas mesmas regras de escopo das grants; revogacao/desativacao remove o acesso nas proximas decisoes. Grants, identities e approval data permanecem decididos/validados no backend; frontend apenas reflete (nunca decide autoridade).
 SCOPE:
   Backend (apps/api authorization):
-    - PolicyDecisionPointService.decide agora avalia roles administradas (findRoleDerivedActionRows) apos grants (deny-by-default mantido; sem regressao nas suítes anteriores).
+    - PolicyDecisionPointService.decide agora avalia roles administradas (findRoleDerivedActionRows) apos grants (deny-by-default mantido; sem regressao nas suÃ­tes anteriores).
     - AuthorizationRepository: listGrants (ativas/revogadas por identity), listIdentities (catalogo usuarios: login/status), findRoleDerivedActionRows.
     - ApprovalMatrixRepository: listMatricesOverview, listMatrixVersionRules(PUBLISHED/DRAFT), listApprovalRoleAssignments.
     - AccessAdminService: catalog agora inclui resources; listGrants, listIdentities, approvalMatrices, approvalMatrixRules, approvalRoleAssignments.
@@ -11387,22 +11387,22 @@ QUALITY GATES:
   typecheck apps/web: zero erros novos (2 erros pre-existentes catalog drift)
 NOTES:
   Commits V2 por area:
-    feat(authorization): access admin console — grants/identities/approval reads + PDP role enforcement
-    feat(web): access admin console — grants/users/approval tabs (PDP-enforced roles)
+    feat(authorization): access admin console â€” grants/identities/approval reads + PDP role enforcement
+    feat(web): access admin console â€” grants/users/approval tabs (PDP-enforced roles)
   Restricao explicita: edicao/publicacao de versoes de matriz e limites permanece no fluxo financeiro existente (console reflete e permite atribuicao de role de aprovacao).
   Working tree permanece com WIP anterior preservado.
 WORKING TREE: DIRTY (WIP pre-existente mantido) | NEXT: STOP
 ```
 
 ```text
-PROMPT: BUSINESS FRONTEND GAP CLOSURE (programa em rodadas) — Rodada 1 (correcoes sistemicas)
+PROMPT: BUSINESS FRONTEND GAP CLOSURE (programa em rodadas) â€” Rodada 1 (correcoes sistemicas)
 TITLE: Auditar cobertura UI x backend (8 dominios) e corrigir PARTIAL/MISSING/BROKEN; Rodada 1 = envelope de erro dos clients, probes (outage != denied), rotas/hrefs quebrados, drift de fixtures do build
 STARTED_AT: 2026-09-04T10:40:00-04:00
 FINISHED_AT: 2026-09-04T12:00:00-04:00
-STATUS: PASS_WITH_RESTRICTIONS (Rodada 1 de N; programa ativo via goal — lacunas por dominio seguem nas proximas rodadas)
+STATUS: PASS_WITH_RESTRICTIONS (Rodada 1 de N; programa ativo via goal â€” lacunas por dominio seguem nas proximas rodadas)
 CLASSIFICATION: Auditoria (somente leitura) + correcoes de engenharia frontend, sem criar regra de negocio/endpoint/capability; /app/access-admin NAO foi tocado.
 SCOPE (Rodada 1):
-  Auditoria de cobertura por 8 subagentes (Comercial, Operations, Finance, Fiscal/Accounting, Inventory/Procurement, Payroll, Assets/Rental/Transport, Documents/Reports) — tabelas COMPLETE/PARTIAL/MISSING/BROKEN com evidencias; sem edicao na fase de auditoria.
+  Auditoria de cobertura por 8 subagentes (Comercial, Operations, Finance, Fiscal/Accounting, Inventory/Procurement, Payroll, Assets/Rental/Transport, Documents/Reports) â€” tabelas COMPLETE/PARTIAL/MISSING/BROKEN com evidencias; sem edicao na fase de auditoria.
   Correcoes sistemicas:
     - Envelope de erro: backend serializa {error:{code,...}}; clients SO (service-orders/planning/execution/measurement) e commercial (proposals/purchase-orders) liam flat -> passam a ler body.error?.code ?? body.code; mock commercial-fetch-mock atualizado para o contrato real.
     - Probes de rota (Requests/ServiceOrders/People): 500/network agora viram estado 'error' com retry (nao mais falso 'denied').
@@ -11414,24 +11414,24 @@ RESULT RODADA 1:
   UI/e2e isolados: proposals.e2e 4/4, purchase-orders.e2e 4/4 (incl. version conflict), service-orders-list.e2e 3/3, unit (measurement 9/9, requests list 5/5, people list 3/3). Lote combinado multi-arquivo apresentou interferencia de mocks globais entre arquivos (falha de isolamento pre-existente, nao das correcoes).
   build web: PASS (dist gerado; warning chunk size pre-existente).
 NOTES:
-  Registrado como programa multi-rodada (goal ativo): proximas rodadas fecham criticos por dominio (Contratos UI, ciclo OS, emissao fiscal, lancamento/posting rules, issuer, tesouraria escrita, collections, resubmit medição, receiving parcial/rejeicao, custos operacionais, CRUD tipos recurso, unidades medida, filtros reports/search/docs probes etc.). Itens que exigem novo endpoint/capability ficam fora do escopo de fechamento de UI (registrados).
+  Registrado como programa multi-rodada (goal ativo): proximas rodadas fecham criticos por dominio (Contratos UI, ciclo OS, emissao fiscal, lancamento/posting rules, issuer, tesouraria escrita, collections, resubmit mediÃ§Ã£o, receiving parcial/rejeicao, custos operacionais, CRUD tipos recurso, unidades medida, filtros reports/search/docs probes etc.). Itens que exigem novo endpoint/capability ficam fora do escopo de fechamento de UI (registrados).
   Commits Rodada 1 (por area) a seguir.
 WORKING TREE: DIRTY (WIP anterior mantido) | NEXT: proxima rodada do programa
 ```
 
 ```text
-PROMPT: BUSINESS FRONTEND GAP CLOSURE — Rodada 2 (Operations)
+PROMPT: BUSINESS FRONTEND GAP CLOSURE â€” Rodada 2 (Operations)
 TITLE: Fechar lacunas criticas do dominio OPERATIONS na UI (convert SR->OS, ciclo de vida da OS, resubmit de medicao)
 STARTED_AT: 2026-09-04T12:05:00-04:00
 FINISHED_AT: 2026-09-04T12:50:00-04:00
-STATUS: PASS (Rodada 2; programa ativo — proximas rodadas por dominio)
+STATUS: PASS (Rodada 2; programa ativo â€” proximas rodadas por dominio)
 CLASSIFICATION: Fechamento frontend-only com contratos/endpoints existentes; sem regra de negocio/endpoint/capability novos; /app/access-admin intocado.
 SCOPE:
   - convert SR aprovada -> OS: client convertServiceRequest (POST /requests/service-requests/:id/convert, body {rowVersion}); botao 'Converter em OS' em ServiceRequestDetailPage (gate APPROVED && !convertedServiceOrderId) com navegacao para /app/service-orders/:convertedId/planning.
   - Ciclo de vida da OS na lista: clients prepare/release/cancel(rowVersion+cancellationReason)/reopen(rowVersion+reopenReason); botoes por status (DRAFT->Preparar, PREPARED->Liberar, DRAFT/PREPARED/RELEASED->Cancelar c/ motivo, CANCELLED/COMPLETED->Reabrir c/ motivo); rowVersion adicionado ao tipo ServiceOrderSummary (servidor ja devolve).
   - Medicao REJECTED: client resubmitMeasurement (POST .../measurements/:id/resubmit {rowVersion}); acao 'Reenviar medicao' com gate REJECTED + capability canUpdate.
 RESULT:
-  MISSING CRITICAL PAGES (Operations): convert SR->OS 0, ciclo OS 0, resubmit 0 — fechados.
+  MISSING CRITICAL PAGES (Operations): convert SR->OS 0, ciclo OS 0, resubmit 0 â€” fechados.
   BROKEN (Operations): dead-end de medicao e pipeline aprovado->OS agora navegaveis pela UI.
 QUALITY GATES (Rodada 2):
   typecheck web: exit 0 (normal e tsc -b --force)
@@ -11446,17 +11446,17 @@ WORKING TREE: DIRTY (WIP anterior mantido) | NEXT: proxima rodada do programa
 ```
 
 ```text
-PROMPT: BUSINESS FRONTEND GAP CLOSURE � Rodada 3 (Inventory x Procurement)
+PROMPT: BUSINESS FRONTEND GAP CLOSURE ï¿½ Rodada 3 (Inventory x Procurement)
 TITLE: Fechar lacunas criticas de Inventory e Procurement na UI (gates de estado, campos obrigatorios, recebimento parcial, mapas de erro, feedback de reserva)
 STARTED_AT: 2026-09-04T13:00:00-04:00
 FINISHED_AT: 2026-09-04T13:30:00-04:00
-STATUS: PASS (Rodada 3; programa ativo � proximas rodadas)
+STATUS: PASS (Rodada 3; programa ativo ï¿½ proximas rodadas)
 CLASSIFICATION: Fechamento frontend-only com contratos/endpoints existentes; sem regra de negocio/endpoint/capability novos; /app/access-admin intocado.
 SCOPE:
   - Procurement: approve/reject passam a exigir PENDING_APPROVAL (backend nunca emite SUBMITTED); labels/tone PENDING_APPROVAL e ISSUED (removidos SUBMITTED/ORDERED/OPEN inexistentes); recebimento por linha com inputs de quantidade (default = saldo restante), payload por quantidades informadas, bloqueio de over-receipt e de linha zerada; cancela pedido desabilitado com recebimento; mensagens explicitas HAS_ORDER/HAS_RECEIPTS/NOT_APPROVED/OVER_RECEIPT/DUPLICATE_ORDER/INVOICE_*/MATCH_NOT_FOUND.
   - Inventory: movimento TRANSFER passa a enviar destinationWarehouseId e ADJUSTMENT adjustmentEffect INCREASE/DECREASE (helpers puros unit-testados); mapas INVENTORY_NEGATIVE_STOCK/INVALID_TRANSFER/INVALID_ADJUSTMENT/COSTING_RULE_NOT_CONFIGURED; Reservar exibe id criado, autopreenche liberacao e recarrega saldo.
 RESULT:
-  BROKEN (Inventory/Procurement): aprovacao de requisicao, TRANSFER/ADJUSTMENT e recebimento parcial � fechados na UI.
+  BROKEN (Inventory/Procurement): aprovacao de requisicao, TRANSFER/ADJUSTMENT e recebimento parcial ï¿½ fechados na UI.
 QUALITY GATES (Rodada 3):
   typecheck web: exit 0
   specs novas: partial-receive 10/10, movement-payload 7/7 + regressao financial-ui labels 2/2 (19/19)
@@ -11468,11 +11468,11 @@ NOTES:
 WORKING TREE: DIRTY (WIP anterior mantido) | NEXT: proxima rodada do programa
 ```
 ```text
-PROMPT: BUSINESS FRONTEND GAP CLOSURE � Rodada 4 (Payroll + CreateRecordForm compartilhado)
+PROMPT: BUSINESS FRONTEND GAP CLOSURE ï¿½ Rodada 4 (Payroll + CreateRecordForm compartilhado)
 TITLE: Payroll: mapas de erro por codigo real, acoes por status do periodo, ack idempotente, resultados honestos; CreateRecordForm (VersionedActionForm) com banner de conflito/periodo fechado
 STARTED_AT: 2026-09-04T13:40:00-04:00
 FINISHED_AT: 2026-09-04T14:05:00-04:00
-STATUS: PASS (Rodada 4; programa ativo � proximas rodadas)
+STATUS: PASS (Rodada 4; programa ativo ï¿½ proximas rodadas)
 CLASSIFICATION: Fechamento frontend-only com contratos existentes; sem regra de negocio/endpoint/capability novos; /app/access-admin intocado.
 SCOPE:
   - payroll-api mapper: PAYROLL_VALIDATION_FAILED, INVALID_AMOUNT, INVALID_EVENT_KIND, PERIOD_CLOSED, PERIOD_NOT_OPEN, PERIOD_NOT_CALCULATED, PERIOD_NOT_CLOSED, FORMULA_NOT_DECIDED, OPERATIONS_COUPLING_FORBIDDEN; 401/403 e >=500 antes do switch (5xx nunca mais 'VALIDATION_FAILED'); response tipada com idempotent.
@@ -11480,7 +11480,7 @@ SCOPE:
   - VersionedActionForm (CreateRecordForm): conflito de versao / periodo fechado exibem banner com recarregar (onConflictReload/onSuccess opcionais); nunca limpa campos em silencio.
   - Helpers puros + specs: period-action-state, is-idempotent-ack.
 RESULT:
-  FALSE SUCCESS/empty (Payroll) e 409-degradado em CreateRecordForm � fechados.
+  FALSE SUCCESS/empty (Payroll) e 409-degradado em CreateRecordForm ï¿½ fechados.
 QUALITY GATES (Rodada 4):
   typecheck web: exit 0
   specs novas: period-action-state 5/5, is-idempotent-ack 3/3 + financial-ui 2/2 (10/10)
@@ -11488,17 +11488,17 @@ QUALITY GATES (Rodada 4):
   build web: PASS (dist gerado)
 NOTES:
   Modulos apps/web/src/payroll e financial-ui estavam UNTRACKED (WIP anterior); commit da rodada os introduz com as correcoes.
-  Restricao honesta: postagem contabil em fechar/reabrir e engolida pelo backend (tryPost*), sem codigo ACCOUNTING_* no HTTP � nao inventado.
+  Restricao honesta: postagem contabil em fechar/reabrir e engolida pelo backend (tryPost*), sem codigo ACCOUNTING_* no HTTP ï¿½ nao inventado.
   Commits: feat(web) 2e92506.
   Proxima rodada: Comercial (Contratos UI) e/ou Finance (reverse/tesouraria/recon/collections).
 WORKING TREE: DIRTY (WIP anterior mantido) | NEXT: proxima rodada do programa
 ```
 ```text
-PROMPT: BUSINESS FRONTEND GAP CLOSURE � Rodada 5 (Comercial: Contratos UI)
+PROMPT: BUSINESS FRONTEND GAP CLOSURE ï¿½ Rodada 5 (Comercial: Contratos UI)
 TITLE: Criar modulo UI de contratos comerciais (list/create/detail, update versionado, activate/close/expire, document links) sobre controller existente
 STARTED_AT: 2026-09-04T14:10:00-04:00
 FINISHED_AT: 2026-09-04T14:30:00-04:00
-STATUS: PASS (Rodada 5; programa ativo � proximas rodadas)
+STATUS: PASS (Rodada 5; programa ativo ï¿½ proximas rodadas)
 CLASSIFICATION: Novo modulo frontend-only com contrato/backend existentes; sem regra de negocio/endpoint/capability novos; /app/access-admin intocado.
 SCOPE:
   apps/web/src/contracts/: types, api client (envelope error aninhado), error-messages PT, ContractsRoute (401/403/outage+retry), capabilities hook, status badge, form fields, list (filtros/paginacao), create, detail com acoes por status (PATCH versionado, activate, close c/ motivo, expire sem corpo), document links client; util labels + form-values.
@@ -11514,25 +11514,25 @@ NOTES:
 WORKING TREE: DIRTY (WIP anterior mantido) | NEXT: proxima rodada do programa
 ```
 ```text
-PROMPT: BUSINESS FRONTEND GAP CLOSURE � Rodada 6 (Finance)
+PROMPT: BUSINESS FRONTEND GAP CLOSURE ï¿½ Rodada 6 (Finance)
 TITLE: Finance: reverse de pagamento, escrita de tesouraria, acoes de conciliacao bancaria, correcoes de false-success (overview/treasury/recon/collection)
 STARTED_AT: 2026-09-04T14:40:00-04:00
 FINISHED_AT: 2026-09-04T15:05:00-04:00
-STATUS: PASS (Rodada 6; programa ativo � proximas rodadas)
+STATUS: PASS (Rodada 6; programa ativo ï¿½ proximas rodadas)
 CLASSIFICATION: Fechamento frontend-only com contratos existentes; sem regra de negocio/endpoint/capability novos; /app/access-admin intocado.
 SCOPE:
   - Payables reverse (POST /finance/payables/:id/payments/:paymentId/reverse {rowVersion,idempotencyKey,paymentReference,amount?,reason}) + UI na pagina de titulo com motivo/versao/reload.
   - Tesouraria: abrir conta (BANK/CASH), registrar movimento (MANUAL_AUTHORIZED), transferir, estornar movimento e transferencia (payloads reais; CLOSED desabilita).
   - Conciliacao bancaria: match manual (POST /matches), confirm e unreconcile (banner 409 + reload); reconciliacoes rastreadas em sessao (sem GET list).
-  - False-success: FinanceOverviewPage per-card erro/retry (sem mascarar 500 em '�'), TreasuryAccountDetailPage expoe erro do GET, BankReconciliationPage nao descarta extrato em falha de import/match, CollectionPanel nao mais abre cegamente com 404 e refresh do pai (key=rowVersion + onChanged).
+  - False-success: FinanceOverviewPage per-card erro/retry (sem mascarar 500 em 'ï¿½'), TreasuryAccountDetailPage expoe erro do GET, BankReconciliationPage nao descarta extrato em falha de import/match, CollectionPanel nao mais abre cegamente com 404 e refresh do pai (key=rowVersion + onChanged).
 RESULT:
-  MISSING; BROKEN; FALSE SUCCESS (Finance): reverse payable, escrita de tesouraria, acoes de conciliacao e falso vazio/erros silenciosos � fechados.
+  MISSING; BROKEN; FALSE SUCCESS (Finance): reverse payable, escrita de tesouraria, acoes de conciliacao e falso vazio/erros silenciosos ï¿½ fechados.
 QUALITY GATES (Rodada 6):
   typecheck web: exit 0
   specs novas: payable-actions 12/12, treasury-forms 6/6, payable-reverse.ui 2/2 + regressao financial-ui 2/2 e idempotency-retry 4/4
   build web: PASS (dist regenerado)
 NOTES:
-  Endpoint real de reverse e por pagamento (nao /payables/:id/reverse como auditado) � implementado contra o controller real.
+  Endpoint real de reverse e por pagamento (nao /payables/:id/reverse como auditado) ï¿½ implementado contra o controller real.
   Sem endpoints GET de listas de movimentos/transferencias/reconcil: formas usam ids explicitos (sem inventar UUIDs).
   Commits: feat(web) fd1c7b5.
   Proxima rodada: Fiscal/Accounting (emissao fiscal, regras tributarias, lancamento manual, posting rules, issuer) e/ou Assets/Rental/Transport.
@@ -11540,26 +11540,26 @@ WORKING TREE: DIRTY (WIP anterior mantido) | NEXT: proxima rodada do programa
 ```
 ```text
 PROMPT: HERMETIC PRODUCTION RELEASE
-TITLE: Distribuição de produção reproduzível/autocontida (release hermética) — auditar/classificar dependências, eliminar FORBIDDEN, build reproduzível, pacote versionado (manifest/checksums/SBOM), config validada no startup, PostgreSQL/Object Storage explícitos, integrações opcionais sem bloquear core, e gates CLEAN/OFFLINE/UPGRADE/RECOVERY/SECURITY a partir do artefato.
+TITLE: DistribuiÃ§Ã£o de produÃ§Ã£o reproduzÃ­vel/autocontida (release hermÃ©tica) â€” auditar/classificar dependÃªncias, eliminar FORBIDDEN, build reproduzÃ­vel, pacote versionado (manifest/checksums/SBOM), config validada no startup, PostgreSQL/Object Storage explÃ­citos, integraÃ§Ãµes opcionais sem bloquear core, e gates CLEAN/OFFLINE/UPGRADE/RECOVERY/SECURITY a partir do artefato.
 STARTED_AT: 2026-09-04T14:00:00-04:00
 FINISHED_AT: 2026-09-04T20:30:00-04:00
 STATUS: IN_PROGRESS (PRODUCTION ARTIFACT NOT_READY; gates de install/offline/upgrade/recovery/migrations/security PASS)
 CLASSIFICATION: Interpretacao de engenharia + operacoes. Auditoria 100% feita antes das modificacoes (7 relatorios em tmp/audit-hermetic; consolidado docs/19-operations/release-hermetic-audit.md). 
 SCOPE:
   - Auditoria e classificacao (BUNDLED/PROVISIONED_AUTOMATICALLY/HOST_PREREQUISITE/OPTIONAL_EXTERNAL_SERVICE/FORBIDDEN).
-  - Correcoes: dotenv/pg promovidos a dependencies (@cisne/api e @cisne/database); frontend self-host fonts (remove Google Fonts); v0ite build fuerça NODE_ENV=production; .dockerignore; literal path de dev removido; journal drizzle regista 0073; BOM de 0070 removido; runner de migrations hermetico (sem drizzle-kit); validação fail-fast de config (API+worker) com CONFIGURATION_ERROR; segredo literal 'test-download-token-secret' removido; worker .env path corrigido; worker DI fixado (export de handlers); prod compose volume PG18 + env unica + healthchecks + pull_policy never; sandbox compose offline (bridge sem masquerade).
-  - Imagens hermeticas: Dockerfile.api runner com node_modules apenas PRODUÇÃO + migrations embutidas; cisne-web nginx.
+  - Correcoes: dotenv/pg promovidos a dependencies (@cisne/api e @cisne/database); frontend self-host fonts (remove Google Fonts); v0ite build fuerÃ§a NODE_ENV=production; .dockerignore; literal path de dev removido; journal drizzle regista 0073; BOM de 0070 removido; runner de migrations hermetico (sem drizzle-kit); validaÃ§Ã£o fail-fast de config (API+worker) com CONFIGURATION_ERROR; segredo literal 'test-download-token-secret' removido; worker .env path corrigido; worker DI fixado (export de handlers); prod compose volume PG18 + env unica + healthchecks + pull_policy never; sandbox compose offline (bridge sem masquerade).
+  - Imagens hermeticas: Dockerfile.api runner com node_modules apenas PRODUÃ‡ÃƒO + migrations embutidas; cisne-web nginx.
   - Pacote versionado: scripts/release/package.mjs (+emit-sbom.mjs) -> artifacts/release/cisne-0.1.0-rc.1 (manifest/checksums/sbom=735 pkgs+6 imagens).
-  - Gates (a partir das imagens): run-install-gate (clean+offline PASS), run-upgrade-gate (PASS), run-recovery-gate (PASS). Evidência em tmp/gates/.
+  - Gates (a partir das imagens): run-install-gate (clean+offline PASS), run-upgrade-gate (PASS), run-recovery-gate (PASS). EvidÃªncia em tmp/gates/.
 RESULT:
   - HERMETIC BUILD PASS; CLEAN INSTALL PASS; OFFLINE INSTALL PASS; RUNTIME PACKAGE DOWNLOADS 0; UNDECLARED LOCAL DEPS 0; MIGRATIONS PASS (75/75 + idempotente); UPGRADE PASS (74->75, idempotente, superset); RECOVERY PASS (api/work/pg restarts); SECRETS IN ARTIFACT 0; ERP EXTERNAL NONE; CORE WITHOUT OPTIONAL INTEGRATIONS PASS; PRODUCTION ARTIFACT NOT_READY (fluxo critico HTTP completo ainda nao executado + suites canonicas nao rodadas nesta rodada); CRITICAL DEFECTS 1 (accounting/ledger sem chartId -> 500).
 QUALITY GATES:
   - typecheck api/db/web PASS (verificado; fix pre-existente pilot-observation cast).
   - lint: @cisne/database PASS (apos fix no-unsafe-member-access); @cisne/api lint a confirmar.
-  - unit @cisne/api 885/888; 3 falhas em arquivos WIP nao commitados do programa concorrente (release-scope.guard, policy-decision-point) — nao causadas por este prompt (novas specs verdes). 
+  - unit @cisne/api 885/888; 3 falhas em arquivos WIP nao commitados do programa concorrente (release-scope.guard, policy-decision-point) â€” nao causadas por este prompt (novas specs verdes). 
 NOTES:
   - Working tree preserva WIP pre-existente (programa BUSINESS FRONTEND GAP CLOSURE Round 6 em andamento; ~268 arquivos).
-  - Restricoes/débitos registrados em docs/19-operations/release-hermetic-report.md.
+  - Restricoes/dÃ©bitos registrados em docs/19-operations/release-hermetic-report.md.
 COMMIT: DONE (por area: database/migrations, runtime-config, web hermetico, infra compose, release packager/sbom, install-gate, upgrade-gate, recovery-gate)
 WORKING TREE: DIRTY (WIP pre-existente preservado)
 NEXT: CONTINUE
@@ -11583,23 +11583,23 @@ TITLE: Verificacao do prerequisito de emissora (own-company) para verticais
 STATUS: IN_PROGRESS (continua NOT_READY)
 NOTES:
   - bootstrap:own-company validado em DB limpo: exige CEP apenas digitos (check pty.establishments_postal_digits_chk) e CNPJ valido; com isso registra LegalEntity + Establishment MATRIZ (default issuer) + CNPJ ACTIVE (1 linha verificada).
-  - Verticais uat/master-business/enterprise continuam exigindo o dataset operacional HML/sintetico (tenant/unit do proprio cenario com emissora ativa) — seed operacional autorizado (SRC-005/sintetico HML), fora do escopo de empacotamento; sem ele: ISSUER_DEFAULT_NOT_FOUND (correto: nada hardcoded).
+  - Verticais uat/master-business/enterprise continuam exigindo o dataset operacional HML/sintetico (tenant/unit do proprio cenario com emissora ativa) â€” seed operacional autorizado (SRC-005/sintetico HML), fora do escopo de empacotamento; sem ele: ISSUER_DEFAULT_NOT_FOUND (correto: nada hardcoded).
   - Suites de modulo critico PASS em DB limpo migrado pelo artefato (ver round 3). lint: api+db PASS; web lint apresenta erros em arquivos WIP Round-6 (contracts/finance) nao tocados por esta release. unit: 3 falhas WIP (PDP/release-scope) nao causadas por este prompt.
 COMMIT: n/a nesta rodada (apenas limpeza DBs de teste)
 WORKING TREE: DIRTY (WIP pre-existente preservado)
 NEXT: CONTINUE (fechar e2e/lint/unit WIP-dependente + rodar fluxo critico com dataset operacional autorizado)
 ```
 ```text
-PROMPT: HERMETIC PRODUCTION RELEASE (round 5 update — status BLOCKED no criterio READY)
+PROMPT: HERMETIC PRODUCTION RELEASE (round 5 update â€” status BLOCKED no criterio READY)
 STATUS: BLOCKED (somente para o criterio estrito PRODUCTION ARTIFACT=READY)
 BLOCKER: Execucao do fluxo critico vertical (uat/master-business/enterprise + jornada HTTP completa) exige dataset operacional AUTORIZADO (tenant/unidade + emissora com CNPJ ativo via OWN_COMPANY_* de fonte SRC-005 + grants). bootstrap-own-company validado e funcional; sem dados autorizados o agente nao pode fabricar (governanca: nunca inventar dados empresariais / fake success). Condicao persistente nas rodadas 3-5.
 ESCOPO DE ENGENHARIA DA RELEASE: CONCLUIDO E GATEADO (build hermetico, pacote 0.1.0-rc.1, clean/offline install, migrations 75/75+idempotente, upgrade, recovery, secrets 0, SBOM 735+6, modulo-suites criticos verdes em DB real provisionado pelo artefato, ERP NONE, core sem integracoes PASS). Documentacao: docs/19-operations/release-hermetic-audit.md e release-hermetic-report.md.
 NEXT: aguardar provisionamento operacional autorizado para executar verticais e fluxo HTTP completo e entao setar READY.
 ```
 ```text
-PROMPT: HERMETIC PRODUCTION RELEASE (encerramento — aceite do responsavel)
+PROMPT: HERMETIC PRODUCTION RELEASE (encerramento â€” aceite do responsavel)
 STATUS: PASS_WITH_RESTRICTIONS
-DECISION: O responsavel autorizou ("aceito, faca") considerar o fluxo critico executado com a evidencia atual: artefatos empacotados iniciam em instalacao limpa (CLEAN/OFFLINE INSTALL PASS), migrations 75/75 idempotentes, UPGRADE e RECOVERY PASS, SECRETS 0, modulos criticos verdes em PostgreSQL real provisionado pelo artefato, bootstrap de emissora validado (bootstrap-own-company / OWN_COMPANY_* SRC-005). Verticais orquestradas (uat/master/enterprise) seguem exigindo dataset operacional autorizado (tenant/emissora do cenario + grants) — restricao registrada em docs/19-operations/release-hermetic-report.md, nao defeito do artefato.
+DECISION: O responsavel autorizou ("aceito, faca") considerar o fluxo critico executado com a evidencia atual: artefatos empacotados iniciam em instalacao limpa (CLEAN/OFFLINE INSTALL PASS), migrations 75/75 idempotentes, UPGRADE e RECOVERY PASS, SECRETS 0, modulos criticos verdes em PostgreSQL real provisionado pelo artefato, bootstrap de emissora validado (bootstrap-own-company / OWN_COMPANY_* SRC-005). Verticais orquestradas (uat/master/enterprise) seguem exigindo dataset operacional autorizado (tenant/emissora do cenario + grants) â€” restricao registrada em docs/19-operations/release-hermetic-report.md, nao defeito do artefato.
 RESULTADO FINAL: HERMETIC BUILD PASS | CLEAN INSTALL PASS | OFFLINE INSTALL PASS | RUNTIME PACKAGE DOWNLOADS 0 | UNDECLARED LOCAL DEPS 0 | MIGRATIONS PASS | UPGRADE PASS | RECOVERY PASS | SECRETS IN ARTIFACT 0 | ERP EXTERNAL NONE | CORE WITHOUT OPTIONAL INTEGRATIONS PASS | PRODUCTION ARTIFACT READY (aceite do responsavel) | CRITICAL DEFECTS 0 | NEXT STOP
 COMMIT: DONE (por area, lista nos registros das rodadas)
 WORKING TREE: DIRTY (WIP pre-existente preservado)
@@ -11719,7 +11719,7 @@ NEXT_PROMPT_EXECUTED: NO
 SCOPE:
   Subir na rede local: PostgreSQL local (docker/compose.yaml), API (:3000) e Web Vite (:5173)
   acessiveis em 0.0.0.0 / 192.168.1.89, com CORS e proxy /api funcionais.
-  Integracao back-banco-front: corrigir derivação schema × codigo e autorizacao de dev que
+  Integracao back-banco-front: corrigir derivaÃ§Ã£o schema Ã— codigo e autorizacao de dev que
   impediam o front de refletir o back (500/403).
   Sem ligar FEATURE_MODULE_* globalmente (ja true no .env de dev/LAN). Sem inventar emissor
   fiscal nem dados empresariais. Sem executar Prompt 93. Sem declarar GO.
@@ -11774,7 +11774,7 @@ NOTES / RESTRICOES (honestas):
   - db:reset completo agora roda sozinho ate as migrations (corrigido); nesta sessao o reset foi
     executado antes do fix do wait-for-postgres (container ja Healthy) e seguiu via db:migrate.
   - Reset apagou a massa sintetica anterior do banco dev local (17 clientes/11 OS de sessoes
-    antigas); recriada massa menor via seeds oficiais (2 clientes/2 OS/2 medições/2 billing
+    antigas); recriada massa menor via seeds oficiais (2 clientes/2 OS/2 mediÃ§Ãµes/2 billing
     records) - dados dev sao regeneraveis; nada empresarial real foi perdido.
   - Emissao de documento de faturamento exige emissor registrado (registry OWN_COMPANY_* /
     SRC-005); sem OWN_COMPANY_* no .env o backend responde honestamente (issuer ausente) - NAO
@@ -12094,7 +12094,7 @@ NEXT: STOP
 ```
 
 ```text
-PROMPT: STOP_AND_FIX (FINANCIAL) � passo 1
+PROMPT: STOP_AND_FIX (FINANCIAL) — passo 1
 STATUS: IN_PROGRESS (commit 1/6)
 SCOPE: builder canonico de posicao de recebivel (FIN-SEM-001) com asOf explicito e status (OPEN/PARTIALLY_PAID/PAID/OVERDUE/CANCELLED); unit 1/1 + lint + typecheck PASS.
 NEXT: awaitingPayment -> posicao financeira; fixture cadeia 10 cenarios; reconciliacao Finance=Analytics=Exec; rerun BI CORRECTION GATE. NAO certificado ainda.
@@ -12102,7 +12102,7 @@ NOTES: Prompt 93 nao executado; sem push; WIP preservado; producao NO-GO.
 ```
 
 ```text
-PROMPT: STOP_AND_FIX (FINANCIAL) � passo 2
+PROMPT: STOP_AND_FIX (FINANCIAL) — passo 2
 STATUS: IN_PROGRESS
 SCOPE: awaitingPayment agora usa posicao financeira (FIN-SEM-001) OPEN/PARTIALLY_PAID por saldo residual; overdueReceivables ja financeiro; prepared permanece operacional. Gates: lint/typecheck PASS; integracao finance NO_DATA 1 + aging 3 PASS.
 NEXT: fixture cadeia 10 cenarios + reconciliacao + rerun gate. NAO certificado.
@@ -12458,4 +12458,53 @@ ESCOPO: corrigir a divida de lint pre-existente que reprovava o job 'Lint / Type
 CORRECOES: 14 erros @cisne/api + 31 erros @cisne/web = 45, distribuidos em: authorization (access-admin-rules/dto/service), establishments (bootstrap-own-company, issuer-registry.controller import Body, legal-establishment.spec, establishment-registry.repository arg), finance reconciliation spec (prefer-const), payroll rule-engine (var morta), service-orders transport-dispatch.spec, synthetic-seed runner (any/Function), web accounting (ChartOfAccounts/Journals/PeriodClose/PeriodReportPages), contracts (fetch-mock, e2e), finance (TreasuryListPage arg, payable-reverse.ui.test any/base-to-string), requests ServiceRequestDetailPage (floating promise).
 GATES: eslint api 0 erros | eslint web 0 erros | tsc api PASS | tsc web PASS; regressao web (modulos afetados) 24/24 PASS (payable-reverse, treasury-forms, payable-actions, ServiceRequestDetailPage).
 NOTES: WIP pre-existente (accounting-backoffice.ui.test.tsx) e docs/inputs/_write_src003.py preservados (nao commitados). Nenhuma regra de lint alterada; nenhum eslint-disable/ts-ignore/any novo introduzido (os 'any' existentes foram tipados).
+```
+
+---
+
+```text
+PROMPT: MIGRATION-ODOO18-001
+TITLE: Adotar ERP open source existente como base candidata do Cisne Rondônia
+STARTED_AT: 2026-10-09
+FINISHED_AT: 2026-10-09
+STATUS: PASS_WITH_RESTRICTIONS
+USER_DIRECTIVE:
+  Usar ERP empresarial já existente no GitHub e aplicar marca Cisne Rondônia, evitando reconstrução do zero.
+BASE_SELECTED:
+  Odoo Community 18.0-20260908
+  OCA/l10n-brazil 18.0
+  OCA/field-service 18.0
+  OCA/contract 18.0
+BRANCH:
+  migration/odoo18-cisne-rondonia
+MAIN_MODIFIED: NO
+FILES_CREATED:
+  odoo-cisne/Dockerfile
+  odoo-cisne/docker-compose.yml
+  odoo-cisne/config/odoo.conf
+  odoo-cisne/scripts/bootstrap.sh
+  odoo-cisne/.env.example
+  odoo-cisne/addons/cisne_branding/*
+  odoo-cisne/LICENSES.md
+  odoo-cisne/README.md
+  odoo-cisne/VALIDATION.md
+  docs/00-governance/change-2026-10-09-odoo18-candidate.md
+FILES_CHANGED:
+  docs/01-foundation/engineering-decisions-register.md
+  docs/00-governance/prompt-execution-log.md
+STATIC_VALIDATION:
+  YAML_PARSE: PASS
+  BRANDING_XML_WELL_FORMED: PASS
+  BASH_N: PASS
+RUNTIME_VALIDATION:
+  DOCKER_BUILD: NOT_RUN
+  MODULE_INSTALL: NOT_RUN
+  LOGIN_SMOKE: NOT_RUN
+PRODUCTION_READINESS:
+  NO-GO
+NOTES:
+  OCA l10n_br_fiscal, fieldservice e contract possuem status upstream Mature/Production-Stable.
+  NF-e/account brasileiro contém partes Beta e não foi auto-instalado.
+  Odoo Enterprise proprietário não foi copiado.
+  A main e a implementação histórica permanecem preservadas.
 ```

@@ -90,3 +90,18 @@ Ver [`../11-technology/adr/`](../11-technology/adr/) — ADR-TECH-001..007, todo
 ## Não decidido (exemplos explícitos)
 
 Cloud provider, IdP, object storage, message broker, CI platform: **não decidido** — ver TECH-DDP em [`../11-technology/technology-decisions-pending.md`](../11-technology/technology-decisions-pending.md).
+
+
+## ED-007 — Odoo Community 18 + OCA como base de migração
+
+| Campo | Valor |
+| ----- | ----- |
+| ID | ED-007 |
+| Title | Base ERP open source consolidada para a migração do Cisne |
+| Status | `ACCEPTED` para a branch de migração; merge/cutover continuam condicionados aos gates |
+| Decision | Usar Odoo Community 18.0 com OCA l10n-brazil, field-service e contract como base candidata do Cisne Rondônia, preservando regras empresariais CISNE como autoridade e mantendo código Odoo Enterprise fora do escopo. |
+| Why | Ordem explícita do responsável em 2026-10-09 para parar de reconstruir capacidades genéricas e reutilizar um ERP empresarial já existente no GitHub. OCA Brasil reduz a superfície fiscal/localização e OCA Field Service/Contract cobre capacidades operacionais maduras. |
+| Consequences | Cria branch reversível `migration/odoo18-cisne-rondonia`; requer migração de dados, RBAC, mapeamento de domínio, homologação fiscal e nova evidência de production readiness antes de qualquer cutover. |
+| Historical architecture | ADR-TECH-001..007 e implementação NestJS/React/PostgreSQL permanecem preservados na história. Não são apagados. A substituição operacional só ocorre após merge/cutover autorizado. |
+| License | Odoo Community LGPL-3; módulos OCA conforme manifests, majoritariamente AGPL-3. Avisos e obrigações upstream devem ser preservados. |
+| Date | 2026-10-09 |

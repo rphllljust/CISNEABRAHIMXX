@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="cisne_branding.CisneDashboard">
+        <div class="o_cisne_dashboard">
+            <aside class="cisne-sidebar">
+                <div class="cisne-sidebar__brand">
+                    <img src="/cisne_branding/static/src/img/cisne-logo.svg" alt="Cisne Rondônia"/>
+                    <span>ERP EMPRESARIAL</span>
+                </div>
+                <nav class="cisne-sidebar__nav">
+                    <t t-foreach="navItems" t-as="item" t-key="item.key">
+                        <button type="button"
+                            t-att-class="'cisne-nav-item ' + (item.key === 'home' ? 'is-active' : '')"
+                            t-on-click="() => this.openSection(item.key)">
+                            <i t-att-class="'fa ' + item.icon"/>
+                            <span t-esc="item.label"/>
+                            <i t-if="item.key !== 'home'" class="fa fa-angle-right cisne-nav-item__chevron"/>
+                        </button>
+                    </t>
+                </nav>
+                <div class="cisne-sidebar__footer">
+                    <div class="cisne-sidebar__footer-mark">
+                        <img src="/cisne_branding/static/src/img/cisne-mark.svg" alt=""/>
+                    </div>
+                    <strong>CISNE RONDÔNIA</strong>
+                    <span>Operação integrada. Decisão com contexto.</span>
+                </div>
+            </aside>
+
+            <main class="cisne-workspace">
+                <header class="cisne-topbar">
+                    <div class="cisne-search">
+                        <i class="fa fa-search"/>
+                        <input type="search"
+                            placeholder="Pesquisar no Cisne: clientes, vendas, compras, OS..."
+                            t-att-value="state.searchTerm"
+                            t-on-input="onSearchInput"
+                            t-on-keydown="onSearchKeydown"/>
+                        <span t-if="state.searching" class="cisne-search__status">
+                            <i class="fa fa-spinner fa-spin"/>
+                        </span>
+                        <button t-if="state.searchOpen" type="button" class="cisne-search__clear"
+                            title="Fechar pesquisa" t-on-click="clearSearch">
+                            <i class="fa fa-times"/>
+                        </button>
+
+                        <div t-if="state.searchOpen" class="cisne-search-results">
+                            <div class="cisne-search-results__header">
+                                <span>Resultados</span>
+                                <small t-esc="state.searchResults.length + ' encontrados'"/>
+                            </div>
+                            <button t-foreach="state.searchResults" t-as="result"
+                                t-key="result.model + '-' + result.id" type="button"
+                                class="cisne-search-result"
+                                t-on-click="() => this.openRecord(result)">
+                                <span class="cisne-search-result__kind" t-esc="result.kind"/>
+                                <span class="cisne-search-result__body">
+                                    <strong t-esc="result.title"/>
+                                    <small t-if="result.subtitle" t-esc="result.subtitle"/>
+                                </span>
+                                <i class="fa fa-arrow-right"/>
+                            </button>
+                            <div t-if="!state.searchResults.length" class="cisne-empty cisne-empty--compact">
+                                Nenhum registro encontrado.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cisne-topbar__actions">
+                        <button type="button" class="cisne-icon-button" title="Atualizar" t-on-click="refresh">
+                            <i class="fa fa-refresh"/>
+                        </button>
+                        <div class="cisne-user-chip">
+                            <span class="cisne-user-chip__avatar">CR</span>
+                            <span>
+                                <strong>Administrador</strong>
+                                <small t-esc="state.data.company_name || 'Cisne Rondônia'"/>
+                            </span>
+                        </div>
+                    </div>
+                </header>
+
+                <div class="cisne-content">
+                    <div class="cisne-page-heading">
+                        <div>
+                            <h1>Bem-vindo ao Cisne Rondônia</h1>
+                            <p>ERP empresarial para operação, serviço, faturamento, financeiro e controle.</p>
+                        </div>
+                        <div class="cisne-page-heading__date">
+                            <i class="fa fa-calendar-o"/>
+                            <span t-esc="todayLabel"/>
+                        </div>
+                    </div>
+
+                    <div t-if="state.loading" class="cisne-loading">
+                        <i class="fa fa-spinner fa-spin"/>
+                        <span>Carregando dados empresariais...</span>
+                    </div>
+
+                    <div t-elif="state.error" class="cisne-state-card cisne-state-card--error">
+                        <i class="fa fa-exclamation-triangle"/>
+                        <div>
+                            <strong>Dashboard indisponível</strong>
+                            <p t-esc="state.error"/>
+                        </div>
+                        <button type="button" class="btn btn-primary" t-on-click="refresh">Tentar novamente</button>
+                    </div>
+
+                    <div t-elif="state.data.access_limited" class="cisne-state-card">
+                        <i class="fa fa-lock"/>
+                        <div>
+                            <strong>Acesso limitado</strong>
+                            <p>Seu perfil não possui leitura de todos os dados necessários para este painel.</p>
+                        </div>
+                    </div>
+
+                    <t t-else="">
+                        <section class="cisne-kpis">
+                            <article class="cisne-kpi cisne-kpi--green">
+                                <div class="cisne-kpi__icon"><i class="fa fa-line-chart"/></div>
+                                <div class="cisne-kpi__body">
+                                    <span>Faturamento do mês</span>
+                                    <strong t-esc="formatMoney(state.data.kpis.billed.value)"/>
+                                    <small t-att-class="'cisne-kpi__delta ' + deltaClass(state.data.kpis.billed.delta)">
+                                        <i t-att-class="'fa ' + ((state.data.kpis.billed.delta || 0) >= 0 ? 'fa-arrow-up' : 'fa-arrow-down')"/>
+                                        <t t-esc="formatDelta(state.data.kpis.billed.delta)"/>
+                                    </small>
+                                </div>
+                            </article>
+                            <article class="cisne-kpi cisne-kpi--red">
+                                <div class="cisne-kpi__icon"><i class="fa fa-shopping-cart"/></div>
+                                <div class="cisne-kpi__body">
+                                    <span>Compras do mês</span>
+                                    <strong t-esc="formatMoney(state.data.kpis.purchased.value)"/>
+                                    <small t-att-class="'cisne-kpi__delta ' + deltaClass(state.data.kpis.purchased.delta, true)">
+                                        <i t-att-class="'fa ' + ((state.data.kpis.purchased.delta || 0) >= 0 ? 'fa-arrow-up' : 'fa-arrow-down')"/>
+                                        <t t-esc="formatDelta(state.data.kpis.purchased.delta)"/>
+                                    </small>
+                                </div>
+                            </article>
+                            <article class="cisne-kpi cisne-kpi--blue">
+                                <div class="cisne-kpi__icon"><i class="fa fa-cube"/></div>
+                                <div class="cisne-kpi__body">
+                                    <span>Produtos ativos</span>
+                                    <strong t-esc="formatNumber(state.data.kpis.products.value)"/>
+                                    <small class="cisne-kpi__delta cisne-kpi__delta--neutral">cadastro disponível</small>
+                                </div>
+                            </article>
+                            <article class="cisne-kpi cisne-kpi--purple">
+                                <div class="cisne-kpi__icon"><i class="fa fa-wrench"/></div>
+                                <div class="cisne-kpi__body">
+                                    <span>OS em aberto</span>
+                                    <strong t-esc="formatNumber(state.data.kpis.open_service_orders.value)"/>
+                                    <small class="cisne-kpi__delta cisne-kpi__delta--neutral">ordens não encerradas</small>
+                                </div>
+                            </article>
+                        </section>
+
+                        <section class="cisne-grid cisne-grid--hero">
+                            <article class="cisne-panel cisne-panel--chart">
+                                <div class="cisne-panel__header">
+                                    <div>
+                                        <h2>Faturamento e compras</h2>
+                                        <p>Últimos oito meses · valores na moeda da empresa</p>
+                                    </div>
+                                    <div class="cisne-legend">
+                                        <span><i class="cisne-dot cisne-dot--blue"/>Faturamento</span>
+                                        <span><i class="cisne-dot cisne-dot--red"/>Compras</span>
+                                    </div>
+                                </div>
+                                <div class="cisne-chart">
+                                    <div t-foreach="state.data.series" t-as="month" t-key="month.key" class="cisne-chart__month">
+                                        <div class="cisne-chart__bars">
+                                            <div class="cisne-chart__bar cisne-chart__bar--billed"
+                                                t-att-style="chartHeight(month.billed)"
+                                                t-att-title="formatMoney(month.billed)"/>
+                                            <div class="cisne-chart__bar cisne-chart__bar--purchased"
+                                                t-att-style="chartHeight(month.purchased)"
+                                                t-att-title="formatMoney(month.purchased)"/>
+                                        </div>
+                                        <span t-esc="month.label"/>
+                                    </div>
+                                    <div t-if="!state.data.series.length" class="cisne-empty">
+                                        Ainda não há dados para montar a série.
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="cisne-panel cisne-panel--service">
+                                <div class="cisne-panel__header">
+                                    <div>
+                                        <h2>Ordens de Serviço por status</h2>
+                                        <p>Distribuição real do Field Service</p>
+                                    </div>
+                                    <button type="button" class="cisne-link-button" t-on-click="() => this.openSection('service')">
+                                        Abrir OS
+                                    </button>
+                                </div>
+                                <div class="cisne-service-status">
+                                    <div class="cisne-donut" t-att-style="stageDonutStyle">
+                                        <div class="cisne-donut__center">
+                                            <strong t-esc="formatNumber(serviceTotal)"/>
+                                            <span>Total</span>
+                                        </div>
+                                    </div>
+                                    <div class="cisne-stage-list">
+                                        <div t-foreach="state.data.service_stages" t-as="stage" t-key="stage.id" class="cisne-stage-row">
+                                            <i class="cisne-stage-row__dot" t-att-style="stageColor(stage_index)"/>
+                                            <span t-esc="stage.name"/>
+                                            <strong t-esc="formatNumber(stage.count)"/>
+                                        </div>
+                                        <div t-if="!state.data.service_stages.length" class="cisne-empty cisne-empty--compact">
+                                            Sem ordens registradas.
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </section>
+
+                        <section class="cisne-grid cisne-grid--details">
+                            <article class="cisne-panel">
+                                <div class="cisne-panel__header">
+                                    <div><h2>Faturamento por cliente</h2><p>Mês atual</p></div>
+                                </div>
+                                <div class="cisne-ranking">
+                                    <button t-foreach="state.data.top_clients" t-as="client" t-key="client.id"
+                                        type="button" class="cisne-ranking__row"
+                                        t-on-click="() => this.openRecord({model: 'res.partner', id: client.id, title: client.name})">
+                                        <span class="cisne-ranking__name" t-esc="client.name"/>
+                                        <span class="cisne-ranking__bar"><i t-att-style="barWidth(client.value, state.data.top_clients)"/></span>
+                                        <strong t-esc="formatMoney(client.value)"/>
+                                    </button>
+                                    <div t-if="!state.data.top_clients.length" class="cisne-empty">
+                                        Nenhum faturamento publicado no mês.
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="cisne-panel">
+                                <div class="cisne-panel__header">
+                                    <div><h2>Top produtos / serviços</h2><p>Valor faturado líquido no mês</p></div>
+                                </div>
+                                <div class="cisne-ranking cisne-ranking--purple">
+                                    <button t-foreach="state.data.top_products" t-as="product" t-key="product.id"
+                                        type="button" class="cisne-ranking__row"
+                                        t-on-click="() => this.openRecord({model: 'product.product', id: product.id, title: product.name})">
+                                        <span class="cisne-ranking__name" t-esc="product.name"/>
+                                        <span class="cisne-ranking__bar"><i t-att-style="barWidth(product.value, state.data.top_products)"/></span>
+                                        <strong t-esc="formatMoney(product.value)"/>
+                                    </button>
+                                    <div t-if="!state.data.top_products.length" class="cisne-empty">
+                                        Nenhum produto ou serviço faturado no mês.
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="cisne-panel">
+                                <div class="cisne-panel__header">
+                                    <div><h2>Atividades recentes</h2><p>Movimentações reais do ERP</p></div>
+                                </div>
+                                <div class="cisne-activity">
+                                    <button t-foreach="state.data.recent_activity" t-as="activity"
+                                        t-key="activity.model + '-' + activity.id" type="button"
+                                        class="cisne-activity__row" t-on-click="() => this.openRecord(activity)">
+                                        <span t-att-class="activityClass(activity.kind)">
+                                            <i t-att-class="'fa ' + activityIcon(activity.kind)"/>
+                                        </span>
+                                        <span class="cisne-activity__body">
+                                            <strong t-esc="activity.title"/>
+                                            <small t-if="activity.subtitle" t-esc="activity.subtitle"/>
+                                        </span>
+                                        <time t-esc="formatActivityDate(activity.date)"/>
+                                    </button>
+                                    <div t-if="!state.data.recent_activity.length" class="cisne-empty">
+                                        Nenhuma atividade recente disponível.
+                                    </div>
+                                </div>
+                            </article>
+                        </section>
+
+                        <section class="cisne-quick-actions">
+                            <button type="button" t-on-click="() => this.createRecord('sale.order', 'Nova venda')">
+                                <i class="fa fa-plus-circle"/><span>Nova venda</span>
+                            </button>
+                            <button type="button" t-on-click="() => this.createRecord('purchase.order', 'Nova compra')">
+                                <i class="fa fa-shopping-cart"/><span>Nova compra</span>
+                            </button>
+                            <button type="button" t-on-click="() => this.createRecord('fsm.order', 'Nova OS')">
+                                <i class="fa fa-wrench"/><span>Nova OS</span>
+                            </button>
+                            <button type="button" t-on-click="() => this.createRecord('contract.contract', 'Novo contrato')">
+                                <i class="fa fa-file-text-o"/><span>Novo contrato</span>
+                            </button>
+                            <button type="button" t-on-click="() => this.createRecord('project.project', 'Novo projeto')">
+                                <i class="fa fa-briefcase"/><span>Novo projeto</span>
+                            </button>
+                            <button type="button" t-on-click="() => this.createRecord('account.move', 'Nova fatura', {default_move_type: 'out_invoice'})">
+                                <i class="fa fa-file-text"/><span>Nova fatura</span>
+                            </button>
+                            <button type="button" t-on-click="() => this.openSection('fiscal')">
+                                <i class="fa fa-university"/><span>Fiscal Brasil</span>
+                            </button>
+                            <button type="button" t-on-click="() => this.openSection('finance')">
+                                <i class="fa fa-ellipsis-h"/><span>Mais ações</span>
+                            </button>
+                        </section>
+                    </t>
+                </div>
+            </main>
+        </div>
+    </t>
+</templates>

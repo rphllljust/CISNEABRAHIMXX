@@ -1,0 +1,65 @@
+:root {
+  --cisne-surface: #f4f7fb;
+  --cisne-ink: #10233f;
+  --cisne-accent: #123b63;
+  --cisne-accent-strong: #071a2d;
+}
+
+body {
+  color: var(--cisne-ink);
+  background: var(--cisne-surface);
+}
+
+.o_web_client,
+.o_home_menu_background {
+  background-color: var(--cisne-surface);
+}
+
+.o_main_navbar {
+  --NavBar-entry-color: #ffffff;
+  --NavBar-entry-backgroundColor: transparent;
+  --NavBar-entry-backgroundColor-hover: rgba(255, 255, 255, 0.08);
+  min-height: 46px;
+  background: linear-gradient(90deg, var(--cisne-accent-strong), var(--cisne-accent));
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  box-shadow: 0 1px 0 rgba(4, 20, 35, 0.18);
+}
+
+.o_main_navbar .o_menu_brand,
+.o_main_navbar .o_nav_entry,
+.o_main_navbar .dropdown-toggle {
+  color: rgba(255, 255, 255, 0.92) !important;
+}
+
+.o_main_navbar .o_menu_brand {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.o_main_navbar .o_nav_entry:hover,
+.o_main_navbar .dropdown-toggle:hover {
+  background: rgba(255, 255, 255, 0.08) !important;
+}
+
+.o_action_manager {
+  background: var(--cisne-surface);
+}
+
+.cisne-login-footer {
+  letter-spacing: 0.01em;
+  color: #60758d;
+}
+
+.o_database_list,
+.oe_login_form {
+  border-radius: 12px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .o_cisne_dashboard *,
+  .o_cisne_dashboard *::before,
+  .o_cisne_dashboard *::after {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+}
