@@ -5,14 +5,14 @@ services:
     image: postgres:16
     restart: unless-stopped
     environment:
-      POSTGRES_DB: ${CISNE_DB_NAME:-cisne}
+      POSTGRES_DB: cisne
       POSTGRES_USER: ${CISNE_DB_USER:-odoo}
       POSTGRES_PASSWORD: ${CISNE_DB_PASSWORD:?set CISNE_DB_PASSWORD}
     healthcheck:
       test:
         [
           "CMD-SHELL",
-          "pg_isready -U ${CISNE_DB_USER:-odoo} -d ${CISNE_DB_NAME:-cisne}",
+          "pg_isready -U ${CISNE_DB_USER:-odoo} -d cisne",
         ]
       interval: 5s
       timeout: 5s
@@ -28,11 +28,10 @@ services:
       db:
         condition: service_healthy
     environment:
-      HOST: db
-      PORT: "5432"
-      USER: ${CISNE_DB_USER:-odoo}
-      PASSWORD: ${CISNE_DB_PASSWORD:?set CISNE_DB_PASSWORD}
-      CISNE_DB_NAME: ${CISNE_DB_NAME:-cisne}
+      DB_HOST: db
+      DB_PORT: "5432"
+      DB_USER: ${CISNE_DB_USER:-odoo}
+      DB_PASSWORD: ${CISNE_DB_PASSWORD:?set CISNE_DB_PASSWORD}
       CISNE_BOOTSTRAP_MODULES: ${CISNE_BOOTSTRAP_MODULES:-base,web,mail,contacts,sale_management,purchase,stock,account,project,maintenance,fleet,hr_timesheet,contract,fieldservice,l10n_br_base,l10n_br_fiscal,cisne_branding}
       CISNE_WITHOUT_DEMO: ${CISNE_WITHOUT_DEMO:-true}
     ports:
