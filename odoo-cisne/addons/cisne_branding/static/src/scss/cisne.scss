@@ -1,0 +1,23 @@
+:root {
+  --cisne-surface: #f6f8fb;
+  --cisne-ink: #172033;
+  --cisne-accent: #173f63;
+}
+
+body {
+  color: var(--cisne-ink);
+}
+
+.o_web_client,
+.o_home_menu_background {
+  background-color: var(--cisne-surface);
+}
+
+.o_main_navbar {
+  --NavBar-entry-color: #ffffff;
+  --NavBar-entry-backgroundColor: var(--cisne-accent);
+}
+
+.cisne-login-footer {
+  letter-spacing: 0.01em;
+}
