@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-DB_HOST="${HOST:-db}"
-DB_PORT="${PORT:-5432}"
-DB_USER="${USER:-odoo}"
-DB_PASSWORD="${PASSWORD:?database password is required}"
-DB_NAME="${CISNE_DB_NAME:-cisne}"
+DB_HOST="${DB_HOST:-db}"
+DB_PORT="${DB_PORT:-5432}"
+DB_USER="${DB_USER:-odoo}"
+DB_PASSWORD="${DB_PASSWORD:?database password is required}"
+DB_NAME="cisne"
 MODULES="${CISNE_BOOTSTRAP_MODULES:-base,web,cisne_branding}"
 
 COMMON_ARGS=(
@@ -40,7 +40,7 @@ if [[ "${CISNE_WITHOUT_DEMO:-true}" == "true" ]]; then
   INIT_ARGS+=(--without-demo=all)
 fi
 
-echo "Initializing/updating Cisne ERP database '${DB_NAME}' with governed module set."
+echo "Initializing/updating Cisne ERP database '$DB_NAME' with governed module set."
 odoo "${COMMON_ARGS[@]}" "${INIT_ARGS[@]}"
 
 echo "Starting Cisne Rondônia ERP."
