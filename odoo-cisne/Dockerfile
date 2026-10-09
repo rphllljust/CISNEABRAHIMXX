@@ -1,4 +1,4 @@
-FROM odoo:18.0
+FROM odoo:18.0-20260908
 
 USER root
 
@@ -13,25 +13,27 @@ RUN apt-get update \
         build-essential \
         git \
         libffi-dev \
-        libssl-dev \
         libxml2-dev \
         libxslt1-dev \
         zlib1g-dev \
     && rm -rf /var/lib/apt/lists/*
 
-RUN mkdir -p /opt/oca /mnt/extra-addons \
-    && git clone --depth 1 --branch 18.0 https://github.com/OCA/l10n-brazil.git /opt/oca/l10n-brazil \
-    && git -C /opt/oca/l10n-brazil checkout "$L10N_BRAZIL_SHA" \
-    && git clone --depth 1 --branch 18.0 https://github.com/OCA/field-service.git /opt/oca/field-service \
-    && git -C /opt/oca/field-service checkout "$FIELD_SERVICE_SHA" \
-    && git clone --depth 1 --branch 18.0 https://github.com/OCA/contract.git /opt/oca/contract \
-    && git -C /opt/oca/contract checkout "$CONTRACT_SHA" \
-    && git clone --depth 1 --branch 18.0 https://github.com/OCA/product-attribute.git /opt/oca/product-attribute \
-    && git -C /opt/oca/product-attribute checkout "$PRODUCT_ATTRIBUTE_SHA" \
-    && git clone --depth 1 --branch 18.0 https://github.com/OCA/bank-payment.git /opt/oca/bank-payment \
-    && git -C /opt/oca/bank-payment checkout "$BANK_PAYMENT_SHA"
+RUN set -eux; \
+    mkdir -p /opt/oca /mnt/extra-addons; \
+    fetch_repo() { \
+      repo="$1"; dest="$2"; sha="$3"; \
+      git init "$dest"; \
+      git -C "$dest" remote add origin "$repo"; \
+      git -C "$dest" fetch --depth 1 origin "$sha"; \
+      git -C "$dest" checkout --detach FETCH_HEAD; \
+    }; \
+    fetch_repo https://github.com/OCA/l10n-brazil.git /opt/oca/l10n-brazil "$L10N_BRAZIL_SHA"; \
+    fetch_repo https://github.com/OCA/field-service.git /opt/oca/field-service "$FIELD_SERVICE_SHA"; \
+    fetch_repo https://github.com/OCA/contract.git /opt/oca/contract "$CONTRACT_SHA"; \
+    fetch_repo https://github.com/OCA/product-attribute.git /opt/oca/product-attribute "$PRODUCT_ATTRIBUTE_SHA"; \
+    fetch_repo https://github.com/OCA/bank-payment.git /opt/oca/bank-payment "$BANK_PAYMENT_SHA"
 
-RUN pip3 install --no-cache-dir \
+RUN pip3 install --break-system-packages --no-cache-dir \
       -r /opt/oca/l10n-brazil/requirements.txt \
       -r /opt/oca/contract/requirements.txt
 
