@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_cisne_dashboard" model="ir.actions.client">
+        <field name="name">Cisne Rondônia</field>
+        <field name="tag">cisne_branding.dashboard</field>
+        <field name="target">main</field>
+    </record>
+
+    <menuitem
+        id="menu_cisne_root"
+        name="Cisne Rondônia"
+        action="action_cisne_dashboard"
+        sequence="1"
+        web_icon="cisne_branding,static/src/img/cisne-mark.svg"
+    />
+</odoo>
