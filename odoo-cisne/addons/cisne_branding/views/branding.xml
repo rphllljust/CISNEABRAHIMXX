@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="cisne_web_layout" inherit_id="web.layout" name="Cisne web layout">
+        <xpath expr="//title" position="replace">
+            <title>Cisne Rondônia</title>
+        </xpath>
+        <xpath expr="//link[@rel='shortcut icon']" position="replace">
+            <link
+                type="image/svg+xml"
+                rel="shortcut icon"
+                href="/cisne_branding/static/src/img/cisne-mark.svg"
+            />
+        </xpath>
+    </template>
+
+    <template id="cisne_login_layout" inherit_id="web.login_layout" name="Cisne login">
+        <xpath expr="//img[contains(@t-attf-src, '/web/binary/company_logo')]" position="replace">
+            <img
+                src="/cisne_branding/static/src/img/cisne-logo.svg"
+                alt="Cisne Rondônia"
+                style="max-height:96px; max-width:100%; width:auto"
+            />
+        </xpath>
+        <xpath expr="//div[contains(@class, 'text-center small')]" position="replace">
+            <div class="text-center small mt-4 pt-3 border-top cisne-login-footer">
+                Cisne Rondônia · ERP Empresarial
+            </div>
+        </xpath>
+    </template>
+
+    <template id="cisne_brand_promotion" inherit_id="web.brand_promotion" name="Cisne footer brand">
+        <xpath expr="//div[contains(@class, 'o_brand_promotion')]" position="replace">
+            <div class="o_brand_promotion">
+                <span>Cisne Rondônia</span>
+            </div>
+        </xpath>
+    </template>
+</odoo>
